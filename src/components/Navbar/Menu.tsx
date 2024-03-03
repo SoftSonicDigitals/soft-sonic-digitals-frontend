@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Menu = () => {
   return (
-    <button type="button">
+    <button type="button" className="lg:hidden">
       <RxHamburgerMenu className="text-2xl font-[700]" />
     </button>
   );
