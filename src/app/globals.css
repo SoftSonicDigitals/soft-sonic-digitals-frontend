@@ -9,8 +9,8 @@
   /* font-family: "Ubuntu", sans-serif; */
 }
 
-.container {
-  @apply w-[92%] mx-auto;
+.wrapper_container {
+  @apply mx-auto  w-[95%] xl:w-[80%] 3xl:w-[50%];
 }
 
 .flex-center {
