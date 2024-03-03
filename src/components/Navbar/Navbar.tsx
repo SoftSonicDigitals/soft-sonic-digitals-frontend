@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container flex justify-between ">
         <Link href={"/"}>
           <div
-            className="cursor-pointer relative w-28 h-14 my-3
+            className="cursor-pointer relative w-28 h-16 my-3
           "
           >
             <Image src="/logo.svg" fill alt="logo" />
@@ -35,6 +35,11 @@ const Navbar = () => {
               <MdOutlineKeyboardArrowDown className="text-2xl" />
             </div>
             <Link href={"/"}>Customer</Link>
+            <div className="flex-center gap-6  ">
+              <button className="text-white tracking-wider px-8 py-3 bg-gradient-to-r from-orange to-pink font-[700] rounded   ">
+                CONTACT US
+              </button>
+            </div>
           </div>
         </div>
       </div>
