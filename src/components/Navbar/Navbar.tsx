@@ -18,18 +18,23 @@ const Navbar = () => {
             <Image src="/logo.svg" fill alt="logo" />
           </div>
         </Link>
-        <div className="flex items-center justify-center gap-10">
-          <div className="flex items-center justify-center gap-10 font-[700] tracking-wide text-gray-800">
-            <Link href={"/"}>
-              <div className=" ">Solutions</div>
-            </Link>
+        <div className="flex-center gap-12">
+          <div className="flex-center gap-8 font-[700] tracking-wide text-gray-800">
+            <div className="flex items-center justify-center gap-0.5">
+              <p className=" ">Solutions</p>
+              <MdOutlineKeyboardArrowDown className="text-2xl" />
+            </div>
 
-            <Link href={"/"}>Platform</Link>
-            <Link href={"/"}>Resources</Link>
-            <Link href={"/"}>Customers</Link>
-          </div>
-          <div className="flex items-center justify-center gap-6 px-16">
-            <div>Contact us</div>
+            <div className="flex items-center justify-center gap-0.5">
+              <p className=" ">Resources</p>
+              <MdOutlineKeyboardArrowDown className="text-2xl" />
+            </div>
+
+            <div className="flex items-center justify-center gap-0.5">
+              <p className=" ">Platform</p>
+              <MdOutlineKeyboardArrowDown className="text-2xl" />
+            </div>
+            <Link href={"/"}>Customer</Link>
           </div>
         </div>
       </div>
