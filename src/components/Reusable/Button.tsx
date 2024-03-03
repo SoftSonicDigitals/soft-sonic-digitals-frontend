@@ -11,9 +11,7 @@ const Button = ({ type, title, className, handleClick }: ButtonProps) => {
   return (
     <button
       type={type}
-      className={`text-white tracking-wider btn__backgroundcolor   font-[700]
-      
-rounded  ${className} `}
+      className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  ${className} `}
     >
       {title}
     </button>

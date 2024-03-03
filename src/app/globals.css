@@ -10,7 +10,7 @@
 }
 
 .container {
-  @apply w-[50%] mx-auto;
+  @apply w-[92%] mx-auto;
 }
 
 .flex-center {
