@@ -15,7 +15,10 @@ const config: Config = {
       },
     },
     colors: {
+      white: "#ffffff",
       gray: { 800: "#495057" },
+      orange: "#F6702D",
+      pink: "#e83556",
     },
   },
 
