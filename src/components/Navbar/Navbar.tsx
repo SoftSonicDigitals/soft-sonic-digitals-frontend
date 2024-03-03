@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
             <Image src="/logo.svg" fill alt="logo" />
           </div>
         </Link>
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-10">
           <div className="flex items-center justify-center gap-10 font-[700] tracking-wide text-gray-800">
             <Link href={"/"}>
               <div className=" ">Solutions</div>
@@ -27,7 +28,7 @@ const Navbar = () => {
             <Link href={"/"}>Resources</Link>
             <Link href={"/"}>Customers</Link>
           </div>
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-6 px-16">
             <div>Contact us</div>
           </div>
         </div>
