@@ -1,14 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { Platform, Resources, Solutions } from ".";
 
 const Navbar = () => {
   return (
-    <nav
-      className="border-b-[2px]
-      border-black"
-    >
+    <nav className="shadow-md">
       <div className="container flex justify-between ">
         <Link href={"/"}>
           <div
@@ -19,28 +16,15 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex-center gap-12">
-          <div className="flex-center gap-8 font-[700] tracking-wide text-gray-800">
-            <div className="flex items-center justify-center gap-0.5">
-              <p className=" ">Solutions</p>
-              <MdOutlineKeyboardArrowDown className="text-2xl" />
-            </div>
+          <div className="flex-center gap-8 font-[700] tracking-wide text-gray-800 h-full">
+            <Solutions />
+            <Platform />
+            <Resources />
 
-            <div className="flex items-center justify-center gap-0.5">
-              <p className=" ">Resources</p>
-              <MdOutlineKeyboardArrowDown className="text-2xl" />
-            </div>
-
-            <div className="flex items-center justify-center gap-0.5">
-              <p className=" ">Platform</p>
-              <MdOutlineKeyboardArrowDown className="text-2xl" />
-            </div>
             <Link href={"/"}>Customer</Link>
-            <div className="flex-center gap-6  ">
-              <button className="text-white tracking-wider px-8 py-3 bg-gradient-to-r from-orange to-pink font-[700] rounded   ">
-                CONTACT US
-              </button>
-            </div>
           </div>
+
+          <div className="flex-center gap-6  "></div>
         </div>
       </div>
     </nav>

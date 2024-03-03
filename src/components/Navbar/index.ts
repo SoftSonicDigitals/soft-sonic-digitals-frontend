@@ -1,3 +1,5 @@
 import Navbar from "./Navbar";
-
-export { Navbar };
+import Platform from "./Platform";
+import Resources from "./Resources";
+import Solutions from "./Solutions";
+export { Navbar, Solutions, Platform, Resources };
