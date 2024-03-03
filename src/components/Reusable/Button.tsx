@@ -2,13 +2,18 @@ import React from "react";
 
 type ButtonProps = {
   title: string;
-  btnStyles?: string;
+  className?: string;
+  type?: "button" | "submit" | "reset" | undefined;
+  handleClick?: () => void;
 };
 
-const Button = ({ title, btnStyles }: ButtonProps) => {
+const Button = ({ type, title, className, handleClick }: ButtonProps) => {
   return (
     <button
-      className={`text-white tracking-wider  bg-gradient-to-r from-orange to-pink font-[700] rounded  ${btnStyles} `}
+      type={type}
+      className={`text-white tracking-wider btn__backgroundcolor   font-[700]
+      
+rounded  ${className} `}
     >
       {title}
     </button>
