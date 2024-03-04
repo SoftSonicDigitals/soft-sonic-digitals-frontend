@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Menu, Platform, Resources, Solutions } from ".";
+import { SideMenu, Platform, Resources, Solutions } from ".";
 import Button from "../Reusable/Button";
 
 const Navbar = () => {
@@ -36,7 +36,7 @@ const Navbar = () => {
               title="CONTACT US"
               className="px-5 py-2 lg:px-7 lg:py-2.5 text-xs lg:text-lg"
             />
-            <Menu />
+            <SideMenu />
           </div>
         </div>
       </div>
