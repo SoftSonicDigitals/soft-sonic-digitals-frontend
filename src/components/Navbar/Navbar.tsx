@@ -20,12 +20,12 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex-center gap-12">
-          <div className="flex-center gap-8 font-[700] tracking-wide text-gray-800 h-full">
+          <div className="flex-center gap-8 font-[700] tracking-wide h-full ">
             <Solutions />
             <Platform />
             <Resources />
 
-            <Link href={"/"} className="hidden lg:block">
+            <Link href={"/"} className="hidden lg:block text-gray-800">
               Customer
             </Link>
           </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
             <Button
               type="button"
               title="CONTACT US"
-              className="px-5 py-2 lg:px-6 lg:py-3 text-xs lg:text-lg"
+              className="px-5 py-2 lg:px-7 lg:py-2.5 text-xs lg:text-lg"
             />
             <Menu />
           </div>
