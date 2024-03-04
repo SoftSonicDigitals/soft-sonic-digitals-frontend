@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <div
             className="cursor-pointer relative w-24 h-12 
-          lg:w-28 lg:h-16 my-3"
+          lg:w-28 lg:h-16 lg:my-3"
           >
             <Image src="/logo.svg" fill alt="logo" />
           </div>
