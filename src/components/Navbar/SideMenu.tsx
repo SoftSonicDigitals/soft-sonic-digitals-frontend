@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
-const Menu = () => {
+const SideMenu = () => {
   const [openNavigationMenu, setOpenNavigationMenu] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
@@ -40,7 +40,8 @@ const Menu = () => {
             key="sidemenu"
             initial={{ width: 0 }}
             animate={{
-              width: screenWidth && screenWidth / 2 ? screenWidth / 2 : 250,
+              width:
+                screenWidth && screenWidth / 2 > 300 ? screenWidth / 2 : 300,
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
             exit={{
@@ -95,4 +96,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default SideMenu;
