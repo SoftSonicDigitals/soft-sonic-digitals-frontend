@@ -6,7 +6,7 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { SolutionsSubmenu } from ".";
 
 const Solutions = () => {
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(true);
 
   return (
     <>
