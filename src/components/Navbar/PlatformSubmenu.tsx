@@ -12,16 +12,19 @@ const PlatformSubmenu = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 grid-rows-2 justify-center wrapper_container gap-5 mb-4 ">
+      <div className="grid grid-cols-3 grid-rows-2 gap-x-10 justify-center wrapper_container  mb-4 ">
         {PLATFORM_MENU.subMenu.map((menu) => (
-          <div key={menu.title}>
+          <div key={menu.title} className="px-5 pt-4 pb-6 hover:bg-gray-0 ">
             <div
-              className={`relative w-full h-8`}
+              className={`relative w-full h-8 mb-3`}
               style={{ width: menu.iconWidth }}
             >
               <Image src={menu.iconPath} alt={`${menu.title}-logo`} fill />
             </div>
-            <h4 className="mb-2">{menu.title}</h4>
+            <h4 className="mb-2 ">{menu.title}</h4>
+            <div className="font-[400] text-sm">
+              <p className=" tracking-wider"> {menu.description}</p>
+            </div>
           </div>
         ))}
       </div>
