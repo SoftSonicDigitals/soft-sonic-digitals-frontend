@@ -3,6 +3,8 @@ export const PLATFORM = "PLATFORM";
 
 export const SOLUTIONS_MENU = {
   title: SOLUTIONS,
+  description:
+    " We push ourselves. We push technology. And we push the boundaries of conventional commerce.",
   subMenu: [
     {
       subMenuHeading: "By Business",

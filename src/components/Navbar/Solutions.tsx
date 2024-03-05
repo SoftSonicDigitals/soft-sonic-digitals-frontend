@@ -1,4 +1,5 @@
 import { SOLUTIONS_MENU } from "@/constants/navbarConstants";
+import Link from "next/link";
 import React from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -17,11 +18,23 @@ const Solutions = () => {
       "
       >
         <div className="flex-center flex-col mt-8 ">
-          <h2 className="text-2xl mb-4">Solutions</h2>
+          <h2 className="text-2xl mb-4">{SOLUTIONS_MENU.title}</h2>
           <p className="text-gray-800 font-[400] tracking-normal mb-4">
-            We push ourselves. We push technology. And we push the boundaries of
-            conventional commerce.
+            {SOLUTIONS_MENU.description}
           </p>
+        </div>
+
+        <div className="flex wrapper_container">
+          {SOLUTIONS_MENU.subMenu.map((menu) => (
+            <div key={menu.subMenuHeading}>
+              <h3>{menu.subMenuHeading}</h3>
+              {menu.subMenuLinks.map((sublink) => (
+                <div key={sublink.title}>
+                  <Link href={sublink.link}>{sublink.title}</Link>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </>
