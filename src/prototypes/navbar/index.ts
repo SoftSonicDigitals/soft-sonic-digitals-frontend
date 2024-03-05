@@ -1,4 +1,5 @@
 import { PLATFORM, SOLUTIONS } from "@/constants/navbar";
+import { PlatformMenuType, SolutionsMenuType } from "@/models/navbar";
 
 export const SOLUTIONS_MENU: SolutionsMenuType = {
   title: SOLUTIONS,
@@ -60,7 +61,7 @@ export const SIDE_MENU = [
   },
 ];
 
-export const PLATFORM_MENU = {
+export const PLATFORM_MENU: PlatformMenuType = {
   title: PLATFORM,
   description:
     "Selecting the right platform for the right requirements is an art. We help you turn it into science.",
