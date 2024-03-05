@@ -18,6 +18,7 @@ type PlatformSubMenuItem = {
   title: string;
   description: string;
   iconPath: string;
+  iconWidth: string;
 };
 
 export type PlatformMenuType = {
