@@ -3,9 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const PlatformSubmenu = () => {
+type PlatformSubmenuProps = {
+  setIsOpen: React.Dispatch<boolean>;
+};
+
+const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
   return (
-    <div className="hidden lg:block absolute z-100 top-[5.5rem] right-0 bg-white w-[100vw] shadow-t-md text-gray-900 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transform origin-top  ">
+    <div
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      className="hidden lg:block absolute z-100 top-[5.5rem] right-0 bg-white w-[100vw] shadow-t-md text-gray-900 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px] transform origin-top  "
+    >
       <div className="flex-center flex-col mt-8 mb-6 ">
         <h2 className="text-2xl mb-4">{PLATFORM_MENU.title}</h2>
         <p className="text-gray-800 font-[400] tracking-normal ">

@@ -23,7 +23,7 @@ const Platform = () => {
           />
         </div>
       </div>
-      <PlatformSubmenu />
+      {isSubMenuOpen && <PlatformSubmenu setIsOpen={setIsSubMenuOpen} />}
     </>
   );
 };
