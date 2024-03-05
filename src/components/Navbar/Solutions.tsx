@@ -6,7 +6,7 @@ import { SolutionsSubmenu } from ".";
 import { SOLUTIONS_MENU } from "@/prototypes/navbar";
 
 const Solutions = () => {
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(true);
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
 
   return (
     <>
