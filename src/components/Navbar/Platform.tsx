@@ -3,6 +3,7 @@ import { PLATFORM } from "@/constants/navbar";
 import { PLATFORM_MENU } from "@/prototypes/navbar";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { PlatformSubmenu } from ".";
 
 const Platform = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
@@ -22,6 +23,7 @@ const Platform = () => {
           />
         </div>
       </div>
+      <PlatformSubmenu />
     </>
   );
 };
