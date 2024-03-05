@@ -1,5 +1,6 @@
 "use client";
 import { PLATFORM } from "@/constants/navbar";
+import { PLATFORM_MENU } from "@/prototypes/navbar";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
@@ -13,10 +14,11 @@ const Platform = () => {
         className="hidden lg:flex group h-full text-gray-800 hover:text-gray-900  "
       >
         <div className=" flex-center gap-0.5 ">
-          <p>{PLATFORM}</p>
+          <p>{PLATFORM_MENU.title}</p>
           <MdOutlineKeyboardArrowDown
-            className={`text-3xl  hover:rotate-180
-             transition duration-300`}
+            className={`text-3xl  ${
+              isSubMenuOpen ? "rotate-180" : ""
+            } transition duration-300`}
           />
         </div>
       </div>
