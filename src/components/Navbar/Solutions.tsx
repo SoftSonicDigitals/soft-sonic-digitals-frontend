@@ -23,9 +23,12 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="flex justify-center wrapper_container gap-10">
+        <div className="flex justify-center wrapper_container gap-5">
           {SOLUTIONS_MENU.subMenu.map((menu) => (
-            <div key={menu.subMenuHeading}>
+            <div
+              key={menu.subMenuHeading}
+              className="border-r-[1px]  pr-12 border-gray-200 last:border-none"
+            >
               <h3 className="text-xl mb-2">{menu.subMenuHeading}</h3>
               {menu.subMenuLinks.map((sublink) => (
                 <div
