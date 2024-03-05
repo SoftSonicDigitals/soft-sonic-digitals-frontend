@@ -71,36 +71,42 @@ export const PLATFORM_MENU: PlatformMenuType = {
       description:
         "Magento is a robust eCommerce platform with extensive features, making it a comprehensive solution for online businesses.",
       iconPath: "/Magento-logo.pngw3.webp",
+      iconWidth: "116px",
     },
     {
       title: "Adobe Commerce",
       description:
         "With the help of Adobe Commerce, we have delivered over 150 successful projects for clients of all sizes and from different industries over the span of 12 years.",
       iconPath: "/adobe.pngw3.webp",
+      iconWidth: "168px",
     },
     {
       title: "Shopify Plus",
       description:
         "Shopify is a well-known eCommerce development platform that provides a user-friendly interface, customizable themes, and various functions to efficiently create and handle eCommerce stores.",
       iconPath: "/Shopifypluss.pngw3.webp",
+      iconWidth: "156px",
     },
     {
       title: "Orocommerce",
       description:
         "It’s a natural addition to our B2B digital commerce arsenal and will enable us to offer our customers an advanced solution for their complex B2B commerce scenarios.",
       iconPath: "/oro-commerce.pngw3.webp",
+      iconWidth: "168px",
     },
     {
       title: "Pimcore",
       description:
         "PiMcore is an industry leader in data and experience management platforms that manage, engage, and distribute any type of digital data for any channel and provide amazing personalized customer experience.",
       iconPath: "/pimcore.pngw3.webp",
+      iconWidth: "168px",
     },
     {
       title: "Commercetools",
       description:
         "Commercetool is an API-first and ready-made commerce building block or add-on to your own infrastructure and runs them as scale.",
       iconPath: "/commercetools.pngw3.webp",
+      iconWidth: "164px",
     },
   ],
 };
