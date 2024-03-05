@@ -72,6 +72,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "Magento is a robust eCommerce platform with extensive features, making it a comprehensive solution for online businesses.",
       iconPath: "/Magento-logo.pngw3.webp",
       iconWidth: "116px",
+      link: "/",
     },
     {
       title: "Adobe Commerce",
@@ -79,6 +80,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "With the help of Adobe Commerce, we have delivered over 150 successful projects for clients of all sizes and from different industries over the span of 12 years.",
       iconPath: "/adobe.pngw3.webp",
       iconWidth: "168px",
+      link: "/",
     },
     {
       title: "Shopify Plus",
@@ -86,6 +88,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "Shopify is a well-known eCommerce development platform that provides a user-friendly interface, customizable themes, and various functions to efficiently create and handle eCommerce stores.",
       iconPath: "/Shopifypluss.pngw3.webp",
       iconWidth: "156px",
+      link: "/",
     },
     {
       title: "Orocommerce",
@@ -93,6 +96,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "It’s a natural addition to our B2B digital commerce arsenal and will enable us to offer our customers an advanced solution for their complex B2B commerce scenarios.",
       iconPath: "/oro-commerce.pngw3.webp",
       iconWidth: "168px",
+      link: "/",
     },
     {
       title: "Pimcore",
@@ -100,6 +104,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "PiMcore is an industry leader in data and experience management platforms that manage, engage, and distribute any type of digital data for any channel and provide amazing personalized customer experience.",
       iconPath: "/pimcore.pngw3.webp",
       iconWidth: "168px",
+      link: "/",
     },
     {
       title: "Commercetools",
@@ -107,6 +112,7 @@ export const PLATFORM_MENU: PlatformMenuType = {
         "Commercetool is an API-first and ready-made commerce building block or add-on to your own infrastructure and runs them as scale.",
       iconPath: "/commercetools.pngw3.webp",
       iconWidth: "164px",
+      link: "/",
     },
   ],
 };
