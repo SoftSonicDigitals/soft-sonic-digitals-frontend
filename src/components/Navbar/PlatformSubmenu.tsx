@@ -15,7 +15,10 @@ const PlatformSubmenu = () => {
       <div className="grid grid-cols-3 grid-rows-2 justify-center wrapper_container gap-5 mb-4 ">
         {PLATFORM_MENU.subMenu.map((menu) => (
           <div key={menu.title}>
-            <div className="relative w-24 h-24">
+            <div
+              className={`relative w-full h-8`}
+              style={{ width: menu.iconWidth }}
+            >
               <Image src={menu.iconPath} alt={`${menu.title}-logo`} fill />
             </div>
             <h4 className="mb-2">{menu.title}</h4>
