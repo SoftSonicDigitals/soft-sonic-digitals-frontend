@@ -35,7 +35,13 @@ const config: Config = {
     },
     colors: {
       white: "#ffffff",
-      gray: { 200: "#e9ecef", 800: "#495057", 900: "#212529" },
+      gray: {
+        0: "#f8f9fa",
+        100: "#f1f3f5",
+        200: "#e9ecef",
+        800: "#495057",
+        900: "#212529",
+      },
       orange: "#F6702D",
       pink: "#e83556",
     },
