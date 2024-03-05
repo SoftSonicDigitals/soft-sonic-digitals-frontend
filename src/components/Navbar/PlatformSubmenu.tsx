@@ -1,4 +1,5 @@
 import { PLATFORM_MENU } from "@/prototypes/navbar";
+import Image from "next/image";
 import React from "react";
 
 const PlatformSubmenu = () => {
@@ -9,6 +10,17 @@ const PlatformSubmenu = () => {
         <p className="text-gray-800 font-[400] tracking-normal ">
           {PLATFORM_MENU.description}
         </p>
+      </div>
+
+      <div className="grid grid-cols-3 grid-rows-2 justify-center wrapper_container gap-5 mb-4 ">
+        {PLATFORM_MENU.subMenu.map((menu) => (
+          <div key={menu.title}>
+            <div className="relative w-24 h-24">
+              <Image src={menu.iconPath} alt={`${menu.title}-logo`} fill />
+            </div>
+            <h4 className="mb-2">{menu.title}</h4>
+          </div>
+        ))}
       </div>
     </div>
   );
