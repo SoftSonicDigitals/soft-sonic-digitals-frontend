@@ -4,7 +4,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
-import { SIDE_MENU } from "@/constants/navbarConstants";
+
 const SideMenu = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
