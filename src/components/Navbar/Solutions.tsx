@@ -1,9 +1,9 @@
 "use client";
 
-import { SOLUTIONS_MENU } from "@/constants/navbarConstants";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { SolutionsSubmenu } from ".";
+import { SOLUTIONS_MENU } from "@/prototypes/navbar";
 
 const Solutions = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(true);
