@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus } from "react-icons/fa6";
 const SideMenu = () => {
-  const [openNavigationMenu, setOpenNavigationMenu] = useState<boolean>(false);
+  const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
 
   useEffect(() => {
@@ -29,13 +29,13 @@ const SideMenu = () => {
       <button
         type="button"
         className="lg:hidden"
-        onClick={() => setOpenNavigationMenu(true)}
+        onClick={() => setIsNavMenuOpen(true)}
       >
         <RxHamburgerMenu className="text-2xl font-[700]" />
       </button>
 
       <AnimatePresence>
-        {openNavigationMenu && (
+        {isNavMenuOpen && (
           <motion.div
             key="sidemenu"
             initial={{ width: 0 }}
@@ -52,7 +52,7 @@ const SideMenu = () => {
             <button
               type="button"
               className="flex w-[95%] mr-14 justify-end  mt-3"
-              onClick={() => setOpenNavigationMenu(false)}
+              onClick={() => setIsNavMenuOpen(false)}
             >
               <IoCloseOutline className="text-2xl font-[700] " />
             </button>

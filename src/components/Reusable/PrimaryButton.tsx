@@ -7,7 +7,12 @@ type ButtonProps = {
   handleClick?: () => void;
 };
 
-const Button = ({ type, title, className, handleClick }: ButtonProps) => {
+const PrimaryButton = ({
+  type,
+  title,
+  className,
+  handleClick,
+}: ButtonProps) => {
   return (
     <button
       type={type}
@@ -18,4 +23,4 @@ const Button = ({ type, title, className, handleClick }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default PrimaryButton;
