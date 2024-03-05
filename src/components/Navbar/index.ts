@@ -5,6 +5,7 @@ import Resources from "./Resources";
 import Solutions from "./Solutions";
 import SolutionsSubmenu from "./SolutionsSubmenu";
 import MenuBanner from "./MenuBanner";
+import PlatformSubmenu from "./PlatformSubmenu";
 
 export {
   Navbar,
@@ -14,4 +15,5 @@ export {
   SideMenu,
   SolutionsSubmenu,
   MenuBanner,
+  PlatformSubmenu,
 };
