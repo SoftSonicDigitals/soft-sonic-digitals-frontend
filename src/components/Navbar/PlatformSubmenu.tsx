@@ -21,7 +21,7 @@ const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
         </p>
       </div>
 
-      <div className="grid grid-cols-3 grid-rows-2 gap-x-10 justify-center wrapper_container  mb-4 ">
+      <div className="grid grid-cols-3 grid-rows-2 lg:gap-x-8 xl:gap-x-10 justify-center wrapper_container  mb-4 ">
         {PLATFORM_MENU.subMenu.map((menu) => (
           <Link href={menu.link} key={menu.title}>
             <div className="px-5 pt-4 pb-6 hover:bg-gray-0 ">
