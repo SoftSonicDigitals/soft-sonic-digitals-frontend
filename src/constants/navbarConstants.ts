@@ -1,5 +1,8 @@
-export const solutionsMenu = {
-  title: "Solutions",
+export const SOLUTIONS = "Solutions";
+export const PLATFORM = "PLATFORM";
+
+export const SOLUTIONS_MENU = {
+  title: SOLUTIONS,
   subMenu: [
     {
       subMenuHeading: "By Business",
@@ -44,3 +47,14 @@ export const solutionsMenu = {
     },
   ],
 };
+
+export const SIDE_MENU = [
+  {
+    title: SOLUTIONS,
+    subMenu: [
+      ...SOLUTIONS_MENU.subMenu[0].subMenuLinks,
+      ...SOLUTIONS_MENU.subMenu[1].subMenuLinks,
+      ...SOLUTIONS_MENU.subMenu[3].subMenuLinks,
+    ],
+  },
+];
