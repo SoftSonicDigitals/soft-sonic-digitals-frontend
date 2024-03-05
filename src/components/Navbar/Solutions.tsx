@@ -24,7 +24,7 @@ const Solutions = () => {
           />
         </div>
       </div>
-      {isSubMenuOpen && <SolutionsSubmenu setIsOpen={setIsSubMenuOpen} />}
+      {/* {isSubMenuOpen && <SolutionsSubmenu setIsOpen={setIsSubMenuOpen} />} */}
     </>
   );
 };
