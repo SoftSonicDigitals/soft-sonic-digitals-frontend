@@ -13,3 +13,13 @@ type SolutionsMenuType = {
   description: string;
   subMenu: SubMenu[];
 };
+
+type ResourcesItemType = {
+  title: string;
+  link: string;
+};
+
+export type ResourcesMenuType = {
+  title: string;
+  submenu: ResourcesItemType[];
+};

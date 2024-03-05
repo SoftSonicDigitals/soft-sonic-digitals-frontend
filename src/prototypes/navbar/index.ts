@@ -1,4 +1,5 @@
-import { SOLUTIONS } from "@/constants/navbar";
+import { RESOURCES, SOLUTIONS } from "@/constants/navbar";
+import { ResourcesMenuType } from "@/models/navbar";
 
 export const SOLUTIONS_MENU = {
   title: SOLUTIONS,
@@ -60,9 +61,12 @@ export const SIDE_MENU = [
   },
 ];
 
-export const RESOURCES_MENU = [
-  { title: "Blogs", link: "/" },
-  { title: "Infographics", link: "/" },
-  { title: "Press Releases", link: "/" },
-  { title: "White Papers", link: "/" },
-];
+export const RESOURCES_MENU: ResourcesMenuType = {
+  title: RESOURCES,
+  submenu: [
+    { title: "Blogs", link: "/" },
+    { title: "Infographics", link: "/" },
+    { title: "Press Releases", link: "/" },
+    { title: "White Papers", link: "/" },
+  ],
+};
