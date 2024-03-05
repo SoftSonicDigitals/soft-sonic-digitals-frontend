@@ -24,7 +24,7 @@ const SolutionsSubmenu = ({ setIsOpen }: SolutionsSubmenuProps) => {
         </p>
       </div>
 
-      <div className="flex justify-center wrapper_container gap-5 mb-2">
+      <div className="flex justify-center wrapper_container gap-5 mb-4">
         {SOLUTIONS_MENU.subMenu.map((menu) => (
           <div
             key={menu.subMenuHeading}
