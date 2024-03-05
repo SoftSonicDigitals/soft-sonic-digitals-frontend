@@ -22,7 +22,7 @@ const Resources = () => {
           />
         </div>
       </div>
-      <ResourcesSubmenu />
+      <ResourcesSubmenu setIsOpen={setIsSubMenuOpen} />
     </>
   );
 };
