@@ -1,48 +1,30 @@
+"use client";
+
 import { SOLUTIONS_MENU } from "@/constants/navbarConstants";
-import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { CiBoxList } from "react-icons/ci";
+import { SolutionsSubmenu } from ".";
+
 const Solutions = () => {
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
+
   return (
     <>
-      <div className="hidden lg:flex group h-full text-gray-800 hover:text-gray-900  ">
+      <div
+        onMouseEnter={() => setIsSubMenuOpen(true)}
+        onMouseLeave={() => setIsSubMenuOpen(false)}
+        className="hidden lg:flex group h-full text-gray-800 hover:text-gray-900  "
+      >
         <div className=" flex-center gap-0.5 ">
           <p>{SOLUTIONS_MENU.title}</p>
-          <MdOutlineKeyboardArrowDown className="text-3xl  group-hover:rotate-180 transition duration-300" />
+          <MdOutlineKeyboardArrowDown
+            className={`text-3xl  ${
+              isSubMenuOpen ? "rotate-180" : ""
+            } transition duration-300`}
+          />
         </div>
       </div>
-      <div
-        className="absolute z-100 top-[5.5rem] right-0 bg-white w-[100vw] shadow-t-md text-gray-900 shadow-[rgba(17,_17,_26,_0.1)_0px_0px_16px]
-     transform origin-top pb-8"
-      >
-        <div className="flex-center flex-col mt-8 mb-6 ">
-          <h2 className="text-2xl mb-4">{SOLUTIONS_MENU.title}</h2>
-          <p className="text-gray-800 font-[400] tracking-normal ">
-            {SOLUTIONS_MENU.description}
-          </p>
-        </div>
-
-        <div className="flex justify-center wrapper_container gap-5">
-          {SOLUTIONS_MENU.subMenu.map((menu) => (
-            <div
-              key={menu.subMenuHeading}
-              className="border-r-[1px]  pr-12 border-gray-200 last:border-none"
-            >
-              <h3 className="text-xl mb-2">{menu.subMenuHeading}</h3>
-              {menu.subMenuLinks.map((sublink) => (
-                <div
-                  key={sublink.title}
-                  className="flex items-center  gap-3 font-[400] text-sm pb-1 mb-1 hover:bg-gray-200"
-                >
-                  <CiBoxList />
-                  <Link href={sublink.link}>{sublink.title}</Link>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      {isSubMenuOpen && <SolutionsSubmenu setIsOpen={setIsSubMenuOpen} />}
     </>
   );
 };
