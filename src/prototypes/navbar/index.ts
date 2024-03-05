@@ -59,3 +59,10 @@ export const SIDE_MENU = [
     ],
   },
 ];
+
+export const RESOURCES_MENU = [
+  { title: "Blogs", link: "/" },
+  { title: "Infographics", link: "/" },
+  { title: "Press Releases", link: "/" },
+  { title: "White Papers", link: "/" },
+];
