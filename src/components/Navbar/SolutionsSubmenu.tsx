@@ -34,7 +34,7 @@ const SolutionsSubmenu = ({ setIsOpen }: SolutionsSubmenuProps) => {
             {menu.subMenuLinks.map((sublink) => (
               <div
                 key={sublink.title}
-                className="flex items-center  gap-3 font-[400] text-sm pb-1 mb-2 hover:bg-gray-200 rounded-xs  xl:pr-10"
+                className="flex items-center  gap-3 font-[400] text-sm pb-1 mb-1 hover:bg-gray-200 rounded-xs  xl:pr-10"
               >
                 <CiBoxList className="text-lg" />
                 <Link href={sublink.link}>{sublink.title}</Link>

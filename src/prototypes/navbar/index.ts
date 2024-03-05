@@ -1,4 +1,4 @@
-import { SOLUTIONS } from "@/constants/navbarConstants";
+import { SOLUTIONS } from "@/constants/navbar";
 
 export const SOLUTIONS_MENU = {
   title: SOLUTIONS,
