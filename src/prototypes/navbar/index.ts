@@ -54,17 +54,6 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
   ],
 };
 
-export const SIDE_MENU = [
-  {
-    title: SOLUTIONS,
-    subMenu: [
-      ...SOLUTIONS_MENU.subMenu[0].subMenuLinks,
-      ...SOLUTIONS_MENU.subMenu[1].subMenuLinks,
-      ...SOLUTIONS_MENU.subMenu[3].subMenuLinks,
-    ],
-  },
-];
-
 export const RESOURCES_MENU: ResourcesMenuType = {
   title: RESOURCES,
   submenu: [
@@ -130,3 +119,21 @@ export const PLATFORM_MENU: PlatformMenuType = {
     },
   ],
 };
+
+export const SIDE_MENU = [
+  {
+    title: SOLUTIONS,
+    subMenu: SOLUTIONS_MENU.subMenu.flatMap(
+      ({ subMenuHeading, subMenuLinks }) =>
+        subMenuHeading !== "Industry" ? subMenuLinks : null
+    ),
+  },
+  {
+    title: PLATFORM,
+    subMenu: PLATFORM_MENU.subMenu.map(({ title, link }) => ({ title, link })),
+  },
+  {
+    title: RESOURCES,
+    subMenu: RESOURCES_MENU.submenu,
+  },
+];
