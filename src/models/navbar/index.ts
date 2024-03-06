@@ -37,3 +37,15 @@ export type ResourcesMenuType = {
   title: string;
   submenu: ResourcesItemType[];
 };
+
+type subMenuType = {
+  title: string;
+  link: string;
+};
+
+type NavItemLinksType = {
+  title: string;
+  subMenu: subMenuType[];
+};
+
+export type SideMenuType = NavItemLinksType[];

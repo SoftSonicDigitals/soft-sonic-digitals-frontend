@@ -3,6 +3,7 @@ import {
   PlatformMenuType,
   SolutionsMenuType,
   ResourcesMenuType,
+  SideMenuType,
 } from "@/models/navbar";
 
 export const SOLUTIONS_MENU: SolutionsMenuType = {
@@ -120,12 +121,14 @@ export const PLATFORM_MENU: PlatformMenuType = {
   ],
 };
 
-export const SIDE_MENU = [
+export const SIDE_MENU: SideMenuType = [
   {
     title: SOLUTIONS,
     subMenu: SOLUTIONS_MENU.subMenu.flatMap(
-      ({ subMenuHeading, subMenuLinks }) =>
-        subMenuHeading !== "Industry" ? subMenuLinks : null
+      ({ subMenuHeading, subMenuLinks }) => {
+        if (subMenuHeading !== "Industry") return subMenuLinks;
+        else return [];
+      }
     ),
   },
   {
