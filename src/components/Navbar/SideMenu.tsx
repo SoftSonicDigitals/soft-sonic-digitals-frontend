@@ -58,7 +58,7 @@ const SideMenu = () => {
             >
               <IoCloseOutline className="text-2xl font-[700] " />
             </button>
-            {/* <div className="ml-4 mr-5 ">
+            <div className="ml-4 mr-5 ">
               {SIDE_MENU.map((optionMenu) => (
                 <div key={optionMenu.title}>
                   <div className=" border-b-[1px] border-gray-200">
@@ -74,7 +74,7 @@ const SideMenu = () => {
                   </div>
                 </div>
               ))}
-            </div> */}
+            </div>
             {/* <div className="ml-4 mr-5 ">
               <div>
                 <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
