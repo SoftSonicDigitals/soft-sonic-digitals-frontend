@@ -1,4 +1,11 @@
-import { PLATFORM, SOLUTIONS, RESOURCES } from "@/constants/navbar";
+import {
+  PLATFORM,
+  SOLUTIONS,
+  RESOURCES,
+  INDUSTRY,
+  CUSTOMER,
+} from "@/constants/navbar";
+
 import {
   PlatformMenuType,
   SolutionsMenuType,
@@ -136,7 +143,20 @@ export const SIDE_MENU: SideMenuType = [
     subMenu: PLATFORM_MENU.subMenu.map(({ title, link }) => ({ title, link })),
   },
   {
+    title: INDUSTRY,
+    subMenu: SOLUTIONS_MENU.subMenu.flatMap(
+      ({ subMenuHeading, subMenuLinks }) => {
+        if (subMenuHeading === "Industries") return subMenuLinks;
+        else return [];
+      }
+    ),
+  },
+  {
     title: RESOURCES,
     subMenu: RESOURCES_MENU.submenu,
+  },
+  {
+    title: CUSTOMER,
+    link: "/",
   },
 ];

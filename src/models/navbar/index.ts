@@ -45,7 +45,8 @@ type subMenuType = {
 
 type NavItemLinksType = {
   title: string;
-  subMenu: subMenuType[];
+  subMenu?: subMenuType[];
+  link?: string;
 };
 
 export type SideMenuType = NavItemLinksType[];
