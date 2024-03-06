@@ -3,8 +3,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPlus } from "react-icons/fa6";
-import { SIDE_MENU } from "@/prototypes/navbar";
+import { SideMenuLinks } from ".";
 
 const SideMenu = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
@@ -58,56 +57,7 @@ const SideMenu = () => {
             >
               <IoCloseOutline className="text-2xl font-[700] " />
             </button>
-            <div className="ml-4 mr-5 ">
-              {SIDE_MENU.map((optionMenu) => (
-                <div key={optionMenu.title}>
-                  <div className=" border-b-[1px] border-gray-200">
-                    <div className="text-gray-800 font-bold text-md flex items-center justify-between pb-3 mt-5">
-                      <p className="tracking-wider">{optionMenu.title}</p>
-                      <FaPlus />
-                    </div>
-                    <div>
-                      {optionMenu.subMenu.map((subMenu) => (
-                        <p key={subMenu.title}>{subMenu.title}</p>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* <div className="ml-4 mr-5 ">
-              <div>
-                <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
-                  <p className="tracking-wider">Solutions</p>
-                  <FaPlus />
-                </div>
-              </div>
-              <div>
-                <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
-                  <p className="tracking-wider">Platforms</p>
-                  <FaPlus />
-                </div>
-              </div>
-
-              <div>
-                <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
-                  <p className="tracking-wider">Industry</p>
-                  <FaPlus />
-                </div>
-              </div>
-              <div>
-                <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
-                  <p className="tracking-wider">Resources</p>
-                  <FaPlus />
-                </div>
-              </div>
-              <div>
-                <div className="text-gray-800 font-bold text-md flex items-center justify-between border-b-[1px] border-gray-200 pb-3 mt-5">
-                  <p className="tracking-wider">Customers</p>
-                  <FaPlus />
-                </div>
-              </div>
-            </div> */}
+            <SideMenuLinks />
           </motion.div>
         )}
       </AnimatePresence>

@@ -7,6 +7,8 @@ import SolutionsSubmenu from "./SolutionsSubmenu";
 import MenuBanner from "./MenuBanner";
 import ResourcesSubmenu from "./ResourcesSubmenu";
 import PlatformSubmenu from "./PlatformSubmenu";
+import SideMenuLinks from "./SideMenuLinks";
+import SideMenuLink from "./SideMenuLink";
 
 export {
   Navbar,
@@ -18,4 +20,6 @@ export {
   MenuBanner,
   ResourcesSubmenu,
   PlatformSubmenu,
+  SideMenuLinks,
+  SideMenuLink,
 };
