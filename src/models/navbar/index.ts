@@ -1,17 +1,31 @@
-type SubMenuLink = {
+type SolutionsSubMenuLink = {
   title: string;
   link: string;
 };
 
-type SubMenu = {
+type SolutionsSubMenu = {
   subMenuHeading: string;
-  subMenuLinks: SubMenuLink[];
+  subMenuLinks: SolutionsSubMenuLink[];
 };
 
-type SolutionsMenuType = {
+export type SolutionsMenuType = {
   title: string;
   description: string;
-  subMenu: SubMenu[];
+  subMenu: SolutionsSubMenu[];
+};
+
+type PlatformSubMenuItem = {
+  title: string;
+  description: string;
+  iconPath: string;
+  iconWidth: string;
+  link: string;
+};
+
+export type PlatformMenuType = {
+  title: string;
+  description: string;
+  subMenu: PlatformSubMenuItem[];
 };
 
 type ResourcesItemType = {

@@ -6,6 +6,7 @@ import Solutions from "./Solutions";
 import SolutionsSubmenu from "./SolutionsSubmenu";
 import MenuBanner from "./MenuBanner";
 import ResourcesSubmenu from "./ResourcesSubmenu";
+import PlatformSubmenu from "./PlatformSubmenu";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   SolutionsSubmenu,
   MenuBanner,
   ResourcesSubmenu,
+  PlatformSubmenu,
 };
