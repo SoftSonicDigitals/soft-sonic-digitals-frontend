@@ -5,6 +5,7 @@ import Resources from "./Resources";
 import Solutions from "./Solutions";
 import SolutionsSubmenu from "./SolutionsSubmenu";
 import MenuBanner from "./MenuBanner";
+import ResourcesSubmenu from "./ResourcesSubmenu";
 import PlatformSubmenu from "./PlatformSubmenu";
 
 export {
@@ -15,5 +16,6 @@ export {
   SideMenu,
   SolutionsSubmenu,
   MenuBanner,
+  ResourcesSubmenu,
   PlatformSubmenu,
 };

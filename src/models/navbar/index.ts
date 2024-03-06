@@ -27,3 +27,13 @@ export type PlatformMenuType = {
   description: string;
   subMenu: PlatformSubMenuItem[];
 };
+
+type ResourcesItemType = {
+  title: string;
+  link: string;
+};
+
+export type ResourcesMenuType = {
+  title: string;
+  submenu: ResourcesItemType[];
+};
