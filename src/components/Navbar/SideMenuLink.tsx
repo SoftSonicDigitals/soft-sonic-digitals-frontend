@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 type NavLink = {
   title: string;
@@ -6,11 +7,17 @@ type NavLink = {
 const SideMenuLink = ({ navLinks }: { navLinks: NavLink[] | undefined }) => {
   console.log(navLinks);
   return (
-    <div>
-      {navLinks?.map((item) => (
-        <p key={item.title}>{item.title}</p>
-      ))}
-    </div>
+    <>
+      <div className="flex flex-col gap-3 text-[14px] ml-6">
+        {navLinks?.map(({ title, link }: NavLink) => (
+          <div key={title} className="">
+            <Link href={link}>
+              {title.includes("-") ? title.split("-")[1].trim() : title}
+            </Link>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
