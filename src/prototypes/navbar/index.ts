@@ -126,7 +126,7 @@ export const SIDE_MENU: SideMenuType = [
     title: SOLUTIONS,
     subMenu: SOLUTIONS_MENU.subMenu.flatMap(
       ({ subMenuHeading, subMenuLinks }) => {
-        if (subMenuHeading !== "Industry") return subMenuLinks;
+        if (subMenuHeading !== "Industries") return subMenuLinks;
         else return [];
       }
     ),
