@@ -17,10 +17,10 @@
   @apply flex items-center justify-center;
 }
 .btn__backgroundcolor {
-  @apply bg-gradient-to-l from-orange to-pink;
+  @apply bg-gradient-to-r from-orange to-pink;
 }
 .btn__backgroundcolor:hover {
-  @apply bg-gradient-to-l from-pink to-orange;
+  @apply bg-gradient-to-r from-pink to-orange;
 }
 
 /* 
