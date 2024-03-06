@@ -24,7 +24,7 @@ const Resources = () => {
           />
         </div>
       </div>
-      {true && <ResourcesSubmenu setIsOpen={setIsSubMenuOpen} />}
+      {isSubMenuOpen && <ResourcesSubmenu setIsOpen={setIsSubMenuOpen} />}
     </>
   );
 };
