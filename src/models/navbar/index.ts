@@ -1,6 +1,7 @@
 type SolutionsSubMenuLink = {
   title: string;
   link: string;
+  description?: string;
 };
 
 type SolutionsSubMenu = {
