@@ -21,18 +21,46 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
     {
       subMenuHeading: "By Business",
       subMenuLinks: [
-        { title: "B2C ecommerce", link: "/" },
-        { title: "B2B ecommerce", link: "/" },
-        { title: "Multi-Vendor Marketplace", link: "/" },
+        {
+          title: "B2C ecommerce",
+          link: "/",
+          description: "Create customer centric experiences",
+        },
+        {
+          title: "B2B ecommerce",
+          link: "/",
+          description: "Empower your wholesale operations",
+        },
+        {
+          title: "Multi-Vendor Marketplace",
+          link: "/",
+          description: "Connect buyers and sellers seamlessly",
+        },
       ],
     },
     {
       subMenuHeading: "By Architecture & Channel",
       subMenuLinks: [
-        { title: "Composable Commerce", link: "/" },
-        { title: "Headless Commerce", link: "/" },
-        { title: "Hyva Development", link: "/" },
-        { title: "Mobile Commerce", link: "/" },
+        {
+          title: "Composable Commerce",
+          link: "/",
+          description: "Flexible, bespoken eCommerce solution",
+        },
+        {
+          title: "Headless Commerce",
+          link: "/",
+          description: "Liberate your platform with a frontend",
+        },
+        {
+          title: "Hyva Development",
+          link: "/",
+          description: "Custom theme development solution",
+        },
+        {
+          title: "Mobile Commerce",
+          link: "/",
+          description: "Enrich the Mobile shopping experience",
+        },
       ],
     },
     {
@@ -53,10 +81,31 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
     {
       subMenuHeading: "Data & Experience",
       subMenuLinks: [
-        { title: "PIM- Product Information Management", link: "/" },
-        { title: "DAM- Digital Asset Management", link: "/" },
-        { title: "DXP- Digital Expeience Platform", link: "/" },
-        { title: "MDM- Master Data Management", link: "/" },
+        {
+          title: "PIM- Product Information Management",
+          link: "/",
+          description: "Product Information Management",
+        },
+        {
+          title: "DAM- Digital Asset Management",
+          link: "/",
+          description: "Digital Asset Management",
+        },
+        {
+          title: "DXP- Digital Expeience Platform",
+          link: "/",
+          description: "Digital Expeience Platform",
+        },
+        {
+          title: "MDM- Master Data Management",
+          link: "/",
+          description: "Master Data Management",
+        },
+        {
+          title: "DCP- Digital Commerce Platform",
+          link: "/",
+          description: "Digital Commerce Platform",
+        },
       ],
     },
   ],
