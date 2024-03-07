@@ -7,6 +7,9 @@ export const COMMERCE_CATEGORIES: CommerceCategoriesTypes =
     .filter((menu) => menu.subMenuHeading !== "Industries")
 
     .map((menu) => ({
-      category_title: menu.subMenuHeading,
+      category_title:
+        menu.subMenuHeading === "Data & Experience"
+          ? "Individually Outstanding, Spectacular in Combination"
+          : menu.subMenuHeading,
       category_items: [...menu.subMenuLinks],
     }));
