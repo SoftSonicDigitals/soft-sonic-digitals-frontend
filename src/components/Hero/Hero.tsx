@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section id="Hero">
       <div className="wrapper_container flex-center  flex-col h-[57vh] 2xl:h-[45vh]">
-        <div className="flex flex-col gap-6 px-4 sm:px-0 2xl:mt-28 3xl:mt-0">
+        <div className="flex flex-col gap-6 px-4 sm:px-0 2xl:mt-28 3xl:mt-0 pt-16 3xl:pt-4">
           <div className="flex-center flex-col gap-6 text-center leading-tight ">
             <h1 className="text-[2.4rem] font-[500] mx-4 ">
               {HERO_MAIN_HEADING}
