@@ -1,7 +1,7 @@
 type CategoryItems = {
   title: string;
   link: string;
-  description: string;
+  description?: string;
 };
 
 type CommerceCatergory = {
