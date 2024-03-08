@@ -10,7 +10,7 @@
 }
 
 .wrapper_container {
-  @apply mx-auto  w-[95%] xl:w-[80%] 3xl:w-[50%];
+  @apply mx-auto  w-[95%] min-[1350px]:w-[87%] 3xl:w-[70%] min-[2050px]:w-[63%] min-[2380px]:w-[53%];
 }
 
 .flex-center {
