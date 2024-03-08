@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import { CategoryItem } from ".";
 
 const CategoriesMobileLayout = () => {
   const [selectedDropDownMenu, setSelectedDropDownMenu] = useState<
@@ -42,21 +43,13 @@ const CategoriesMobileLayout = () => {
           {isMenuOpen(selectedDropDownMenu, indexOfMenu) && (
             <div className=" my-3 flex flex-col gap-3">
               {category.category_items.map((item) => (
-                <div key={item.link} className="flex  gap-3 ml-4">
-                  <div className="relative w-6 h-6">
-                    <Image
-                      src={"/dropdown-icon.svg"}
-                      alt="dropdown-logo"
-                      fill
-                    />
-                  </div>
-                  <Link href={item.link} className="flex">
-                    {category.category_title ===
-                    "Individually Outstanding, Spectacular in Combination"
-                      ? `${item.title.split("-")[1]}`
-                      : item.title}
-                  </Link>
-                </div>
+                <CategoryItem
+                  key={item.link}
+                  categoryName={category.category_title}
+                  title={item.title}
+                  description={String(item.description)}
+                  link={item.link}
+                />
               ))}
             </div>
           )}
