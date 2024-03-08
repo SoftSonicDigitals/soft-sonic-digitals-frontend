@@ -15,7 +15,7 @@ const CategoryItem = ({
 }: CategoryItemProps) => {
   return (
     <Link key={title} href={link}>
-      <div className="flex  flex-col  gap-2 hover:bg-gray-0 p-3 pr-2 ml-4  xl:mx-3">
+      <div className="hidden md:flex  flex-col  gap-2 hover:bg-gray-0 p-3 pr-2 ml-4  xl:mx-3">
         <div className="flex gap-2">
           <div className="relative w-4 h-4 mt-1">
             <Image src={"/dropdown-icon.svg"} alt="dropdown-icon" fill />
@@ -28,6 +28,15 @@ const CategoryItem = ({
           </h3>
         </div>
         <p className="text-[0.8rem] lg:text-[0.9rem]  ml-6">{description}</p>
+      </div>
+
+      <div key={link} className="flex md:hidden gap-3 ml-4">
+        <div className="relative w-6 h-6">
+          <Image src={"/dropdown-icon.svg"} alt="dropdown-logo" fill />
+        </div>
+        {categoryName === "Individually Outstanding, Spectacular in Combination"
+          ? `${title.split("-")[1]}`
+          : title}
       </div>
     </Link>
   );
