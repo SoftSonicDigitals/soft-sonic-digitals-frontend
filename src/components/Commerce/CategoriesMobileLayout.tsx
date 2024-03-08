@@ -1,10 +1,12 @@
+"use client";
 import { COMMERCE_CATEGORIES } from "@/prototypes/commerce";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 
 const CategoriesMobileLayout = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <div className="mb-10">
       {COMMERCE_CATEGORIES.map((category) => (
@@ -25,7 +27,10 @@ const CategoriesMobileLayout = () => {
                   <Image src={"/dropdown-icon.svg"} alt="dropdown-logo" fill />
                 </div>
                 <Link href={item.link} className="flex">
-                  {item.title}
+                  {category.category_title ===
+                  "Individually Outstanding, Spectacular in Combination"
+                    ? `${item.title.split("-")[1]}`
+                    : item.title}
                 </Link>
               </div>
             ))}
