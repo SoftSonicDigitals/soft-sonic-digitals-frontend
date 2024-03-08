@@ -1,7 +1,6 @@
 import { COMMERCE_CATEGORIES } from "@/prototypes/commerce";
 import React from "react";
-import { CategoryItems } from ".";
-import { FaPlus } from "react-icons/fa6";
+import { CategoriesMobileLayout, CategoryItems } from ".";
 
 const Categories = () => {
   return (
@@ -24,21 +23,8 @@ const Categories = () => {
           </div>
         ))}
       </div>
-      <div className="mb-10">
-        {COMMERCE_CATEGORIES.map((category) => (
-          <div
-            key={category.category_title}
-            className="  first:border-t-[1px] border-b-[1px] border-gray-200 text-gray-800 mx-4 py-4 flex item-center justify-between "
-          >
-            <div>
-              <h4 className="font-[600] text-lg">{category.category_title}</h4>
-            </div>
-            <div className="flex-center mx-2">
-              <FaPlus className="cursor-pointer text-lg" />
-            </div>
-          </div>
-        ))}
-      </div>
+
+      <CategoriesMobileLayout />
     </>
   );
 };
