@@ -34,6 +34,7 @@ const config: Config = {
       },
     },
     colors: {
+      red: "#ed4542",
       white: "#ffffff",
       gray: {
         0: "#f8f9fa",
