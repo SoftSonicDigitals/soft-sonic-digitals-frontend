@@ -1,5 +1,7 @@
 import { RESULTS_DELIVERED } from "@/prototypes/Results";
+
 import React from "react";
+import { ResultsDeliveredItem } from ".";
 
 const ResultsDelivered = () => {
   return (
@@ -12,7 +14,7 @@ const ResultsDelivered = () => {
         </div>
         <div className="flex-center ">
           {RESULTS_DELIVERED.map(({ title, value }) => (
-          
+            <ResultsDeliveredItem key={title} title={title} value={value} />
           ))}
         </div>
       </div>
