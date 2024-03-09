@@ -1,5 +1,5 @@
 "use client";
-import { PLATFORM_MENU } from "@/prototypes/navbar";
+import { PLATFORM_MENU } from "@/prototypes/Navbar";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { PlatformSubmenu } from ".";
