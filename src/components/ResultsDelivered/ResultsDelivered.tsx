@@ -12,7 +12,7 @@ const ResultsDelivered = () => {
             The results we deliver
           </h1>
         </div>
-        <div className="flex-center ">
+        <div className="  grid grid-cols-2  gap-4 lg:gap-0 md:flex item-center justify-center md:flex-wrap md:px-12 lg:px-0">
           {RESULTS_DELIVERED.map(({ title, value }) => (
             <ResultsDeliveredItem key={title} title={title} value={value} />
           ))}
