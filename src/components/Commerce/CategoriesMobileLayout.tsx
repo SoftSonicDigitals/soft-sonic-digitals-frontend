@@ -23,7 +23,7 @@ const CategoriesMobileLayout = () => {
   };
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 md:hidden">
       {COMMERCE_CATEGORIES.map((category, indexOfMenu) => (
         <div
           onClick={() => toggleDropDown(indexOfMenu)}
