@@ -1,6 +1,9 @@
 import React from "react";
-
-const ResultDeliveredItem = () => {
+type ResultDeliveredItemProps = {
+  title: string;
+  value: string;
+};
+const ResultsDeliveredItem = ({ title, value }: ResultDeliveredItemProps) => {
   return (
     <div
       key={title}
@@ -15,4 +18,4 @@ const ResultDeliveredItem = () => {
   );
 };
 
-export default ResultDeliveredItem;
+export default ResultsDeliveredItem;

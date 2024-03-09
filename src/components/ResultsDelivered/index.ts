@@ -1,4 +1,4 @@
-import ResultDeliveredItem from "./ResultDeliveredItem";
+import ResultsDeliveredItem from "./ResultsDeliveredItem";
 import ResultsDelivered from "./ResultsDelivered";
 
-export { ResultsDelivered, ResultDeliveredItem };
+export { ResultsDelivered, ResultsDeliveredItem };
