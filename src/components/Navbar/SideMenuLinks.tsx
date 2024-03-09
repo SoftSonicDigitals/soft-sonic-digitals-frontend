@@ -1,5 +1,5 @@
 "use client";
-import { SIDE_MENU } from "@/prototypes/navbar";
+import { SIDE_MENU } from "@/prototypes/Navbar";
 import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
 import { FaMinus } from "react-icons/fa6";

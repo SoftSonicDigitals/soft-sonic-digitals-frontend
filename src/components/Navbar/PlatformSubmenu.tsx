@@ -1,4 +1,4 @@
-import { PLATFORM_MENU } from "@/prototypes/navbar";
+import { PLATFORM_MENU } from "@/prototypes/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

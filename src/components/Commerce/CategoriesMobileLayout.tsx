@@ -1,5 +1,5 @@
 "use client";
-import { COMMERCE_CATEGORIES } from "@/prototypes/commerce";
+import { COMMERCE_CATEGORIES } from "@/prototypes/Commerce";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";

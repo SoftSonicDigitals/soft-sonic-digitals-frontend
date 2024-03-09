@@ -1,4 +1,4 @@
-import { COMMERCE_CATEGORIES } from "@/prototypes/commerce";
+import { COMMERCE_CATEGORIES } from "@/prototypes/Commerce";
 import React from "react";
 import { CategoriesMobileLayout, CategoryItems } from ".";
 
