@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { SolutionsSubmenu } from ".";
-import { SOLUTIONS_MENU } from "@/prototypes/Navbar";
+import { SOLUTIONS_MENU } from "@/prototypes/navbar";
 
 const Solutions = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);

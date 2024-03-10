@@ -1,4 +1,4 @@
-import { RESOURCES_MENU } from "@/prototypes/Navbar";
+import { RESOURCES_MENU } from "@/prototypes/navbar";
 import Link from "next/link";
 import React from "react";
 type ResourcesSubmenuProps = {

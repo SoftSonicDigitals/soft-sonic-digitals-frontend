@@ -1,5 +1,5 @@
 import { CommerceCategoriesTypes } from "@/models/Commerce";
-import { SOLUTIONS_MENU } from "../Navbar";
+import { SOLUTIONS_MENU } from "../navbar";
 
 export const COMMERCE_CATEGORIES: CommerceCategoriesTypes =
   SOLUTIONS_MENU.subMenu

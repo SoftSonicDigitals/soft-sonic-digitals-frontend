@@ -4,14 +4,14 @@ import {
   RESOURCES,
   INDUSTRY,
   CUSTOMER,
-} from "@/constants/Navbar";
+} from "@/constants/navbar";
 
 import {
   PlatformMenuType,
   SolutionsMenuType,
   ResourcesMenuType,
   SideMenuType,
-} from "@/models/Navbar";
+} from "@/models/navbar";
 
 export const SOLUTIONS_MENU: SolutionsMenuType = {
   title: SOLUTIONS,

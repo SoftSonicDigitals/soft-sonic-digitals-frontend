@@ -1,6 +1,6 @@
 "use client";
 
-import { SOLUTIONS_MENU } from "@/prototypes/Navbar";
+import { SOLUTIONS_MENU } from "@/prototypes/navbar";
 import Link from "next/link";
 import React from "react";
 import { CiBoxList } from "react-icons/ci";

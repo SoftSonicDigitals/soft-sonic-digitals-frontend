@@ -1,4 +1,4 @@
-import { BANNER_DETAILS } from "@/constants/Navbar";
+import { BANNER_DETAILS } from "@/constants/navbar";
 import Link from "next/link";
 import React from "react";
 
