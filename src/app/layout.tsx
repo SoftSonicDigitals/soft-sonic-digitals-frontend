@@ -6,6 +6,7 @@ import { Navbar } from "@/components/Navbar";
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
