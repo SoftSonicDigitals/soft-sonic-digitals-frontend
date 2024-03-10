@@ -1,6 +1,6 @@
 import { ClientsType } from "@/models/clients";
 
-const CLIENTS: ClientsType = [
+export const CLIENTS: ClientsType = [
   { id: "1", imgPath: "/neom.pngw3.webp" },
   { id: "2", imgPath: "/hyundai.pngw3.webp" },
   { id: "3", imgPath: "/pif.jpgw3.webp" },
