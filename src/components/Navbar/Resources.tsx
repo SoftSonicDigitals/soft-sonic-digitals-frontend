@@ -1,5 +1,5 @@
 "use client";
-import { RESOURCES } from "@/constants/Navbar";
+import { RESOURCES } from "@/constants/navbar";
 import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { ResourcesSubmenu } from ".";
