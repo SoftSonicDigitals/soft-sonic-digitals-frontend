@@ -1,8 +1,8 @@
-import { RESULTS_DELIVERED } from "@/prototypes/Results";
+import { RESULTS_DELIVERED } from "@/prototypes/results";
 
 import React from "react";
 import { ResultsDeliveredItem } from ".";
-import { RESULTS_DELIVERED_HEADING } from "@/constants/Results";
+import { RESULTS_DELIVERED_HEADING } from "@/constants/results";
 
 const ResultsDelivered = () => {
   return (

@@ -4,7 +4,7 @@ import {
   HERO_BUTTON_TEXT,
   HERO_MAIN_HEADING,
   HERO_SUB_HEADING,
-} from "@/constants/Hero";
+} from "@/constants/hero";
 
 const Hero = () => {
   return (

@@ -1,4 +1,4 @@
-import { ResultsDeliveredType } from "@/models/Results";
+import { ResultsDeliveredType } from "@/models/results";
 
 export const RESULTS_DELIVERED: ResultsDeliveredType[] = [
   { title: "Global Team", value: "120" },

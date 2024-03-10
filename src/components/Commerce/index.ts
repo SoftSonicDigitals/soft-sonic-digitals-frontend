@@ -4,7 +4,8 @@ import CategoryItems from "./CategoryItems";
 import CategoryItem from "./CategoryItem";
 import CategoriesMobileLayout from "./CategoriesMobileLayout";
 
-CategoryItem;
+export * from "./Commerce";
+
 export {
   Commerce,
   Categories,

@@ -1,7 +1,7 @@
 import {
   COMMERCE_MAIN_HEADING,
   COMMERCE_SUB_HEADING,
-} from "@/constants/Commerce";
+} from "@/constants/commerce";
 import React from "react";
 import { Categories } from ".";
 

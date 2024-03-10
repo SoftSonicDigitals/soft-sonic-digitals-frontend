@@ -1,4 +1,4 @@
-import { CommerceCategoriesTypes } from "@/models/Commerce";
+import { CommerceCategoriesTypes } from "@/models/commerce";
 import { SOLUTIONS_MENU } from "../navbar";
 
 export const COMMERCE_CATEGORIES: CommerceCategoriesTypes =
