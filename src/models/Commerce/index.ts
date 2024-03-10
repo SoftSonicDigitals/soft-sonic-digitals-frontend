@@ -9,4 +9,4 @@ type CommerceCatergory = {
   category_items: CategoryItems[];
 };
 
-export type CommerceCategoriesTypes = [];
+export type CommerceCategoriesTypes = CommerceCatergory[];
