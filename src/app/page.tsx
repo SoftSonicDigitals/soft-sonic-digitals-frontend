@@ -1,3 +1,4 @@
+import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
@@ -9,6 +10,7 @@ const page = () => {
       <Hero />
       <Commerce />
       <ResultsDelivered />
+      <Clients />
     </main>
   );
 };
