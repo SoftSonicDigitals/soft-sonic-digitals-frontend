@@ -1,9 +1,6 @@
-import {
-  COMMERCE_MAIN_HEADING,
-  COMMERCE_SUB_HEADING,
-} from "@/constants/commerce";
 import React from "react";
 import { Categories } from ".";
+import { COMMERCE_MAIN_HEADING, COMMERCE_SUB_HEADING } from "@/constants/commerce";
 
 const Commerce = () => {
   return (
