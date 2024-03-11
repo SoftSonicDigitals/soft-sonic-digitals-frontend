@@ -25,14 +25,14 @@
 
 .rule_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
   align-items: stretch;
   gap: var(--gap);
   overflow: hidden;
 
-  --gap: 01rem;
-  --line-color: gray;
-  --line_thickness: 2px;
+  --gap: 1rem;
+  --line-color: #d1d7e0;
+  --line_thickness: 1px;
   --line-offset: calc(var(--gap) / 2);
 }
 

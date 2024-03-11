@@ -6,8 +6,8 @@ import { RESULTS_DELIVERED_HEADING } from "@/constants/results";
 
 const ResultsDelivered = () => {
   return (
-    <section>
-      <div className="wrapper_container mt-24 mb-24 ">
+    <section id="results">
+      <div className="wrapper_container my-24 ">
         <div className="flex-center mb-12">
           <h1 className="text-2xl md:text-[2.1rem] font-[500] mx-4 text-gray-800 ">
             {RESULTS_DELIVERED_HEADING}
