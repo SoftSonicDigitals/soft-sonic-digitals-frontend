@@ -6,10 +6,8 @@ const Clients = () => {
   return (
     <section id="clients">
       <div className="wrapper_container mb-24 md:px-16 lg:px-0 2xl:px-16 3xl:px-[2.8rem]">
-        <div className="rule_grid grid-cols-4">
+        <div className="rule_grid grid grid-cols-4 overflow-hidden">
           {CLIENTS.map(({ id, imgPath }) => (
-            // <div key={id} className="card w-[88px] h-[44px]">
-            //   <div className="relative w-full h-full ">
             <div key={id} className="card py-3 md:py-4">
               <Image
                 width={288}
@@ -20,8 +18,6 @@ const Clients = () => {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            //   </div>
-            // </div>
           ))}
         </div>
       </div>
