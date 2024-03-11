@@ -14,7 +14,6 @@ const Clients = () => {
                 height={88}
                 src={`/clients/${imgPath}`}
                 alt="client logo"
-                layout="responsive"
                 style={{ objectFit: "contain" }}
               />
             </div>
