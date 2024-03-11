@@ -1,6 +1,7 @@
 import { CLIENTS } from "@/prototypes/clients";
 import Image from "next/image";
 import React from "react";
+import { CLIENT_IMG_WIDTH, CLIENT_IMG_HEIGHT } from "@/constants/clients";
 
 const Clients = () => {
   return (
@@ -10,8 +11,8 @@ const Clients = () => {
           {CLIENTS.map(({ id, imgName }) => (
             <div key={id} className="card py-3 md:py-4">
               <Image
-                width={288}
-                height={88}
+                width={CLIENT_IMG_WIDTH}
+                height={CLIENT_IMG_HEIGHT}
                 src={`/clients/${imgName}`}
                 alt="client logo"
                 style={{ objectFit: "contain" }}
