@@ -1,4 +1,4 @@
 export type ClientsType = {
   id: string;
-  imgPath: string;
+  imgName: string;
 }[];
