@@ -7,11 +7,8 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
-import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
-import Image from "next/image";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
-import Link from "next/link";
-import Testimony from "./Testimony";
+import { Testimony } from ".";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -23,15 +20,7 @@ const EmblaCarousel = () => {
   const tweenFactor = useRef(0);
   const tweenNodes = useRef<HTMLElement[]>([]);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
-
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
+  const { onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
   const setTweenNodes = useCallback((emblaApi: EmblaCarouselType): void => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
@@ -96,7 +85,7 @@ const EmblaCarousel = () => {
       .on("reInit", setTweenFactor)
       .on("reInit", tweenScale)
       .on("scroll", tweenScale);
-  }, [emblaApi, tweenScale]);
+  }, [emblaApi, tweenScale, setTweenNodes, setTweenFactor]);
 
   return (
     <div className="embla">
@@ -115,22 +104,10 @@ const EmblaCarousel = () => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <DotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected" : ""
-              )}
-            />
-          ))}
+      <div className="flex-center mt-8">
+        <div className="flex gap-4">
+          <PrevButton onClick={onPrevButtonClick} />
+          <NextButton onClick={onNextButtonClick} />
         </div>
       </div>
     </div>
