@@ -3,7 +3,7 @@ import React from "react";
 const VideoCarousel = () => {
   return (
     <section id="video_carousel">
-      <div className="wrapper_container">Video Carousel</div>
+      <div className="wrapper_container">Video</div>
     </section>
   );
 };
