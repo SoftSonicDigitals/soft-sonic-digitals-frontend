@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoCarousel = () => {
+const Testimonails = () => {
   return (
     <section id="video_carousel">
       <div className="wrapper_container">Video</div>
@@ -8,4 +8,4 @@ const VideoCarousel = () => {
   );
 };
 
-export default VideoCarousel;
+export default Testimonails;
