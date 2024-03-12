@@ -3,5 +3,5 @@ export type TestimonialsType = {
   name: string;
   position: string;
   thumbnail: string;
-  videoLink: string;
+  videoKey: string;
 };
