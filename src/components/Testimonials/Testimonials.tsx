@@ -5,7 +5,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import { Testimony } from ".";
-import MyModal from "./Modal";
 
 // changes the slides next to the centered
 const TWEEN_FACTOR_BASE = 0.21;
@@ -114,7 +113,6 @@ const EmblaCarousel = () => {
           </div>
         </div>
       </div>
-      <MyModal />
     </section>
   );
 };
