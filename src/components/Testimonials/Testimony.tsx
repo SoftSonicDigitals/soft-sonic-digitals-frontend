@@ -1,21 +1,42 @@
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
-const Testimony = () => {
+
+type TestimonyPropsType = {
+  id: string;
+  name: string;
+  position: string;
+  thumbnail: string;
+  videoLink: string;
+};
+
+const Testimony = ({
+  id,
+  name,
+  position,
+  thumbnail,
+  videoLink,
+}: TestimonyPropsType) => {
   return (
-    <div>
-      <div>
-        <Image
-          src={`/testimonials/${TESTIMONIALS[0].thumbnail}`}
-          alt="testimony"
-          width={752}
-          height={416}
-          style={{ objectFit: "contain" }}
-        />
-      </div>
-      <div>
-        <h1>{TESTIMONIALS[0].name}</h1>
-        <p>{TESTIMONIALS[0].position}</p>
+    <div className="embla__slide" key={id}>
+      <div className="embla__slide__container ">
+        <div className="flex-col flex">
+          <Link href={videoLink}>
+            <Image
+              src={`/testimonials/${thumbnail}`}
+              alt="img"
+              width={752}
+              height={416}
+              style={{ objectFit: "contain" }}
+            />
+          </Link>
+
+          <div className="mt-8">
+            <h1 className="text-2xl font-[600] tracking-wider">{name}</h1>
+            <p className="text-md text-gray-700 mt-1">{position}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

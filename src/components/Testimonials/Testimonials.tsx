@@ -11,6 +11,7 @@ import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import Image from "next/image";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import Link from "next/link";
+import Testimony from "./Testimony";
 
 const TWEEN_FACTOR_BASE = 0.2;
 
@@ -102,28 +103,14 @@ const EmblaCarousel = () => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {TESTIMONIALS.map(({ id, name, position, thumbnail, videoLink }) => (
-            <div className="embla__slide" key={id}>
-              <div className="embla__slide__container ">
-                <div className="flex-col flex">
-                  <Link href={videoLink}>
-                    <Image
-                      src={`/testimonials/${thumbnail}`}
-                      alt="img"
-                      width={752}
-                      height={416}
-                      style={{ objectFit: "contain" }}
-                    />
-                  </Link>
-
-                  <div className="mt-8">
-                    <h1 className="text-2xl font-[600] tracking-wider">
-                      {name}
-                    </h1>
-                    <p className="text-md text-gray-700 mt-1">{position}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <Testimony
+              key={id}
+              id={id}
+              name={name}
+              position={position}
+              thumbnail={thumbnail}
+              videoLink={videoLink}
+            />
           ))}
         </div>
       </div>
