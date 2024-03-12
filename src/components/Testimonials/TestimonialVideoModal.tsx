@@ -56,7 +56,7 @@ export default function TestimonialVideoModal({
               >
                 <Dialog.Panel className=" relative w-[650px] h-[340px] transform overflow-hidden shadow-xl transition-all">
                   <iframe
-                    src={`https://www.youtube.com/embed/C_UTN096Z20`}
+                    src={`https://www.youtube.com/embed/${videoKey}`}
                     className=" w-[598px] h-[320px] mt-4"
                   />
                   <button
