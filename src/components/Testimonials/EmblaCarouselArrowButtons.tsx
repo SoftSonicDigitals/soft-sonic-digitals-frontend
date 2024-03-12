@@ -1,7 +1,6 @@
 import React, { PropsWithChildren, useCallback } from "react";
 
 import { EmblaCarouselType } from "embla-carousel";
-
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 type UsePrevNextButtonsType = {

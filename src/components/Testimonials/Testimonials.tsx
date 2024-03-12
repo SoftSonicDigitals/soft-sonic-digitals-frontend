@@ -88,29 +88,35 @@ const EmblaCarousel = () => {
   }, [emblaApi, tweenScale, setTweenNodes, setTweenFactor]);
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          {TESTIMONIALS.map(({ id, name, position, thumbnail, videoLink }) => (
-            <Testimony
-              key={id}
-              id={id}
-              name={name}
-              position={position}
-              thumbnail={thumbnail}
-              videoLink={videoLink}
-            />
-          ))}
-        </div>
-      </div>
+    <section id="testimonials">
+      <div className="wrapper_copntainer mb-24">
+        <div className="embla">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="embla__container">
+              {TESTIMONIALS.map(
+                ({ id, name, position, thumbnail, videoLink }) => (
+                  <Testimony
+                    key={id}
+                    id={id}
+                    name={name}
+                    position={position}
+                    thumbnail={thumbnail}
+                    videoLink={videoLink}
+                  />
+                )
+              )}
+            </div>
+          </div>
 
-      <div className="flex-center mt-8">
-        <div className="flex gap-4">
-          <PrevButton onClick={onPrevButtonClick} />
-          <NextButton onClick={onNextButtonClick} />
+          <div className="flex-center mt-8">
+            <div className="flex gap-4">
+              <PrevButton onClick={onPrevButtonClick} />
+              <NextButton onClick={onNextButtonClick} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
