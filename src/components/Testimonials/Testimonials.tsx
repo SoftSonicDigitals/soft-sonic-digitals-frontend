@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { NextButton, PrevButton, usePrevNextButtons } from "./";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import { Testimony } from ".";
+import MyModal from "./Modal";
 
 // changes the slides next to the centered
 const TWEEN_FACTOR_BASE = 0.21;
@@ -91,14 +92,14 @@ const EmblaCarousel = () => {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="embla__container">
               {TESTIMONIALS.map(
-                ({ id, name, position, thumbnail, videoLink }) => (
+                ({ id, name, position, thumbnail, videoKey }) => (
                   <Testimony
                     key={id}
                     id={id}
                     name={name}
                     position={position}
                     thumbnail={thumbnail}
-                    videoLink={videoLink}
+                    videoKey={videoKey}
                   />
                 )
               )}
@@ -113,6 +114,7 @@ const EmblaCarousel = () => {
           </div>
         </div>
       </div>
+      <MyModal />
     </section>
   );
 };

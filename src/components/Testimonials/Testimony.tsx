@@ -8,7 +8,7 @@ type TestimonyPropsType = {
   name: string;
   position: string;
   thumbnail: string;
-  videoLink: string;
+  videoKey: string;
 };
 
 const Testimony = ({
@@ -16,13 +16,13 @@ const Testimony = ({
   name,
   position,
   thumbnail,
-  videoLink,
+  videoKey,
 }: TestimonyPropsType) => {
   return (
     <div className="embla__slide" key={id}>
       <div className="embla__slide__container flex-center">
         <div className="flex-col flex">
-          <Link href={videoLink}>
+          <Link href={videoKey}>
             <Image
               src={`/testimonials/${thumbnail}`}
               alt="img"
