@@ -20,7 +20,7 @@ const Testimony = ({
 }: TestimonyPropsType) => {
   return (
     <div className="embla__slide" key={id}>
-      <div className="embla__slide__container ">
+      <div className="embla__slide__container flex-center">
         <div className="flex-col flex">
           <Link href={videoLink}>
             <Image

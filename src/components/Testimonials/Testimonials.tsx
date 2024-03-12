@@ -2,15 +2,12 @@
 import React, { useCallback, useEffect, useRef } from "react";
 import { EmblaCarouselType, EmblaEventType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  NextButton,
-  PrevButton,
-  usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
+import { NextButton, PrevButton, usePrevNextButtons } from "./";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import { Testimony } from ".";
 
-const TWEEN_FACTOR_BASE = 0.2;
+// changes the slides next to the centered
+const TWEEN_FACTOR_BASE = 0.21;
 
 const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
@@ -89,8 +86,8 @@ const EmblaCarousel = () => {
 
   return (
     <section id="testimonials">
-      <div className="wrapper_copntainer mb-24">
-        <div className="embla">
+      <div className="wrapper_container mb-24">
+        <div className="embla px-4 sm:px-6 md:px-[5%] lg:px-0">
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="embla__container">
               {TESTIMONIALS.map(
