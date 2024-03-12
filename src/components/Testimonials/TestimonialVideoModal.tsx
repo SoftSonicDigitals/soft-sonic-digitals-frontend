@@ -1,3 +1,4 @@
+"use client";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { IoClose } from "react-icons/io5";
@@ -22,16 +23,9 @@ export default function TestimonialVideoModal({
 
   return (
     <>
-      <div className=" inset-0 flex items-center justify-center">
-        <button
-          type="button"
-          onClick={openModal}
-          className="rounded-md bg-black/20 px-4 py-2 text-3xl font-medium text-black hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75  "
-        >
-          {children}
-        </button>
+      <div onClick={openModal} className="embla__slide">
+        {children}
       </div>
-
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child

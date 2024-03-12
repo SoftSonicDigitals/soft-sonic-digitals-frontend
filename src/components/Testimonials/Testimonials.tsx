@@ -61,9 +61,16 @@ const EmblaCarousel = () => {
           }
 
           const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor.current);
-          const scale = numberWithinRange(tweenValue, 0, 1).toString();
+          // const scale = numberWithinRange(tweenValue, 0, 1).toString();
+          // const tweenNode = tweenNodes.current[slideIndex];
+          // tweenNode.style.transform = `scale(${scale})`;
           const tweenNode = tweenNodes.current[slideIndex];
-          tweenNode.style.transform = `scale(${scale})`;
+
+          if (tweenNode) {
+            // Check if tweenNode is not null
+            const scale = numberWithinRange(tweenValue, 0, 1).toString();
+            tweenNode.style.transform = `scale(${scale})`;
+          }
         });
       });
     },
