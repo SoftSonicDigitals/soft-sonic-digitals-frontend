@@ -1,6 +1,6 @@
 import { TestimonialsType } from "@/models/testimonials";
 
-const TESTIMONIALS: TestimonialsType[] = [
+export const TESTIMONIALS: TestimonialsType[] = [
   {
     id: "1",
     name: "Max Herber",
