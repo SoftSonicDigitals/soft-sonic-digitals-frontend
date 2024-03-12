@@ -2,6 +2,7 @@ import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
+import { VideoCarousel } from "@/components/VideoCarousel";
 import React from "react";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <Commerce />
       <ResultsDelivered />
       <Clients />
+      <VideoCarousel />
     </main>
   );
 };
