@@ -64,28 +64,29 @@ background-image: linear-gradient(90deg, #f6702d 0%, #d1304d 100%); */
 
 /* carousel styles */
 
-.embla {
-  max-width: 69rem;
-  margin: auto;
-
-  --slide-spacing: 0.5rem;
-  --slide-size: 35%;
+.slick-list {
+  overflow: visible !important;
+  padding-bottom: 50px !important;
 }
 
-.embla__container {
-  display: flex;
-  touch-action: pan-y;
-  margin-left: calc(var(--slide-spacing) * -1);
-}
-.embla__slide {
-  flex: 0 0 var(--slide-size);
-  min-width: 0;
-  padding-left: var(--slide-spacing);
+/* .slick-slide {
+  opacity: 0;
+  pointer-events: none;
 }
 
-@media (max-width: 1000px) {
-  .embla__slide {
-    /* Set slide size to 100% for mobile and tablets */
-    flex: 0 0 100%;
-  }
+.slick-slide.slick-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.slick-cloned.slick-active {
+  opacity: 1;
+} */
+
+.slick-active {
+  transition: all 300ms;
+  scale: 0.95;
+}
+
+.slick-current {
+  scale: 1.15;
 }
