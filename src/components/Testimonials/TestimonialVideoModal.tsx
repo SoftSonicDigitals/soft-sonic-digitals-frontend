@@ -1,31 +1,26 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Dispatch, Fragment, SetStateAction } from "react";
 import { IoClose } from "react-icons/io5";
 
 type VideoModalType = {
   videoKey: string;
-  children: React.ReactNode;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 export default function TestimonialVideoModal({
   videoKey,
-  children,
+  isOpen,
+  setIsOpen,
 }: VideoModalType) {
-  let [isOpen, setIsOpen] = useState(false);
-
   function closeModal() {
     setIsOpen(false);
   }
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  function openModal() {}
 
   return (
     <>
-      <div onClick={openModal} className="embla__slide">
-        {children}
-      </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
           <Transition.Child
