@@ -65,7 +65,7 @@ background-image: linear-gradient(90deg, #f6702d 0%, #d1304d 100%); */
 /* carousel styles */
 
 .slick-list {
-  @apply !overflow-visible lg:!pb-[30px] xl:!pb-[50px];
+  @apply !overflow-visible !pb-[50px] lg:!pb-[30px] xl:!pb-[50px];
 }
 
 .slick-slide {
