@@ -3,13 +3,21 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { TESTIMONIALS } from "@/prototypes/testimonials";
-import React, { Component } from "react";
+import React, { MutableRefObject, useRef } from "react";
 import Slider from "react-slick";
 import { Testimony } from ".";
 
-// Loop through each slick slide
-
 const Testimonials = () => {
+  let sliderRef = useRef<Slider | null>(null);
+  const next = () => {
+    // bug for typescript
+
+    (sliderRef as any).slickNext();
+  };
+  const previous = () => {
+    // bug for typescript
+    (sliderRef as any).slickPrev();
+  };
   const settings = {
     centerMode: true,
 
@@ -33,7 +41,13 @@ const Testimonials = () => {
   return (
     <div className="wrapper_container">
       <div className="slider-container">
-        <Slider {...settings}>
+        <Slider
+          {...settings}
+          ref={(slider) => {
+            // Typenot working properly FIX needed For the component
+            sliderRef = slider as unknown as MutableRefObject<Slider | null>;
+          }}
+        >
           {TESTIMONIALS.map(({ id, name, position, thumbnail, videoKey }) => (
             <Testimony
               key={id}

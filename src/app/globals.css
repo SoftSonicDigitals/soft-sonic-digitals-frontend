@@ -69,7 +69,7 @@ background-image: linear-gradient(90deg, #f6702d 0%, #d1304d 100%); */
   padding-bottom: 50px !important;
 }
 
-/* .slick-slide {
+.slick-slide {
   opacity: 0;
   pointer-events: none;
 }
@@ -80,7 +80,7 @@ background-image: linear-gradient(90deg, #f6702d 0%, #d1304d 100%); */
 }
 .slick-cloned.slick-active {
   opacity: 1;
-} */
+}
 
 .slick-active {
   transition: all 300ms;
