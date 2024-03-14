@@ -1,3 +1,4 @@
+import { CaseStudies } from "@/components/CaseStudies";
 import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
 import { Hero } from "@/components/Hero";
@@ -11,6 +12,7 @@ const page = () => {
       <Commerce />
       <ResultsDelivered />
       <Clients />
+      <CaseStudies />
     </main>
   );
 };
