@@ -2,6 +2,10 @@ import { CASE_STUDIES } from "@/prototypes/case_studies";
 import React from "react";
 import { CaseStudy } from ".";
 import { PrimaryButton } from "../Reusable";
+import {
+  CASE_STUDIES_HEADING,
+  CASE_STUDIES_SUBHEADING,
+} from "@/constants/case_studies";
 
 const CaseStudies = () => {
   return (
@@ -9,11 +13,10 @@ const CaseStudies = () => {
       <div className="wrapper_container mb-24">
         <div className="flex-center flex-col mb-16 gap-4 ">
           <h1 className="text-2xl md:text-[2.1rem] font-[500] mx-4 ">
-            Case studies & stories
+            {CASE_STUDIES_HEADING}
           </h1>
           <p className="text-xl font-[500] text-gray-800">
-            As a digital commerce development agency, we work together across
-            the globe to make a difference
+            {CASE_STUDIES_SUBHEADING}
           </p>
         </div>
         <div className="flex-center mb-16 ">
