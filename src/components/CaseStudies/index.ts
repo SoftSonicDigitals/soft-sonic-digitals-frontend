@@ -1,3 +1,4 @@
 import CaseStudies from "./CaseStudies";
+import CaseStudy from "./CaseStudy";
 
-export { CaseStudies };
+export { CaseStudies, CaseStudy };
