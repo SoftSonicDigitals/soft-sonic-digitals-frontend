@@ -1,4 +1,6 @@
-const CASE_STUDIES = [
+import { CaseStudiesType } from "@/models/case_studies";
+
+export const CASE_STUDIES: CaseStudiesType = [
   {
     id: "1",
     title: "Feather Down",
