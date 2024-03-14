@@ -18,6 +18,7 @@ const Testimonials = () => {
     // bug for typescript
     (sliderRef as any).slickPrev();
   };
+
   const settings = {
     centerMode: true,
     infinite: true,
@@ -37,7 +38,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="wrapper_container">
+    <div className="wrapper_container mb-24">
       <div className="slider-container">
         <Slider
           {...settings}
