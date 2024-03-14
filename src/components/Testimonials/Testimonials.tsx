@@ -20,7 +20,6 @@ const Testimonials = () => {
   };
   const settings = {
     centerMode: true,
-
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -32,7 +31,6 @@ const Testimonials = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
         },
       },
     ],
