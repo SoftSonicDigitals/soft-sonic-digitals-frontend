@@ -38,8 +38,10 @@ const Testimony = ({
           </div>
 
           <div className="mt-8">
-            <h1 className="text-2xl font-[600] tracking-wider">{name}</h1>
-            <p className="text-md text-gray-700 mt-1">{position}</p>
+            <h1 className="text-xl sm:text-2xl font-[600] tracking-wider">
+              {name}
+            </h1>
+            <p className="text-sm sm:text-md text-gray-700 mt-1">{position}</p>
           </div>
         </div>
       </div>
