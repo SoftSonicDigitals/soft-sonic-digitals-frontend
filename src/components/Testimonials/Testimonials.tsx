@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { TESTIMONIALS } from "@/prototypes/testimonials";
 import React, { MutableRefObject, useRef } from "react";
 import Slider from "react-slick";
-import { Testimony } from ".";
+import { NextArrow, PreviousArrow, Testimony } from ".";
 
 const Testimonials = () => {
   let sliderRef = useRef<Slider | null>(null);
@@ -59,6 +59,10 @@ const Testimonials = () => {
             />
           ))}
         </Slider>
+      </div>
+      <div className="flex-center gap-5">
+        <PreviousArrow onClick={previous} />
+        <NextArrow onClick={next} />
       </div>
     </div>
   );
