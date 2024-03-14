@@ -11,11 +11,11 @@ const CaseStudies = () => {
   return (
     <section id="case_studies">
       <div className="wrapper_container mb-24">
-        <div className="flex-center flex-col mb-16 gap-4 ">
+        <div className="flex-center flex-col mb-16 gap-4 px-5 md:px-8 ">
           <h1 className="text-2xl md:text-[2.1rem] font-[500] mx-4 ">
             {CASE_STUDIES_HEADING}
           </h1>
-          <p className="text-xl font-[500] text-gray-800">
+          <p className="text-[1rem] md:text-xl font-[500] text-gray-800 text-center">
             {CASE_STUDIES_SUBHEADING}
           </p>
         </div>
