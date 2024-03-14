@@ -14,13 +14,13 @@ export const CASE_STUDIES: CaseStudiesType = [
     link: "/",
   },
   {
-    id: "1",
+    id: "3",
     title: "Power Look",
     imageName: "Powerlook.webp",
     link: "/",
   },
   {
-    id: "1",
+    id: "4",
     title: "Pet Zone",
     imageName: "Petzone.webp",
     link: "/",
