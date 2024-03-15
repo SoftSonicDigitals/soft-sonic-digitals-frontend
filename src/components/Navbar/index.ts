@@ -1,6 +1,6 @@
 import SideMenu from "./SideMenu";
 import Navbar from "./Navbar";
-import Platform from "./Platform";
+import Platforms from "./Platforms";
 import Resources from "./Resources";
 import Solutions from "./Solutions";
 import SolutionsSubmenu from "./SolutionsSubmenu";
@@ -13,7 +13,7 @@ import SideMenuLink from "./SideMenuLink";
 export {
   Navbar,
   Solutions,
-  Platform,
+  Platforms,
   Resources,
   SideMenu,
   SolutionsSubmenu,

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { PlatformSubmenu } from ".";
 
-const Platform = () => {
+const Platforms = () => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
   return (
     <>
@@ -27,4 +27,4 @@ const Platform = () => {
   );
 };
 
-export default Platform;
+export default Platforms;
