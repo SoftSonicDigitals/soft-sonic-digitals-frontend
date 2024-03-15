@@ -38,7 +38,7 @@ const Platform = ({
           <Image src={iconPath} alt={`${title}-logo`} fill />
         </div>
         <div className={`${infoContainerStyles}`}>
-          <h4 className={`${headingStyles}`}>{title}</h4>
+          <h4 className={`${headingStyles} `}>{title}</h4>
           <p className={`${descriptionStyles}`}> {description}</p>
         </div>
 
