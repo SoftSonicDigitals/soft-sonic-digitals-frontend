@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { SideMenu, Platform, Resources, Solutions } from ".";
+import { SideMenu, Platforms, Resources, Solutions } from ".";
 import { PrimaryButton } from "../Reusable";
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex-center gap-12">
           <div className="flex-center gap-8 font-[700] tracking-wide h-full ">
             <Solutions />
-            <Platform />
+            <Platforms />
             <Resources />
 
             <Link href={"/"} className="hidden lg:block text-gray-800">
