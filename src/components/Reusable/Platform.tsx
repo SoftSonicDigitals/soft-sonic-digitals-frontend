@@ -6,7 +6,7 @@ type PlatformType = {
   link: string;
   title: string;
   iconWidth: string;
-  iconPath: string;
+  logoName: string;
   description: string;
   showArrow: boolean;
   containerStyles?: string;
@@ -19,7 +19,7 @@ const Platform = ({
   link,
   title,
   iconWidth,
-  iconPath,
+  logoName,
   description,
   showArrow,
   containerStyles,
@@ -35,7 +35,7 @@ const Platform = ({
           className={`relative w-full h-8  ${imageContainerStyles}`}
           style={{ width: iconWidth }}
         >
-          <Image src={`/platforms/${iconPath}`} alt={`${title}-logo`} fill />
+          <Image src={`/platforms/${logoName}`} alt={`${title}-logo`} fill />
         </div>
         <div className={`${infoContainerStyles}`}>
           <h4 className={`${headingStyles} `}>{title}</h4>

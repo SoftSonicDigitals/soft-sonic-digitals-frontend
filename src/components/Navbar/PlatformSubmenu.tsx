@@ -27,7 +27,7 @@ const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
               key={title}
               title={title}
               link={link}
-              iconPath={logoName}
+              logoName={logoName}
               iconWidth={iconWidth}
               description={description}
               showArrow={false}
