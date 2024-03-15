@@ -1,3 +1,4 @@
+import Platform from "./Platform";
 import PrimaryButton from "./PrimaryButton";
 
-export { PrimaryButton };
+export { PrimaryButton, Platform };
