@@ -10,12 +10,12 @@ const DigitalPlatforms = () => {
           <DigitalPlatformInfo />
           <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-x-8 xl:gap-x-10 lg:gap-y-3 xl:gap-y-6 justify-center   mb-4 ">
             {PLATFORM_MENU.subMenu.map(
-              ({ title, link, iconPath, iconWidth, description }) => (
+              ({ title, link, logoName, iconWidth, description }) => (
                 <Platform
                   key={title}
                   title={title}
                   link={link}
-                  iconPath={iconPath}
+                  iconPath={logoName}
                   iconWidth={iconWidth}
                   description={description}
                   showArrow={true}
