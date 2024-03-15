@@ -37,7 +37,6 @@ const CaseStudies = () => {
           <PrimaryButton
             title="VIEW ALL"
             className="px-11 py-3 md:px-14 md:py-4"
-            handleClick={() => {}}
           />
         </div>
       </div>
