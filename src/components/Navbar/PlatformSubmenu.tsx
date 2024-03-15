@@ -2,6 +2,7 @@ import { PLATFORM_MENU } from "@/prototypes/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Platform } from "../Reusable";
 
 type PlatformSubmenuProps = {
   setIsOpen: React.Dispatch<boolean>;
@@ -22,22 +23,24 @@ const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
       </div>
 
       <div className="grid grid-cols-3 grid-rows-2 lg:gap-x-8 xl:gap-x-10 justify-center wrapper_container  mb-4 ">
-        {PLATFORM_MENU.subMenu.map((menu) => (
-          <Link href={menu.link} key={menu.title}>
-            <div className="px-5 pt-4 pb-6 hover:bg-gray-0 ">
-              <div
-                className={`relative w-full h-8 mb-3`}
-                style={{ width: menu.iconWidth }}
-              >
-                <Image src={menu.iconPath} alt={`${menu.title}-logo`} fill />
-              </div>
-              <h4 className="mb-2 ">{menu.title}</h4>
-              <div className="font-[400] text-sm">
-                <p className=" tracking-wider"> {menu.description}</p>
-              </div>
-            </div>
-          </Link>
-        ))}
+        {PLATFORM_MENU.subMenu.map(
+          ({ title, link, iconPath, iconWidth, description }) => (
+            <Platform
+              key={title}
+              title={title}
+              link={link}
+              iconPath={iconPath}
+              iconWidth={iconWidth}
+              description={description}
+              showArrow={false}
+              containerStyles={"px-5 pt-4 pb-6 hover:bg-gray-0"}
+              infoContainerStyles=""
+              descriptionStyles="tracking-wider font-[400] text-sm"
+              headingStyles="mb-2 "
+              imageContainerStyles="mb-3"
+            />
+          )
+        )}
       </div>
     </div>
   );
