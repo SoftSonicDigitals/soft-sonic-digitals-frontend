@@ -22,12 +22,12 @@ const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
 
       <div className="grid grid-cols-3 grid-rows-2 lg:gap-x-8 xl:gap-x-10 justify-center wrapper_container  mb-4 ">
         {PLATFORM_MENU.subMenu.map(
-          ({ title, link, iconPath, iconWidth, description }) => (
+          ({ title, link, logoName, iconWidth, description }) => (
             <Platform
               key={title}
               title={title}
               link={link}
-              iconPath={iconPath}
+              iconPath={logoName}
               iconWidth={iconWidth}
               description={description}
               showArrow={false}
