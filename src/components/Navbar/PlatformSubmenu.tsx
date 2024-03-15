@@ -1,6 +1,4 @@
 import { PLATFORM_MENU } from "@/prototypes/navbar";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import { Platform } from "../Reusable";
 
@@ -34,10 +32,10 @@ const PlatformSubmenu = ({ setIsOpen }: PlatformSubmenuProps) => {
               description={description}
               showArrow={false}
               containerStyles={"px-5 pt-4 pb-6 hover:bg-gray-0"}
-              infoContainerStyles=""
-              descriptionStyles="tracking-wider font-[400] text-sm"
-              headingStyles="mb-2 "
               imageContainerStyles="mb-3"
+              infoContainerStyles=""
+              headingStyles="mb-2 "
+              descriptionStyles="tracking-wider font-[400] text-sm"
             />
           )
         )}
