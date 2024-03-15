@@ -5,9 +5,10 @@ import { Platform } from "../Reusable";
 const DigitalPlatforms = () => {
   return (
     <section id="digital_platforms" className="bg-gray-0">
-      <div className="wrapper_container flex items-center justify-center  lg:block">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr,2fr] mb-24 py-16 px-8 lg:px-0 max-w-[750px] lg:max-w-max">
+      <div className="wrapper_container flex items-center justify-center  lg:block mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr,2fr]  py-16 px-8 lg:px-0 max-w-[750px] lg:max-w-max">
           <DigitalPlatformInfo />
+
           <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-x-8 xl:gap-x-10 lg:gap-y-3 xl:gap-y-6 justify-center   mb-4 ">
             {PLATFORM_MENU.subMenu.map(
               ({ title, link, logoName, iconWidth, description }) => (
