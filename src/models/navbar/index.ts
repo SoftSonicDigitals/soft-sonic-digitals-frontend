@@ -18,7 +18,7 @@ export type SolutionsMenuType = {
 type PlatformSubMenuItem = {
   title: string;
   description: string;
-  iconPath: string;
+  logoName: string;
   iconWidth: string;
   link: string;
 };
