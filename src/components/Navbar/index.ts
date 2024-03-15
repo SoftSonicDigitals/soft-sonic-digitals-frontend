@@ -9,7 +9,7 @@ import ResourcesSubmenu from "./ResourcesSubmenu";
 import PlatformSubmenu from "./PlatformSubmenu";
 import SideMenuLinks from "./SideMenuLinks";
 import SideMenuLink from "./SideMenuLink";
-
+import ContactUs from "./ContactUs";
 export {
   Navbar,
   Solutions,
@@ -22,4 +22,5 @@ export {
   PlatformSubmenu,
   SideMenuLinks,
   SideMenuLink,
+  ContactUs,
 };
