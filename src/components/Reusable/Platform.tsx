@@ -35,7 +35,7 @@ const Platform = ({
           className={`relative w-full h-8  ${imageContainerStyles}`}
           style={{ width: iconWidth }}
         >
-          <Image src={iconPath} alt={`${title}-logo`} fill />
+          <Image src={`/platforms/${iconPath}`} alt={`${title}-logo`} fill />
         </div>
         <div className={`${infoContainerStyles}`}>
           <h4 className={`${headingStyles} `}>{title}</h4>
