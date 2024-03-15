@@ -1,3 +1,4 @@
+import DigitalPlatformInfo from "./DigitalPlatformInfo";
 import DigitalPlatforms from "./DigitalPlatforms";
 
-export { DigitalPlatforms };
+export { DigitalPlatforms, DigitalPlatformInfo };
