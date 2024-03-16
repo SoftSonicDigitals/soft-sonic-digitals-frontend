@@ -1,6 +1,6 @@
 import { AwardsType } from "@/models/awards";
 
-const AWARDS: AwardsType = [
+export const AWARDS: AwardsType = [
   {
     id: "1",
     title: "Top eCommerce Development Agency 2023",
