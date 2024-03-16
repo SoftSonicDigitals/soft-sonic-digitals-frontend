@@ -1,3 +1,4 @@
+import { Awards } from "@/components/Awards";
 import { CaseStudies } from "@/components/CaseStudies";
 import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
@@ -15,6 +16,7 @@ const page = () => {
       <Clients />
       <CaseStudies />
       <DigitalPlatforms />
+      <Awards />
     </main>
   );
 };
