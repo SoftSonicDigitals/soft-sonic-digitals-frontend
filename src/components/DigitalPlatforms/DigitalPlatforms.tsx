@@ -5,7 +5,7 @@ import { Platform } from "../Reusable";
 const DigitalPlatforms = () => {
   return (
     <section id="digital_platforms" className="bg-gray-0">
-      <div className="wrapper_container flex items-center justify-center  lg:block mb-24">
+      <div className="wrapper_container flex items-center justify-center  lg:block mb-12 md:mb-16">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,2fr]  py-16 px-8 lg:px-0 max-w-[750px] lg:max-w-max">
           <DigitalPlatformInfo />
 
