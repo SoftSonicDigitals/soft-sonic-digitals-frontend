@@ -2,6 +2,7 @@ import { Awards } from "@/components/Awards";
 import { CaseStudies } from "@/components/CaseStudies";
 import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
+import { Consultation } from "@/components/Consultation";
 import { DigitalPlatforms } from "@/components/DigitalPlatforms";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
@@ -17,6 +18,7 @@ const page = () => {
       <CaseStudies />
       <DigitalPlatforms />
       <Awards />
+      <Consultation />
     </main>
   );
 };
