@@ -1,3 +1,4 @@
+import { AWARDS_HEADING } from "@/constants/awards";
 import { AWARDS } from "@/prototypes/awards";
 import Image from "next/image";
 import React from "react";
@@ -7,7 +8,7 @@ const Awards = () => {
     <section id="awards">
       <div className="wrapper_container pt-4 mb-24 flex-center flex-col">
         <h1 className="text-2xl lg:text-4xl font-[700] text-center mb-10 md:mb-16">
-          Awards & Recognitions
+          {AWARDS_HEADING}
         </h1>
 
         <div className="max-w-[700px] lg:max-w-max">
