@@ -7,7 +7,7 @@ type PrimaryStyledHeadingType = {
   subHeadingStyles?: string;
 };
 
-const PrimaryStyledHeading = ({
+const PrimaryStyledHeadings = ({
   mainHeading,
   subHeading,
   mainHeadingStyles,
@@ -29,4 +29,4 @@ const PrimaryStyledHeading = ({
   );
 };
 
-export default PrimaryStyledHeading;
+export default PrimaryStyledHeadings;

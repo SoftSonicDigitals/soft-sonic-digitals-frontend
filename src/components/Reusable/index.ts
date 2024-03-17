@@ -1,5 +1,5 @@
 import Platform from "./Platform";
 import PrimaryButton from "./PrimaryButton";
-import PrimaryStyledHeading from "./PrimaryStyledHeading";
+import PrimaryStyledHeadings from "./PrimaryStyledHeadings";
 
-export { PrimaryButton, Platform, PrimaryStyledHeading };
+export { PrimaryButton, Platform, PrimaryStyledHeadings };

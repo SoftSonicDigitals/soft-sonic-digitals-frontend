@@ -1,4 +1,5 @@
 import React from "react";
+import { PrimaryStyledHeading } from "../Reusable";
 
 const Consultation = () => {
   return (
@@ -12,6 +13,7 @@ const Consultation = () => {
             Get all digital commerce services under one roof.
           </p>
         </div>
+        <PrimaryStyledHeading />
         <div>Cards</div>
       </div>
     </section>
