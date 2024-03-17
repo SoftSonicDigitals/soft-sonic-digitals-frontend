@@ -16,7 +16,7 @@ const PrimaryStyledHeadings = ({
   return (
     <div className="flex-center flex-col mb-16 gap-4 px-5 md:px-8 ">
       <h1
-        className={`${mainHeadingStyles} text-2xl md:text-[2.1rem] font-[500] mx-4 `}
+        className={`${mainHeadingStyles} text-2xl md:text-[2.1rem] font-[500] `}
       >
         {mainHeading}
       </h1>
