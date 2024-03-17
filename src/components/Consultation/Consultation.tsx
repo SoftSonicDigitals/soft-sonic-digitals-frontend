@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Consultation = () => {
   return (
-    <div>Consultation</div>
-  )
-}
+    <section id="consultation">
+      <div className="wrapper_container">
+        <div>Headign</div>
+        <div>Cards</div>
+      </div>
+    </section>
+  );
+};
 
-export default Consultation
+export default Consultation;
