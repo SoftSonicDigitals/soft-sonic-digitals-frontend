@@ -12,6 +12,7 @@ const Consultation = () => {
           mainHeading={MAIN_HEADING}
           subHeading={SUB_HEADING}
           mainHeadingStyles="mx-4 "
+          containerStyles="mb-16 gap-4 px-5 md:px-8"
         />
         <div
           className="grid  grid-cols-1
