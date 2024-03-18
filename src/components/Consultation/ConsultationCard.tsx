@@ -3,23 +3,18 @@ import React from "react";
 import { LetsTalkButton } from "../Reusable";
 
 type ConsultationCardType = {
-  id: string;
   imageName: string;
   title: string;
   description: string;
 };
 
 const ConsultationCard = ({
-  id,
   imageName,
   title,
   description,
 }: ConsultationCardType) => {
   return (
-    <div
-      key={id}
-      className=" flex-col gap-4    basis-full md:max-w-[325px] lg:max-w-[435px] 2xl:max-w-[375px] card_shadow  "
-    >
+    <div className=" flex-col gap-4    basis-full md:max-w-[325px] lg:max-w-[435px] 2xl:max-w-[375px] card_shadow  ">
       <div className="relative w-full max-w-3xl">
         <Image
           src={`/consultation/${imageName}`}

@@ -18,7 +18,6 @@ const Consultation = () => {
           {CONSULTATION.map(({ id, title, description, imageName }) => (
             <ConsultationCard
               key={id}
-              id={id}
               title={title}
               description={description}
               imageName={imageName}
