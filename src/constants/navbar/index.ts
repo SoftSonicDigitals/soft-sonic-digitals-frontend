@@ -7,6 +7,4 @@ export const BANNER_DETAILS = {
   title: "Work with Magneto",
   description:
     "Allow us to get a better understanding of your digital commerce needs.",
-  btnText: "LET'S TALK",
-  btnLink: "/",
 };

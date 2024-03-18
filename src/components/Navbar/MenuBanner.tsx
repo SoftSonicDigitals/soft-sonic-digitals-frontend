@@ -1,6 +1,7 @@
 import { BANNER_DETAILS } from "@/constants/navbar";
 import Link from "next/link";
 import React from "react";
+import { LetsTalkButton } from "../Reusable";
 
 const MenuBanner = () => {
   return (
@@ -10,12 +11,7 @@ const MenuBanner = () => {
           <h2 className="text-xl mb-1">{BANNER_DETAILS.title} </h2>
           <p className="text-sm font-[400]">{BANNER_DETAILS.description} </p>
         </div>
-        <button
-          type="button"
-          className="rounded border-2 px-8 py-2 border-gray-800 tracking-wider"
-        >
-          <Link href={BANNER_DETAILS.btnLink}>{BANNER_DETAILS.btnText}</Link>
-        </button>
+        <LetsTalkButton />
       </div>
     </div>
   );
