@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import { LetsTalkButton } from "../Reusable";
 
 type ConsultationCardType = {
   id: string;
@@ -35,12 +35,7 @@ const ConsultationCard = ({
         </h3>
         <p className="tracking-wider mb-2 font-[500]">{description}</p>
 
-        <button
-          type="button"
-          className="rounded border-2 px-8 py-2 border-gray-800 tracking-wider  font-[700]"
-        >
-          <Link href={"/contact"}>{"LET'S TALK"}</Link>
-        </button>
+        <LetsTalkButton />
       </div>
     </div>
   );
