@@ -20,11 +20,13 @@ const PrimaryStyledHeadings = ({
       >
         {mainHeading}
       </h1>
-      <p
-        className={`${subHeadingStyles} text-[1rem] md:text-xl font-[500] text-gray-800 text-center`}
-      >
-        {subHeading}
-      </p>
+      {subHeading && (
+        <p
+          className={`${subHeadingStyles} text-[1rem] md:text-xl font-[500] text-gray-800 text-center`}
+        >
+          {subHeading}
+        </p>
+      )}
     </div>
   );
 };
