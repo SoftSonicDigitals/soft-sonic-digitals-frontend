@@ -24,7 +24,7 @@ const Consultation = () => {
               title={title}
               description={description}
               imageName={imageName}
-            ></ConsultationCard>
+            />
           ))}
         </div>
       </div>
