@@ -6,6 +6,7 @@ import { Consultation } from "@/components/Consultation";
 import { DigitalPlatforms } from "@/components/DigitalPlatforms";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
+import { Reviews } from "@/components/Reviews";
 import React from "react";
 
 const page = () => {
@@ -19,6 +20,7 @@ const page = () => {
       <DigitalPlatforms />
       <Awards />
       <Consultation />
+      <Reviews />
     </main>
   );
 };
