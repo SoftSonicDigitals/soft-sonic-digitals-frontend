@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Reviews = () => {
   return (
-    <div>Reviews</div>
-  )
-}
+    <section id="reviews">
+      <div className="wrapper_container">Reviews</div>
+    </section>
+  );
+};
 
-export default Reviews
+export default Reviews;
