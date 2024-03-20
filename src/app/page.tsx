@@ -7,6 +7,7 @@ import { DigitalPlatforms } from "@/components/DigitalPlatforms";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
 import { Reviews } from "@/components/Reviews";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import React from "react";
 
 const page = () => {
@@ -21,6 +22,7 @@ const page = () => {
       <Awards />
       <Consultation />
       <Reviews />
+      <WhyChooseUs />
     </main>
   );
 };
