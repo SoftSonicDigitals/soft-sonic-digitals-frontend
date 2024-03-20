@@ -19,11 +19,11 @@ const WhyChooseUs = () => {
             className="md:row-span-2"
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-y-6 gap-x-12 lg:gap-6 mb-4 px-5 md:px-6 2xl:px-8 pt-8 lg:pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2  gap-y-6 gap-x-12 lg:gap-6 mb-4 px-5 md:px-0 xl:pl-6 2xl:pl-8 pt-8 lg:pt-16">
             {CHOOSING_REASON.map((reason, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-r from-orange to-pink w-full text-white font-[500] text-xl lg:text-base xl:text-xl px-6 py-4"
+                className="bg-gradient-to-r from-orange to-pink w-full text-white font-[500] text-xl lg:text-base xl:text-xl px-6 py-4 lg:px-3.5"
               >
                 {reason}
               </div>
