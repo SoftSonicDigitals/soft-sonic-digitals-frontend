@@ -2,7 +2,7 @@ import React from "react";
 import { PrimaryStyledHeadings } from "../Reusable";
 import { REVIEWS_MAIN_HEADING, REVIEWS_SUB_HEADING } from "@/constants/reviews";
 import { REVIEWS } from "@/prototypes/reviews";
-import ReviewCard from "./ReviewCard";
+import { ReviewCard } from ".";
 
 const Reviews = () => {
   return (
