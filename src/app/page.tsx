@@ -4,6 +4,7 @@ import { Clients } from "@/components/Clients";
 import { Commerce } from "@/components/Commerce";
 import { Consultation } from "@/components/Consultation";
 import { DigitalPlatforms } from "@/components/DigitalPlatforms";
+import { GetInTouch } from "@/components/GetInTouch";
 import { Hero } from "@/components/Hero";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
 import { Reviews } from "@/components/Reviews";
@@ -23,6 +24,7 @@ const page = () => {
       <Consultation />
       <Reviews />
       <WhyChooseUs />
+      <GetInTouch/>
     </main>
   );
 };
