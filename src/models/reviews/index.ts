@@ -2,7 +2,7 @@ export type ReviewsType = {
   id: string;
   title: string;
   rating: number;
-  noOfReviews: number;
+  noOfReviews?: number;
   logoName: string;
   link: string;
 }[];
