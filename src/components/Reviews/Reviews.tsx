@@ -7,7 +7,7 @@ import { ReviewCard } from ".";
 const Reviews = () => {
   return (
     <section id="reviews" className="bg-gray-0">
-      <div className="wrapper_container pt-28 pb-24 mb-24">
+      <div className="wrapper_container pt-28 pb-24 mb-16">
         <PrimaryStyledHeadings
           mainHeading={REVIEWS_MAIN_HEADING}
           subHeading={REVIEWS_SUB_HEADING}
