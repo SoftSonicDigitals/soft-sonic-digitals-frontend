@@ -13,7 +13,7 @@ const Reviews = () => {
           subHeading={REVIEWS_SUB_HEADING}
           mainHeadingStyles="mb-10 text-center"
           subHeadingStyles="!font-[400]"
-          containerStyles="mb-10 px-12"
+          containerStyles="mb-10 px-6 md:px-12"
         />
         <div className="grid items-center justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 px-4 md:px-16  lg:px-8 2xl:px-[2%] max-w-[1280px] mx-auto">
           {REVIEWS.map(({ link, id, logoName, title, rating, noOfReviews }) => (
