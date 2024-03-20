@@ -1,3 +1,3 @@
 import WhyChooseUs from "./WhyChooseUs";
-
-export { WhyChooseUs };
+import WhyChooseUsHeadingInfo from "./WhyChooseUsHeadingInfo";
+export { WhyChooseUs, WhyChooseUsHeadingInfo };
