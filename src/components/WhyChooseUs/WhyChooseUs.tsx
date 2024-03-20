@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { WhyChooseUsHeadingInfo } from ".";
 import { CHOOSING_REASON } from "@/prototypes/why_choose_us";
+
 const WhyChooseUs = () => {
   return (
     <section id="why_choose_us">
@@ -19,12 +20,12 @@ const WhyChooseUs = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2  gap-y-6 gap-x-12 lg:gap-6 mb-4 px-5 md:px-6 2xl:px-8 pt-8 lg:pt-16">
-            {CHOOSING_REASON.map((index) => (
+            {CHOOSING_REASON.map((reason, index) => (
               <div
                 key={index}
                 className="bg-gradient-to-r from-orange to-pink w-full text-white font-[500] text-xl lg:text-base xl:text-xl px-6 py-4"
               >
-                13+ Yrs Experience
+                {reason}
               </div>
             ))}
           </div>
