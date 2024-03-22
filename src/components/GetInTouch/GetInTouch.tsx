@@ -2,6 +2,10 @@ import React from "react";
 import { PrimaryButton, PrimaryStyledHeadings } from "../Reusable";
 import { CONTACTS } from "@/prototypes/get_in_touch";
 import Image from "next/image";
+import {
+  GET_IN_TOUCH_MAIN_HEADING,
+  GET_IN_TOUCH_SUB_HEADING,
+} from "@/constants/get_in_touch";
 
 const GetInTouch = () => {
   return (
@@ -9,9 +13,8 @@ const GetInTouch = () => {
       <div className="wrapper_container py-12 mb-24">
         <div className="mt-12 mb-16 md:mb-20">
           <PrimaryStyledHeadings
-            mainHeading="GET IN TOUCH"
-            subHeading="We can only comprehend each other if we communicate well. Allow us to get a better understanding of your needs or queries. Present us the chance to assist you."
-            mainHeadingStyles="mb-4 text-white"
+            mainHeading={GET_IN_TOUCH_MAIN_HEADING}
+            subHeading={GET_IN_TOUCH_SUB_HEADING}
             subHeadingStyles="text-white 2xl:px-20"
             containerStyles="mb-12 px-8  md:px-12 lg:px-8 xl:px-12 "
           />
