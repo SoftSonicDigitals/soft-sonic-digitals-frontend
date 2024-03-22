@@ -1,4 +1,28 @@
-export const SOCIALS = [{}];
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa6";
+
+export const SOCIALS = {
+  social_platforms: [
+    {
+      name: "facebook",
+      icon: FaFacebookSquare,
+      link: "/",
+    },
+    {
+      name: "twitter",
+      icon: FaSquareXTwitter,
+      link: "/",
+    },
+    {
+      name: "linkedin",
+      icon: FaLinkedin,
+      link: "/",
+    },
+  ],
+  contactNumber: "+1-646-205-8151",
+  email: "info@magnetoitsolutions.com",
+};
 
 export const FOOTER_LINKS = [
   {
