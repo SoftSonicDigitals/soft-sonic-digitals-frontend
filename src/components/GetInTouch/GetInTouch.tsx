@@ -1,11 +1,11 @@
 import React from "react";
 import { PrimaryButton, PrimaryStyledHeadings } from "../Reusable";
 import { CONTACTS } from "@/prototypes/get_in_touch";
-import Image from "next/image";
 import {
   GET_IN_TOUCH_MAIN_HEADING,
   GET_IN_TOUCH_SUB_HEADING,
 } from "@/constants/get_in_touch";
+import { LocationCard } from ".";
 
 const GetInTouch = () => {
   return (
@@ -15,6 +15,7 @@ const GetInTouch = () => {
           <PrimaryStyledHeadings
             mainHeading={GET_IN_TOUCH_MAIN_HEADING}
             subHeading={GET_IN_TOUCH_SUB_HEADING}
+            mainHeadingStyles="mb-4 text-white"
             subHeadingStyles="text-white 2xl:px-20"
             containerStyles="mb-12 px-8  md:px-12 lg:px-8 xl:px-12 "
           />
@@ -23,22 +24,13 @@ const GetInTouch = () => {
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-20 md:gap-y-16 px-6 md:px-16 lg:px-8 max-w-[1270px] mx-auto ">
-          {CONTACTS.map((contact) => (
-            <div
-              key={contact.id}
-              className="flex justify-start items-center gap-8 "
-            >
-              <Image
-                src={`/get_in_touch/${contact.locationImage}`}
-                alt={`${contact.location}-img`}
-                width={88}
-                height={88}
-              />
-              <div className="text-white flex item-start justify-center flex-col tracking-wide font-[700] gap-2 ">
-                <p>{contact.contactNumber}</p>
-                <p>{contact.location}</p>
-              </div>
-            </div>
+          {CONTACTS.map(({ id, contactNumber, location, locationImage }) => (
+            <LocationCard
+              key={id}
+              contactNumber={contactNumber}
+              location={location}
+              locationImage={locationImage}
+            />
           ))}
         </div>
       </div>
