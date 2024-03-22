@@ -7,7 +7,7 @@ const GetInTouch = () => {
   return (
     <section id="get_in_touch" className="bg-black">
       <div className="wrapper_container py-12 mb-24">
-        <div className="mt-12 mb-16">
+        <div className="mt-12 mb-16 md:mb-20">
           <PrimaryStyledHeadings
             mainHeading="GET IN TOUCH"
             subHeading="We can only comprehend each other if we communicate well. Allow us to get a better understanding of your needs or queries. Present us the chance to assist you."
@@ -19,11 +19,11 @@ const GetInTouch = () => {
             <PrimaryButton title="LET'S TAlK" className="px-12 py-3" />
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 px-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-20 md:gap-y-16 px-6 md:px-16 lg:px-8 max-w-[1270px] mx-auto ">
           {CONTACTS.map((contact) => (
             <div
               key={contact.id}
-              className="flex justify-start items-center gap-4 "
+              className="flex justify-start items-center gap-8 "
             >
               <Image
                 src={`/get_in_touch/${contact.locationImage}`}
