@@ -11,6 +11,16 @@ const Footer = () => {
             <FooterLinks key={index} title={title} links={links} />
           ))}
         </div>
+        <div className="flex flex-col md:hidden w-full">
+          {FOOTER_LINKS.map(({ title, links }, index) => (
+            <p
+              key={index}
+              className=" px-4 py-2.5 border-t-[1px] last:border-b-[1px] border-gray-200 text-sm capitalize"
+            >
+              {title}
+            </p>
+          ))}
+        </div>
         <Socials />
       </div>
     </footer>
