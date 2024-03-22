@@ -13,10 +13,11 @@ const Footer = () => {
               <p className="tracking-widest">{links.title}</p>
               <div className="flex flex-col gap-2 ">
                 {links.links.map((link, index) => (
-                  <div key={index} className="text-gray-700 font-[500] ">
-                    <Link href={link.link} className="text-base">
-                      {link.title}
-                    </Link>
+                  <div
+                    key={index}
+                    className="text-gray-700 font-[500] text-base "
+                  >
+                    <Link href={link.link}>{link.title}</Link>
                   </div>
                 ))}
               </div>
@@ -25,7 +26,8 @@ const Footer = () => {
         </div>
         <div
           className="flex items-end
-         flex-col gap-4"
+         flex-col gap-4
+         text-gray-700 font-[500]"
         >
           <div className="flex gap-6">
             {SOCIALS.social_platforms.map((social, index) => {
@@ -33,7 +35,10 @@ const Footer = () => {
               return (
                 <div key={index}>
                   <Link href={social.link}>
-                    <Icon className="text-3xl text-gray-800" />
+                    <Icon
+                      className="text-3xl text-gray-800
+                    font-[500] "
+                    />
                   </Link>
                 </div>
               );
