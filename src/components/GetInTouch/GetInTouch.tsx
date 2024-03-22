@@ -5,7 +5,7 @@ import {
   GET_IN_TOUCH_MAIN_HEADING,
   GET_IN_TOUCH_SUB_HEADING,
 } from "@/constants/get_in_touch";
-import { LocationCard } from ".";
+import { GetInTouchContactBtn, LocationCard } from ".";
 
 const GetInTouch = () => {
   return (
@@ -20,7 +20,7 @@ const GetInTouch = () => {
             containerStyles="mb-12 px-8  md:px-12 lg:px-8 xl:px-12 "
           />
           <div className="flex-center w-full">
-            <PrimaryButton title="LET'S TAlK" className="px-12 py-3" />
+            <GetInTouchContactBtn />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-20 md:gap-y-16 px-6 md:px-16 lg:px-8 max-w-[1270px] mx-auto ">
