@@ -26,7 +26,7 @@ export const SOCIALS = {
 
 export const FOOTER_LINKS = [
   {
-    title: "QUICK LINKS",
+    title: "Quick Links",
     links: [
       { title: "Company", link: "/" },
       { title: "Referrals", link: "/" },
@@ -38,7 +38,7 @@ export const FOOTER_LINKS = [
     ],
   },
   {
-    title: "EXPERTISE",
+    title: "Expertise",
     links: [
       { title: "B2C eCommerce", link: "/" },
       { title: "B2B eCommerce", link: "/" },
@@ -48,7 +48,7 @@ export const FOOTER_LINKS = [
     ],
   },
   {
-    title: "SERVICES",
+    title: "Services",
     links: [
       { title: "Consulting", link: "/" },
       { title: "Design (UI/UX)", link: "/" },
@@ -59,7 +59,7 @@ export const FOOTER_LINKS = [
     ],
   },
   {
-    title: "PLATFORM",
+    title: "Platform",
     links: [
       { title: "Magento", link: "/" },
       { title: "OroCommerce", link: "/" },
@@ -69,7 +69,7 @@ export const FOOTER_LINKS = [
     ],
   },
   {
-    title: "WEB",
+    title: "Web",
     links: [
       { title: "Digital Transformation", link: "/" },
       { title: "Software Development", link: "/" },

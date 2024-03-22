@@ -11,7 +11,9 @@ type FooterLinksType = {
 const FooterLinks = ({ title, links }: FooterLinksType) => {
   return (
     <div className="flex flex-col gap-6">
-      <p className="tracking-widest text-lg lg:text-base font-[500]">{title}</p>
+      <p className="tracking-widest text-lg lg:text-base font-[500] uppercase">
+        {title}
+      </p>
       <div className="flex flex-col gap-2 ">
         {links.map(({ title, link }, index) => (
           <Link
