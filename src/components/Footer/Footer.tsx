@@ -1,6 +1,4 @@
-import { FOOTER_LINKS, SOCIALS } from "@/prototypes/footer";
-import Image from "next/image";
-import Link from "next/link";
+import { FOOTER_LINKS } from "@/prototypes/footer";
 import React from "react";
 import { FooterLinks, Socials } from ".";
 
