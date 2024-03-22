@@ -1,4 +1,5 @@
 import { FOOTER_LINKS, SOCIALS } from "@/prototypes/footer";
+import Image from "next/image";
 import Link from "next/link";
 
 import React from "react";
@@ -6,7 +7,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer>
-      <div className="wrapper_container mb-24 flex items-center justify-between">
+      <div className="wrapper_container mb-24 flex items-center justify-between gap-10 px-16">
         <div className="grid grid-cols-5 gap-5">
           {FOOTER_LINKS.map((links, index) => (
             <div key={index} className="flex flex-col gap-6">
@@ -15,7 +16,7 @@ const Footer = () => {
                 {links.links.map((link, index) => (
                   <div
                     key={index}
-                    className="text-gray-700 font-[500] text-base "
+                    className="text-gray-700 font-[500] text-[15px] tracking-wide "
                   >
                     <Link href={link.link}>{link.title}</Link>
                   </div>
@@ -44,8 +45,16 @@ const Footer = () => {
               );
             })}
           </div>
-          <p> {SOCIALS.contactNumber}</p>
-          <p> {SOCIALS.email}</p>
+          <p className="text-[15px]"> {SOCIALS.contactNumber}</p>
+          <p className="text-[15px]"> {SOCIALS.email}</p>
+          <div>
+            <Image
+              src={"/footer/member.webp"}
+              alt={"member-logo"}
+              width={165}
+              height={78}
+            />
+          </div>
         </div>
       </div>
     </footer>
