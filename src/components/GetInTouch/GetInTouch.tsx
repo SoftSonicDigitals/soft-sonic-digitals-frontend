@@ -12,8 +12,8 @@ const GetInTouch = () => {
             mainHeading="GET IN TOUCH"
             subHeading="We can only comprehend each other if we communicate well. Allow us to get a better understanding of your needs or queries. Present us the chance to assist you."
             mainHeadingStyles="mb-4 text-white"
-            subHeadingStyles="text-white"
-            containerStyles="mb-12 px-8 lg:px-32"
+            subHeadingStyles="text-white 2xl:px-20"
+            containerStyles="mb-12 px-8  md:px-12 lg:px-8 xl:px-12 "
           />
           <div className="flex-center w-full">
             <PrimaryButton title="LET'S TAlK" className="px-12 py-3" />
