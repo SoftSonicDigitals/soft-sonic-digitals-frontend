@@ -11,7 +11,7 @@ export const CONTACTS: ContactsType = [
     id: "2",
     contactNumber: "+1-4169044907",
     location: "CANADA",
-    locationImage: "Australia.png",
+    locationImage: "Australia-W.png",
   },
   {
     id: "3",
