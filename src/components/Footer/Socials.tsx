@@ -13,7 +13,7 @@ const Socials = () => {
             <div key={index}>
               <Link href={social.link}>
                 <Icon
-                  className="text-3xl text-gray-800
+                  className=" text-2xl md:text-3xl text-gray-800
             font-[500] hover:text-pink "
                 />
               </Link>
