@@ -1,7 +1,7 @@
 import Footer from "./Footer";
 import FooterLink from "./FooterLink";
 import FooterLinks from "./FooterLinks";
-import MobileFooter from "./MobileFooter";
+import FooterMobileLayout from "./FooterMobileLayout";
 import Socials from "./Socials";
 
-export { Footer, FooterLinks, Socials, MobileFooter, FooterLink };
+export { Footer, FooterLinks, Socials, FooterMobileLayout, FooterLink };
