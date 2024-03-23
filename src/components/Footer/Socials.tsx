@@ -7,7 +7,7 @@ const Socials = () => {
   return (
     <div className="flex  items-center md:items-end flex-col gap-4 text-gray-700 font-[500]">
       <div className="flex gap-6 text-[15px]">
-        {SOCIALS.social_platforms.map((social, index) => {
+        {SOCIALS.socialPlatforms.map((social, index) => {
           const Icon = social.icon;
           return (
             <div key={index}>
