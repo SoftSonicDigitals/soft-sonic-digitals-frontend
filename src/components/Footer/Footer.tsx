@@ -1,6 +1,7 @@
 import { FOOTER_LINKS } from "@/prototypes/footer";
 import React from "react";
 import { FooterLinks, FooterMobileLayout, Socials } from ".";
+import { Copyright } from "../Copyrights";
 
 const Footer = () => {
   return (
@@ -14,6 +15,7 @@ const Footer = () => {
         <FooterMobileLayout />
         <Socials />
       </div>
+      <Copyright />
     </footer>
   );
 };
