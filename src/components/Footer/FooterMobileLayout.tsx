@@ -37,7 +37,7 @@ const FooterMobileLayout = () => {
             }
              group-last:border-b-[1px]`}
           >
-            <p className="text-sm capitalize">{title}</p>
+            <p className="text-base tracking-wider capitalize">{title}</p>
 
             {!isMenuOpen(selectedDropDownMenu, indexOfMenu) ? (
               <IoAddOutline className="cursor-pointertext-gray-700 text-black" />
