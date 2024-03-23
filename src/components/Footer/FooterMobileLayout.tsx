@@ -31,7 +31,7 @@ const FooterMobileLayout = () => {
           className="group"
         >
           <div
-            className={`flex items-center justify-between border-t-[1px] border-gray-200 px-4 py-2.5 bg-gray-0   ${
+            className={`flex items-center justify-between border-t-[1px] border-gray-600 px-4 py-2.5 bg-gray-0   ${
               isMenuOpen(selectedDropDownMenu, indexOfMenu)
                 ? "border-y-[1px]"
                 : ""
