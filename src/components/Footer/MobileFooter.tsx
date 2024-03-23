@@ -21,7 +21,7 @@ const MobileFooter = () => {
   };
 
   return (
-    <div className="flex flex-col md:hidden w-full">
+    <div className="flex flex-col md:hidden w-full mb-12">
       {FOOTER_LINKS.map(({ title, links }, indexOfMenu) => (
         <div key={indexOfMenu} onClick={() => toggleDropDown(indexOfMenu)}>
           <div className="flex items-center justify-between border-y-[1px] last:border-b-[1px] border-gray-200 px-4 py-2.5">
