@@ -75,3 +75,7 @@
 /* 
 background-color: #f6702d;
 background-image: linear-gradient(90deg, #f6702d 0%, #d1304d 100%); */
+
+.ReactCollapse--collapse {
+  transition: height 400ms;
+}
