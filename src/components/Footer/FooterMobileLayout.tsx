@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { IoAddOutline } from "react-icons/io5";
 import { FooterLink } from ".";
 import { AiOutlineMinus } from "react-icons/ai";
-
+import { Collapse } from "react-collapse";
 const FooterMobileLayout = () => {
   const [selectedDropDownMenu, setSelectedDropDownMenu] = useState<
     number | null
@@ -45,13 +45,15 @@ const FooterMobileLayout = () => {
               <AiOutlineMinus className="cursor-pointer text-black" />
             )}
           </div>
-          {isMenuOpen(selectedDropDownMenu, indexOfMenu) && (
-            <div className="flex flex-col gap-3 px-4 py-6">
-              {links.map(({ title, link }, index) => (
-                <FooterLink key={index} link={link} title={title} />
-              ))}
-            </div>
-          )}
+          <Collapse isOpened={isMenuOpen(selectedDropDownMenu, indexOfMenu)}>
+            {isMenuOpen(selectedDropDownMenu, indexOfMenu) && (
+              <div className="flex flex-col gap-3 px-4 py-6">
+                {links.map(({ title, link }, index) => (
+                  <FooterLink key={index} link={link} title={title} />
+                ))}
+              </div>
+            )}
+          </Collapse>
         </div>
       ))}
     </div>
