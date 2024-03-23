@@ -12,7 +12,6 @@ const Footer = () => {
           ))}
         </div>
         <MobileFooter />
-
         <Socials />
       </div>
     </footer>

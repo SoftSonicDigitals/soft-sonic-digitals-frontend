@@ -1,9 +1,10 @@
+import { FooterLinksType, SocialsType } from "@/models/footer";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 
-export const SOCIALS = {
-  social_platforms: [
+export const SOCIALS: SocialsType = {
+  socialPlatforms: [
     {
       name: "facebook",
       icon: FaFacebookSquare,
@@ -24,7 +25,7 @@ export const SOCIALS = {
   email: "info@magnetoitsolutions.com",
 };
 
-export const FOOTER_LINKS = [
+export const FOOTER_LINKS: FooterLinksType = [
   {
     title: "Quick Links",
     links: [
