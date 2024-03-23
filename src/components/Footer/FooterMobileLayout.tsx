@@ -5,6 +5,7 @@ import { IoAddOutline } from "react-icons/io5";
 import { FooterLink } from ".";
 import { AiOutlineMinus } from "react-icons/ai";
 import { Collapse } from "react-collapse";
+
 const FooterMobileLayout = () => {
   const [selectedDropDownMenu, setSelectedDropDownMenu] = useState<
     number | null
