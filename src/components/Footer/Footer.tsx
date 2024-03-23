@@ -1,6 +1,6 @@
 import { FOOTER_LINKS } from "@/prototypes/footer";
 import React from "react";
-import { FooterLinks, MobileFooter, Socials } from ".";
+import { FooterLinks, FooterMobileLayout, Socials } from ".";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
             <FooterLinks key={index} title={title} links={links} />
           ))}
         </div>
-        <MobileFooter />
+        <FooterMobileLayout />
         <Socials />
       </div>
     </footer>
