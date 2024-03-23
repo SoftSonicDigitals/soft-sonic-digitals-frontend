@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React from "react";
+import { FooterLink } from ".";
 
 type FooterLinksType = {
   title: string;
@@ -16,13 +16,7 @@ const FooterLinks = ({ title, links }: FooterLinksType) => {
       </p>
       <div className="flex flex-col gap-2 ">
         {links.map(({ title, link }, index) => (
-          <Link
-            href={link}
-            key={index}
-            className="text-gray-700 font-[500] text-[15px] tracking-wide "
-          >
-            {title}
-          </Link>
+          <FooterLink key={index} link={link} title={title} />
         ))}
       </div>
     </div>
