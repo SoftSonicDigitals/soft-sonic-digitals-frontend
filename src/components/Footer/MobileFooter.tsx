@@ -3,6 +3,7 @@ import { FOOTER_LINKS } from "@/prototypes/footer";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import { FooterLink } from ".";
 
 const MobileFooter = () => {
   const [selectedDropDownMenu, setSelectedDropDownMenu] = useState<
@@ -36,13 +37,7 @@ const MobileFooter = () => {
           {isMenuOpen(selectedDropDownMenu, indexOfMenu) && (
             <div className="flex flex-col gap-2.5 px-4 py-2.5">
               {links.map(({ title, link }, index) => (
-                <Link
-                  href={link}
-                  key={index}
-                  className="text-gray-700 font-[500] text-sm tracking-wide "
-                >
-                  {title}
-                </Link>
+                <FooterLink key={index} link={link} title={title} />
               ))}
             </div>
           )}
