@@ -10,7 +10,7 @@ import { GetInTouchContactBtn, LocationCard } from ".";
 const GetInTouch = () => {
   return (
     <section id="get_in_touch" className="bg-black">
-      <div className="wrapper_container py-12 mb-24">
+      <div className="wrapper_container py-8 mb-12 md:mb-24">
         <div className="mt-12 mb-16 md:mb-20">
           <PrimaryStyledHeadings
             mainHeading={GET_IN_TOUCH_MAIN_HEADING}
