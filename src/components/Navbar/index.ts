@@ -10,6 +10,7 @@ import PlatformSubmenu from "./PlatformSubmenu";
 import SideMenuLinks from "./SideMenuLinks";
 import SideMenuLink from "./SideMenuLink";
 import ContactUs from "./ContactUs";
+import ContactPageNavbar from "./ContactPageNavbar";
 export {
   Navbar,
   Solutions,
@@ -23,4 +24,5 @@ export {
   SideMenuLinks,
   SideMenuLink,
   ContactUs,
+  ContactPageNavbar,
 };
