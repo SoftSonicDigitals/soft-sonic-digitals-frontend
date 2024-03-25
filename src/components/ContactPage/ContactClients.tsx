@@ -21,6 +21,15 @@ const ContactClients = () => {
           />
         ))}
       </div>
+      <div className="flex-center mt-4 md:mt-16">
+        <Image
+          src={`/contact_page/review.webp`}
+          alt={"reviews-rating"}
+          width={281}
+          height={64}
+          className="py-2 md:block"
+        />
+      </div>
     </div>
   );
 };
