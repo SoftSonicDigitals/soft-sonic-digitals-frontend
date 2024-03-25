@@ -7,9 +7,9 @@ const Contact = () => {
     <main className="overflow-hidden">
       <LetsTalkHeadings />
 
-      <div className="flex gap-2 ">
+      <div className="wrapper_container flex gap-2 ">
         <ContactClients />
-        <div>form </div>
+        <div className="basis-full">form </div>
       </div>
     </main>
   );
