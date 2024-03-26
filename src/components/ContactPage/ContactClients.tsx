@@ -2,6 +2,7 @@ import { CLIENTS_PROMO_HEADING } from "@/constants/contact_page";
 import { CLIENTS } from "@/prototypes/clients";
 import Image from "next/image";
 import React from "react";
+import { TestimonialAccordian } from ".";
 
 const ContactClients = () => {
   return (
@@ -30,6 +31,7 @@ const ContactClients = () => {
           className="py-2 md:block"
         />
       </div>
+      <TestimonialAccordian />
     </div>
   );
 };
