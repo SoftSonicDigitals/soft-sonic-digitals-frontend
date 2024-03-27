@@ -22,7 +22,7 @@ const ContactClients = () => {
           />
         ))}
       </div>
-      <div className="flex-center mt-4 md:mt-16">
+      <div className="flex-center mt-4 md:mt-16 mb-10">
         <Image
           src={`/contact_page/review.webp`}
           alt={"reviews-rating"}
