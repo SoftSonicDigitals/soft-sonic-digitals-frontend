@@ -1,48 +1,30 @@
 import React from "react";
 import { PrimaryStyledHeadings } from "../Reusable";
-import Image from "next/image";
 import { WHERE_TO_FIND } from "@/prototypes/contact_page";
+import { ContactInfo } from ".";
 
 const WhereToFind = () => {
-  const { locations } = WHERE_TO_FIND[0];
   return (
     <section id="where_to_find_us">
-      <div className="wrapper_container mb-24">
+      <div className="wrapper_container ">
         <PrimaryStyledHeadings
           mainHeading="Where you'll find us"
-          mainHeadingStyles="!font-[600] tracking-wide mb-24  "
+          mainHeadingStyles="!font-[600] tracking-wide mb-12 sm:mb-24 "
         />
-        <div className="flex items-center justify-center lg:items-start flex-col lg:flex-row gap-8 text-gray-900 px-10 sm:px-16 ">
-          <Image
-            src={`/contact_page/${locations[0].image}`}
-            alt={`${locations[0].name}`}
-            width={540}
-            height={540}
-            style={{ objectFit: "contain" }}
-          />
-
-          <div className="flex flex-col gap-8 max-w-[540px] mt-4">
-            <div className="relative">
-              <h3 className="text-xl sm:text-2xl lg:text-3xl capitalize font-[600] tracking-wide pb-3 ">
-                {locations[0].name}
-              </h3>
-              <div className="absolute h-[3px] w-[40px] bg-gradient-to-r from-orange to-pink bottom-0" />
-            </div>
-            <div>
-              <p className="contact_headings">Contact us</p>
-              <p className="contact_info">{locations[0].email}</p>
-            </div>
-            <div>
-              <p className="contact_headings">Call us</p>
-              <p className="contact_info">{locations[0].contactNo}</p>
-            </div>
-            <div>
-              <p className="contact_headings">Address</p>
-              <p className="contact_info">{locations[0].address}</p>
-            </div>
-          </div>
-        </div>
       </div>
+
+      {WHERE_TO_FIND.map(({ country, locations }) =>
+        locations.map(({ name, email, address, image, contactNo }, index) => (
+          <ContactInfo
+            key={index}
+            name={name}
+            email={email}
+            address={address}
+            image={image}
+            contactNo={contactNo}
+          />
+        ))
+      )}
     </section>
   );
 };
