@@ -1,4 +1,8 @@
-import { ContactTestimonialType, WhereToFindType } from "@/models/contact_page";
+import {
+  ContactFooterLinks,
+  ContactTestimonialType,
+  WhereToFindType,
+} from "@/models/contact_page";
 
 export const CONTACT_TESTIMONIALS: ContactTestimonialType = [
   {
@@ -44,4 +48,11 @@ export const WHERE_TO_FIND: WhereToFindType = [
       },
     ],
   },
+];
+
+export const CONTACT_FOOTER_LINKS: ContactFooterLinks = [
+  { title: "Sales", email: "info@magnetoitsolutions.com" },
+  { title: "Career", email: "hiring@magnetoitsolutions.com" },
+  { title: "Media & Press", email: "outreach@magnetoitsolutions.com" },
+  { title: "Skype", handle: "marketing_19207" },
 ];
