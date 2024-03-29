@@ -12,11 +12,11 @@ const TestimonialAccordian = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 360,
-    autoplaySpeed: 6000,
+    autoplaySpeed: 7777000,
     cssEase: "ease-in-out",
   };
   return (
-    <div className="slider-container">
+    <div className="slider-container max-w-[360px] mx-auto 2xl:max-w-fit ">
       <Slider {...settings}>
         {CONTACT_TESTIMONIALS.map(
           ({ title, profile, name, testimonial }, index) => (
