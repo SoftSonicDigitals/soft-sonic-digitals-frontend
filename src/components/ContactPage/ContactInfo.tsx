@@ -1,3 +1,4 @@
+import { ADDRESS, CALL_US, CONTACT_US } from "@/constants/contact_page";
 import Image from "next/image";
 import React from "react";
 type ContactInfoType = {
@@ -32,15 +33,15 @@ const ContactInfo = ({
           <div className="absolute h-[3px] w-[40px] bg-gradient-to-r from-orange to-pink bottom-0" />
         </div>
         <div>
-          <p className="contact_headings">Contact us</p>
+          <p className="contact_headings">{CONTACT_US}</p>
           <p className="contact_info">{email}</p>
         </div>
         <div>
-          <p className="contact_headings">Call us</p>
+          <p className="contact_headings">{CALL_US}</p>
           <p className="contact_info">{contactNo}</p>
         </div>
         <div>
-          <p className="contact_headings">Address</p>
+          <p className="contact_headings">{ADDRESS}</p>
           <p className="contact_info">{address}</p>
         </div>
       </div>
