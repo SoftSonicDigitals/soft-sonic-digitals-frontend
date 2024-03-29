@@ -29,3 +29,19 @@ export const CONTACT_TESTIMONIALS: ContactTestimonialType = [
     title: "IT Manager, Ashrafs W.L.L",
   },
 ];
+
+export const WHERE_TO_FIND = [
+  {
+    country: "Australia",
+    locations: [
+      {
+        image: "sydney.webp",
+        name: "sydney",
+        email: "info@magnetoitsolutions.com",
+        contactNo: "+61-452581620",
+        address:
+          "Unit 3, 248 Flushcombe Road,Blacktown NSW 2148 , Sydney , Australia.",
+      },
+    ],
+  },
+];
