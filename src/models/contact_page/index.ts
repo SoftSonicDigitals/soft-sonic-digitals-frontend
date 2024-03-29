@@ -22,4 +22,5 @@ export type ContactFooterLinks = {
   title: string;
   email?: string;
   handle?: string;
+  link?: string;
 }[];

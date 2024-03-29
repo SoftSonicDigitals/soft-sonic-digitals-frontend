@@ -51,8 +51,12 @@ export const WHERE_TO_FIND: WhereToFindType = [
 ];
 
 export const CONTACT_FOOTER_LINKS: ContactFooterLinks = [
-  { title: "Sales", email: "info@magnetoitsolutions.com" },
-  { title: "Career", email: "hiring@magnetoitsolutions.com" },
-  { title: "Media & Press", email: "outreach@magnetoitsolutions.com" },
+  { title: "Sales", email: "info@magnetoitsolutions.com", link: "/" },
+  { title: "Career", email: "hiring@magnetoitsolutions.com", link: "/" },
+  {
+    title: "Media & Press",
+    email: "outreach@magnetoitsolutions.com",
+    link: "/",
+  },
   { title: "Skype", handle: "marketing_19207" },
 ];
