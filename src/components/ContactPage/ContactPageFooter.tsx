@@ -4,7 +4,7 @@ import React from "react";
 
 const ContactPageFooter = () => {
   return (
-    <section id="contact_footer" className="bg-black">
+    <footer className="bg-black">
       <div className="wrapper_container text-white flex-center py-16 px-5">
         <div className="grid items-center justify-center grid-cols-1 md:grid-cols-2  gap-y-5 sm:gap-y-8">
           {CONTACT_FOOTER_LINKS.map(({ email, handle, title, link }, index) => (
@@ -18,7 +18,7 @@ const ContactPageFooter = () => {
           ))}
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
