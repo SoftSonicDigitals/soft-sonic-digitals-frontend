@@ -82,6 +82,12 @@
   @apply text-lg tracking-wider font-[500];
 }
 
+.footer_headings {
+  @apply font-[600] text-xl tracking-wider;
+}
+.footer_info {
+  @apply font-[500] text-lg tracking-wider;
+}
 .ReactCollapse--collapse {
   transition: height 400ms;
 }
