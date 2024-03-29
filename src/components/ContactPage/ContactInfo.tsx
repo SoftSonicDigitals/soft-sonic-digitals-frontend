@@ -1,6 +1,7 @@
 import { ADDRESS, CALL_US, CONTACT_US } from "@/constants/contact_page";
 import Image from "next/image";
 import React from "react";
+
 type ContactInfoType = {
   image: string;
   name: string;
@@ -8,6 +9,7 @@ type ContactInfoType = {
   contactNo: string;
   address: string;
 };
+
 const ContactInfo = ({
   image,
   name,
@@ -16,7 +18,7 @@ const ContactInfo = ({
   address,
 }: ContactInfoType) => {
   return (
-    <div className="flex items-center justify-center lg:items-start flex-col md:flex-row gap-8 text-gray-900 px-6 sm:pl-8 lg:px-16 mb-24">
+    <div className="flex items-center justify-center lg:items-start flex-col md:flex-row gap-8 text-gray-900 px-6 sm:pl-12 lg:px-16 mb-24">
       <Image
         src={`/contact_page/${image}`}
         alt={`${name}`}
@@ -25,7 +27,7 @@ const ContactInfo = ({
         style={{ objectFit: "contain" }}
       />
 
-      <div className="flex flex-col gap-8 md:gap-4 max-w-[540px] mt-4">
+      <div className="flex flex-col gap-8 md:gap-4 lg:gap-8 max-w-[540px] mt-6">
         <div className="relative">
           <h3 className="text-xl sm:text-2xl lg:text-3xl capitalize font-[600] tracking-wide pb-3 ">
             {name}
