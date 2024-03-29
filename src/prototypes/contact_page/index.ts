@@ -1,4 +1,4 @@
-import { ContactTestimonialType } from "@/models/contact_page";
+import { ContactTestimonialType, WhereToFindType } from "@/models/contact_page";
 
 export const CONTACT_TESTIMONIALS: ContactTestimonialType = [
   {
@@ -30,18 +30,10 @@ export const CONTACT_TESTIMONIALS: ContactTestimonialType = [
   },
 ];
 
-export const WHERE_TO_FIND = [
+export const WHERE_TO_FIND: WhereToFindType = [
   {
     country: "Australia",
     locations: [
-      {
-        image: "sydney.webp",
-        name: "sydney",
-        email: "info@magnetoitsolutions.com",
-        contactNo: "+61-452581620",
-        address:
-          "Unit 3, 248 Flushcombe Road,Blacktown NSW 2148 , Sydney , Australia.",
-      },
       {
         image: "sydney.webp",
         name: "sydney",
