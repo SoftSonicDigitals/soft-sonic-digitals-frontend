@@ -75,6 +75,13 @@
   border-bottom: 3px solid black;
 }
 
+.contact_headings {
+  @apply text-xl lg:text-[25px] mb-2 font-[600] lg:font-[500];
+}
+.contact_info {
+  @apply text-lg tracking-wider font-[500];
+}
+
 .ReactCollapse--collapse {
   transition: height 400ms;
 }

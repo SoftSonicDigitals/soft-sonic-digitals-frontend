@@ -42,6 +42,14 @@ export const WHERE_TO_FIND = [
         address:
           "Unit 3, 248 Flushcombe Road,Blacktown NSW 2148 , Sydney , Australia.",
       },
+      {
+        image: "sydney.webp",
+        name: "sydney",
+        email: "info@magnetoitsolutions.com",
+        contactNo: "+61-452581620",
+        address:
+          "Unit 3, 248 Flushcombe Road,Blacktown NSW 2148 , Sydney , Australia.",
+      },
     ],
   },
 ];
