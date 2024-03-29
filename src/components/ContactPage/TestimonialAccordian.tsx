@@ -12,7 +12,7 @@ const TestimonialAccordian = () => {
     slidesToScroll: 1,
     autoplay: true,
     speed: 360,
-    autoplaySpeed: 7777000,
+    autoplaySpeed: 6000,
     cssEase: "ease-in-out",
   };
   return (
