@@ -1,5 +1,6 @@
 import ContactClients from "./ContactClients";
 import ContactInfo from "./ContactInfo";
+import ContactPageFooter from "./ContactPageFooter";
 import ContactPageNavbar from "./ContactPageNavbar";
 import LetsTalkHeadings from "./LetsTalkHeadings";
 import TestimonialAccordian from "./TestimonialAccordian";
@@ -14,4 +15,5 @@ export {
   TestimonialCard,
   WhereToFind,
   ContactInfo,
+  ContactPageFooter,
 };
