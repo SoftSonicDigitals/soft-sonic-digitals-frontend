@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "../globals.css";
-import { ContactPageNavbar } from "@/components/ContactPage";
+import { ContactPageFooter, ContactPageNavbar } from "@/components/ContactPage";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -24,6 +24,7 @@ export default function RootLayout({
       <body className={raleway.className}>
         <ContactPageNavbar />
         {children}
+        <ContactPageFooter />
       </body>
     </html>
   );
