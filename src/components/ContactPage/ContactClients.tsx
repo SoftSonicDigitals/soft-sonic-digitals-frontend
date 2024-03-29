@@ -2,7 +2,7 @@ import { CLIENTS_PROMO_HEADING } from "@/constants/contact_page";
 import { CLIENTS } from "@/prototypes/clients";
 import Image from "next/image";
 import React from "react";
-import { TestimonialAccordian } from ".";
+import { TestimonialAccordian, WhereToFind } from ".";
 
 const ContactClients = () => {
   return (
@@ -35,6 +35,7 @@ const ContactClients = () => {
         />
       </div>
       <TestimonialAccordian />
+      <WhereToFind />
     </section>
   );
 };

@@ -3,6 +3,7 @@ import ContactPageNavbar from "./ContactPageNavbar";
 import LetsTalkHeadings from "./LetsTalkHeadings";
 import TestimonialAccordian from "./TestimonialAccordian";
 import TestimonialCard from "./TestimonialCard";
+import WhereToFind from "./WhereToFind";
 
 export {
   LetsTalkHeadings,
@@ -10,4 +11,5 @@ export {
   ContactClients,
   TestimonialAccordian,
   TestimonialCard,
+  WhereToFind,
 };
