@@ -1,4 +1,8 @@
-import { ContactClients, LetsTalkHeadings } from "@/components/ContactPage";
+import {
+  ContactClients,
+  LetsTalkHeadings,
+  WhereToFind,
+} from "@/components/ContactPage";
 
 import React from "react";
 
@@ -20,6 +24,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <WhereToFind />
     </main>
   );
 };
