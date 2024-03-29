@@ -6,7 +6,10 @@ import { TestimonialAccordian } from ".";
 
 const ContactClients = () => {
   return (
-    <div className=" max-w-[555px]  px-4 md:px-[10%]  lg:pl-8 lg:pr-0 basis-full">
+    <section
+      id="contact_clients"
+      className=" max-w-[555px]  px-4 md:px-[10%]  lg:pl-8 lg:pr-0 basis-full mt-4"
+    >
       <h3 className="text-xl text-center font-[500] tracking-wider mb-10">
         {CLIENTS_PROMO_HEADING}
       </h3>
@@ -32,7 +35,7 @@ const ContactClients = () => {
         />
       </div>
       <TestimonialAccordian />
-    </div>
+    </section>
   );
 };
 
