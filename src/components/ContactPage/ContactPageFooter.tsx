@@ -11,8 +11,7 @@ const ContactPageFooter = () => {
             <div key={index} className="pr-24">
               <p className="footer_headings">{title}</p>
               <Link href={`${link ? link : "/"}`} className="footer_info">
-                {email && email}
-                {handle && handle}
+                {email ? email : handle}
               </Link>
             </div>
           ))}
