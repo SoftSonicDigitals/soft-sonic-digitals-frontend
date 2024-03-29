@@ -9,7 +9,7 @@ LETS_TALK_SUB_HEADING;
 const LetsTalkHeadings = () => {
   return (
     <section id="lets_talk">
-      <div className="wrapper_container  mb-8 lg:mb-24">
+      <div className="wrapper_container  mb-8 lg:mb-24 ">
         <PrimaryStyledHeadings
           mainHeading={LETS_TALK_MAIN_HEADING}
           subHeading={LETS_TALK_SUB_HEADING}
