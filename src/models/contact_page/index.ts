@@ -17,3 +17,9 @@ export type WhereToFindType = {
   country: string;
   locations: location[];
 }[];
+
+export type ContactFooterLinks = {
+  title: string;
+  email?: string;
+  handle?: string;
+}[];
