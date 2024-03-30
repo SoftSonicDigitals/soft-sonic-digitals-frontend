@@ -7,7 +7,7 @@ const Form = () => {
       id="contact_form"
       className="md:max-w-[555px]  basis-full  w-full "
     >
-      <div className=" pr-8">
+      <div className=" pr-16">
         <form className="px-3 py-8 flex flex-col gap-2  bg-gray-300  ">
           {/* name field */}
           <div className="flex flex-col gap-1 text-gray-700">
@@ -170,7 +170,7 @@ const Form = () => {
             <textarea
               id="project_details"
               name="project_details"
-              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm h-24"
+              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm h-40"
             />
           </div>
 
