@@ -5,7 +5,7 @@ import { SideMenu, Platforms, Resources, Solutions, ContactUs } from ".";
 
 const Navbar = () => {
   return (
-    <nav className="shadow-md">
+    <nav className="shadow-md fixed w-full bg-white z-[999]">
       <div
         className="wrapper_container flex justify-between
        "
