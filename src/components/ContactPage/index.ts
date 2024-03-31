@@ -3,6 +3,7 @@ import ContactInfo from "./ContactInfo";
 import ContactPageFooter from "./ContactPageFooter";
 import ContactPageNavbar from "./ContactPageNavbar";
 import Form from "./Form";
+import FormDropDownOption from "./FormDropDownOption";
 import LetsTalkHeadings from "./LetsTalkHeadings";
 import TestimonialAccordian from "./TestimonialAccordian";
 import TestimonialCard from "./TestimonialCard";
@@ -18,4 +19,5 @@ export {
   ContactInfo,
   ContactPageFooter,
   Form,
+  FormDropDownOption,
 };

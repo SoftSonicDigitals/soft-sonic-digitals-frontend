@@ -89,3 +89,27 @@ export const FORM_SERVICES = [
     title: "UI & UX design",
   },
 ];
+
+export const FORM_BUDGET = [
+  { value: "", title: "-Select-" },
+  { value: "$10k+", title: "$10k+" },
+  { value: "$50k+", title: "$50k+" },
+  { value: "$100k+", title: "$100k+" },
+  { value: "$200k+", title: "$200k+" },
+  { value: "$500k+", title: "$500k+" },
+];
+
+export const FORM_REQUIREMENT = [
+  { value: "", title: "-Select-" },
+  { value: "Hire Dedicated Team", title: "Hire Dedicated Team" },
+  { value: "New Project", title: "New Project" },
+  { value: "Existing Project", title: "Existing Project" },
+];
+
+export const FORM_START = [
+  { value: "", title: "-Select-" },
+  { value: "Right now", title: "Right now" },
+  { value: "In few weeks", title: "In few weeks" },
+  { value: "In few months", title: "In few months" },
+  { value: "Not sure", title: "Not sure" },
+];
