@@ -24,3 +24,15 @@ export type ContactFooterLinks = {
   handle?: string;
   link?: string;
 }[];
+
+export type FormFields = {
+  name: string;
+  email: string;
+  mobile: string;
+  company: string;
+  service: string;
+  budget: string;
+  requirement: string;
+  start: string;
+  details: string;
+};
