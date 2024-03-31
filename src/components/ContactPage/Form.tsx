@@ -1,28 +1,49 @@
 "use client";
 import React from "react";
 import { PrimaryButton } from "../Reusable";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { FormFields } from "@/models/contact_page";
-
+import { BsFillExclamationSquareFill } from "react-icons/bs";
 const Form = () => {
-  const { register } = useForm<FormFields>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormFields>();
+
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log(data);
+  };
 
   return (
     <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
       <div className=" px-0.5 md:pr-8">
-        <form className="px-3 py-8 flex flex-col gap-2  bg-gray-300  ">
+        <form
+          className="px-3 py-8 flex flex-col gap-2  bg-gray-300  "
+          onSubmit={handleSubmit(onSubmit)}
+        >
           {/* name field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="name" className="font-[600] text-sm">
               Name <span className="text-red text-xl">*</span>
             </label>
-
-            <input
-              type="text"
-              id="name"
-              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm text-gray-700"
-              {...register("name")}
-            />
+            <div>
+              <input
+                type="text"
+                id="name"
+                className={`relative border-[1px] ${
+                  errors?.name ? "border-red" : "border-gray-600 "
+                } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+                {...register("name", {
+                  required: "Name is required",
+                })}
+              />
+              {errors.name && (
+                <div className="text-sm font-[500] text-red mt-1">
+                  {errors.name.message}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* email field */}
@@ -34,9 +55,22 @@ const Form = () => {
             <input
               type="text"
               id="email"
-              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
-              {...register("email")}
+              className={`relative border-[1px] ${
+                errors?.email ? "border-red" : "border-gray-600 "
+              } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+              {...register("email", {
+                required: "Email is required",
+                pattern: {
+                  value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+                  message: "Please enter a valid email",
+                },
+              })}
             />
+            {errors.email && (
+              <div className="text-sm font-[500] text-red mt-1">
+                {errors.email.message}
+              </div>
+            )}
           </div>
 
           {/* mobile field */}
@@ -49,7 +83,9 @@ const Form = () => {
               type="text"
               id="mobile"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
-              {...register("mobile")}
+              {...register("mobile", {
+                required: true,
+              })}
             />
           </div>
 
@@ -77,8 +113,9 @@ const Form = () => {
               id="service"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
               {...register("service")}
+              defaultValue={""}
             >
-              <option value="" disabled defaultValue={""}>
+              <option value="" disabled>
                 -Select-
               </option>
               <option value="Ecommerce Consultation">
@@ -111,8 +148,9 @@ const Form = () => {
                 id="budget"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
                 {...register("budget")}
+                defaultValue={""}
               >
-                <option value="" disabled defaultValue={""}>
+                <option value="" disabled>
                   -Select-
                 </option>
                 <option value="$10k+">$10k+</option>
@@ -133,8 +171,9 @@ const Form = () => {
                 id="requirement"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
                 {...register("requirement")}
+                defaultValue={""}
               >
-                <option value="" disabled defaultValue={""}>
+                <option value="" disabled>
                   -Select-
                 </option>
                 <option value="Hire Dedicated Team">Hire Dedicated Team</option>
@@ -154,8 +193,9 @@ const Form = () => {
               id="start"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
               {...register("start")}
+              defaultValue={""}
             >
-              <option value="" disabled defaultValue={""}>
+              <option value="" disabled>
                 -Select-
               </option>
               <option value="Right now">Right now</option>
