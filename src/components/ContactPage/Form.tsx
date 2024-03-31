@@ -128,6 +128,7 @@ const Form = () => {
               {FORM_FIELDS.service}
               <span className="text-red text-xl">*</span>
             </label>
+
             {/* Select a service field */}
             <select
               id="service"
@@ -135,7 +136,7 @@ const Form = () => {
                 errors?.service ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("service", {
-                required: "Please select an item form the list ",
+                required: "Please select a service ",
               })}
               defaultValue={""}
             >
@@ -163,7 +164,7 @@ const Form = () => {
                   errors?.budget ? "border-red" : "border-gray-600 "
                 } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
                 {...register("budget", {
-                  required: "Please select an item form the list ",
+                  required: "Please select the budget",
                 })}
                 defaultValue={""}
               >
@@ -172,9 +173,9 @@ const Form = () => {
                 ))}
               </select>
 
-              {errors.service && (
+              {errors.budget && (
                 <div className="text-sm font-[500] text-red mt-1">
-                  {errors.service.message}
+                  {errors.budget.message}
                 </div>
               )}
             </div>
@@ -191,13 +192,9 @@ const Form = () => {
                 className={`relative border-[1px] ${
                   errors?.requirement ? "border-red" : "border-gray-600 "
                 } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
-                {...register(
-                  "requirement",
-
-                  {
-                    required: "Please select an item form the list ",
-                  }
-                )}
+                {...register("requirement", {
+                  required: "Please select the requirement",
+                })}
                 defaultValue={""}
               >
                 {FORM_REQUIREMENT.map(({ value, title }, index) => (
@@ -223,7 +220,7 @@ const Form = () => {
                 errors?.start ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("start", {
-                required: "Please select an item form the list ",
+                required: "Please select your estimated start date",
               })}
               defaultValue={""}
             >
