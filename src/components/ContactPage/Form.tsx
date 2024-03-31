@@ -1,9 +1,17 @@
 "use client";
+
 import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormFields } from "@/models/contact_page";
-import { FORM_SERVICES } from "@/prototypes/contact_page";
+import {
+  FORM_BUDGET,
+  FORM_REQUIREMENT,
+  FORM_SERVICES,
+  FORM_START,
+} from "@/prototypes/contact_page";
+import { FormDropDownOption } from ".";
+
 const Form = () => {
   const {
     register,
@@ -21,7 +29,7 @@ const Form = () => {
     <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
       <div className=" px-0.5 md:pr-8">
         <form
-          className="px-3 py-8 flex flex-col gap-2  bg-gray-300  "
+          className="px-3.5 py-8 flex flex-col gap-3  bg-gray-300  "
           onSubmit={handleSubmit(onSubmit)}
         >
           {/* name field */}
@@ -112,12 +120,11 @@ const Form = () => {
             />
           </div>
 
-          {/* Select a service field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="service" className="font-[600] text-sm">
               Select a service<span className="text-red text-xl">*</span>
             </label>
-
+            {/* Select a service field */}
             <select
               id="service"
               className={`relative border-[1px] ${
@@ -128,38 +135,9 @@ const Form = () => {
               })}
               defaultValue={""}
             >
-              {FORM_SERVICES.map((service, index) =>
-                service.value === "" ? (
-                  <option key={index} value="" disabled>
-                    {service.title}
-                  </option>
-                ) : (
-                  <option key={index} value={service.value}>
-                    {service.title}
-                  </option>
-                )
-              )}
-
-              {/* <option value="" disabled>
-                -Select-
-              </option>
-              <option value="Ecommerce Consultation">
-                Ecommerce Consultation
-              </option>
-              <option value="Ecommerce Development">
-                Ecommerce Development
-              </option>
-              <option value="Ecommerce Replatforming">
-                Ecommerce Replatforming
-              </option>
-              <option value="Mobile Application Development">
-                Mobile Application Development
-              </option>
-              <option value="Web Application Development">
-                Web Application Development
-              </option>
-              <option value="Digital Marketing">Digital Marketing</option>
-              <option value="UI & UX design">UI & UX design</option> */}
+              {FORM_SERVICES.map(({ value, title }, index) => (
+                <FormDropDownOption value={value} title={title} key={index} />
+              ))}
             </select>
             {errors.service && (
               <div className="text-sm font-[500] text-red mt-1">
@@ -173,7 +151,7 @@ const Form = () => {
               <label htmlFor="budget" className="font-[600] text-sm">
                 Budget<span className="text-red text-xl">*</span>
               </label>
-
+              {/* Select a budget field */}
               <select
                 id="budget"
                 className={`relative border-[1px] ${
@@ -184,16 +162,11 @@ const Form = () => {
                 })}
                 defaultValue={""}
               >
-                <option value="" disabled>
-                  -Select-
-                </option>
-                <option value="$10k+">$10k+</option>
-                <option value="$50k+">$50k+</option>
-                <option value="$100k+">$100k+</option>
-
-                <option value="$200k+">$200k+</option>
-                <option value="$500k+">$500k+</option>
+                {FORM_BUDGET.map(({ value, title }, index) => (
+                  <FormDropDownOption value={value} title={title} key={index} />
+                ))}
               </select>
+
               {errors.service && (
                 <div className="text-sm font-[500] text-red mt-1">
                   {errors.service.message}
@@ -201,6 +174,7 @@ const Form = () => {
               )}
             </div>
 
+            {/* Select a requirement field */}
             <div className="flex flex-col gap-1 text-gray-700">
               <label htmlFor="requirement" className="font-[600] text-sm">
                 Requirement<span className="text-red text-xl">*</span>
@@ -220,12 +194,9 @@ const Form = () => {
                 )}
                 defaultValue={""}
               >
-                <option value="" disabled>
-                  -Select-
-                </option>
-                <option value="Hire Dedicated Team">Hire Dedicated Team</option>
-                <option value="New Project">New Project</option>
-                <option value="Existing Project">Existing Project</option>
+                {FORM_REQUIREMENT.map(({ value, title }, index) => (
+                  <FormDropDownOption value={value} title={title} key={index} />
+                ))}
               </select>
               {errors.requirement && (
                 <div className="text-sm font-[500] text-red mt-1">
@@ -234,7 +205,7 @@ const Form = () => {
               )}
             </div>
           </div>
-
+          {/* Select a start field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="start" className="font-[600] text-sm">
               How soon you want to start?
@@ -250,14 +221,10 @@ const Form = () => {
               })}
               defaultValue={""}
             >
-              <option value="" disabled>
-                -Select-
-              </option>
-              <option value="Right now">Right now</option>
-              <option value="In few weeks">In few weeks</option>
-              <option value="In few months">In few months</option>
-              <option value="Not sure">Not sure</option>
-            </select>{" "}
+              {FORM_START.map(({ value, title }, index) => (
+                <FormDropDownOption value={value} title={title} key={index} />
+              ))}
+            </select>
             {errors.start && (
               <div className="text-sm font-[500] text-red mt-1">
                 {errors.start.message}
@@ -265,6 +232,7 @@ const Form = () => {
             )}
           </div>
 
+          {/* Select a project details field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="details" className="font-[600] text-sm">
               Project Details
