@@ -3,8 +3,10 @@ import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { useForm } from "react-hook-form";
 import { FormFields } from "@/models/contact_page";
+
 const Form = () => {
-  const form = useForm<FormFields>();
+  const { register } = useForm<FormFields>();
+
   return (
     <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
       <div className=" px-0.5 md:pr-8">
@@ -18,8 +20,8 @@ const Form = () => {
             <input
               type="text"
               id="name"
-              name="name"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm text-gray-700"
+              {...register("name")}
             />
           </div>
 
@@ -32,8 +34,8 @@ const Form = () => {
             <input
               type="text"
               id="email"
-              name="email"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
+              {...register("email")}
             />
           </div>
 
@@ -46,8 +48,8 @@ const Form = () => {
             <input
               type="text"
               id="mobile"
-              name="mobile"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
+              {...register("mobile")}
             />
           </div>
 
@@ -60,8 +62,8 @@ const Form = () => {
             <input
               type="text"
               id="company"
-              name="company"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
+              {...register("company")}
             />
           </div>
 
@@ -72,9 +74,9 @@ const Form = () => {
             </label>
 
             <select
-              name="service"
               id="service"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
+              {...register("service")}
             >
               <option value="" disabled defaultValue={""}>
                 -Select-
@@ -106,9 +108,9 @@ const Form = () => {
               </label>
 
               <select
-                name="budget"
                 id="budget"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
+                {...register("budget")}
               >
                 <option value="" disabled defaultValue={""}>
                   -Select-
@@ -128,9 +130,9 @@ const Form = () => {
               </label>
 
               <select
-                name="requirement"
                 id="requirement"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
+                {...register("requirement")}
               >
                 <option value="" disabled defaultValue={""}>
                   -Select-
@@ -149,9 +151,9 @@ const Form = () => {
             </label>
 
             <select
-              name="start"
               id="start"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
+              {...register("start")}
             >
               <option value="" disabled defaultValue={""}>
                 -Select-
@@ -164,14 +166,14 @@ const Form = () => {
           </div>
 
           <div className="flex flex-col gap-1 text-gray-700">
-            <label htmlFor="project_details" className="font-[600] text-sm">
+            <label htmlFor="details" className="font-[600] text-sm">
               Project Details
             </label>
 
             <textarea
-              id="project_details"
-              name="project_details"
+              id="details"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm h-40"
+              {...register("details")}
             />
           </div>
 
