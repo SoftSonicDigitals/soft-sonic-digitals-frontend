@@ -5,9 +5,11 @@ type ButtonProps = {
   className?: string;
   type?: "button" | "submit" | "reset" | undefined;
   clickHandler?: () => void;
+  disabled?: boolean;
 };
 
 const PrimaryButton = ({
+  disabled,
   type,
   title,
   className,
@@ -18,6 +20,7 @@ const PrimaryButton = ({
       type={type}
       className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  ${className} `}
       onClick={clickHandler}
+      disabled={disabled}
     >
       {title}
     </button>
