@@ -74,7 +74,7 @@ const Form = () => {
               id="service"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
             >
-              <option value="" disabled selected>
+              <option value="" disabled defaultValue={""}>
                 -Select-
               </option>
               <option value="Ecommerce Consultation">
@@ -97,7 +97,7 @@ const Form = () => {
             </select>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-1 text-gray-700">
               <label htmlFor="budget" className="font-[600] text-sm">
                 Budget<span className="text-red text-xl">*</span>
@@ -108,7 +108,7 @@ const Form = () => {
                 id="budget"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
               >
-                <option value="" disabled selected>
+                <option value="" disabled defaultValue={""}>
                   -Select-
                 </option>
                 <option value="$10k+">$10k+</option>
@@ -119,6 +119,7 @@ const Form = () => {
                 <option value="$500k+">$500k+</option>
               </select>
             </div>
+
             <div className="flex flex-col gap-1 text-gray-700">
               <label htmlFor="requirement" className="font-[600] text-sm">
                 Requirement<span className="text-red text-xl">*</span>
@@ -129,7 +130,7 @@ const Form = () => {
                 id="requirement"
                 className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
               >
-                <option value="" disabled selected>
+                <option value="" disabled defaultValue={""}>
                   -Select-
                 </option>
                 <option value="Hire Dedicated Team">Hire Dedicated Team</option>
@@ -150,7 +151,7 @@ const Form = () => {
               id="start"
               className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
             >
-              <option value="" disabled selected>
+              <option value="" disabled defaultValue={""}>
                 -Select-
               </option>
               <option value="Right now">Right now</option>
