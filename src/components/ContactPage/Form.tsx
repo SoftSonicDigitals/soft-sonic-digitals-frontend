@@ -1,13 +1,11 @@
+"use client";
 import React from "react";
 import { PrimaryButton } from "../Reusable";
 
 const Form = () => {
   return (
-    <section
-      id="contact_form"
-      className="md:max-w-[555px]  basis-full  w-full "
-    >
-      <div className=" pr-16">
+    <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
+      <div className=" px-0.5 md:pr-8">
         <form className="px-3 py-8 flex flex-col gap-2  bg-gray-300  ">
           {/* name field */}
           <div className="flex flex-col gap-1 text-gray-700">
@@ -171,19 +169,6 @@ const Form = () => {
               id="project_details"
               name="project_details"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm h-40"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1 text-gray-700">
-            <label htmlFor="shared_files" className="font-[600] text-sm">
-              Have a file to share?
-            </label>
-
-            <input
-              type="file"
-              id="shared_files"
-              name="shared_files"
-              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm "
             />
           </div>
 
