@@ -60,3 +60,32 @@ export const CONTACT_FOOTER_LINKS: ContactFooterLinks = [
   },
   { title: "Skype", handle: "marketing_19207" },
 ];
+
+export const FORM_SERVICES = [
+  { value: "", title: "-Select-" },
+  { value: "Ecommerce Consultation", title: "Ecommerce Consultation" },
+  {
+    value: "Ecommerce Development",
+    title: "Ecommerce Development",
+  },
+  {
+    value: "Ecommerce Replatforming",
+    title: "Ecommerce Replatforming",
+  },
+  {
+    value: "Mobile Application Development",
+    title: "Mobile Application Development",
+  },
+  {
+    value: "Web Application Development",
+    title: "Web Application Development",
+  },
+  {
+    value: "Digital Marketing",
+    title: "Digital Marketing",
+  },
+  {
+    value: "UI & UX design",
+    title: "UI & UX design",
+  },
+];
