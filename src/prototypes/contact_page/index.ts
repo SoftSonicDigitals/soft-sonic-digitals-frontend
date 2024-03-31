@@ -1,6 +1,7 @@
 import {
   ContactFooterLinks,
   ContactTestimonialType,
+  FormDropDownOptionsType,
   WhereToFindType,
 } from "@/models/contact_page";
 
@@ -61,7 +62,7 @@ export const CONTACT_FOOTER_LINKS: ContactFooterLinks = [
   { title: "Skype", handle: "marketing_19207" },
 ];
 
-export const FORM_SERVICES = [
+export const FORM_SERVICES: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "Ecommerce Consultation", title: "Ecommerce Consultation" },
   {
@@ -90,7 +91,7 @@ export const FORM_SERVICES = [
   },
 ];
 
-export const FORM_BUDGET = [
+export const FORM_BUDGET: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "$10k+", title: "$10k+" },
   { value: "$50k+", title: "$50k+" },
@@ -99,14 +100,14 @@ export const FORM_BUDGET = [
   { value: "$500k+", title: "$500k+" },
 ];
 
-export const FORM_REQUIREMENT = [
+export const FORM_REQUIREMENT: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "Hire Dedicated Team", title: "Hire Dedicated Team" },
   { value: "New Project", title: "New Project" },
   { value: "Existing Project", title: "Existing Project" },
 ];
 
-export const FORM_START = [
+export const FORM_START: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "Right now", title: "Right now" },
   { value: "In few weeks", title: "In few weeks" },

@@ -36,3 +36,8 @@ export type FormFields = {
   start: string;
   details: string;
 };
+
+export type FormDropDownOptionsType = {
+  value: string;
+  title: string;
+}[];
