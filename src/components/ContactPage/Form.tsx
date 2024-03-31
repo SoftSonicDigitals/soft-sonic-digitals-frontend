@@ -11,6 +11,7 @@ import {
   FORM_START,
 } from "@/prototypes/contact_page";
 import { FormDropDownOption } from ".";
+import { FORM_FIELDS } from "@/constants/contact_page";
 
 const Form = () => {
   const {
@@ -35,7 +36,7 @@ const Form = () => {
           {/* name field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="name" className="font-[600] text-sm">
-              Name <span className="text-red text-xl">*</span>
+              {FORM_FIELDS.name} <span className="text-red text-xl">*</span>
             </label>
             <div>
               <input
@@ -59,7 +60,8 @@ const Form = () => {
           {/* email field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="email" className="font-[600] text-sm">
-              Email<span className="text-red text-xl">*</span>
+              {FORM_FIELDS.email}
+              <span className="text-red text-xl">*</span>
             </label>
 
             <input
@@ -86,7 +88,8 @@ const Form = () => {
           {/* mobile field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="mobile" className="font-[600] text-sm">
-              Mobile<span className="text-red text-xl">*</span>
+              {FORM_FIELDS.mobile}
+              <span className="text-red text-xl">*</span>
             </label>
 
             <input
@@ -109,7 +112,7 @@ const Form = () => {
           {/* Company field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="company" className="font-[600] text-sm">
-              Company
+              {FORM_FIELDS.company}
             </label>
 
             <input
@@ -122,7 +125,8 @@ const Form = () => {
 
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="service" className="font-[600] text-sm">
-              Select a service<span className="text-red text-xl">*</span>
+              {FORM_FIELDS.service}
+              <span className="text-red text-xl">*</span>
             </label>
             {/* Select a service field */}
             <select
@@ -149,7 +153,8 @@ const Form = () => {
           <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-1 text-gray-700">
               <label htmlFor="budget" className="font-[600] text-sm">
-                Budget<span className="text-red text-xl">*</span>
+                {FORM_FIELDS.budget}
+                <span className="text-red text-xl">*</span>
               </label>
               {/* Select a budget field */}
               <select
@@ -177,7 +182,8 @@ const Form = () => {
             {/* Select a requirement field */}
             <div className="flex flex-col gap-1 text-gray-700">
               <label htmlFor="requirement" className="font-[600] text-sm">
-                Requirement<span className="text-red text-xl">*</span>
+                {FORM_FIELDS.requirement}
+                <span className="text-red text-xl">*</span>
               </label>
 
               <select
@@ -208,7 +214,7 @@ const Form = () => {
           {/* Select a start field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="start" className="font-[600] text-sm">
-              How soon you want to start?
+              {FORM_FIELDS.start}
               <span className="text-red text-xl">*</span>
             </label>
             <select
@@ -235,7 +241,7 @@ const Form = () => {
           {/* Select a project details field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="details" className="font-[600] text-sm">
-              Project Details
+              {FORM_FIELDS.details}
             </label>
 
             <textarea

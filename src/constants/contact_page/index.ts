@@ -6,3 +6,15 @@ export const CLIENTS_PROMO_HEADING =
 export const CONTACT_US = "Contact us";
 export const CALL_US = "Call us";
 export const ADDRESS = "Address";
+
+export const FORM_FIELDS = {
+  name: "Name",
+  email: "Email",
+  mobile: "Mobile",
+  company: "Company",
+  service: "Select a service",
+  budget: "Budget",
+  requirement: "Requirement",
+  start: "How soon you want to start?",
+  details: "Project Details",
+};
