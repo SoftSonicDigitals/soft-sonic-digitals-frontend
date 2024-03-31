@@ -1,8 +1,10 @@
 "use client";
 import React from "react";
 import { PrimaryButton } from "../Reusable";
-
+import { useForm } from "react-hook-form";
+import { FormFields } from "@/models/contact_page";
 const Form = () => {
+  const form = useForm<FormFields>();
   return (
     <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
       <div className=" px-0.5 md:pr-8">
