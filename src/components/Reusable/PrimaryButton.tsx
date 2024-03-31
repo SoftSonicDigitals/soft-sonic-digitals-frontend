@@ -18,7 +18,9 @@ const PrimaryButton = ({
   return (
     <button
       type={type}
-      className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  ${className} `}
+      className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  ${className} ${
+        disabled ? "cursor-not-allowed" : ""
+      } `}
       onClick={clickHandler}
       disabled={disabled}
     >

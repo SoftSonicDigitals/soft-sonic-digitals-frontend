@@ -3,16 +3,18 @@ import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormFields } from "@/models/contact_page";
-
+import { FORM_SERVICES } from "@/prototypes/contact_page";
 const Form = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data);
+    reset();
   };
 
   return (
@@ -126,7 +128,19 @@ const Form = () => {
               })}
               defaultValue={""}
             >
-              <option value="" disabled>
+              {FORM_SERVICES.map((service, index) =>
+                service.value === "" ? (
+                  <option key={index} value="" disabled>
+                    {service.title}
+                  </option>
+                ) : (
+                  <option key={index} value={service.value}>
+                    {service.title}
+                  </option>
+                )
+              )}
+
+              {/* <option value="" disabled>
                 -Select-
               </option>
               <option value="Ecommerce Consultation">
@@ -145,7 +159,7 @@ const Form = () => {
                 Web Application Development
               </option>
               <option value="Digital Marketing">Digital Marketing</option>
-              <option value="UI & UX design">UI & UX design</option>
+              <option value="UI & UX design">UI & UX design</option> */}
             </select>
             {errors.service && (
               <div className="text-sm font-[500] text-red mt-1">
