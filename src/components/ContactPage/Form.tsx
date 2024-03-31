@@ -3,12 +3,12 @@ import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FormFields } from "@/models/contact_page";
-import { BsFillExclamationSquareFill } from "react-icons/bs";
+
 const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
@@ -82,11 +82,18 @@ const Form = () => {
             <input
               type="text"
               id="mobile"
-              className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
+              className={`relative border-[1px] ${
+                errors?.mobile ? "border-red" : "border-gray-600 "
+              } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("mobile", {
-                required: true,
+                required: "Mobile is required",
               })}
             />
+            {errors.mobile && (
+              <div className="text-sm font-[500] text-red mt-1">
+                {errors.mobile.message}
+              </div>
+            )}
           </div>
 
           {/* Company field */}
@@ -111,8 +118,12 @@ const Form = () => {
 
             <select
               id="service"
-              className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
-              {...register("service")}
+              className={`relative border-[1px] ${
+                errors?.service ? "border-red" : "border-gray-600 "
+              } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+              {...register("service", {
+                required: "Please select an item form the list ",
+              })}
               defaultValue={""}
             >
               <option value="" disabled>
@@ -136,6 +147,11 @@ const Form = () => {
               <option value="Digital Marketing">Digital Marketing</option>
               <option value="UI & UX design">UI & UX design</option>
             </select>
+            {errors.service && (
+              <div className="text-sm font-[500] text-red mt-1">
+                {errors.service.message}
+              </div>
+            )}
           </div>
 
           <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
@@ -146,8 +162,12 @@ const Form = () => {
 
               <select
                 id="budget"
-                className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
-                {...register("budget")}
+                className={`relative border-[1px] ${
+                  errors?.budget ? "border-red" : "border-gray-600 "
+                } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+                {...register("budget", {
+                  required: "Please select an item form the list ",
+                })}
                 defaultValue={""}
               >
                 <option value="" disabled>
@@ -160,6 +180,11 @@ const Form = () => {
                 <option value="$200k+">$200k+</option>
                 <option value="$500k+">$500k+</option>
               </select>
+              {errors.service && (
+                <div className="text-sm font-[500] text-red mt-1">
+                  {errors.service.message}
+                </div>
+              )}
             </div>
 
             <div className="flex flex-col gap-1 text-gray-700">
@@ -169,8 +194,16 @@ const Form = () => {
 
               <select
                 id="requirement"
-                className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm"
-                {...register("requirement")}
+                className={`relative border-[1px] ${
+                  errors?.requirement ? "border-red" : "border-gray-600 "
+                } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+                {...register(
+                  "requirement",
+
+                  {
+                    required: "Please select an item form the list ",
+                  }
+                )}
                 defaultValue={""}
               >
                 <option value="" disabled>
@@ -180,6 +213,11 @@ const Form = () => {
                 <option value="New Project">New Project</option>
                 <option value="Existing Project">Existing Project</option>
               </select>
+              {errors.requirement && (
+                <div className="text-sm font-[500] text-red mt-1">
+                  {errors.requirement.message}
+                </div>
+              )}
             </div>
           </div>
 
@@ -188,11 +226,14 @@ const Form = () => {
               How soon you want to start?
               <span className="text-red text-xl">*</span>
             </label>
-
             <select
               id="start"
-              className="border-[1px] border-gray-600 w-full  py-3 outline-0 px-4 text-sm tracking-wider"
-              {...register("start")}
+              className={`relative border-[1px] ${
+                errors?.start ? "border-red" : "border-gray-600 "
+              } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+              {...register("start", {
+                required: "Please select an item form the list ",
+              })}
               defaultValue={""}
             >
               <option value="" disabled>
@@ -202,7 +243,12 @@ const Form = () => {
               <option value="In few weeks">In few weeks</option>
               <option value="In few months">In few months</option>
               <option value="Not sure">Not sure</option>
-            </select>
+            </select>{" "}
+            {errors.start && (
+              <div className="text-sm font-[500] text-red mt-1">
+                {errors.start.message}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-1 text-gray-700">
@@ -217,7 +263,12 @@ const Form = () => {
             />
           </div>
 
-          <PrimaryButton title="SUBMIT" className="mt-8 py-2.5" type="submit" />
+          <PrimaryButton
+            title="SUBMIT"
+            className="mt-8 py-2.5"
+            type="submit"
+            disabled={isSubmitting}
+          />
         </form>
       </div>
     </section>
