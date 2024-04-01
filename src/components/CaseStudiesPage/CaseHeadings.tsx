@@ -3,7 +3,7 @@ import React from "react";
 const CaseHeadings = () => {
   return (
     <div className="wrapper_container mb-24 px-4 md:px-2">
-      <div className="pt-[150px] mb-12 text-base font-[700] text-gray-700 tracking-wide uppercase">
+      <div className="pt-[150px] lg:pt-[170px] mb-9 md:mb-12 text-base lg:text-lg xl:text-base font-[700] text-gray-700 tracking-wide uppercase">
         Feather down
       </div>
       <div className="text-2xl md:text-[35px] font-[500] text-gray-800 md:leading-snug ">
