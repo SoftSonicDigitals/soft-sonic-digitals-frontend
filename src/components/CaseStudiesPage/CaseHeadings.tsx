@@ -1,7 +1,17 @@
 import React from "react";
 
 const CaseHeadings = () => {
-  return <div>CaseHeadings</div>;
+  return (
+    <div className="wrapper_container mb-24 px-4 md:px-2">
+      <div className="pt-[150px] mb-12 text-base font-[700] text-gray-700 tracking-wide uppercase">
+        Feather down
+      </div>
+      <div className="text-2xl md:text-[35px] font-[500] text-gray-800 md:leading-snug ">
+        By delivering a unique client experience, the website assisted in
+        promoting the glamping industry and increasing revenue for the company.
+      </div>
+    </div>
+  );
 };
 
 export default CaseHeadings;
