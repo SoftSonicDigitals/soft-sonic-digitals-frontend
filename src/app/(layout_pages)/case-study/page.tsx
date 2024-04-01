@@ -1,4 +1,4 @@
-import { CaseHeadings } from "@/components/CaseStudiesPage";
+import { BannerImage, CaseHeadings } from "@/components/CaseStudiesPage";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
 import React from "react";
 
@@ -9,6 +9,7 @@ const page = () => {
         caseName={FEATHER_DOWN.caseName}
         caseOutcomes={FEATHER_DOWN.caseOutcomes}
       />
+      <BannerImage />
     </>
   );
 };
