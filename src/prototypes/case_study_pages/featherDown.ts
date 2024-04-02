@@ -3,5 +3,5 @@ export const FEATHER_DOWN = {
   caseOutcomes:
     "By delivering a unique client experience, the website assisted in promoting the glamping industry and increasing revenue for the company.",
   // no leading slash for path name
-  bannerImagePath: "feather_down/feather_down_banner.webp",
+  bannerImagePath: "/case_study_pages/feather_down/feather_down_banner.webp",
 };
