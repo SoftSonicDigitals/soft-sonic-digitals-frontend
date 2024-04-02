@@ -9,7 +9,7 @@ const page = () => {
         caseName={FEATHER_DOWN.caseName}
         caseOutcomes={FEATHER_DOWN.caseOutcomes}
       />
-      <BannerImage />
+      <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
     </>
   );
 };
