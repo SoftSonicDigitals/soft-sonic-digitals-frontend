@@ -2,12 +2,15 @@ import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
 import Image from "next/legacy/image";
 import React from "react";
 
-const BannerImage = () => {
+type BannerImgPropsType = {
+  bannerImgPath: string;
+};
+const BannerImage = ({ bannerImgPath }: BannerImgPropsType) => {
   return (
     <section>
       <div className="relative w-[100vw] mb-24 ">
         <Image
-          src={`/case_study_pages/${FEATHER_DOWN.bannerImagePath}`}
+          src={`${bannerImgPath}`}
           alt="banner image"
           layout="responsive"
           height={688}
