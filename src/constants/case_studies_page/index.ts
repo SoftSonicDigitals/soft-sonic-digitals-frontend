@@ -4,3 +4,4 @@ export const SOLUTION = "Solution";
 export const BENEFITS = "Benefits";
 export const FACTS_FIGURES = "Facts & figures";
 export const RESPONSIVE_LAYOUT = "Responsive Layout";
+export const TAKE_AWAY = "Take Away";
