@@ -8,6 +8,7 @@ import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
 import {
   BENEFITS,
   COMMON_ISSUES,
+  FACTS_FIGURES,
   SOLUTION,
   THE_ASK,
 } from "@/constants/case_studies_page";
@@ -28,6 +29,11 @@ const page = () => {
       <CaseStudyInfo title={SOLUTION} description={FEATHER_DOWN.solution} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg2Path} />
       <CaseStudyLists list={FEATHER_DOWN.benefits} title={BENEFITS} />
+
+      <CaseStudyInfo
+        title={FACTS_FIGURES}
+        description={FEATHER_DOWN.factsFigures}
+      />
     </>
   );
 };
