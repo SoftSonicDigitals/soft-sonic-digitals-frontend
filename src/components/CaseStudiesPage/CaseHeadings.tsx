@@ -9,9 +9,7 @@ const CaseHeadings = ({ caseName, caseOutcomes }: CaseHeadingsPropsType) => {
       <div className="pt-[150px] lg:pt-[170px] mb-9 md:mb-12 text-base lg:text-lg xl:text-base font-[700] text-gray-700 tracking-wide uppercase">
         {caseName}
       </div>
-      <div className="text-2xl md:text-[35px] font-[500] text-gray-800 md:leading-snug ">
-        {caseOutcomes}
-      </div>
+      <div className="case_study_headings">{caseOutcomes}</div>
     </div>
   );
 };
