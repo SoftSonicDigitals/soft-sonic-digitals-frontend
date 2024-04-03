@@ -2,10 +2,14 @@ import {
   BannerImage,
   CaseHeadings,
   CaseStudyInfo,
-  CommonIssue,
   ShowCaseImg,
 } from "@/components/CaseStudiesPage";
-import { SOLUTION, THE_ASK } from "@/constants/case_studies_page";
+import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
+import {
+  COMMON_ISSUES,
+  SOLUTION,
+  THE_ASK,
+} from "@/constants/case_studies_page";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
 import React from "react";
 
@@ -18,7 +22,7 @@ const page = () => {
       />
       <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
       <CaseStudyInfo title={THE_ASK} description={FEATHER_DOWN.theAsk} />
-      <CommonIssue commonIssues={FEATHER_DOWN.commonIssues} />
+      <CaseStudyLists list={FEATHER_DOWN.commonIssues} title={COMMON_ISSUES} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
       <CaseStudyInfo title={SOLUTION} description={FEATHER_DOWN.solution} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg2Path} />
