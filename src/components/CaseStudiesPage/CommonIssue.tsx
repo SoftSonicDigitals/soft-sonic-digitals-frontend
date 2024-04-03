@@ -1,10 +1,11 @@
+import { COMMON_ISSUES_FACED } from "@/constants/case_studies_page";
 import React from "react";
 
 const CommonIssue = () => {
   return (
     <section>
       <div className="wrapper_container mb-12 md:mb-24  px-4 md:px-2">
-        <div className="case_study_headings">Common issues faced</div>
+        <div className="case_study_headings">{COMMON_ISSUES_FACED}</div>
         <ul className="text-lg text-gray-400 mb-2 font-[500] list-disc list-outside pl-6 marker:text-orange marker:text-3xl ">
           <li className="mb-1">
             The client was facing problems managing the customer’s requests from
