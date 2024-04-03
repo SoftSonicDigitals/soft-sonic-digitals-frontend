@@ -10,7 +10,7 @@ const ShowCaseImg = ({ showCaseImgPath }: ShowCaseImgPropsType) => {
         <div className="flex-center">
           <Image
             src={showCaseImgPath}
-            alt="show-case Image"
+            alt="showcase image"
             width={1224}
             height={768}
             style={{ objectFit: "contain" }}
