@@ -22,7 +22,7 @@ const page = () => {
         caseName={FEATHER_DOWN.caseName}
         caseOutcomes={FEATHER_DOWN.caseOutcomes}
       />
-      <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
+      <BannerImage bannerImgPath={FEATHER_DOWN.bannerImg1Path} />
       <CaseStudyInfo title={THE_ASK} description={FEATHER_DOWN.theAsk} />
       <CaseStudyLists list={FEATHER_DOWN.commonIssues} title={COMMON_ISSUES} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
@@ -35,6 +35,7 @@ const page = () => {
         description={FEATHER_DOWN.factsFigures}
       />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg3Path} />
+      <BannerImage bannerImgPath={FEATHER_DOWN.bannerImg2Path} />
     </>
   );
 };
