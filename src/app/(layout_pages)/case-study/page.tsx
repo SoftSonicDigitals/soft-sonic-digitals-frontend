@@ -14,7 +14,7 @@ const page = () => {
         caseOutcomes={FEATHER_DOWN.caseOutcomes}
       />
       <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
-      <TheAsk />
+      <TheAsk theAskDescription={FEATHER_DOWN.theAsk} />
     </>
   );
 };
