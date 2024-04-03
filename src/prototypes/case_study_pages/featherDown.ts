@@ -32,4 +32,6 @@ export const FEATHER_DOWN = {
   bannerImg2Path: "/case_study_pages/feather_down/feather_down_banner_2.webp",
   responsiveLayout:
     "Featherdown needed a mobile-friendly website, so we built one for them. We tested the web pages on various mobile devices to ensure that they function correctly. Furthermore, the navigation and content categories were designed so that clients get a consistent experience.",
+  responsiveShowCaseImgPath:
+    "/case_study_pages/feather_down/responsive_layout.webp",
 };
