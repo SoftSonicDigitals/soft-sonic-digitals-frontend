@@ -1,6 +1,6 @@
 import LetsTalkButton from "./LetsTalkButton";
 import Platform from "./Platform";
-import PrimaryLists from "./PrimaryBullets";
+import PrimaryLists from "./PrimaryLists";
 import PrimaryButton from "./PrimaryButton";
 import PrimaryStyledHeadings from "./PrimaryStyledHeadings";
 
