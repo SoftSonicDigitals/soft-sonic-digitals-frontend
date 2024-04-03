@@ -11,6 +11,7 @@ import {
   FACTS_FIGURES,
   RESPONSIVE_LAYOUT,
   SOLUTION,
+  TAKE_AWAY,
   THE_ASK,
 } from "@/constants/case_studies_page";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
@@ -42,6 +43,7 @@ const page = () => {
         description={FEATHER_DOWN.responsiveLayout}
       />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.responsiveShowCaseImgPath} />
+      <CaseStudyInfo title={TAKE_AWAY} description={FEATHER_DOWN.takeAway} />
     </>
   );
 };
