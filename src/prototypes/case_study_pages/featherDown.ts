@@ -28,4 +28,5 @@ export const FEATHER_DOWN = {
   ],
   factsFigures:
     "The proof for success is an expansion of farm sites in the USA in addition to leading European countries. There are already 64 farm sites running successfully, and the average customer review is 9.5/10, with more than 35% repeat customer rate. In a few months, clients have experienced a significant improvement in revenue. As we have integrated the website with backend inventory software, handling and managing sales accounts were automated. By getting heavy traffic from the Netherlands, we have developed another website for customers in the Netherlands. Sales and revenue were improved up to 6 times.",
+  showCaseImg3Path: "/case_study_pages/feather_down/show_case_3.webp",
 };
