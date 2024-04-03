@@ -4,6 +4,7 @@ import {
   CommonIssue,
   ShowCaseImg,
   TheAsk,
+  TheSolution,
 } from "@/components/CaseStudiesPage";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
 import React from "react";
@@ -19,6 +20,7 @@ const page = () => {
       <TheAsk theAskDescription={FEATHER_DOWN.theAsk} />
       <CommonIssue commonIssues={FEATHER_DOWN.commonIssues} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
+      <TheSolution />
     </>
   );
 };
