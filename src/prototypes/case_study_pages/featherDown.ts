@@ -18,4 +18,12 @@ export const FEATHER_DOWN = {
   solution:
     "We conducted research, studied, and understood core areas of the glamping industry. We prepared a list of features that could be ideal for the client glamping website based on our research. This case study portrays the contribution of Magneto development services in delivering reliable solutions to the client",
   showCaseImg2Path: "/case_study_pages/feather_down/show_case_2.webp",
+  benefits: [
+    "We have developed a full-fledged portal that can let customers register and search around thousands of camp locations from Europe.",
+    "Through the portal, customers view all pre-set basic needs with amenities of the farm site through the details like images, accommodation, features involved, specialty, reviews, and nearby adventures through the website.",
+    "Receiving payment from the customers was a serious issue before. We have integrated a secure different payment gateway with the website, so the customer can check and book the camp and can pay through different payment gateway options.",
+    "We have implemented a route planner feature on the website so that customers can check the route on the map to farm sites from their current location.",
+    "We have integrated inventory software with the system to ensure changes, transactions, and order updates are automatically updated.",
+    "We have developed a separate portal for countries like the Netherlands and UK.",
+  ],
 };
