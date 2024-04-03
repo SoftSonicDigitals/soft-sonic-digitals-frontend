@@ -9,6 +9,7 @@ import {
   BENEFITS,
   COMMON_ISSUES,
   FACTS_FIGURES,
+  RESPONSIVE_LAYOUT,
   SOLUTION,
   THE_ASK,
 } from "@/constants/case_studies_page";
@@ -36,6 +37,10 @@ const page = () => {
       />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg3Path} />
       <BannerImage bannerImgPath={FEATHER_DOWN.bannerImg2Path} />
+      <CaseStudyInfo
+        title={RESPONSIVE_LAYOUT}
+        description={FEATHER_DOWN.responsiveLayout}
+      />
     </>
   );
 };
