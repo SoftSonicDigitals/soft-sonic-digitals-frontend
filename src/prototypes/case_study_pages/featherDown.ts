@@ -15,4 +15,6 @@ export const FEATHER_DOWN = {
     "Manual handling of inventory and records updation has become a surpassing issue.",
   ],
   showCaseImg1Path: "/case_study_pages/feather_down/show_case.webp",
+  solution:
+    "We conducted research, studied, and understood core areas of the glamping industry. We prepared a list of features that could be ideal for the client glamping website based on our research. This case study portrays the contribution of Magneto development services in delivering reliable solutions to the client",
 };
