@@ -14,5 +14,5 @@ export const FEATHER_DOWN = {
     "Clients were facing the issue of managing the payments from the customers.",
     "Manual handling of inventory and records updation has become a surpassing issue.",
   ],
-  showCaseImgPath: "/case_study_pages/feather_down/show_case.webp",
+  showCaseImg1Path: "/case_study_pages/feather_down/show_case.webp",
 };
