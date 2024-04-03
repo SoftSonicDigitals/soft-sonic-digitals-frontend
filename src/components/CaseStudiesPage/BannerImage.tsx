@@ -1,4 +1,3 @@
-import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
 import Image from "next/legacy/image";
 import React from "react";
 
