@@ -6,6 +6,7 @@ import {
 } from "@/components/CaseStudiesPage";
 import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
 import {
+  BENEFITS,
   COMMON_ISSUES,
   SOLUTION,
   THE_ASK,
@@ -26,6 +27,7 @@ const page = () => {
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
       <CaseStudyInfo title={SOLUTION} description={FEATHER_DOWN.solution} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg2Path} />
+      <CaseStudyLists list={FEATHER_DOWN.benefits} title={BENEFITS} />
     </>
   );
 };
