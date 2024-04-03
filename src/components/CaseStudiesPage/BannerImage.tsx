@@ -7,7 +7,7 @@ type BannerImgPropsType = {
 const BannerImage = ({ bannerImgPath }: BannerImgPropsType) => {
   return (
     <section>
-      <div className="relative w-[100vw] mb-24 ">
+      <div className="relative w-[100vw] mb-12 md:mb-24 ">
         <Image
           src={`${bannerImgPath}`}
           alt="banner image"
