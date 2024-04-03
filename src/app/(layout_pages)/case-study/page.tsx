@@ -34,6 +34,7 @@ const page = () => {
         title={FACTS_FIGURES}
         description={FEATHER_DOWN.factsFigures}
       />
+      <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg3Path} />
     </>
   );
 };
