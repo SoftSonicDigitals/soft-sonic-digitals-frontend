@@ -34,4 +34,6 @@ export const FEATHER_DOWN = {
     "Featherdown needed a mobile-friendly website, so we built one for them. We tested the web pages on various mobile devices to ensure that they function correctly. Furthermore, the navigation and content categories were designed so that clients get a consistent experience.",
   responsiveShowCaseImgPath:
     "/case_study_pages/feather_down/responsive_layout.webp",
+  takeAway:
+    "The case study summarizes the magnificent support a competent web development platform can offer to a local or national level business. With the highly customized services delivered by Magneto IT, all your web service queries converge to a single answer, the ultimate commitment of 360 degrees quality for the best.",
 };
