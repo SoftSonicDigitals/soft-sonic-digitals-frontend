@@ -21,6 +21,7 @@ const page = () => {
       <CommonIssue commonIssues={FEATHER_DOWN.commonIssues} />
       <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
       <CaseStudyInfo title={SOLUTION} description={FEATHER_DOWN.solution} />
+      <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg2Path} />
     </>
   );
 };
