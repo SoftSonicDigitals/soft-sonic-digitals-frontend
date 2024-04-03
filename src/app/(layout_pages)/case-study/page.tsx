@@ -41,6 +41,7 @@ const page = () => {
         title={RESPONSIVE_LAYOUT}
         description={FEATHER_DOWN.responsiveLayout}
       />
+      <ShowCaseImg showCaseImgPath={FEATHER_DOWN.responsiveShowCaseImgPath} />
     </>
   );
 };
