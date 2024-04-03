@@ -18,7 +18,7 @@ const page = () => {
       <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
       <TheAsk theAskDescription={FEATHER_DOWN.theAsk} />
       <CommonIssue commonIssues={FEATHER_DOWN.commonIssues} />
-      <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImgPath} />
+      <ShowCaseImg showCaseImgPath={FEATHER_DOWN.showCaseImg1Path} />
     </>
   );
 };
