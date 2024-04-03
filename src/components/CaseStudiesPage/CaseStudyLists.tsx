@@ -1,7 +1,7 @@
 import React from "react";
 import { PrimaryLists } from "../Reusable";
 type CaseStudyListsProps = {
-  title: string[];
+  title: string;
   list: string[];
 };
 const CaseStudyLists = ({ list, title }: CaseStudyListsProps) => {
