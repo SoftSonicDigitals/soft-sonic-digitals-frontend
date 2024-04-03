@@ -1,6 +1,7 @@
 import {
   BannerImage,
   CaseHeadings,
+  CommonIssue,
   TheAsk,
 } from "@/components/CaseStudiesPage";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
@@ -15,6 +16,7 @@ const page = () => {
       />
       <BannerImage bannerImgPath={FEATHER_DOWN.bannerImgPath} />
       <TheAsk theAskDescription={FEATHER_DOWN.theAsk} />
+      <CommonIssue />
     </>
   );
 };
