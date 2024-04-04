@@ -15,9 +15,12 @@ import {
   THE_ASK,
 } from "@/constants/case_studies_page";
 import { FEATHER_DOWN } from "@/prototypes/case_study_pages/featherDown";
+
 import React from "react";
 
-const page = () => {
+const CaseStudyPage = ({ params }: { params: { slug: string } }) => {
+  console.log(params);
+
   return (
     <>
       <CaseHeadings
@@ -48,4 +51,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CaseStudyPage;
