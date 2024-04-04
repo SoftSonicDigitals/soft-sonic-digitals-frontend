@@ -20,9 +20,11 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 const CaseStudyPage = ({ params }: { params: { case_name: string } }) => {
+  console.log(params.case_name);
+
   const caseStudy = CASE_STUDIES_ARRAY.find(
     (caseItem) =>
-      caseItem.caseName.replace(" ", "_").toLowerCase() === params.case_name
+      caseItem.caseName.replaceAll(" ", "_").toLowerCase() === params.case_name
   );
 
   if (!caseStudy) {
