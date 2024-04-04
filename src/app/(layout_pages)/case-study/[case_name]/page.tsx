@@ -2,10 +2,10 @@ import {
   BannerImage,
   CaseHeadings,
   CaseStudyInfo,
+  LetsTalkBanner,
   ShowCaseImg,
 } from "@/components/CaseStudiesPage";
 import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
-import LetsTalkBanner from "@/components/CaseStudiesPage/LetsTalkBanner";
 import {
   BENEFITS,
   COMMON_ISSUES,
