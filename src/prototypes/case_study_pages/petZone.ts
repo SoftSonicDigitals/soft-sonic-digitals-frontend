@@ -39,7 +39,7 @@ export const PETZONE = {
   responsiveLayout:
     "We crafted a mobile-responsive website for Petzone, ensuring seamless functionality across all mobile devices. Our team meticulously designed the navigation and content categories to deliver a cohesive and user-friendly experience for customers browsing the site.",
 
-  responsiveShowCaseImgPath: "/case_study_pages/powerlook/showCaseImg2.webp",
+  responsiveShowCaseImgPath: "/case_study_pages/petzone/showCaseImg1.webp",
   takeAway:
     "Magneto IT Solutions assisted Petzone in developing an enhanced platform for their clientele. This case study underscores the significance of enhancing website features and functionality to enhance the shopping experience for customers, while also streamlining manual management efforts.",
 };
