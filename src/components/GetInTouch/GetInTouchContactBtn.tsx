@@ -8,7 +8,7 @@ const GetInTouchContactBtn = () => {
   return (
     <PrimaryButton
       title="LET'S TAlK"
-      className="px-12 py-3"
+      className="px-12 py-3 "
       clickHandler={() => router.push("/contact")}
     />
   );
