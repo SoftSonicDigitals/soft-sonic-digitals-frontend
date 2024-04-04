@@ -1,0 +1,17 @@
+export type CaseStudyPage = {
+  caseName: string;
+  caseOutcomes: string;
+  bannerImg1Path: string;
+  theAsk: string;
+  commonIssues: string[];
+  showCaseImg1Path: string;
+  solution: string;
+  showCaseImg2Path: string;
+  benefits: string[];
+  factsFigures: string;
+  showCaseImg3Path: string;
+  bannerImg2Path: string;
+  responsiveLayout: string;
+  responsiveShowCaseImgPath: string;
+  takeAway: string;
+};
