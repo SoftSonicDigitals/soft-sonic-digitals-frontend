@@ -21,8 +21,8 @@ export const CASE_STUDIES: CaseStudiesType = [
   },
   {
     id: "4",
-    title: "Hayatmart",
-    imageName: "Hayatmart.webp",
-    link: "/case-study/hayatmart",
+    title: "Petzone",
+    imageName: "Petzone.webp",
+    link: "/case-study/petzone",
   },
 ];
