@@ -1,5 +1,5 @@
 export const FEATHER_DOWN = {
-  caseName: "Feather Down",
+  caseName: "feather down",
   caseOutcomes:
     "By delivering a unique client experience, the website assisted in promoting the glamping industry and increasing revenue for the company.",
   bannerImg1Path: "/case_study_pages/feather_down/feather_down_banner.webp",
