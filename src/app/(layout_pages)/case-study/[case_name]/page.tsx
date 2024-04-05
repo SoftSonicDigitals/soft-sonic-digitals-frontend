@@ -6,6 +6,7 @@ import {
   ShowCaseImg,
 } from "@/components/CaseStudiesPage";
 import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
+import RequestProposalBtn from "@/components/CaseStudiesPage/RequestProposalBtn";
 import {
   BENEFITS,
   COMMON_ISSUES,
@@ -57,6 +58,7 @@ const CaseStudyPage = ({ params }: { params: { case_name: string } }) => {
       <ShowCaseImg showCaseImgPath={caseStudy.responsiveShowCaseImgPath} />
       <CaseStudyInfo title={TAKE_AWAY} description={caseStudy.takeAway} />
       <LetsTalkBanner />
+      <RequestProposalBtn />
     </>
   );
 };
