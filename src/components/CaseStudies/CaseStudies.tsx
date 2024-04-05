@@ -1,7 +1,7 @@
 import { CASE_STUDIES } from "@/prototypes/case_studies";
 import React from "react";
 import { CaseStudy } from ".";
-import { PrimaryButton, PrimaryStyledHeadings } from "../Reusable";
+import { PrimaryStyledHeadings, ViewAllBtn } from "../Reusable";
 import {
   CASE_STUDIES_HEADING,
   CASE_STUDIES_SUBHEADING,
@@ -31,12 +31,7 @@ const CaseStudies = () => {
           </div>
         </div>
 
-        <div className="flex-center">
-          <PrimaryButton
-            title="VIEW ALL"
-            className="px-11 py-3 md:px-14 md:py-4"
-          />
-        </div>
+        <ViewAllBtn />
       </div>
     </section>
   );
