@@ -4,17 +4,49 @@ import React from "react";
 const RandomCaseStudies = () => {
   return (
     <section>
-      <div className="wrapper_container mb-12 md:mb-24">
-        <div className="flex flex-col lg:flex-row">
-          <div>
+      <div className="wrapper_container mb-12 md:mb-24 px-4 md:px-2 pt-16">
+        <div className="grid  grid-cols-1  md:grid-cols-2 gap-8">
+          <div className="relative ">
             <Image
               src={`/case_study_pages/feather_down/poster.webp`}
               height={400}
               width={576}
               alt="poster"
             />
+            <Image
+              src={`/case_study_pages/feather_down/logo.webp`}
+              height={64}
+              width={182}
+              alt="logo"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%,-50%)",
+              }}
+            />
           </div>
-          <div></div>
+
+          <div className="relative ">
+            <Image
+              src={`/case_study_pages/feather_down/poster.webp`}
+              height={400}
+              width={576}
+              alt="poster"
+            />
+            <Image
+              src={`/case_study_pages/feather_down/logo.webp`}
+              height={64}
+              width={182}
+              alt="logo"
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%,-50%)",
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
