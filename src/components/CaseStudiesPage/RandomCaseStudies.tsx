@@ -1,7 +1,11 @@
 import React from "react";
 
 const RandomCaseStudies = () => {
-  return <div>RandomCaseStudies</div>;
+  return (
+    <section>
+      <div className="wrapper_container"></div>
+    </section>
+  );
 };
 
 export default RandomCaseStudies;
