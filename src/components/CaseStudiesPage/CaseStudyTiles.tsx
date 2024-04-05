@@ -12,7 +12,7 @@ const CaseStudyTiles = ({
   logoPath,
 }: CaseStudyTilesProps) => {
   return (
-    <Link href="">
+    <Link href={`/case-study/${title.replaceAll(" ", "_")}`}>
       <div className="relative ">
         <Image src={`${posterPath}`} height={400} width={576} alt="poster" />
         <Image
@@ -28,7 +28,7 @@ const CaseStudyTiles = ({
           }}
         />
       </div>
-      <p className="mt-2.5 text-lg font-[500] ">{title}</p>
+      <p className="mt-2.5 text-lg font-[500]  capitalize">{title}</p>
     </Link>
   );
 };
