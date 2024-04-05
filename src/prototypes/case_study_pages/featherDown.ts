@@ -38,5 +38,5 @@ export const FEATHER_DOWN = {
     "The case study summarizes the magnificent support a competent web development platform can offer to a local or national level business. With the highly customized services delivered by Magneto IT, all your web service queries converge to a single answer, the ultimate commitment of 360 degrees quality for the best.",
 
   posterPath: "/case_study_pages/feather_down/poster.webp",
-  logo: " /case_study_pages/feather_down/logo.webp",
+  logoPath: "/case_study_pages/feather_down/logo.webp",
 };

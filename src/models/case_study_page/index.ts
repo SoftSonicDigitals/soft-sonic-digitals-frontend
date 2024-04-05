@@ -14,4 +14,6 @@ export type CaseStudyPage = {
   responsiveLayout: string;
   responsiveShowCaseImgPath: string;
   takeAway: string;
+  posterPath: string;
+  logoPath: string;
 };

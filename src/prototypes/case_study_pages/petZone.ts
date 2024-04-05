@@ -43,5 +43,5 @@ export const PETZONE = {
   takeAway:
     "Magneto IT Solutions assisted Petzone in developing an enhanced platform for their clientele. This case study underscores the significance of enhancing website features and functionality to enhance the shopping experience for customers, while also streamlining manual management efforts.",
   posterPath: "/case_study_pages/petzone/poster.webp",
-  logo: " /case_study_pages/petzone/logo.webp",
+  logoPath: "/case_study_pages/petzone/logo.webp",
 };
