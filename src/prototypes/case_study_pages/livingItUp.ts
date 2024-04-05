@@ -34,4 +34,6 @@ export const LIVING_IT_UP = {
     "/case_study_pages/living_it_up/responsive_layout.webp",
   takeAway:
     "This case study shows how Magneto IT Solutions, as a technology partner, helped Living it Up redesign their website in terms of appearance, functionality, and customer experience to increase customer traffic and income through their e-Commerce platform.",
+  posterPath: "/case_study_pages/living_it_up/poster.webp",
+  logo: " /case_study_pages/living_it_up/logo.webp",
 };
