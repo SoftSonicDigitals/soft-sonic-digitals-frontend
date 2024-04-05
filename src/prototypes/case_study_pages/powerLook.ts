@@ -35,5 +35,5 @@ export const POWERLOOK = {
   takeAway:
     "Magneto IT Solution helped Powerlook to create a new improved platform for their customers. This case study also depicts how improving website features and functionality can improve the customer shopping experience and also reduce the manual efforts of management.",
   posterPath: "/case_study_pages/powerlook/poster.webp",
-  logo: " /case_study_pages/powerlook/logo.webp",
+  logoPath: "/case_study_pages/powerlook/logo.png",
 };
