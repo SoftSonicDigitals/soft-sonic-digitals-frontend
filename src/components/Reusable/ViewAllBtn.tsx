@@ -9,7 +9,7 @@ const ViewAllBtn = () => {
     <div className="flex-center">
       <PrimaryButton
         title="VIEW ALL"
-        className="px-10 py-3 "
+        className="px-12 py-3 "
         clickHandler={() => router.push("/case-studies")}
       />
     </div>

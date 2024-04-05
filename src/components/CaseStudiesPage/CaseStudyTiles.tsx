@@ -28,7 +28,9 @@ const CaseStudyTiles = ({
           }}
         />
       </div>
-      <p className="mt-2.5 text-lg font-[500]  capitalize">{title}</p>
+      <p className="mt-2.5 text-lg font-[500]  capitalize xl:text-xl">
+        {title}
+      </p>
     </Link>
   );
 };
