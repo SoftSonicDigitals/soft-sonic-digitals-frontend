@@ -8,8 +8,8 @@ type RandomCaseStudiesProps = {
 const RandomCaseStudies = ({ randomCases }: RandomCaseStudiesProps) => {
   return (
     <section>
-      <div className="wrapper_container mb-12 md:mb-24 px-4 pt-16">
-        <div className="grid  grid-cols-1  md:grid-cols-2 gap-14 max-w-[576px] md:max-w-fit mx-auto mb-24">
+      <div className="wrapper_container mb-14 md:mb-24 px-4 pt-16">
+        <div className="grid  grid-cols-1  md:grid-cols-2 gap-14 max-w-[576px] md:max-w-fit mx-auto mb-16 md:mb-24">
           {randomCases.map((caseStudy, index) => (
             <CaseStudyTiles
               key={index}
