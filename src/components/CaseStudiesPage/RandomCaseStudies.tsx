@@ -31,26 +31,29 @@ const RandomCaseStudies = () => {
             <p className="mt-2.5 text-lg font-[500] ">{"Arabian Ceramics"}</p>
           </Link>
 
-          {/* <div className="relative ">
-            <Image
-              src={`/case_study_pages/feather_down/poster.webp`}
-              height={400}
-              width={576}
-              alt="poster"
-            />
-            <Image
-              src={`/case_study_pages/feather_down/logo.webp`}
-              height={64}
-              width={182}
-              alt="logo"
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%,-50%)",
-              }}
-            />
-          </div> */}
+          <Link href="">
+            <div className="relative ">
+              <Image
+                src={`/case_study_pages/feather_down/poster.webp`}
+                height={400}
+                width={576}
+                alt="poster"
+              />
+              <Image
+                src={`/case_study_pages/feather_down/logo.webp`}
+                height={64}
+                width={182}
+                alt="logo"
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                }}
+              />
+            </div>
+            <p className="mt-2.5 text-lg font-[500] ">{"Arabian Ceramics"}</p>
+          </Link>
         </div>
       </div>
     </section>
