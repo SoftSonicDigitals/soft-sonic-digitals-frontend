@@ -58,9 +58,9 @@ const CaseStudyPage = ({ params }: { params: { case_name: string } }) => {
       />
       <ShowCaseImg showCaseImgPath={caseStudy.responsiveShowCaseImgPath} />
       <CaseStudyInfo title={TAKE_AWAY} description={caseStudy.takeAway} />
+      <RandomCaseStudies />
       <LetsTalkBanner />
       <RequestProposalBtn />
-      <RandomCaseStudies />
     </>
   );
 };
