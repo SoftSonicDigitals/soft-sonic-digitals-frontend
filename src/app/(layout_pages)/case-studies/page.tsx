@@ -1,7 +1,12 @@
+import { OurWork } from "@/components/OurWork";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <main>
+      <OurWork />
+    </main>
+  );
 };
 
 export default page;
