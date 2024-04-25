@@ -6,7 +6,7 @@ import React from "react";
 const ProjectTile = () => {
   return (
     <>
-      <div className="lg:max-w-[400px] lg:max-h-[400px] relative group">
+      <div className="lg:max-w-[400px] lg:max-h-[400px] relative group overflow-hidden">
         <Image
           src={FEATHER_DOWN.ourWorkPageDisplayPath}
           alt="display"
