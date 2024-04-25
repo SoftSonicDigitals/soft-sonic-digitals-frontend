@@ -1,3 +1,4 @@
 import OurWork from "./OurWork";
+import ProjectTile from "./ProjectTile";
 
-export { OurWork };
+export { OurWork, ProjectTile };
