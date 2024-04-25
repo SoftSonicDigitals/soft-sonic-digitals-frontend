@@ -36,4 +36,9 @@ export const LIVING_IT_UP = {
     "This case study shows how Magneto IT Solutions, as a technology partner, helped Living it Up redesign their website in terms of appearance, functionality, and customer experience to increase customer traffic and income through their e-Commerce platform.",
   posterPath: "/case_study_pages/living_it_up/poster.webp",
   logoPath: "/case_study_pages/living_it_up/logo.webp",
+
+  // for our work page (/case-studies)
+  displayImg: "/case_study_pages/living_it_up/our_work_display.webp",
+  displayDescription:
+    "Living It Up is in the business of making made-to-order beds, sofas, chairs, and footstools.",
 };

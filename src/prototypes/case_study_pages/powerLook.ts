@@ -36,4 +36,8 @@ export const POWERLOOK = {
     "Magneto IT Solution helped Powerlook to create a new improved platform for their customers. This case study also depicts how improving website features and functionality can improve the customer shopping experience and also reduce the manual efforts of management.",
   posterPath: "/case_study_pages/powerlook/poster.webp",
   logoPath: "/case_study_pages/powerlook/logo.png",
+  // for our work page (/case-studies)
+  displayImg: "/case_study_pages/powerlook/our_work_display.webp",
+  displayDescription:
+    "Powerlook is one of the fastest-growing e-commerce brands in India which offers a unique range of men’s casual wear.",
 };

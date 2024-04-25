@@ -16,4 +16,6 @@ export type CaseStudyPage = {
   takeAway: string;
   posterPath: string;
   logoPath: string;
+  displayImg: string;
+  displayDescription: string;
 };
