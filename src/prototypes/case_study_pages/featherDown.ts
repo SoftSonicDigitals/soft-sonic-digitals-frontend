@@ -39,4 +39,6 @@ export const FEATHER_DOWN = {
 
   posterPath: "/case_study_pages/feather_down/poster.webp",
   logoPath: "/case_study_pages/feather_down/logo.webp",
+  ourWorkPageDisplayPath:
+    "/case_study_pages/feather_down/our_work_display.webp",
 };

@@ -6,7 +6,7 @@ const page = () => {
     <main>
       <OurWork />
       <section id="projects">
-        <div className="wrapper_container">
+        <div className="wrapper_container flex-center">
           <ProjectTile />
         </div>
       </section>
