@@ -8,7 +8,11 @@ type ProjectTileProps = {
   description: string;
 };
 
-const ProjectTile = ({ displayImg, title, description }: ProjectTileProps) => {
+const CaseStudyTile = ({
+  displayImg,
+  title,
+  description,
+}: ProjectTileProps) => {
   return (
     <div className="lg:max-w-[400px] lg:max-h-[400px] relative group ">
       <Image src={displayImg} alt="display" width={720} height={720} />
@@ -36,4 +40,4 @@ const ProjectTile = ({ displayImg, title, description }: ProjectTileProps) => {
   );
 };
 
-export default ProjectTile;
+export default CaseStudyTile;
