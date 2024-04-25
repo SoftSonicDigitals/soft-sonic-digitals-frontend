@@ -44,4 +44,8 @@ export const PETZONE = {
     "Magneto IT Solutions assisted Petzone in developing an enhanced platform for their clientele. This case study underscores the significance of enhancing website features and functionality to enhance the shopping experience for customers, while also streamlining manual management efforts.",
   posterPath: "/case_study_pages/petzone/poster.webp",
   logoPath: "/case_study_pages/petzone/logo.webp",
+  // for our work page (/case-studies)
+  displayImg: "/case_study_pages/petzone/our_work_display.webp",
+  displayDescription:
+    "Petzone is Kuwait's premier pet retail and distribution company. They offer a wide selection of high standard pet supplies, services, solutions and expertise to improve pet care while providing the best international brands in the market.",
 };
