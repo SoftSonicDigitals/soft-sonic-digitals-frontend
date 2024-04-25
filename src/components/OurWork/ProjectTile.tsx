@@ -1,9 +1,8 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const ProjectTile = () => {
-  return (
-    <div>ProjectTile</div>
-  )
-}
+  return <Link href={"#"}></Link>;
+};
 
-export default ProjectTile
+export default ProjectTile;

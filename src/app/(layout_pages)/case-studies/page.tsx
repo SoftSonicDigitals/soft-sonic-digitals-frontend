@@ -5,7 +5,11 @@ const page = () => {
   return (
     <main>
       <OurWork />
-      <ProjectTile />
+      <section id="projects">
+        <div className="wrapper_container">
+          <ProjectTile />
+        </div>
+      </section>
     </main>
   );
 };
