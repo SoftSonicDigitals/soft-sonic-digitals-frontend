@@ -1,4 +1,5 @@
 import OurWork from "./OurWork";
-import ProjectTile from "./ProjectTile";
+import CaseStudyTile from "./CaseStudyTile";
+import CaseStudyTiles from "./CaseStudyTiles";
 
-export { OurWork, ProjectTile };
+export { OurWork, CaseStudyTile, CaseStudyTiles };
