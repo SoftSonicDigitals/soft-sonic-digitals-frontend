@@ -3,8 +3,15 @@ import React from "react";
 
 const HeroTemplate = () => {
   return (
-    <section id="hero">
-      <Image src="/prototype_page/Hero.webp" alt="" />
+    <section
+      style={{
+        background: "#EFEFEF url(/prototype_page/hero.webp)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+      }}
+    >
+      <div className="h-[100vh] w-[100vw]"></div>
     </section>
   );
 };
