@@ -66,7 +66,10 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
     {
       subMenuHeading: "Industries",
       subMenuLinks: [
-        { title: "Jewellery & Diamond", link: "/" },
+        {
+          title: "Jewellery & Diamond",
+          link: "/industry/jewellery-website-development",
+        },
         { title: "Food & Grocery", link: "/" },
         { title: "Furniture & Home Decor", link: "/" },
         { title: "Manufacturing", link: "/" },
