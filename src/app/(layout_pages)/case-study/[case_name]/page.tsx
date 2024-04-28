@@ -7,7 +7,8 @@ import {
 } from "@/components/CaseStudiesPage";
 import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
 import RandomCaseStudies from "@/components/CaseStudiesPage/RandomCaseStudies";
-import RequestProposalBtn from "@/components/CaseStudiesPage/RequestProposalBtn";
+import { RequestProposalBtn } from "@/components/Reusable";
+
 import {
   BENEFITS,
   COMMON_ISSUES,
