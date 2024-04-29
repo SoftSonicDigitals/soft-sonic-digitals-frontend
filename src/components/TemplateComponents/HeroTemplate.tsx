@@ -1,8 +1,17 @@
 import Image from "next/image";
 import React from "react";
-import { PrimaryButton } from "../Reusable";
+import Link from "next/link";
+type HeroTemplateProps = {
+  heroImgPath: string;
+  heroHeading: string;
+  heroDescription: string;
+};
 
-const HeroTemplate = () => {
+const HeroTemplate = ({
+  heroImgPath,
+  heroHeading,
+  heroDescription,
+}: HeroTemplateProps) => {
   return (
     <section className="mb-24">
       <div className="pt-[48px] lg:pt-[88px]">
@@ -16,17 +25,20 @@ const HeroTemplate = () => {
           <div className="absolute w-full h-full ">
             <div className="wrapper_container h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
               <h2 className="text-3xl lg:text-[2.5rem]  font-[600] text-gray-800 mb-5 tracking-tight ">
-                Transform your Jewelry Business Online!
+                {heroHeading}
               </h2>
               <p className="text-lg font-[500] text-gray-700 mb-2 ">
-                We are the One Stop Shop for all your Jewelry website design &
-                development needs.
+                {heroDescription}
               </p>
               <div>
-                <PrimaryButton
-                  title="REQUEST A PROPOSAL"
-                  className="px-2 py-2.5"
-                />
+                <Link
+                  href={"/contact"}
+                  className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  
+                
+              `}
+                >
+                  REQUEST A APPROVAL
+                </Link>
               </div>
             </div>
           </div>
