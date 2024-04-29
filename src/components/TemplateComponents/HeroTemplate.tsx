@@ -1,23 +1,28 @@
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
+
 type HeroTemplateProps = {
-  heroImgPath: string;
-  heroHeading: string;
-  heroDescription: string;
+  imgPath: string;
+  heading: string;
+  description: string;
+  btnText: string;
+  btnStyles?: string;
 };
 
 const HeroTemplate = ({
-  heroImgPath,
-  heroHeading,
-  heroDescription,
+  imgPath,
+  heading,
+  description,
+  btnText,
+  btnStyles,
 }: HeroTemplateProps) => {
   return (
     <section className="mb-24">
       <div className="pt-[48px] lg:pt-[88px]">
         <div className="relative w-[100vw] h-[60vh] xl:h-[100vh] 2xl:h-[55vh]">
           <Image
-            src="/prototype_page/hero.webp"
+            src={`${imgPath}`}
             alt="hero"
             fill
             className="object-cover object-[85%] md:object-top"
@@ -25,19 +30,17 @@ const HeroTemplate = ({
           <div className="absolute w-full h-full ">
             <div className="wrapper_container h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
               <h2 className="text-3xl lg:text-[2.5rem]  font-[600] text-gray-800 mb-5 tracking-tight ">
-                {heroHeading}
+                {heading}
               </h2>
-              <p className="text-lg font-[500] text-gray-700 mb-2 ">
-                {heroDescription}
+              <p className="text-lg font-[500] text-gray-700 mb-4 ">
+                {description}
               </p>
               <div>
                 <Link
                   href={"/contact"}
-                  className={`text-white tracking-wider btn__backgroundcolor   font-[700] rounded  
-                
-              `}
+                  className={`text-white tracking-wider font-[700] rounded px-2 py-2.5 ${btnStyles}`}
                 >
-                  REQUEST A APPROVAL
+                  {btnText}
                 </Link>
               </div>
             </div>
