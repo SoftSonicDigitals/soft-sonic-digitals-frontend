@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 
-type HeroTemplateProps = {
+type IndustryHeroProps = {
   imgPath: string;
   heading: string;
   description: string;
@@ -10,13 +10,13 @@ type HeroTemplateProps = {
   btnStyles?: string;
 };
 
-const HeroTemplate = ({
+const IndustryHero = ({
   imgPath,
   heading,
   description,
   btnText,
   btnStyles,
-}: HeroTemplateProps) => {
+}: IndustryHeroProps) => {
   return (
     <section className="mb-24">
       <div className="pt-[48px] lg:pt-[88px]">
@@ -28,7 +28,7 @@ const HeroTemplate = ({
             className="object-cover object-[85%] md:object-top"
           />
           <div className="absolute w-full h-full ">
-            <div className="wrapper_container h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+            <div className="wrapper_container h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-">
               <h2 className="text-3xl lg:text-[2.5rem]  font-[600] text-gray-800 mb-5 tracking-tight ">
                 {heading}
               </h2>
@@ -51,4 +51,4 @@ const HeroTemplate = ({
   );
 };
 
-export default HeroTemplate;
+export default IndustryHero;
