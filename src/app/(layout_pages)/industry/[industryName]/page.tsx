@@ -1,9 +1,9 @@
-import { HeroTemplate } from "@/components/TemplateComponents";
+import { IndustryHero } from "@/components/IndustryComponents";
 import React from "react";
 
 const page = () => {
   return (
-    <HeroTemplate
+    <IndustryHero
       imgPath="/prototype_page/hero.webp"
       heading="Transform your Jewelry Business Online!"
       description="We are the One Stop Shop for all your Jewelry website design & development needs."
