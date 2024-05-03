@@ -16,8 +16,8 @@ const IndustryHero = ({
   btnText,
 }: IndustryHeroProps) => {
   return (
-    <section className="mb-24">
-      <div className="pt-[48px] lg:pt-[88px]">
+    <section>
+      <div className="pt-[48px] lg:pt-[88px] ">
         <div className="relative w-[100vw] h-[60vh] xl:h-[100vh] 3xl:h-[55vh]">
           <Image
             src={`${imgPath}`}
@@ -25,7 +25,7 @@ const IndustryHero = ({
             fill
             className="object-cover object-[85%] md:object-top"
           />
-          <div className="md:hidden absolute industry_overlay_gradient w-full h-full" />
+          <div className="md:hidden absolute industry_overlay_gradient w-full h-[61vh] " />
 
           <div className="absolute w-full h-full ">
             <div className="wrapper_container h-full flex flex-col justify-center items-center lg:items-start text-center lg:text-left max-w-">
