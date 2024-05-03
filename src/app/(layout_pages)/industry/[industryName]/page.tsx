@@ -1,10 +1,11 @@
 import { IndustryHero } from "@/components/IndustryComponents";
+import { JEWELLERY } from "@/prototypes/industries/jewellery";
 import React from "react";
 
 const page = () => {
   return (
     <IndustryHero
-      imgPath="/prototype_page/hero.webp"
+      imgPath={JEWELLERY.imgPath}
       heading="Transform your Jewelry Business Online!"
       description="We are the One Stop Shop for all your Jewelry website design & development needs."
       btnText="REQUEST A PROPOSAL"
