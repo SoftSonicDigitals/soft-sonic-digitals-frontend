@@ -2,7 +2,10 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
-import { JEWELLERY } from "@/prototypes/industries/jewellery";
+import {
+  JEWELLERY,
+  SPECIALIZATION_TILES_DATA,
+} from "@/prototypes/industries/jewellery";
 import React from "react";
 
 const page = () => {
@@ -10,11 +13,11 @@ const page = () => {
     <>
       <IndustryHero
         imgPath={JEWELLERY.imgPath}
-        heading="Transform your Jewellry Business Online!"
-        description="We are the One Stop Shop for all your Jewellry website design & development needs."
-        btnText="REQUEST A PROPOSAL"
+        heading={JEWELLERY.heading}
+        description={JEWELLERY.description}
+        btnText={JEWELLERY.btnText}
       />
-      <SpecializationTiles />
+      <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
     </>
   );
 };
