@@ -6,10 +6,9 @@ const page = () => {
   return (
     <IndustryHero
       imgPath={JEWELLERY.imgPath}
-      heading="Transform your Jewelry Business Online!"
-      description="We are the One Stop Shop for all your Jewelry website design & development needs."
+      heading="Transform your Jewellry Business Online!"
+      description="We are the One Stop Shop for all your Jewellry website design & development needs."
       btnText="REQUEST A PROPOSAL"
-      btnStyles="bg-gradient-to-l from-orange to-pink hover:bg-gradient-to-r from-pink to-orange"
     />
   );
 };

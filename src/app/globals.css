@@ -23,6 +23,15 @@
   @apply bg-gradient-to-r from-pink to-orange;
 }
 
+.industry_overlay_gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 55%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
 .card_bottom_shadow {
   transition: all 200ms;
   box-shadow: 0px 0px 50px -17px rgba(0, 0, 0, 0.1);
