@@ -10,7 +10,7 @@ type tilesDataArr = {
 const SpecializationTiles = ({ tilesDataArr }: tilesDataArr) => {
   return (
     <section className="relative -mt-8 sm:-mt-20 z-50">
-      <div className="wrapper_container flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-16">
+      <div className="wrapper_container flex flex-wrap items-center justify-center gap-6 sm:gap-10 mb-20">
         {tilesDataArr.map(({ imgPath, title }, index) => (
           <div
             key={index}

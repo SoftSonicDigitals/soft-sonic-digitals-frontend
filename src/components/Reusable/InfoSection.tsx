@@ -5,14 +5,16 @@ const InfoSection = () => {
   return (
     <section>
       <div className="wrapper_container mb-24">
-        <div className="flex-center gap-12 ">
-          <div className="basis-full ">
-            <h1 className={` text-2xl md:text-[2.1rem] font-[500] mb-8 `}>
+        <div className="flex-center flex-col-reverse lg:flex-row gap-12 px-2 ">
+          <div className="basis-full  max-w-[700px] ">
+            <h1
+              className={` text-[1.7rem] md:text-[2.1rem] font-[500] mb-8 text-center md:text-left`}
+            >
               Digital Asset Management
             </h1>
 
-            <p
-              className={` text-[1rem] md:text-[19px] font-[500] text-gray-800 `}
+            <h3
+              className={`text-xl md:text-2xl lg:text-xl  font-[500] text-gray-900 text-center md:text-left  tracking-wider`}
             >
               DAM is a centralized platform for jewelry design asset sharing,
               version control, and task assignment. It enables smooth
@@ -22,8 +24,11 @@ const InfoSection = () => {
               multiple stakeholders, such as designers, photographers,
               marketers, and customers. It will help to reduce offline marketing
               material wastage.
-              <br />
-              <br />
+            </h3>
+            <br />
+            <p
+              className={`text-[1rem] md:text-lg lg:text-xl font-[500] text-gray-800  md:text-left  tracking-wider text-center `}
+            >
               Efficient design inventory management is essential to accurately
               track and categorize jewelry and diamond assets. Media asset
               management tools help businesses organize design inventory, track
