@@ -1,5 +1,6 @@
 import {
   IndustryHero,
+  InfoSection,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
 import {
@@ -18,6 +19,7 @@ const page = () => {
         btnText={JEWELLERY.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
+      <InfoSection />
     </>
   );
 };
