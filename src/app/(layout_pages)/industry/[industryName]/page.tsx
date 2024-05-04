@@ -1,8 +1,8 @@
 import {
   IndustryHero,
-  InfoSection,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
+import { InfoSection } from "@/components/Reusable";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -19,6 +19,7 @@ const page = () => {
         btnText={JEWELLERY.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
+
       <InfoSection />
     </>
   );
