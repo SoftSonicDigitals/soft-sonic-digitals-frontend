@@ -13,14 +13,19 @@ const page = () => {
   return (
     <>
       <IndustryHero
-        imgPath={JEWELLERY.imgPath}
-        heading={JEWELLERY.heading}
-        description={JEWELLERY.description}
-        btnText={JEWELLERY.btnText}
+        imgPath={JEWELLERY.hero.imgPath}
+        heading={JEWELLERY.hero.heading}
+        description={JEWELLERY.hero.description}
+        btnText={JEWELLERY.hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
 
-      <InfoSection />
+      <InfoSection
+        heading={JEWELLERY.sections.digitalAssetManagement.heading}
+        subHeading={JEWELLERY.sections.digitalAssetManagement.subHeading}
+        description={JEWELLERY.sections.digitalAssetManagement.description}
+        imgpath={JEWELLERY.sections.digitalAssetManagement.imgPath}
+      />
     </>
   );
 };
