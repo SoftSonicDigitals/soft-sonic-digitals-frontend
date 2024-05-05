@@ -8,23 +8,14 @@ export const JEWELLERY: IndustryPage = {
       "We are the One Stop Shop for all your Jewelry website design & development needs.",
     btnText: "REQUEST A PROPOSAL",
   },
-  sections: {
-    digitalAssetManagement: {
-      heading: "Digital Asset Management",
-      subHeading:
-        "DAM is a centralized platform for jewelry design asset sharing, version control, and task assignment. It enables smooth communication, enhances collaboration, and improves overall workflow management. It can effortlessly conduct global jewelry design collaboration support and co-marketing campaigns for multiple stakeholders, such as designers, photographers, marketers, and customers. It will help to reduce offline marketing material wastage.",
-      description:
-        "Efficient design inventory management is essential to accurately track and categorize jewelry and diamond assets. Media asset management tools help businesses organize design inventory, track stock levels, find specific items, and maintain a consistent brand image. It saves time and reduces errors associated with manual inventory management processes.",
-      imgPath: "/industry/info1.png",
-    },
-    abc: {
-      heading: "Digital Asset Management",
-      subHeading:
-        "DAM is a as designers, photographers, marketers, and customers. It will help to reduce offline marketing material wastage.",
-      description:
-        "Efficient design inventory management is essential to accurately track and categorize jewelry and diamond assets. Medi.",
-      imgPath: "/industry/info1.png",
-    },
+
+  section1: {
+    heading: "Digital Asset Management",
+    subHeading:
+      "DAM is a centralized platform for jewelry design asset sharing, version control, and task assignment. It enables smooth communication, enhances collaboration, and improves overall workflow management. It can effortlessly conduct global jewelry design collaboration support and co-marketing campaigns for multiple stakeholders, such as designers, photographers, marketers, and customers. It will help to reduce offline marketing material wastage.",
+    description:
+      "Efficient design inventory management is essential to accurately track and categorize jewelry and diamond assets. Media asset management tools help businesses organize design inventory, track stock levels, find specific items, and maintain a consistent brand image. It saves time and reduces errors associated with manual inventory management processes.",
+    imgPath: "/industry/info1.png",
   },
 };
 
