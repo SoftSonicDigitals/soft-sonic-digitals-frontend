@@ -5,12 +5,14 @@ type InfoSectionProps = {
   subHeading: string;
   description: string;
   imgpath: string;
+  listArray?: string[];
 };
 const InfoSection = ({
   heading,
   subHeading,
   description,
   imgpath,
+  listArray,
 }: InfoSectionProps) => {
   return (
     <section>
@@ -34,6 +36,28 @@ const InfoSection = ({
             >
               {description}
             </p>
+            {listArray && (
+              <ul className="mt-4">
+                {listArray.map((listItem, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center justify-start gap-4"
+                  >
+                    <Image
+                      src={"/industry/tick-mark-icon.png"}
+                      alt="tick-mark"
+                      height={24}
+                      width={24}
+                    />
+                    <p
+                      className={`text-xl font-[500] text-gray-800  md:text-left  tracking-wider  `}
+                    >
+                      {listItem}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="basis-full">
             <Image src={`${imgpath}`} alt="assets" width={678} height={538} />
