@@ -6,6 +6,7 @@ type InfoSectionProps = {
   description: string;
   imgpath: string;
   listArray?: string[];
+  reverseLayout?: boolean;
 };
 const InfoSection = ({
   heading,
@@ -13,11 +14,16 @@ const InfoSection = ({
   description,
   imgpath,
   listArray,
+  reverseLayout = false,
 }: InfoSectionProps) => {
   return (
     <section>
       <div className="wrapper_container mb-24">
-        <div className="flex-center flex-col-reverse lg:flex-row gap-12 px-2 ">
+        <div
+          className={`flex-center flex-col-reverse ${
+            !reverseLayout ? "lg:flex-row" : "lg:flex-row-reverse"
+          } gap-12 px-2 `}
+        >
           <div className="basis-full  max-w-[700px] ">
             <h1
               className={` text-[1.7rem] md:text-[2.1rem] font-[500] mb-8 text-center md:text-left`}
@@ -50,7 +56,7 @@ const InfoSection = ({
                       width={24}
                     />
                     <p
-                      className={`text-xl font-[500] text-gray-800  md:text-left  tracking-wider  `}
+                      className={`text-[1rem] md:text-lg lg:text-xl font-[500] text-gray-800  md:text-left  tracking-wider  `}
                     >
                       {listItem}
                     </p>
