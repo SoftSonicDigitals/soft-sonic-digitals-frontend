@@ -1,8 +1,6 @@
 export type IndustryPage = {
   hero: Hero;
-  sections: {
-    [key: string]: Section;
-  };
+  section1: Section;
 };
 
 type Hero = {

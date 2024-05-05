@@ -10,21 +10,23 @@ import {
 import React from "react";
 
 const page = () => {
+  const { hero, section1 } = JEWELLERY;
+
   return (
     <>
       <IndustryHero
-        imgPath={JEWELLERY.hero.imgPath}
-        heading={JEWELLERY.hero.heading}
-        description={JEWELLERY.hero.description}
-        btnText={JEWELLERY.hero.btnText}
+        imgPath={hero.imgPath}
+        heading={hero.heading}
+        description={hero.description}
+        btnText={hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
 
       <InfoSection
-        heading={JEWELLERY.sections.digitalAssetManagement.heading}
-        subHeading={JEWELLERY.sections.digitalAssetManagement.subHeading}
-        description={JEWELLERY.sections.digitalAssetManagement.description}
-        imgpath={JEWELLERY.sections.digitalAssetManagement.imgPath}
+        heading={section1.heading}
+        subHeading={section1.subHeading}
+        description={section1.description}
+        imgpath={section1.imgPath}
       />
     </>
   );
