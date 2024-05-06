@@ -58,6 +58,15 @@ export const JEWELLERY: IndustryPage = {
       "Real-time visibility into commission trends and performance data helps businesses make informed decisions. It will recognize exceptional sales performance and effectively manage commission and incentives. It is helpful for seamlessly managing the commission and customer data in a single place.",
     imgPath: "/industry/Digital_catalog.png",
   },
+
+  sectionFive: {
+    heading: "Digital Order Management",
+    subHeading:
+      "The digital order management solution allows customers to browse and select products from an online platform. It can then be approved by the salesperson to process the order. It is integrated into the business's ERP system for further processing. It also includes inventory management and fulfillment.",
+    description:
+      "It helps to get accurate and efficient handling of customer orders. Also, it reduces manual efforts and improves order fulfillment in the jewelry industry.",
+    imgPath: "/industry/digital-order-management-system.png",
+  },
 };
 
 export const SPECIALIZATION_TILES_DATA = [

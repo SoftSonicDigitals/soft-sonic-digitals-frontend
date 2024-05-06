@@ -10,7 +10,14 @@ import {
 import React from "react";
 
 const page = () => {
-  const { hero, sectionOne, sectionTwo, sectionThree, sectionFour } = JEWELLERY;
+  const {
+    hero,
+    sectionOne,
+    sectionTwo,
+    sectionThree,
+    sectionFour,
+    sectionFive,
+  } = JEWELLERY;
 
   return (
     <>
@@ -51,6 +58,12 @@ const page = () => {
         description={sectionFour!.description}
         imgpath={sectionFour!.imgPath}
         reverseLayout={true}
+      />
+      <InfoSection
+        heading={sectionFive!.heading}
+        subHeading={sectionFive!.subHeading}
+        description={sectionFive!.description}
+        imgpath={sectionFive!.imgPath}
       />
     </>
   );
