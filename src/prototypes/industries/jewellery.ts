@@ -67,6 +67,15 @@ export const JEWELLERY: IndustryPage = {
       "It helps to get accurate and efficient handling of customer orders. Also, it reduces manual efforts and improves order fulfillment in the jewelry industry.",
     imgPath: "/industry/digital-order-management-system.png",
   },
+
+  sectionSix: {
+    heading: "Seamless Brand Collaboration",
+    subHeading:
+      "Co-marketing in this industry is possible through collaboration between jewelry brands and shops. This can involve joint promotional campaigns and product launches.",
+    description:
+      "This solution is useful for running collaborative marketing efforts and establishing brand familiarity. That helps to improve sales ratios. This can be executed by using a real-time cooperation system. That gives both parties quick visibility and accessibility to each other's customers.",
+    imgPath: "/industry/Seamless-brand.png",
+  },
 };
 
 export const SPECIALIZATION_TILES_DATA = [
