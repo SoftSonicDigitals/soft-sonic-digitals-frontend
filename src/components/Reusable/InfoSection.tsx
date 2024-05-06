@@ -47,7 +47,7 @@ const InfoSection = ({
                 {listArray.map((listItem, index) => (
                   <li
                     key={index}
-                    className="flex items-center justify-start gap-4"
+                    className="flex items-center justify-start gap-4 mb-1.5"
                   >
                     <Image
                       src={"/industry/tick-mark-icon.png"}
