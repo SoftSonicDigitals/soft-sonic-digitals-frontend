@@ -17,7 +17,7 @@ const InfoSection = ({
   reverseLayout = false,
 }: InfoSectionProps) => {
   return (
-    <section>
+    <section id={heading.toLowerCase().replaceAll(" ", "_")}>
       <div className="wrapper_container mb-24">
         <div
           className={`flex-center flex-col-reverse ${
