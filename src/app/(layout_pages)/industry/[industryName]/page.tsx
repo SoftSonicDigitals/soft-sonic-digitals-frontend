@@ -34,6 +34,7 @@ const page = () => {
         description={sectionTwo!.description}
         imgpath={sectionTwo!.imgPath}
         reverseLayout={true}
+        listArray={sectionTwo!.listArray}
       />
     </>
   );
