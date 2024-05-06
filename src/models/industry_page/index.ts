@@ -1,6 +1,10 @@
+export type RecordOne = Record<string, Section>;
+
 export type IndustryPage = {
   hero: Hero;
-  section1: Section;
+  sectionOne?: Section;
+  sectionTwo?: Section;
+  sectionThree?: Section;
 };
 
 type Hero = {
@@ -9,9 +13,11 @@ type Hero = {
   description: string;
   btnText: string;
 };
+
 type Section = {
   heading: string;
   subHeading: string;
   description: string;
   imgPath: string;
+  listArray?: string[];
 };

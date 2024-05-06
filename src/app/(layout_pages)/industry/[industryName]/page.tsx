@@ -10,7 +10,7 @@ import {
 import React from "react";
 
 const page = () => {
-  const { hero, section1 } = JEWELLERY;
+  const { hero, sectionOne, sectionTwo } = JEWELLERY;
 
   return (
     <>
@@ -21,12 +21,19 @@ const page = () => {
         btnText={hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
+      <InfoSection
+        heading={sectionOne!.heading}
+        subHeading={sectionOne!.subHeading}
+        description={sectionOne!.description}
+        imgpath={sectionOne!.imgPath}
+      />
 
       <InfoSection
-        heading={section1.heading}
-        subHeading={section1.subHeading}
-        description={section1.description}
-        imgpath={section1.imgPath}
+        heading={sectionTwo!.heading}
+        subHeading={sectionTwo!.subHeading}
+        description={sectionTwo!.description}
+        imgpath={sectionTwo!.imgPath}
+        reverseLayout={true}
       />
     </>
   );
