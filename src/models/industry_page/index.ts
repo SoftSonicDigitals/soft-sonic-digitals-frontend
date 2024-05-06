@@ -5,6 +5,7 @@ export type IndustryPage = {
   sectionOne?: Section;
   sectionTwo?: Section;
   sectionThree?: Section;
+  sectionFour?: Section;
 };
 
 type Hero = {
