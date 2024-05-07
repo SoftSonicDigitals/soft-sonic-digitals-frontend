@@ -83,6 +83,13 @@ export const JEWELLERY: IndustryPage = {
       "A jewelry design comment and versioning system holds importance for a jewelry business. It helps to get accurate integration of customer expectations into jewelry designs. That results in enhanced customer satisfaction.\n\nThis system allows businesses to track and preserve design versions. Facilitating collaboration and effective communication. The system also serves as a valuable tool for ongoing improvement. It allows businesses to identify areas for enhancement and cater to customer preferences.",
     imgPath: "/industry/design-comment-1.png",
   },
+  sectionEight: {
+    heading: "Task Management System",
+    subHeading: "",
+    description:
+      "Implementing a task management system in the jewelry business acts as a comprehensive to-do manager. It allows users to save and organize tasks in a hierarchical structure.\n\n It will help the jewelry business to create tasks for various activities. Includes designing new jewelry pieces, sourcing materials, conducting quality checks, and managing inventory.\n\n Each task can be assigned to specific team members with designated start and due dates. It will help to boost productivity.",
+    imgPath: "/industry/design-comment-1.png",
+  },
 };
 
 export const SPECIALIZATION_TILES_DATA = [
