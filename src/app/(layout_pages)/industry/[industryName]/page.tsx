@@ -2,7 +2,10 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
-import { PrimaryInfoSection } from "@/components/Reusable";
+import {
+  PrimaryInfoSection,
+  SecondaryInfoSection,
+} from "@/components/Reusable";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -46,6 +49,8 @@ const page = () => {
         reverseLayout={true}
         listArray={sectionTwo!.listArray}
       />
+
+      <SecondaryInfoSection />
 
       <PrimaryInfoSection
         heading={sectionThree!.heading}
