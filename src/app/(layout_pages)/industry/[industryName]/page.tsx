@@ -23,6 +23,7 @@ const page = () => {
     sectionSix,
     sectionSeven,
     sectionEight,
+    sectionNine,
   } = JEWELLERY;
 
   return (
@@ -50,15 +51,11 @@ const page = () => {
         listArray={sectionTwo!.listArray}
       />
 
-      <SecondaryInfoSection />
-
-      <PrimaryInfoSection
+      <SecondaryInfoSection
         heading={sectionThree!.heading}
         subHeading={sectionThree!.subHeading}
         description={sectionThree!.description}
         imgpath={sectionThree!.imgPath}
-        reverseLayout={true}
-        listArray={sectionThree!.listArray}
       />
 
       <PrimaryInfoSection
@@ -66,36 +63,46 @@ const page = () => {
         subHeading={sectionFour!.subHeading}
         description={sectionFour!.description}
         imgpath={sectionFour!.imgPath}
+        reverseLayout={true}
+        listArray={sectionFour!.listArray}
       />
+
       <PrimaryInfoSection
         heading={sectionFive!.heading}
         subHeading={sectionFive!.subHeading}
         description={sectionFive!.description}
         imgpath={sectionFive!.imgPath}
-        reverseLayout={true}
       />
-
       <PrimaryInfoSection
         heading={sectionSix!.heading}
         subHeading={sectionSix!.subHeading}
         description={sectionSix!.description}
         imgpath={sectionSix!.imgPath}
+        reverseLayout={true}
       />
+
       <PrimaryInfoSection
         heading={sectionSeven!.heading}
         subHeading={sectionSeven!.subHeading}
         description={sectionSeven!.description}
         imgpath={sectionSeven!.imgPath}
-        reverseLayout={true}
-        requireSectionOverlay={true}
-        overlayStyles="bg-rose_white"
-        overlayPosition="right-0"
       />
       <PrimaryInfoSection
         heading={sectionEight!.heading}
         subHeading={sectionEight!.subHeading}
         description={sectionEight!.description}
         imgpath={sectionEight!.imgPath}
+        reverseLayout={true}
+        requireSectionOverlay={true}
+        overlayStyles="bg-rose_white"
+        overlayPosition="right-0"
+      />
+
+      <PrimaryInfoSection
+        heading={sectionNine!.heading}
+        subHeading={sectionNine!.subHeading}
+        description={sectionNine!.description}
+        imgpath={sectionNine!.imgPath}
         requireSectionOverlay={true}
         overlayStyles="bg-green"
         overlayPosition="left-0"
