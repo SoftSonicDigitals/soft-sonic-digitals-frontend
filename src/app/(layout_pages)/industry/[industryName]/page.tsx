@@ -2,7 +2,7 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
-import { InfoSection } from "@/components/Reusable";
+import { PrimaryInfoSection } from "@/components/Reusable";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -31,14 +31,14 @@ const page = () => {
         btnText={hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionOne!.heading}
         subHeading={sectionOne!.subHeading}
         description={sectionOne!.description}
         imgpath={sectionOne!.imgPath}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionTwo!.heading}
         subHeading={sectionTwo!.subHeading}
         description={sectionTwo!.description}
@@ -47,7 +47,7 @@ const page = () => {
         listArray={sectionTwo!.listArray}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionThree!.heading}
         subHeading={sectionThree!.subHeading}
         description={sectionThree!.description}
@@ -56,13 +56,13 @@ const page = () => {
         listArray={sectionThree!.listArray}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionFour!.heading}
         subHeading={sectionFour!.subHeading}
         description={sectionFour!.description}
         imgpath={sectionFour!.imgPath}
       />
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionFive!.heading}
         subHeading={sectionFive!.subHeading}
         description={sectionFive!.description}
@@ -70,13 +70,13 @@ const page = () => {
         reverseLayout={true}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionSix!.heading}
         subHeading={sectionSix!.subHeading}
         description={sectionSix!.description}
         imgpath={sectionSix!.imgPath}
       />
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionSeven!.heading}
         subHeading={sectionSeven!.subHeading}
         description={sectionSeven!.description}
@@ -86,7 +86,7 @@ const page = () => {
         overlayStyles="bg-rose_white"
         overlayPosition="right-0"
       />
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionEight!.heading}
         subHeading={sectionEight!.subHeading}
         description={sectionEight!.description}
