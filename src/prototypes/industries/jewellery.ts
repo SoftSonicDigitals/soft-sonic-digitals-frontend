@@ -76,6 +76,13 @@ export const JEWELLERY: IndustryPage = {
       "This solution is useful for running collaborative marketing efforts and establishing brand familiarity. That helps to improve sales ratios. This can be executed by using a real-time cooperation system. That gives both parties quick visibility and accessibility to each other's customers.",
     imgPath: "/industry/Seamless-brand.png",
   },
+  sectionSeven: {
+    heading: "Jewellry Design Comment & Versioning system",
+    subHeading: "",
+    description:
+      "A jewelry design comment and versioning system holds importance for a jewelry business. It helps to get accurate integration of customer expectations into jewelry designs. That results in enhanced customer satisfaction.\n\nThis system allows businesses to track and preserve design versions. Facilitating collaboration and effective communication. The system also serves as a valuable tool for ongoing improvement. It allows businesses to identify areas for enhancement and cater to customer preferences.",
+    imgPath: "/industry/design-comment-1.png",
+  },
 };
 
 export const SPECIALIZATION_TILES_DATA = [
