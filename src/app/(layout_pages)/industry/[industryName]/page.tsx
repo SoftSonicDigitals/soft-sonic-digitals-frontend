@@ -19,6 +19,7 @@ const page = () => {
     sectionFive,
     sectionSix,
     sectionSeven,
+    sectionEight,
   } = JEWELLERY;
 
   return (
@@ -83,6 +84,16 @@ const page = () => {
         reverseLayout={true}
         requireSectionOverlay={true}
         overlayStyles="bg-rose_white"
+        overlayPosition="right-0"
+      />
+      <InfoSection
+        heading={sectionEight!.heading}
+        subHeading={sectionEight!.subHeading}
+        description={sectionEight!.description}
+        imgpath={sectionEight!.imgPath}
+        requireSectionOverlay={true}
+        overlayStyles="bg-green"
+        overlayPosition="left-0"
       />
     </>
   );
