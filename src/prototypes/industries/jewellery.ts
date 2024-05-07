@@ -41,7 +41,7 @@ export const JEWELLERY: IndustryPage = {
       "Let your customers become the designers of their own jewelry. With the Ring & Jewelry Builder Feature",
     description:
       "Jewelry builders include all components, including pendants, necklaces, earrings, and rings. This unique function allows the buyer to design their own jewelry. They start the process from scratch and, in a way, they become designers of their own jewelry. Both B2B and B2C jewelry websites can implement this option. The 4 actions listed below can help you obtain the jewel of your choice:",
-    imgPath: "/industry/Digital_catalog.png",
+    imgPath: "/industry/product-ring-bilder.png",
     listArray: [
       "Choose the diamond or the setting first",
       "Select every aspect of the diamond, including its type, cut, size, color, and shape",
@@ -56,7 +56,7 @@ export const JEWELLERY: IndustryPage = {
       "This module is a must-have tool for the jewelry industry. It comes with a live dashboard for monitoring commission trends. It helps to easily analyze sales and commission data based on teams, brands, stores, Persons, regions, products, etc.",
     description:
       "Real-time visibility into commission trends and performance data helps businesses make informed decisions. It will recognize exceptional sales performance and effectively manage commission and incentives. It is helpful for seamlessly managing the commission and customer data in a single place.",
-    imgPath: "/industry/Digital_catalog.png",
+    imgPath: "/industry/spiff-commission.png",
   },
 
   sectionFive: {
