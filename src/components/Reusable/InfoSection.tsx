@@ -28,7 +28,7 @@ const InfoSection = ({
         <div
           className={` ${
             requireSectionOverlay
-              ? ` py-10 relative before:absolute before:-z-10 before:w-[67%] before:h-full before:${overlayStyles}   before:${overlayPosition}  before:top-0 `
+              ? ` lg:py-10 relative before:absolute before:-z-10 before:w-[67%] before:h-full before:${overlayStyles}   before:${overlayPosition}  before:top-0 before:opacity-0 before:lg:opacity-100`
               : ""
           }`}
         >
@@ -37,8 +37,8 @@ const InfoSection = ({
               !reverseLayout ? "lg:flex-row " : "lg:flex-row-reverse "
             } gap-12 px-2  ${
               requireSectionOverlay && overlayPosition === "right-0"
-                ? "pr-8"
-                : "pl-8"
+                ? "lg:pr-8"
+                : "lg:pl-8"
             }  `}
           >
             <div className={`basis-full  max-w-[700px]  `}>
