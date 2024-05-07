@@ -18,6 +18,7 @@ const page = () => {
     sectionFour,
     sectionFive,
     sectionSix,
+    sectionSeven,
   } = JEWELLERY;
 
   return (
@@ -72,6 +73,13 @@ const page = () => {
         subHeading={sectionSix!.subHeading}
         description={sectionSix!.description}
         imgpath={sectionSix!.imgPath}
+        reverseLayout={true}
+      />
+      <InfoSection
+        heading={sectionSeven!.heading}
+        subHeading={sectionSeven!.subHeading}
+        description={sectionSeven!.description}
+        imgpath={sectionSeven!.imgPath}
         reverseLayout={true}
       />
     </>
