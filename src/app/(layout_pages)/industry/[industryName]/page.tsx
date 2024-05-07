@@ -51,6 +51,7 @@ const page = () => {
         subHeading={sectionThree!.subHeading}
         description={sectionThree!.description}
         imgpath={sectionThree!.imgPath}
+        reverseLayout={true}
         listArray={sectionThree!.listArray}
       />
 
@@ -59,13 +60,13 @@ const page = () => {
         subHeading={sectionFour!.subHeading}
         description={sectionFour!.description}
         imgpath={sectionFour!.imgPath}
-        reverseLayout={true}
       />
       <InfoSection
         heading={sectionFive!.heading}
         subHeading={sectionFive!.subHeading}
         description={sectionFive!.description}
         imgpath={sectionFive!.imgPath}
+        reverseLayout={true}
       />
 
       <InfoSection
@@ -73,7 +74,6 @@ const page = () => {
         subHeading={sectionSix!.subHeading}
         description={sectionSix!.description}
         imgpath={sectionSix!.imgPath}
-        reverseLayout={true}
       />
       <InfoSection
         heading={sectionSeven!.heading}
@@ -81,6 +81,8 @@ const page = () => {
         description={sectionSeven!.description}
         imgpath={sectionSeven!.imgPath}
         reverseLayout={true}
+        requireSectionOverlay={true}
+        overlayStyles="bg-rose_white"
       />
     </>
   );

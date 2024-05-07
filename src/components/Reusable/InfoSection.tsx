@@ -7,6 +7,8 @@ type InfoSectionProps = {
   imgpath: string;
   listArray?: string[];
   reverseLayout?: boolean;
+  requireSectionOverlay?: boolean;
+  overlayStyles?: string;
 };
 const InfoSection = ({
   heading,
@@ -15,21 +17,23 @@ const InfoSection = ({
   imgpath,
   listArray,
   reverseLayout = false,
+  requireSectionOverlay = false,
+  overlayStyles,
 }: InfoSectionProps) => {
   return (
     <section id={heading.toLowerCase().replaceAll(" ", "_")}>
       <div className="wrapper_container mb-24 ">
         <div
-          className={`py-10 relative ${
-            reverseLayout
-              ? "before:absolute before:-z-10 before:w-[67%] before:h-full before:bg-rose_white  before:right-0  before:top-0 "
+          className={` ${
+            requireSectionOverlay
+              ? ` py-10 relative before:absolute before:-z-10 before:w-[67%] before:h-full before:${overlayStyles}   before:right-0  before:top-0 `
               : ""
           }`}
         >
           <div
             className={`flex-center flex-col-reverse  relative ${
-              !reverseLayout ? "lg:flex-row " : "lg:flex-row-reverse pr-8"
-            } gap-12 px-2    `}
+              !reverseLayout ? "lg:flex-row " : "lg:flex-row-reverse "
+            } gap-12 px-2  ${requireSectionOverlay ? "pr-8" : ""}  `}
           >
             <div className={`basis-full  max-w-[700px]  `}>
               <h1
