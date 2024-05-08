@@ -10,7 +10,7 @@ const IndustryFeatureTabs = () => {
     <section id="features">
       <div className="wrapper_container mb-24">
         <h1
-          className={` text-[1.7rem] md:text-[2.1rem] font-[500] mb-8 text-center `}
+          className={` text-[1.7rem] md:text-[2.1rem] font-[500] mb-8 text-center  px-8`}
         >
           {JEWELLERY.featuresSection.sectionHeading}
         </h1>
