@@ -12,8 +12,15 @@ export type IndustryPage = {
   sectionEight?: Section;
   sectionNine?: Section;
   sectionTen?: Section;
+  featuresSection: { sectionHeading: string; features: Features[] };
 };
 
+type Features = {
+  imgPath: string;
+  heading: string;
+  subHeading: string;
+  description: string;
+};
 type Hero = {
   imgPath: string;
   heading: string;
