@@ -24,6 +24,7 @@ const page = () => {
     sectionSeven,
     sectionEight,
     sectionNine,
+    sectionTen,
   } = JEWELLERY;
 
   return (
@@ -56,6 +57,8 @@ const page = () => {
         subHeading={sectionThree!.subHeading}
         description={sectionThree!.description}
         imgpath={sectionThree!.imgPath}
+        imgHeight={sectionThree!.imgHeight as number}
+        imgWidth={sectionThree!.imgWidth as number}
       />
 
       <PrimaryInfoSection
@@ -106,6 +109,15 @@ const page = () => {
         requireSectionOverlay={true}
         overlayStyles="bg-green"
         overlayPosition="left-0"
+      />
+
+      <SecondaryInfoSection
+        heading={sectionTen!.heading}
+        subHeading={sectionTen!.subHeading}
+        description={sectionTen!.description}
+        imgpath={sectionTen!.imgPath}
+        imgHeight={sectionTen!.imgHeight as number}
+        imgWidth={sectionTen!.imgWidth as number}
       />
     </>
   );

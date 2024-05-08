@@ -11,6 +11,7 @@ export type IndustryPage = {
   sectionSeven?: Section;
   sectionEight?: Section;
   sectionNine?: Section;
+  sectionTen?: Section;
 };
 
 type Hero = {
@@ -26,4 +27,6 @@ type Section = {
   description: string;
   imgPath: string;
   listArray?: string[];
+  imgWidth?: number;
+  imgHeight?: number;
 };
