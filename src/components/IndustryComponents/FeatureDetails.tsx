@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 type FeatureDetailsProps = {
-  heading: string;
+  heading?: string;
   subHeading: string;
   description: string;
   imgPath: string;
@@ -15,10 +15,10 @@ const FeatureDetails = ({
 }: FeatureDetailsProps) => {
   return (
     <>
-      <div className="basis-full">
+      <div className="basis-full flex-center">
         <Image src={imgPath} alt="assets" width={587} height={362} />
       </div>
-      <div className={`basis-full  max-w-[700px]  `}>
+      <div className={`basis-full  max-w-[700px]   `}>
         <h1
           className={` text-[1.7rem] md:text-[2.1rem] font-[500] mb-8 text-center md:text-left capitalize`}
         >
@@ -26,13 +26,13 @@ const FeatureDetails = ({
         </h1>
 
         <h3
-          className={`text-xl md:text-2xl lg:text-xl  font-[500] text-gray-900 text-center md:text-left  tracking-wider`}
+          className={`text-xl md:text-2xl lg:text-xl  font-[500] text-gray-900 text-center lg:text-left  tracking-wider`}
         >
           {subHeading}
         </h3>
         <br />
         <p
-          className={`text-[1rem] md:text-lg lg:text-xl font-[500] text-gray-800  md:text-left  tracking-wider text-center whitespace-pre-line`}
+          className={`text-[1rem] md:text-lg lg:text-xl font-[500] text-gray-800  lg:text-left  tracking-wider text-center whitespace-pre-line`}
         >
           {description}
         </p>
