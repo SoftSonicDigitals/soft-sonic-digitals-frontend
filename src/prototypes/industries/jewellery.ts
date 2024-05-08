@@ -1,4 +1,5 @@
 import { IndustryPage } from "@/models/industry_page";
+import { describe } from "node:test";
 
 export const JEWELLERY: IndustryPage = {
   hero: {
@@ -41,6 +42,9 @@ export const JEWELLERY: IndustryPage = {
     description:
       "Jewelry brands use a PIM solution. This solution helps them handle and share consistent product information. They can use it for diamond details and metal type. They can use it on their website, online marketplaces, apps, social media, and physical stores.",
     imgPath: "/industry/product-information-management.png",
+    // in px
+    imgHeight: 710,
+    imgWidth: 1117,
   },
   sectionFour: {
     heading: "Product Ring Builder",
@@ -96,6 +100,18 @@ export const JEWELLERY: IndustryPage = {
     description:
       "Implementing a task management system in the jewelry business acts as a comprehensive to-do manager. It allows users to save and organize tasks in a hierarchical structure.\n\n It will help the jewelry business to create tasks for various activities. Includes designing new jewelry pieces, sourcing materials, conducting quality checks, and managing inventory.\n\n Each task can be assigned to specific team members with designated start and due dates. It will help to boost productivity.",
     imgPath: "/industry/design-comment-1.png",
+  },
+
+  sectionTen: {
+    heading: "Product Customization",
+    subHeading:
+      "Product customization has become a “must-have” feature in any kind of Jewelry website. Add this to your website now!",
+    description:
+      "Customization in the jewelry industry is the ability to fulfill user needs. It helps them to design products that reflect their style, sentiment, and occasion.\n\nBy offering product customization options, brands can separate themselves from competitors. Customers can personalize their jewelry by picking the metal type, gemstone, design, and color. It will boost brand loyalty by building emotional ties with the brand.",
+    imgPath: "/industry/product-customization.png",
+    // in px
+    imgHeight: 604,
+    imgWidth: 916,
   },
 };
 

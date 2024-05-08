@@ -5,12 +5,16 @@ type SecondaryInfoSectionProps = {
   subHeading: string;
   description: string;
   imgpath: string;
+  imgHeight: number;
+  imgWidth: number;
 };
 const SecondaryInfoSection = ({
   heading,
   subHeading,
   description,
   imgpath,
+  imgHeight,
+  imgWidth,
 }: SecondaryInfoSectionProps) => {
   return (
     <section className="bg-rose_white">
@@ -35,10 +39,10 @@ const SecondaryInfoSection = ({
         </div>
         <div className="mb-10">
           <Image
-            src={`/industry/${imgpath}`}
+            src={`${imgpath}`}
             alt={`${heading}`}
-            height={710}
-            width={1117}
+            height={imgHeight}
+            width={imgWidth}
           />
         </div>
       </div>
