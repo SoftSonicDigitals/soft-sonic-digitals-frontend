@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { Fragment } from "react";
 import { IoIosRemove } from "react-icons/io";
 import { IoAddOutline } from "react-icons/io5";
 import FeatureDetails from "./FeatureDetails";
+import useDropDown from "@/hooks/useDropDown";
 type IndustryFeaturesMobileProps = {
   featuresArray: {
     heading: string;
@@ -15,31 +16,21 @@ type IndustryFeaturesMobileProps = {
 const IndustryFeaturesMobile = ({
   featuresArray,
 }: IndustryFeaturesMobileProps) => {
-  const [selectedDropDownMenu, setSelectedDropDownMenu] = useState<
-    number | null
-  >(null);
-
-  const toggleDropDown = (index: number) => {
-    if (selectedDropDownMenu === index) {
-      return setSelectedDropDownMenu(null);
-    }
-    setSelectedDropDownMenu(index);
-  };
-
-  const isMenuOpen = (selected: number | null, index: number) => {
-    return selected === index;
-  };
+  const {
+    selected: selectedMenu,
+    toggle: toogleMenu,
+    isOpen: isMenuOpen,
+  } = useDropDown();
 
   return (
     <div className="flex gap-16 lg:hidden item-center justify-center flex-col mx-3">
       {featuresArray.map((feature, index) => (
-        <>
+        <Fragment key={index}>
           <button
-            key={index}
             className="flex items-center justify-center  gap-6"
-            onClick={() => toggleDropDown(index)}
+            onClick={() => toogleMenu(index)}
           >
-            {!isMenuOpen(selectedDropDownMenu, index) ? (
+            {!isMenuOpen(selectedMenu, index) ? (
               <IoAddOutline className="cursor-pointer" />
             ) : (
               <IoIosRemove className="cursor-pointer" />
@@ -48,16 +39,17 @@ const IndustryFeaturesMobile = ({
               {feature.heading}
             </p>
           </button>
-          {isMenuOpen(selectedDropDownMenu, index) && (
+          {isMenuOpen(selectedMenu, index) && (
             <div className="flex-center flex-col">
               <FeatureDetails
+                key={index}
                 subHeading={feature.subHeading}
                 description={feature.description}
                 imgPath={feature.imgPath}
               />
             </div>
           )}
-        </>
+        </Fragment>
       ))}
     </div>
   );
