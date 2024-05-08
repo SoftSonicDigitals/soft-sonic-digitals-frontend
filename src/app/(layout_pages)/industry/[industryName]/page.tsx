@@ -121,7 +121,10 @@ const page = () => {
         imgWidth={sectionTen!.imgWidth as number}
       />
 
-      <IndustryFeatureTabs />
+      <IndustryFeatureTabs
+        sectionHeading={JEWELLERY.featuresSection.sectionHeading}
+        featuresArray={JEWELLERY.featuresSection.features}
+      />
     </>
   );
 };
