@@ -28,7 +28,7 @@ const PrimaryInfoSection = ({
         <div
           className={` ${
             requireSectionOverlay
-              ? ` lg:py-10 relative before:absolute before:-z-10 before:w-[67%] before:h-full before:${overlayStyles} before:${overlayPosition} before:top-0 before:opacity-0 before:lg:opacity-100`
+              ? ` lg:py-10 relative before:absolute before:-z-10 before:w-[67%] before:h-full ${overlayStyles} ${overlayPosition} before:top-0 before:opacity-0 before:lg:opacity-100`
               : ""
           }`}
         >
