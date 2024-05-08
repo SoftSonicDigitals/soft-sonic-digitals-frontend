@@ -1,4 +1,5 @@
 import {
+  IndustryFeatureTabs,
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
@@ -119,6 +120,8 @@ const page = () => {
         imgHeight={sectionTen!.imgHeight as number}
         imgWidth={sectionTen!.imgWidth as number}
       />
+
+      <IndustryFeatureTabs />
     </>
   );
 };
