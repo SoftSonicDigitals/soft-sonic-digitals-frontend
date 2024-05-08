@@ -102,8 +102,8 @@ const page = () => {
         imgpath={sectionEight!.imgPath}
         reverseLayout={true}
         requireSectionOverlay={true}
-        overlayStyles="bg-rose_white"
-        overlayPosition="right-0"
+        overlayStyles="before:bg-rose_white"
+        overlayPosition="before:right-0"
       />
 
       <PrimaryInfoSection
@@ -112,8 +112,8 @@ const page = () => {
         description={sectionNine!.description}
         imgpath={sectionNine!.imgPath}
         requireSectionOverlay={true}
-        overlayStyles="bg-green"
-        overlayPosition="left-0"
+        overlayStyles="before:bg-green"
+        overlayPosition="before:left-0"
       />
 
       <SecondaryInfoSection
