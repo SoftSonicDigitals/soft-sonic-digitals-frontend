@@ -113,6 +113,71 @@ export const JEWELLERY: IndustryPage = {
     imgHeight: 604,
     imgWidth: 916,
   },
+
+  features: [
+    {
+      heading: "360 degree view",
+      subHeading: "Add this amazing, eye-catching tool to your website design",
+      description:
+        "This module is useful. At the same time, it is an eye-catching feature of your jewelry website design. It helps the customers to see their favorite jewelry products from all angles. This way, accurate customer feedback for jewelry can reach the design teams. The recommended changes can be made to the final product. It is also a pleasant visual experience for the customers while browsing.",
+      imgPath: "/industry/360-view.png",
+    },
+    {
+      heading: "Warranty claim",
+      subHeading:
+        "Experience hassle-free warranty claims for the jewelry and diamond industries.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/warranty-claim.png",
+    },
+    {
+      heading: "Third party platforms",
+      subHeading:
+        "Integrate with third-party platforms for better product visibility.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/third-party-platform.png",
+    },
+    {
+      heading: "Search & Filtering",
+      subHeading:
+        "Simplify your jewelry search and filtering with a refined tool.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/product-search-filtering.png",
+    },
+    {
+      heading: "Display management",
+      subHeading:
+        "Digital display management to increase brand visibility and communication.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/display-management.png",
+    },
+    {
+      heading: "Mood-board design",
+      subHeading: "Present your jewelry ideas visually with stunning effects.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/mood-board.png",
+    },
+    {
+      heading: "Make to order",
+      subHeading:
+        "Allow your customer to provide jewelry reviews and feedback in real-time digitally.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/make-to-order.png",
+    },
+    {
+      heading: "Chatbot support",
+      subHeading:
+        "Chatbots in jewelry eCommerce can boost customer support by handling simple inquiries effectively.",
+      description:
+        "The online warranty claim forms drop the need for physical invoices. It allows customers to upload their claims from anywhere conveniently. With secure registration and global validity, customers can enjoy peace of mind. It simplifies the warranty claim process by reducing paperwork for both parties.",
+      imgPath: "/industry/chatbot.png",
+    },
+  ],
 };
 
 export const SPECIALIZATION_TILES_DATA = [
