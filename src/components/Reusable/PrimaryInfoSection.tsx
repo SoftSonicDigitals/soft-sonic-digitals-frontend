@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-type InfoSectionProps = {
+type PrimaryInfoSectionProps = {
   heading: string;
   subHeading: string;
   description: string;
@@ -11,7 +11,7 @@ type InfoSectionProps = {
   overlayStyles?: string;
   overlayPosition?: string;
 };
-const InfoSection = ({
+const PrimaryInfoSection = ({
   heading,
   subHeading,
   description,
@@ -21,7 +21,7 @@ const InfoSection = ({
   requireSectionOverlay = false,
   overlayStyles,
   overlayPosition,
-}: InfoSectionProps) => {
+}: PrimaryInfoSectionProps) => {
   return (
     <section id={heading.toLowerCase().replaceAll(" ", "_")}>
       <div className="wrapper_container mb-24 ">
@@ -92,4 +92,4 @@ const InfoSection = ({
   );
 };
 
-export default InfoSection;
+export default PrimaryInfoSection;

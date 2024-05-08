@@ -2,7 +2,10 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
-import { InfoSection } from "@/components/Reusable";
+import {
+  PrimaryInfoSection,
+  SecondaryInfoSection,
+} from "@/components/Reusable";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -20,6 +23,8 @@ const page = () => {
     sectionSix,
     sectionSeven,
     sectionEight,
+    sectionNine,
+    sectionTen,
   } = JEWELLERY;
 
   return (
@@ -31,14 +36,14 @@ const page = () => {
         btnText={hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionOne!.heading}
         subHeading={sectionOne!.subHeading}
         description={sectionOne!.description}
         imgpath={sectionOne!.imgPath}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionTwo!.heading}
         subHeading={sectionTwo!.subHeading}
         description={sectionTwo!.description}
@@ -47,53 +52,72 @@ const page = () => {
         listArray={sectionTwo!.listArray}
       />
 
-      <InfoSection
+      <SecondaryInfoSection
         heading={sectionThree!.heading}
         subHeading={sectionThree!.subHeading}
         description={sectionThree!.description}
         imgpath={sectionThree!.imgPath}
-        reverseLayout={true}
-        listArray={sectionThree!.listArray}
+        imgHeight={sectionThree!.imgHeight as number}
+        imgWidth={sectionThree!.imgWidth as number}
       />
 
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionFour!.heading}
         subHeading={sectionFour!.subHeading}
         description={sectionFour!.description}
         imgpath={sectionFour!.imgPath}
+        reverseLayout={true}
+        listArray={sectionFour!.listArray}
       />
-      <InfoSection
+
+      <PrimaryInfoSection
         heading={sectionFive!.heading}
         subHeading={sectionFive!.subHeading}
         description={sectionFive!.description}
         imgpath={sectionFive!.imgPath}
-        reverseLayout={true}
       />
-
-      <InfoSection
+      <PrimaryInfoSection
         heading={sectionSix!.heading}
         subHeading={sectionSix!.subHeading}
         description={sectionSix!.description}
         imgpath={sectionSix!.imgPath}
+        reverseLayout={true}
       />
-      <InfoSection
+
+      <PrimaryInfoSection
         heading={sectionSeven!.heading}
         subHeading={sectionSeven!.subHeading}
         description={sectionSeven!.description}
         imgpath={sectionSeven!.imgPath}
+      />
+      <PrimaryInfoSection
+        heading={sectionEight!.heading}
+        subHeading={sectionEight!.subHeading}
+        description={sectionEight!.description}
+        imgpath={sectionEight!.imgPath}
         reverseLayout={true}
         requireSectionOverlay={true}
         overlayStyles="bg-rose_white"
         overlayPosition="right-0"
       />
-      <InfoSection
-        heading={sectionEight!.heading}
-        subHeading={sectionEight!.subHeading}
-        description={sectionEight!.description}
-        imgpath={sectionEight!.imgPath}
+
+      <PrimaryInfoSection
+        heading={sectionNine!.heading}
+        subHeading={sectionNine!.subHeading}
+        description={sectionNine!.description}
+        imgpath={sectionNine!.imgPath}
         requireSectionOverlay={true}
         overlayStyles="bg-green"
         overlayPosition="left-0"
+      />
+
+      <SecondaryInfoSection
+        heading={sectionTen!.heading}
+        subHeading={sectionTen!.subHeading}
+        description={sectionTen!.description}
+        imgpath={sectionTen!.imgPath}
+        imgHeight={sectionTen!.imgHeight as number}
+        imgWidth={sectionTen!.imgWidth as number}
       />
     </>
   );

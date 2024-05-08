@@ -5,8 +5,8 @@ import PrimaryButton from "./PrimaryButton";
 import PrimaryStyledHeadings from "./PrimaryStyledHeadings";
 import ViewAllBtn from "./ViewAllBtn";
 import RequestProposalBtn from "./RequestProposalBtn";
-import InfoSection from "./InfoSection";
-
+import PrimaryInfoSection from "./PrimaryInfoSection";
+import SecondaryInfoSection from "./SecondaryInfoSection";
 export {
   PrimaryButton,
   Platform,
@@ -15,5 +15,6 @@ export {
   PrimaryLists,
   ViewAllBtn,
   RequestProposalBtn,
-  InfoSection,
+  PrimaryInfoSection,
+  SecondaryInfoSection,
 };
