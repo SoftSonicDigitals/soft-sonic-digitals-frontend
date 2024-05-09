@@ -2,6 +2,7 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
+import { ResultsDelivered } from "@/components/ResultsDelivered";
 import {
   PrimaryInfoSection,
   SecondaryInfoSection,
@@ -119,6 +120,8 @@ const page = () => {
         imgHeight={sectionTen!.imgHeight as number}
         imgWidth={sectionTen!.imgWidth as number}
       />
+
+      <ResultsDelivered />
     </>
   );
 };
