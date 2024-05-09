@@ -1,3 +1,4 @@
+import { Clients } from "@/components/Clients";
 import {
   IndustryHero,
   SpecializationTiles,
@@ -122,6 +123,7 @@ const page = () => {
       />
 
       <ResultsDelivered />
+      <Clients />
     </>
   );
 };
