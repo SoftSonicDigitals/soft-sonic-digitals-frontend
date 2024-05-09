@@ -8,6 +8,7 @@ import {
   PrimaryInfoSection,
   SecondaryInfoSection,
 } from "@/components/Reusable";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -124,6 +125,7 @@ const page = () => {
 
       <ResultsDelivered />
       <Clients />
+      <WhyChooseUs />
     </>
   );
 };
