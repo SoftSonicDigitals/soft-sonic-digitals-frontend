@@ -15,7 +15,7 @@ const IndustryBanner = () => {
             containerStyles="mb-12 px-8  md:px-12 lg:px-8 xl:px-12 "
           />
           <div className="flex-center w-full">
-            <GetInTouchContactBtn />
+            <GetInTouchContactBtn>HIRE NOW</GetInTouchContactBtn>
           </div>
         </div>
       </div>
