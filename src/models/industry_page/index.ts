@@ -12,7 +12,15 @@ export type IndustryPage = {
   sectionEight?: Section;
   sectionNine?: Section;
   sectionTen?: Section;
+  featuresSection: { sectionHeading: string; features: Features[] };
   bannerSection: Banner;
+};
+
+type Features = {
+  imgPath: string;
+  heading: string;
+  subHeading: string;
+  description: string;
 };
 
 type Hero = {
