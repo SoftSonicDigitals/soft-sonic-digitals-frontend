@@ -10,7 +10,7 @@ const LetsTalkBanner = () => {
           {BANNER_MESSAGE}
         </p>
         <div>
-          <GetInTouchContactBtn />
+          <GetInTouchContactBtn>LET&apso;S TALK </GetInTouchContactBtn>
         </div>
       </div>
     </section>
