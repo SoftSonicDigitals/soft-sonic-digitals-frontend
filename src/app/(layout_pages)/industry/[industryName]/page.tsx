@@ -29,6 +29,7 @@ const page = () => {
     sectionEight,
     sectionNine,
     sectionTen,
+    bannerSection,
   } = JEWELLERY;
 
   return (
@@ -127,7 +128,11 @@ const page = () => {
       <ResultsDelivered />
       <Clients />
       <WhyChooseUs />
-      <IndustryBanner />
+      <IndustryBanner
+        title={bannerSection.title}
+        description={bannerSection.description}
+        btnText={bannerSection.btnText}
+      />
     </>
   );
 };
