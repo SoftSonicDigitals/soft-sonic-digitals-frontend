@@ -12,6 +12,7 @@ export type IndustryPage = {
   sectionEight?: Section;
   sectionNine?: Section;
   sectionTen?: Section;
+  bannerSection: Banner;
 };
 
 type Hero = {
@@ -20,7 +21,11 @@ type Hero = {
   description: string;
   btnText: string;
 };
-
+type Banner = {
+  title: string;
+  description: string;
+  btnText: string;
+};
 type Section = {
   heading: string;
   subHeading: string;
