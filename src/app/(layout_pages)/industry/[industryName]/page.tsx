@@ -1,12 +1,16 @@
+import { Clients } from "@/components/Clients";
 import {
   IndustryFeatureTabs,
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
+import IndustryBanner from "@/components/IndustryComponents/IndustryBanner";
+import { ResultsDelivered } from "@/components/ResultsDelivered";
 import {
   PrimaryInfoSection,
   SecondaryInfoSection,
 } from "@/components/Reusable";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import {
   JEWELLERY,
   SPECIALIZATION_TILES_DATA,
@@ -26,6 +30,7 @@ const page = () => {
     sectionEight,
     sectionNine,
     sectionTen,
+    bannerSection,
   } = JEWELLERY;
 
   return (
@@ -124,6 +129,15 @@ const page = () => {
       <IndustryFeatureTabs
         sectionHeading={JEWELLERY.featuresSection.sectionHeading}
         featuresArray={JEWELLERY.featuresSection.features}
+      />
+
+      <ResultsDelivered />
+      <Clients />
+      <WhyChooseUs />
+      <IndustryBanner
+        title={bannerSection.title}
+        description={bannerSection.description}
+        btnText={bannerSection.btnText}
       />
     </>
   );

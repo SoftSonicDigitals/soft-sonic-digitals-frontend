@@ -3,11 +3,15 @@ import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { useRouter } from "next/navigation";
 
-const GetInTouchContactBtn = () => {
+type GetInTouchContactBtnProps = {
+  children: string;
+};
+
+const GetInTouchContactBtn = ({ children }: GetInTouchContactBtnProps) => {
   const router = useRouter();
   return (
     <PrimaryButton
-      title="LET'S TAlK"
+      title={children}
       className="px-12 py-3 "
       clickHandler={() => router.push("/contact")}
     />

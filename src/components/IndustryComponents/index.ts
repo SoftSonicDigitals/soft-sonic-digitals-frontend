@@ -1,3 +1,4 @@
+import IndustryBanner from "./IndustryBanner";
 import FeatureDetails from "./FeatureDetails";
 import IndustryFeatureTabs from "./IndustryFeatureTabs";
 import IndustryFeaturesMobile from "./IndustryFeaturesMobile";
@@ -10,3 +11,4 @@ export {
   FeatureDetails,
   IndustryFeaturesMobile,
 };
+IndustryBanner;

@@ -13,6 +13,7 @@ export type IndustryPage = {
   sectionNine?: Section;
   sectionTen?: Section;
   featuresSection: { sectionHeading: string; features: Features[] };
+  bannerSection: Banner;
 };
 
 type Features = {
@@ -21,13 +22,18 @@ type Features = {
   subHeading: string;
   description: string;
 };
+
 type Hero = {
   imgPath: string;
   heading: string;
   description: string;
   btnText: string;
 };
-
+type Banner = {
+  title: string;
+  description: string;
+  btnText: string;
+};
 type Section = {
   heading: string;
   subHeading: string;

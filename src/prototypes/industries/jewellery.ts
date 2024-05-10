@@ -184,6 +184,13 @@ export const JEWELLERY: IndustryPage = {
       },
     ],
   },
+
+  bannerSection: {
+    title: "Talk to our gems & jewelry web designer consultant",
+    description:
+      "Communication is the key for us to understand each other. Allow us to understand your requirements or queries. Present us with an opportunity to serve you.",
+    btnText: "HIRE NOW",
+  },
 };
 
 export const SPECIALIZATION_TILES_DATA = [
