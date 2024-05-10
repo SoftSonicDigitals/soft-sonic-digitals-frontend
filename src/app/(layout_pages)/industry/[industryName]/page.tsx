@@ -3,6 +3,7 @@ import {
   IndustryHero,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
+import IndustryBanner from "@/components/IndustryComponents/IndustryBanner";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
 import {
   PrimaryInfoSection,
@@ -126,6 +127,7 @@ const page = () => {
       <ResultsDelivered />
       <Clients />
       <WhyChooseUs />
+      <IndustryBanner />
     </>
   );
 };
