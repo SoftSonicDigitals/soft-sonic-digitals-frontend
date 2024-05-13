@@ -2,6 +2,7 @@ import { Clients } from "@/components/Clients";
 import {
   IndustryFeatureTabs,
   IndustryHero,
+  ServedIndustries,
   SpecializationTiles,
 } from "@/components/IndustryComponents";
 import IndustryBanner from "@/components/IndustryComponents/IndustryBanner";
@@ -139,6 +140,7 @@ const page = () => {
         description={bannerSection.description}
         btnText={bannerSection.btnText}
       />
+      <ServedIndustries />
     </>
   );
 };
