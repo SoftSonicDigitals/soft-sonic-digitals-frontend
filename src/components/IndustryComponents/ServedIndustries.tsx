@@ -1,11 +1,12 @@
 import React from "react";
 import { PrimaryStyledHeadings } from "../Reusable";
+import Image from "next/image";
 
 const ServedIndustries = () => {
   return (
     <section>
-      <div className="wrapper_container mb-24 flex ">
-        <div className="max-w-[510px]">
+      <div className="wrapper_container mb-24 flex px-10 gap-10">
+        <div className="max-w-[500px]  ">
           {/* <PrimaryStyledHeadings
             mainHeading="Other industries that we serve"
             subHeading="Create an ecommerce website backed by powerful tools that help you find customers, drive sales, and manage your day-to-day."
@@ -19,7 +20,18 @@ const ServedIndustries = () => {
             find customers, drive sales, and manage your day-to-day.
           </p>
         </div>
-        <div></div>
+        <div className="flex-center flex-col">
+          <div className=" px-10 py-3.5 rounded shadow-custom">
+            <Image
+              src="/industry/served_industries/Furniture.png"
+              alt="industry"
+              width={72}
+              height={72}
+              className="mb-6"
+            />
+            <p className="text-center text-lg font-[500]">Furniture</p>
+          </div>
+        </div>
       </div>
     </section>
   );
