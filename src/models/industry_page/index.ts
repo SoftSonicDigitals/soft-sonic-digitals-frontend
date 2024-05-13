@@ -1,4 +1,7 @@
-export type RecordOne = Record<string, Section>;
+export type IndustriesServedArray = {
+  name: string;
+  image: string;
+}[];
 
 export type IndustryPage = {
   hero: Hero;
