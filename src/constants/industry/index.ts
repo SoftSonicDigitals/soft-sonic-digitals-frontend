@@ -17,7 +17,7 @@ export const INDUSTRIES_SERVED_ARRAY = [
   },
   {
     name: "Healthcare",
-    img: "/industry/served_industries/Healthcare.png",
+    img: "/industry/served_industries/HHealthcare.png",
   },
   {
     name: "Electronics",
@@ -29,7 +29,7 @@ export const INDUSTRIES_SERVED_ARRAY = [
   },
   {
     name: "Floristry",
-    img: "/industry/served_industries/Floristry.png",
+    img: "/industry/served_industries/HFloristry.png",
   },
   {
     name: "Grocery",

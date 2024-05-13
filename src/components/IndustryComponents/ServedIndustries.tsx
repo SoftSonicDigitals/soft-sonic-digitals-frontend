@@ -1,31 +1,42 @@
 import React from "react";
 import { PrimaryStyledHeadings } from "../Reusable";
 import Image from "next/image";
+import {
+  INDUSTRIES_SERVED_ARRAY,
+  INDUSTRIES_SERVED_DESCRIPTION,
+  INDUSTRIES_SERVED_HEADING,
+} from "@/constants/industry";
 
 const ServedIndustries = () => {
   return (
     <section>
-      <div className="wrapper_container mb-24 flex px-10 gap-10">
-        <div className="max-w-[500px]  ">
+      <div className="wrapper_container mb-24 flex flex-col lg:flex-row px-3 xl:px-16 gap-10 lg:gap-6 justify-center items-center">
+        <div className="mt-6 text-center lg:text-left lg:max-w-[510px]">
           <h1 className={` text-2xl md:text-[2.1rem] font-[500] mb-6 `}>
-            Other industries that we serve
+            {INDUSTRIES_SERVED_HEADING}
           </h1>
           <p className={`text-[1rem] md:text-xl font-[500] text-gray-800 `}>
-            Create an ecommerce website backed by powerful tools that help you
-            find customers, drive sales, and manage your day-to-day.
+            {INDUSTRIES_SERVED_DESCRIPTION}
           </p>
         </div>
-        <div className="flex-center flex-col">
-          <div className=" px-10 py-3.5 rounded shadow-custom">
-            <Image
-              src="/industry/served_industries/Furniture.png"
-              alt="industry"
-              width={72}
-              height={72}
-              className="mb-6"
-            />
-            <p className="text-center text-lg font-[500]">Furniture</p>
-          </div>
+        <div className="flex items-center justify-center flex-wrap  gap-6  xl:grid xl:grid-cols-3 2xl:grid-cols-4">
+          {INDUSTRIES_SERVED_ARRAY.map(({ name, img }, index) => (
+            <div
+              key={index}
+              className=" px-10 py-3.5 rounded shadow-lg max-w-[156px] max-h-[152px]"
+            >
+              <div className="flex-center flex-col ">
+                <Image
+                  src={img}
+                  alt="industry"
+                  width={72}
+                  height={72}
+                  className="mb-6"
+                />
+                <p className="text-center text-lg font-[500]">{name}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
