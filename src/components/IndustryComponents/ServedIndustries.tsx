@@ -1,5 +1,4 @@
 import React from "react";
-import { PrimaryStyledHeadings } from "../Reusable";
 import Image from "next/image";
 import {
   INDUSTRIES_SERVED_ARRAY,
