@@ -5,6 +5,7 @@ import {
   INDUSTRIES_SERVED_DESCRIPTION,
   INDUSTRIES_SERVED_HEADING,
 } from "@/constants/industry";
+import IndustriesCard from "./IndustriesCard";
 
 const ServedIndustries = () => {
   return (
@@ -19,22 +20,8 @@ const ServedIndustries = () => {
           </p>
         </div>
         <div className="flex items-center justify-center flex-wrap  gap-6  xl:grid xl:grid-cols-3 2xl:grid-cols-4">
-          {INDUSTRIES_SERVED_ARRAY.map(({ name, img }, index) => (
-            <div
-              key={index}
-              className=" px-10 py-3.5 rounded shadow-lg max-w-[156px] max-h-[152px]"
-            >
-              <div className="flex-center flex-col ">
-                <Image
-                  src={img}
-                  alt="industry"
-                  width={72}
-                  height={72}
-                  className="mb-6"
-                />
-                <p className="text-center text-lg font-[500]">{name}</p>
-              </div>
-            </div>
+          {INDUSTRIES_SERVED_ARRAY.map(({ name, image }, index) => (
+            <IndustriesCard key={index} name={name} image={image} />
           ))}
         </div>
       </div>

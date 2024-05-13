@@ -5,6 +5,7 @@ import IndustryFeaturesMobile from "./IndustryFeaturesMobile";
 import IndustryHero from "./IndustryHero";
 import SpecializationTiles from "./SpecializationTiles";
 import ServedIndustries from "./ServedIndustries";
+import IndustriesCard from "./IndustriesCard";
 
 export {
   IndustryHero,
@@ -13,5 +14,6 @@ export {
   FeatureDetails,
   IndustryFeaturesMobile,
   ServedIndustries,
+  IndustriesCard,
 };
 IndustryBanner;
