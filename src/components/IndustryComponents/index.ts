@@ -6,6 +6,7 @@ import IndustryHero from "./IndustryHero";
 import SpecializationTiles from "./SpecializationTiles";
 import ServedIndustries from "./ServedIndustries";
 import IndustriesCard from "./IndustriesCard";
+import EcommerceFrameworks from "./EcommerceFrameworks";
 
 export {
   IndustryHero,
@@ -15,5 +16,6 @@ export {
   IndustryFeaturesMobile,
   ServedIndustries,
   IndustriesCard,
+  EcommerceFrameworks,
 };
 IndustryBanner;
