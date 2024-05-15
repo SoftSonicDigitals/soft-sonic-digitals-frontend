@@ -3,6 +3,11 @@ export type IndustriesServedArray = {
   image: string;
 }[];
 
+export type EcommerceFrameworksArr = {
+  name: string;
+  logo: string;
+}[];
+
 export type IndustryPage = {
   hero: Hero;
   sectionOne?: Section;

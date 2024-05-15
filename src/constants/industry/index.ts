@@ -1,4 +1,7 @@
-import { IndustriesServedArray } from "@/models/industry_page";
+import {
+  EcommerceFrameworksArr,
+  IndustriesServedArray,
+} from "@/models/industry_page";
 
 export const INDUSTRIES_SERVED_HEADING = "Other industries that we serve";
 export const INDUSTRIES_SERVED_DESCRIPTION =
@@ -37,4 +40,24 @@ export const INDUSTRIES_SERVED_ARRAY: IndustriesServedArray = [
     name: "Grocery",
     image: "/industry/served_industries/Grocery.png",
   },
+];
+
+export const INDUSTRY_ECOMMERCE_FRAMEWORKS: EcommerceFrameworksArr = [
+  { name: "MySQL", logo: "/indusrty/ecommerce_frameworks/MySQL.png" },
+  { name: "MongoDB", logo: "/indusrty/ecommerce_frameworks/MongoDB.png" },
+  { name: "Firebase", logo: "/indusrty/ecommerce_frameworks/Firebase-1.png" },
+  { name: "Knockout", logo: "/indusrty/ecommerce_frameworks/Knockout.js.png" },
+  { name: "AWS", logo: "/indusrty/ecommerce_frameworks/AWS-1.png" },
+  { name: "Laravel", logo: "/indusrty/ecommerce_frameworks/Laravel.png" },
+  { name: "Magneto", logo: "/indusrty/ecommerce_frameworks/Magneto.png" },
+  { name: "Shopify", logo: "/indusrty/ecommerce_frameworks/Shopify.png" },
+  { name: "Shopware", logo: "/indusrty/ecommerce_frameworks/shopware.png" },
+  {
+    name: "WooCommerce",
+    logo: "/indusrty/ecommerce_frameworks/wooCommerce.png",
+  },
+  { name: "Yii", logo: "/indusrty/ecommerce_frameworks/Yii.png" },
+  { name: "Vue.js", logo: "/indusrty/ecommerce_frameworks/Vue.js.png" },
+  { name: "Salesforce", logo: "/indusrty/ecommerce_frameworks/salesforce.png" },
+  { name: "Node.js", logo: "/indusrty/ecommerce_frameworks/node-js-logo.png" },
 ];
