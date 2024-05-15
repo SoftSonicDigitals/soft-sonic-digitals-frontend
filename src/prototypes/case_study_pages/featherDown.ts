@@ -36,7 +36,7 @@ export const FEATHER_DOWN = {
     "/case_study_pages/feather_down/responsive_layout.webp",
   takeAway:
     "The case study summarizes the magnificent support a competent web development platform can offer to a local or national level business. With the highly customized services delivered by Magneto IT, all your web service queries converge to a single answer, the ultimate commitment of 360 degrees quality for the best.",
-
+  // image for random tile in case study page at the bottom
   posterPath: "/case_study_pages/feather_down/poster.webp",
   logoPath: "/case_study_pages/feather_down/logo.webp",
   // for our work page (/case-studies)
