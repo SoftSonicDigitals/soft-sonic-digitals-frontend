@@ -9,6 +9,7 @@ export type EcommerceFrameworksArr = {
 }[];
 
 export type IndustryPage = {
+  routeParams: string;
   hero: Hero;
   sectionOne?: Section;
   sectionTwo?: Section;

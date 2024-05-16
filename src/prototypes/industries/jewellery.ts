@@ -2,6 +2,7 @@ import { IndustryPage } from "@/models/industry_page";
 import { describe } from "node:test";
 
 export const JEWELLERY: IndustryPage = {
+  routeParams: "/jewellery-website-development",
   hero: {
     imgPath: "/industry/hero.webp",
     heading: "Transform your Jewelry Business Online!",
@@ -192,14 +193,3 @@ export const JEWELLERY: IndustryPage = {
     btnText: "HIRE NOW",
   },
 };
-
-export const SPECIALIZATION_TILES_DATA = [
-  { imgPath: "/industry/b2c.png", title: "For B2C Business Model" },
-  { imgPath: "/industry/b2b.png", title: "For B2B Business Model" },
-  { imgPath: "/industry/d2c.png", title: "For D2C Business Model" },
-  { imgPath: "/industry/api.png", title: "For Flawless API Integration" },
-  {
-    imgPath: "/industry/marketplace.png",
-    title: "For Marketplace Development",
-  },
-];
