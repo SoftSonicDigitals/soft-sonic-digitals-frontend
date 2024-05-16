@@ -14,100 +14,93 @@ import {
   SecondaryInfoSection,
 } from "@/components/Reusable";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
-import {
-  JEWELLERY,
-  SPECIALIZATION_TILES_DATA,
-} from "@/prototypes/industries/jewellery";
+import { SPECIALIZATION_TILES_DATA } from "@/constants/industry";
+import { INDUSTRY_ARRAY } from "@/prototypes/industries";
+
+import { redirect } from "next/navigation";
 import React from "react";
 
 const page = ({ params }: { params: { industry_name: string } }) => {
-  const industryIndex = CASE_STUDIES_ARRAY.findIndex(
-    (caseItem) =>
-      caseItem.caseName.replaceAll(" ", "_").toLowerCase() === params.case_name
+  const industryIndex = INDUSTRY_ARRAY.findIndex(
+    (industryName) =>
+      industryName.routeParams.replace("/", "").toLowerCase() ===
+      params.industry_name
   );
-  const {
-    hero,
-    sectionOne,
-    sectionTwo,
-    sectionThree,
-    sectionFour,
-    sectionFive,
-    sectionSix,
-    sectionSeven,
-    sectionEight,
-    sectionNine,
-    sectionTen,
-    bannerSection,
-  } = JEWELLERY;
+  const industryDetails = INDUSTRY_ARRAY[industryIndex];
+
+  if (!industryDetails) {
+    redirect("/");
+  }
 
   return (
     <>
       <IndustryHero
-        imgPath={hero.imgPath}
-        heading={hero.heading}
-        description={hero.description}
-        btnText={hero.btnText}
+        imgPath={industryDetails.hero.imgPath}
+        heading={industryDetails.hero.heading}
+        description={industryDetails.hero.description}
+        btnText={industryDetails.hero.btnText}
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
+
       <PrimaryInfoSection
-        heading={sectionOne!.heading}
-        subHeading={sectionOne!.subHeading}
-        description={sectionOne!.description}
-        imgpath={sectionOne!.imgPath}
+        heading={industryDetails?.sectionOne!.heading}
+        subHeading={industryDetails?.sectionOne!.subHeading}
+        description={industryDetails?.sectionOne!.description}
+        imgpath={industryDetails?.sectionOne!.imgPath}
       />
 
       <PrimaryInfoSection
-        heading={sectionTwo!.heading}
-        subHeading={sectionTwo!.subHeading}
-        description={sectionTwo!.description}
-        imgpath={sectionTwo!.imgPath}
+        heading={industryDetails?.sectionTwo!.heading}
+        subHeading={industryDetails?.sectionTwo!.subHeading}
+        description={industryDetails?.sectionTwo!.description}
+        imgpath={industryDetails?.sectionTwo!.imgPath}
         reverseLayout={true}
-        listArray={sectionTwo!.listArray}
+        listArray={industryDetails?.sectionTwo!.listArray}
       />
 
       <SecondaryInfoSection
-        heading={sectionThree!.heading}
-        subHeading={sectionThree!.subHeading}
-        description={sectionThree!.description}
-        imgpath={sectionThree!.imgPath}
-        imgHeight={sectionThree!.imgHeight as number}
-        imgWidth={sectionThree!.imgWidth as number}
+        heading={industryDetails?.sectionThree!.heading}
+        subHeading={industryDetails?.sectionThree!.subHeading}
+        description={industryDetails?.sectionThree!.description}
+        imgpath={industryDetails?.sectionThree!.imgPath}
+        imgHeight={industryDetails?.sectionThree!.imgHeight as number}
+        imgWidth={industryDetails?.sectionThree!.imgWidth as number}
       />
 
       <PrimaryInfoSection
-        heading={sectionFour!.heading}
-        subHeading={sectionFour!.subHeading}
-        description={sectionFour!.description}
-        imgpath={sectionFour!.imgPath}
+        heading={industryDetails?.sectionFour!.heading}
+        subHeading={industryDetails?.sectionFour!.subHeading}
+        description={industryDetails?.sectionFour!.description}
+        imgpath={industryDetails?.sectionFour!.imgPath}
         reverseLayout={true}
-        listArray={sectionFour!.listArray}
+        listArray={industryDetails?.sectionFour!.listArray}
       />
 
       <PrimaryInfoSection
-        heading={sectionFive!.heading}
-        subHeading={sectionFive!.subHeading}
-        description={sectionFive!.description}
-        imgpath={sectionFive!.imgPath}
+        heading={industryDetails?.sectionFive!.heading}
+        subHeading={industryDetails?.sectionFive!.subHeading}
+        description={industryDetails?.sectionFive!.description}
+        imgpath={industryDetails?.sectionFive!.imgPath}
       />
       <PrimaryInfoSection
-        heading={sectionSix!.heading}
-        subHeading={sectionSix!.subHeading}
-        description={sectionSix!.description}
-        imgpath={sectionSix!.imgPath}
+        heading={industryDetails?.sectionSix!.heading}
+        subHeading={industryDetails?.sectionSix!.subHeading}
+        description={industryDetails?.sectionSix!.description}
+        imgpath={industryDetails?.sectionSix!.imgPath}
         reverseLayout={true}
       />
 
       <PrimaryInfoSection
-        heading={sectionSeven!.heading}
-        subHeading={sectionSeven!.subHeading}
-        description={sectionSeven!.description}
-        imgpath={sectionSeven!.imgPath}
+        heading={industryDetails?.sectionSeven!.heading}
+        subHeading={industryDetails?.sectionSeven!.subHeading}
+        description={industryDetails?.sectionSeven!.description}
+        imgpath={industryDetails?.sectionSeven!.imgPath}
       />
       <PrimaryInfoSection
-        heading={sectionEight!.heading}
-        subHeading={sectionEight!.subHeading}
-        description={sectionEight!.description}
-        imgpath={sectionEight!.imgPath}
+        heading={industryDetails?.sectionEight!.heading}
+        subHeading={industryDetails?.sectionEight!.subHeading}
+        description={industryDetails?.sectionEight!.description}
+        imgpath={industryDetails?.sectionEight!.imgPath}
         reverseLayout={true}
         requireSectionOverlay={true}
         overlayStyles="before:bg-rose_white"
@@ -115,36 +108,36 @@ const page = ({ params }: { params: { industry_name: string } }) => {
       />
 
       <PrimaryInfoSection
-        heading={sectionNine!.heading}
-        subHeading={sectionNine!.subHeading}
-        description={sectionNine!.description}
-        imgpath={sectionNine!.imgPath}
+        heading={industryDetails?.sectionNine!.heading}
+        subHeading={industryDetails?.sectionNine!.subHeading}
+        description={industryDetails?.sectionNine!.description}
+        imgpath={industryDetails?.sectionNine!.imgPath}
         requireSectionOverlay={true}
         overlayStyles="before:bg-green"
         overlayPosition="before:left-0"
       />
 
       <SecondaryInfoSection
-        heading={sectionTen!.heading}
-        subHeading={sectionTen!.subHeading}
-        description={sectionTen!.description}
-        imgpath={sectionTen!.imgPath}
-        imgHeight={sectionTen!.imgHeight as number}
-        imgWidth={sectionTen!.imgWidth as number}
+        heading={industryDetails?.sectionTen!.heading}
+        subHeading={industryDetails?.sectionTen!.subHeading}
+        description={industryDetails?.sectionTen!.description}
+        imgpath={industryDetails?.sectionTen!.imgPath}
+        imgHeight={industryDetails?.sectionTen!.imgHeight as number}
+        imgWidth={industryDetails?.sectionTen!.imgWidth as number}
       />
 
       <IndustryFeatureTabs
-        sectionHeading={JEWELLERY.featuresSection.sectionHeading}
-        featuresArray={JEWELLERY.featuresSection.features}
+        sectionHeading={industryDetails?.featuresSection.sectionHeading}
+        featuresArray={industryDetails?.featuresSection.features}
       />
 
       <ResultsDelivered />
       <Clients />
       <WhyChooseUs />
       <IndustryBanner
-        title={bannerSection.title}
-        description={bannerSection.description}
-        btnText={bannerSection.btnText}
+        title={industryDetails?.bannerSection.title}
+        description={industryDetails?.bannerSection.description}
+        btnText={industryDetails?.bannerSection.btnText}
       />
       <ServedIndustries />
       <EcommerceFrameworks />
