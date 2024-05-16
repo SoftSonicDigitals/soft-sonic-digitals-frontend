@@ -6,13 +6,15 @@ const EcommerceProjectBanner = () => {
   return (
     <section id="banner" className="bg-black">
       <div className="wrapper_container py-8 mb-12 md:mb-24">
-        <div className="flex justify-around items-center">
-          <h1 className="text-xl md:text-2xl font-[500] text-white">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 xl:mx-16">
+          <h1 className="text-xl md:text-2xl font-[500] text-white text-center lg:text-left xl:max-w-max">
             {ECOMMERCE_PROJECT_BANNER_HEADING}
           </h1>
-          <GetInTouchContactBtn btnStyles="hover:text-black transition duration-200">
-            LET&apos;S TALK
-          </GetInTouchContactBtn>
+          <div className="flex w-[200px]">
+            <GetInTouchContactBtn btnStyles="hover:text-black transition duration-200 mb-2  basis-full">
+              LET&apos;S TALK
+            </GetInTouchContactBtn>
+          </div>
         </div>
       </div>
     </section>
