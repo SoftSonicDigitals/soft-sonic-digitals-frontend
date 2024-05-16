@@ -42,103 +42,129 @@ const page = ({ params }: { params: { industry_name: string } }) => {
       />
       <SpecializationTiles tilesDataArr={SPECIALIZATION_TILES_DATA} />
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionOne!.heading}
-        subHeading={industryDetails?.sectionOne!.subHeading}
-        description={industryDetails?.sectionOne!.description}
-        imgpath={industryDetails?.sectionOne!.imgPath}
-      />
+      {industryDetails?.sectionOne && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionOne.heading}
+          subHeading={industryDetails?.sectionOne.subHeading}
+          description={industryDetails?.sectionOne.description}
+          imgpath={industryDetails?.sectionOne.imgPath}
+        />
+      )}
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionTwo!.heading}
-        subHeading={industryDetails?.sectionTwo!.subHeading}
-        description={industryDetails?.sectionTwo!.description}
-        imgpath={industryDetails?.sectionTwo!.imgPath}
-        reverseLayout={true}
-        listArray={industryDetails?.sectionTwo!.listArray}
-      />
+      {industryDetails?.sectionTwo && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionTwo.heading}
+          subHeading={industryDetails?.sectionTwo.subHeading}
+          description={industryDetails?.sectionTwo.description}
+          imgpath={industryDetails?.sectionTwo.imgPath}
+          reverseLayout={true}
+          listArray={industryDetails?.sectionTwo.listArray}
+        />
+      )}
 
-      <SecondaryInfoSection
-        heading={industryDetails?.sectionThree!.heading}
-        subHeading={industryDetails?.sectionThree!.subHeading}
-        description={industryDetails?.sectionThree!.description}
-        imgpath={industryDetails?.sectionThree!.imgPath}
-        imgHeight={industryDetails?.sectionThree!.imgHeight as number}
-        imgWidth={industryDetails?.sectionThree!.imgWidth as number}
-      />
+      {industryDetails?.sectionThree && (
+        <SecondaryInfoSection
+          heading={industryDetails?.sectionThree.heading}
+          subHeading={industryDetails?.sectionThree.subHeading}
+          description={industryDetails?.sectionThree.description}
+          imgpath={industryDetails?.sectionThree.imgPath}
+          imgHeight={industryDetails?.sectionThree.imgHeight as number}
+          imgWidth={industryDetails?.sectionThree.imgWidth as number}
+        />
+      )}
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionFour!.heading}
-        subHeading={industryDetails?.sectionFour!.subHeading}
-        description={industryDetails?.sectionFour!.description}
-        imgpath={industryDetails?.sectionFour!.imgPath}
-        reverseLayout={true}
-        listArray={industryDetails?.sectionFour!.listArray}
-      />
+      {industryDetails?.sectionFour && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionFour.heading}
+          subHeading={industryDetails?.sectionFour.subHeading}
+          description={industryDetails?.sectionFour.description}
+          imgpath={industryDetails?.sectionFour.imgPath}
+          reverseLayout={true}
+          listArray={industryDetails?.sectionFour.listArray}
+        />
+      )}
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionFive!.heading}
-        subHeading={industryDetails?.sectionFive!.subHeading}
-        description={industryDetails?.sectionFive!.description}
-        imgpath={industryDetails?.sectionFive!.imgPath}
-      />
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionSix!.heading}
-        subHeading={industryDetails?.sectionSix!.subHeading}
-        description={industryDetails?.sectionSix!.description}
-        imgpath={industryDetails?.sectionSix!.imgPath}
-        reverseLayout={true}
-      />
+      {industryDetails?.sectionFive && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionFive.heading}
+          subHeading={industryDetails?.sectionFive.subHeading}
+          description={industryDetails?.sectionFive.description}
+          imgpath={industryDetails?.sectionFive.imgPath}
+        />
+      )}
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionSeven!.heading}
-        subHeading={industryDetails?.sectionSeven!.subHeading}
-        description={industryDetails?.sectionSeven!.description}
-        imgpath={industryDetails?.sectionSeven!.imgPath}
-      />
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionEight!.heading}
-        subHeading={industryDetails?.sectionEight!.subHeading}
-        description={industryDetails?.sectionEight!.description}
-        imgpath={industryDetails?.sectionEight!.imgPath}
-        reverseLayout={true}
-        requireSectionOverlay={true}
-        overlayStyles="before:bg-rose_white"
-        overlayPosition="before:right-0"
-      />
+      {industryDetails?.sectionSix && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionSix.heading}
+          subHeading={industryDetails?.sectionSix.subHeading}
+          description={industryDetails?.sectionSix.description}
+          imgpath={industryDetails?.sectionSix.imgPath}
+          reverseLayout={true}
+        />
+      )}
 
-      <PrimaryInfoSection
-        heading={industryDetails?.sectionNine!.heading}
-        subHeading={industryDetails?.sectionNine!.subHeading}
-        description={industryDetails?.sectionNine!.description}
-        imgpath={industryDetails?.sectionNine!.imgPath}
-        requireSectionOverlay={true}
-        overlayStyles="before:bg-green"
-        overlayPosition="before:left-0"
-      />
+      {industryDetails?.sectionSeven && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionSeven.heading}
+          subHeading={industryDetails?.sectionSeven.subHeading}
+          description={industryDetails?.sectionSeven.description}
+          imgpath={industryDetails?.sectionSeven.imgPath}
+        />
+      )}
 
-      <SecondaryInfoSection
-        heading={industryDetails?.sectionTen!.heading}
-        subHeading={industryDetails?.sectionTen!.subHeading}
-        description={industryDetails?.sectionTen!.description}
-        imgpath={industryDetails?.sectionTen!.imgPath}
-        imgHeight={industryDetails?.sectionTen!.imgHeight as number}
-        imgWidth={industryDetails?.sectionTen!.imgWidth as number}
-      />
+      {industryDetails?.sectionEight && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionEight.heading}
+          subHeading={industryDetails?.sectionEight.subHeading}
+          description={industryDetails?.sectionEight.description}
+          imgpath={industryDetails?.sectionEight.imgPath}
+          reverseLayout={true}
+          requireSectionOverlay={true}
+          overlayStyles="before:bg-rose_white"
+          overlayPosition="before:right-0"
+        />
+      )}
 
-      <IndustryFeatureTabs
-        sectionHeading={industryDetails?.featuresSection.sectionHeading}
-        featuresArray={industryDetails?.featuresSection.features}
-      />
+      {industryDetails?.sectionNine && (
+        <PrimaryInfoSection
+          heading={industryDetails?.sectionNine.heading}
+          subHeading={industryDetails?.sectionNine.subHeading}
+          description={industryDetails?.sectionNine.description}
+          imgpath={industryDetails?.sectionNine.imgPath}
+          requireSectionOverlay={true}
+          overlayStyles="before:bg-green"
+          overlayPosition="before:left-0"
+        />
+      )}
+
+      {industryDetails?.sectionTen && (
+        <SecondaryInfoSection
+          heading={industryDetails?.sectionTen.heading}
+          subHeading={industryDetails?.sectionTen.subHeading}
+          description={industryDetails?.sectionTen.description}
+          imgpath={industryDetails?.sectionTen.imgPath}
+          imgHeight={industryDetails?.sectionTen.imgHeight as number}
+          imgWidth={industryDetails?.sectionTen.imgWidth as number}
+        />
+      )}
+
+      {industryDetails?.featuresSection && (
+        <IndustryFeatureTabs
+          sectionHeading={industryDetails?.featuresSection.sectionHeading}
+          featuresArray={industryDetails?.featuresSection.features}
+        />
+      )}
 
       <ResultsDelivered />
       <Clients />
       <WhyChooseUs />
-      <IndustryBanner
-        title={industryDetails?.bannerSection.title}
-        description={industryDetails?.bannerSection.description}
-        btnText={industryDetails?.bannerSection.btnText}
-      />
+      {industryDetails?.bannerSection && (
+        <IndustryBanner
+          title={industryDetails?.bannerSection.title}
+          description={industryDetails?.bannerSection.description}
+          btnText={industryDetails?.bannerSection.btnText}
+        />
+      )}
       <ServedIndustries />
       <EcommerceFrameworks />
       <EcommerceProjectBanner />
