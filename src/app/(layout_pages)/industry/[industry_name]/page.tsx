@@ -20,7 +20,11 @@ import {
 } from "@/prototypes/industries/jewellery";
 import React from "react";
 
-const page = () => {
+const page = ({ params }: { params: { industry_name: string } }) => {
+  const industryIndex = CASE_STUDIES_ARRAY.findIndex(
+    (caseItem) =>
+      caseItem.caseName.replaceAll(" ", "_").toLowerCase() === params.case_name
+  );
   const {
     hero,
     sectionOne,
