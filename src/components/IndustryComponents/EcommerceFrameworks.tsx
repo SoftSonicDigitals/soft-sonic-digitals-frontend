@@ -1,6 +1,9 @@
 "use client";
 
-import { INDUSTRY_ECOMMERCE_FRAMEWORKS } from "@/constants/industry";
+import {
+  ECOMMERCE_FRAMEWORK_HEADING,
+  INDUSTRY_ECOMMERCE_FRAMEWORKS,
+} from "@/constants/industry";
 import Image from "next/image";
 import React from "react";
 import Slider from "react-slick";
@@ -33,7 +36,7 @@ const EcommerceFrameworks = () => {
     <section id="ecommerce_frameworks">
       <div className="wrapper_container mb-24 ">
         <PrimaryStyledHeadings
-          mainHeading="eCommerce Frameworks We Work With"
+          mainHeading={ECOMMERCE_FRAMEWORK_HEADING}
           containerStyles="mb-24"
           mainHeadingStyles="text-center"
         />

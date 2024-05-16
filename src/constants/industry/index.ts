@@ -7,6 +7,8 @@ export const INDUSTRIES_SERVED_HEADING = "Other industries that we serve";
 export const INDUSTRIES_SERVED_DESCRIPTION =
   "Create an ecommerce website backed by powerful tools that help you find customers, drive sales, and manage your day-to-day.";
 
+export const ECOMMERCE_FRAMEWORK_HEADING = "eCommerce Frameworks We Work With";
+
 export const INDUSTRIES_SERVED_ARRAY: IndustriesServedArray = [
   {
     name: "Furniture",
