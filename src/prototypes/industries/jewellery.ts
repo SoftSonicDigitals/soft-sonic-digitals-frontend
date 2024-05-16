@@ -1,5 +1,4 @@
 import { IndustryPage } from "@/models/industry_page";
-import { describe } from "node:test";
 
 export const JEWELLERY: IndustryPage = {
   routeParams: "/jewellery-website-development",
