@@ -65,6 +65,7 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
     },
     {
       subMenuHeading: "Industries",
+      // match the links for each industry tab  with routeParms of the industry prototype array for routing purpose
       subMenuLinks: [
         {
           title: "Jewellery & Diamond",
