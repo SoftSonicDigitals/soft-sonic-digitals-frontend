@@ -1,6 +1,7 @@
 import { Clients } from "@/components/Clients";
 import {
   EcommerceFrameworks,
+  EcommerceProjectBanner,
   IndustryFeatureTabs,
   IndustryHero,
   ServedIndustries,
@@ -143,6 +144,7 @@ const page = () => {
       />
       <ServedIndustries />
       <EcommerceFrameworks />
+      <EcommerceProjectBanner />
     </>
   );
 };
