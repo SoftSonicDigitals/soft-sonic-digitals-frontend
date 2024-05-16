@@ -9,6 +9,9 @@ export const INDUSTRIES_SERVED_DESCRIPTION =
 
 export const ECOMMERCE_FRAMEWORK_HEADING = "eCommerce Frameworks We Work With";
 
+export const ECOMMERCE_PROJECT_BANNER_HEADING =
+  "Have an eCommerce project in mind? We’d love to make your ideas into reality.";
+
 export const INDUSTRIES_SERVED_ARRAY: IndustriesServedArray = [
   {
     name: "Furniture",

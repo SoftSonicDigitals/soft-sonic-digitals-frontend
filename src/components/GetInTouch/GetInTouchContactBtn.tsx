@@ -5,14 +5,18 @@ import { useRouter } from "next/navigation";
 
 type GetInTouchContactBtnProps = {
   children: string;
+  btnStyles?: string;
 };
 
-const GetInTouchContactBtn = ({ children }: GetInTouchContactBtnProps) => {
+const GetInTouchContactBtn = ({
+  children,
+  btnStyles,
+}: GetInTouchContactBtnProps) => {
   const router = useRouter();
   return (
     <PrimaryButton
       title={children}
-      className="px-12 py-3 "
+      className={`px-12 py-3  ${btnStyles}`}
       clickHandler={() => router.push("/contact")}
     />
   );
