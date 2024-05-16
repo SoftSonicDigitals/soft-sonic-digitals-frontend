@@ -9,7 +9,7 @@ const EcommerceFrameworks = () => {
       <div className="wrapper_container mb-24 ">
         <PrimaryStyledHeadings
           mainHeading={ECOMMERCE_FRAMEWORK_HEADING}
-          containerStyles="mb-24"
+          containerStyles="mb-16 lg:mb-24"
           mainHeadingStyles="text-center"
         />
         <div className=" xl:mx-20">
