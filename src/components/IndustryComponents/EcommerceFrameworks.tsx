@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { PrimaryStyledHeadings } from "../Reusable";
 
 const EcommerceFrameworks = () => {
-  const settings = {
+  let settings = {
     dots: false,
     infinite: true,
     slidesToShow: 6,
@@ -18,6 +18,16 @@ const EcommerceFrameworks = () => {
     speed: 300,
     autoplaySpeed: 1000,
     cssEase: "ease-in-out",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   return (
     <section id="ecommerce_frameworks">
@@ -25,8 +35,9 @@ const EcommerceFrameworks = () => {
         <PrimaryStyledHeadings
           mainHeading="eCommerce Frameworks We Work With"
           containerStyles="mb-24"
+          mainHeadingStyles="text-center"
         />
-        <div className="mx-20">
+        <div className=" xl:mx-20">
           <Slider {...settings}>
             {INDUSTRY_ECOMMERCE_FRAMEWORKS.map(({ name, logo }, index) => (
               <div
