@@ -1,7 +1,12 @@
+import { B2CHero } from "@/components/B2CEcommerce";
 import React from "react";
 
 const page = () => {
-  return <div>page</div>;
+  return (
+    <main className="overflow-hidden">
+      <B2CHero />;
+    </main>
+  );
 };
 
 export default page;
