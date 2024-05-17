@@ -23,7 +23,7 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
       subMenuLinks: [
         {
           title: "B2C ecommerce",
-          link: "/",
+          link: "/services/b2c-retail-ecommerce",
           description: "Create customer centric experiences",
         },
         {
