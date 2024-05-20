@@ -1,4 +1,4 @@
-import { B2CHero } from "@/components/B2CEcommerce";
+import { B2CHero } from "@/components/B2CEcommerceComponent";
 import React from "react";
 
 const page = () => {
