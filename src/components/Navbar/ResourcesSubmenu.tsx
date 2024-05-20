@@ -7,7 +7,7 @@ type ResourcesSubmenuProps = {
 const ResourcesSubmenu = ({ setIsOpen }: ResourcesSubmenuProps) => {
   // to make responsive menu
   const gapFromRight =
-    "right-[21rem] xl:right-[27.5rem] 2xl:right-[29rem]  3xl:right-[48.3rem] min-[2000px]:right-[calc(100vw/2-13rem)]  min-[2160px]:right-[calc(100vw/2-14.8rem)] min-[2260px]:right-[calc(100vw/2-18rem)] min-[2350px]:right-[calc(100vw/2-22rem)]  min-[2460px]:right-[calc(100vw/2-22rem)]";
+    "right-[21rem] xl:right-[27.5rem] 2xl:right-[29rem]  3xl:right-[48.3rem] min-[2000px]:right-[calc(100vw/2-13rem)]  min-[2160px]:right-[calc(100vw/2-40rem)] min-[2260px]:right-[calc(100vw/2-18rem)] min-[2350px]:right-[calc(100vw/2-22rem)]  min-[2460px]:right-[calc(100vw/2-22rem)]";
 
   return (
     <div
