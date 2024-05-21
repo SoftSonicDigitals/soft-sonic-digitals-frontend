@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const B2ConcernsExpertise = () => {
@@ -9,7 +10,15 @@ const B2ConcernsExpertise = () => {
             <div></div>
             <div></div>
           </div>
-          <div>Image</div>
+          <div>
+            <Image
+              src="/b2c/shape.png"
+              alt="shape"
+              width={496}
+              height={600}
+              style={{ objectFit: "contain" }}
+            />
+          </div>
         </div>
       </div>
     </section>
