@@ -59,3 +59,38 @@ export const RETAILERS_CONCERNS: ConcernsAndExpertise = {
     },
   ],
 };
+
+export const RETAILERS_GOALS: ConcernsAndExpertise = {
+  title: "Retailer’s Long-Term Goals, Our Expertise",
+  list: [
+    {
+      title: "Gain and retain market share",
+      description: "We'll outsmart the competition.",
+    },
+    {
+      title: "Offer a seamless omnichannel experience",
+      description: "Your customers will flow effortlessly.",
+    },
+    {
+      title: "Improve data quality and management",
+      description: "Insights that can ease your work.",
+    },
+    {
+      title: "Reduce costs through automation",
+      description: "Efficiency for greater growth.",
+    },
+    {
+      title: "Personalize your offerings for increased sales",
+      description: "Tailored experiences that convert.",
+    },
+    {
+      title: "Enhance user experience and brand image",
+      description: "Build a store they'll love and trust.",
+    },
+    {
+      title: "The online store needs a refresh",
+      description:
+        "Ditch the outdated platform, and let's rebuild something exciting!",
+    },
+  ],
+};
