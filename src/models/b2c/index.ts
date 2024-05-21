@@ -5,3 +5,11 @@ export type WeAreDifferentReasons = {
     description: string;
   }[];
 };
+
+export type ConcernsAndExpertise = {
+  title: string;
+  list: {
+    title: string;
+    description: string;
+  }[];
+};
