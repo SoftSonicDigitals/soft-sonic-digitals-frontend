@@ -1,4 +1,5 @@
 import React from "react";
+
 type RetailerListLayoutProps = {
   title: string;
   list: { title: string; description: string }[];
@@ -10,24 +11,24 @@ type RetailerListLayoutProps = {
 const RetailerListLayout = ({
   title,
   list,
-  toogle,
-  selected,
-  isOpen,
+  toogle: toogleMenu,
+  selected: selectedMenu,
+  isOpen: isMenuOpen,
   index,
 }: RetailerListLayoutProps) => {
   return (
     <div
       className="border-l-2 border-gray-700 pl-8  py-3 tracking-wide mb-10"
-      onClick={() => toogle(index)}
+      onClick={() => toogleMenu(index)}
     >
       <h3
         className={`text-4xl font-[700] ${
-          isOpen(selected, index) ? "text-gray-800" : "text-gray-700"
+          isMenuOpen(selectedMenu, index) ? "text-gray-800" : "text-gray-700"
         }`}
       >
         {title}
       </h3>
-      {isOpen(selected, index) && (
+      {isMenuOpen(selectedMenu, index) && (
         <div className="mt-8">
           {list.map(({ title, description }, index) => (
             <div key={index} className="mb-3">
