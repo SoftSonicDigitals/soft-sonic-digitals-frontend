@@ -12,11 +12,11 @@ const B2CWeAreDifferent = () => {
               For over a decade,
             </span>{" "}
             we've been working with online retailers, learning their business
-            and challenges. We don't believe in cookie-cutter approaches or
-            empty promises
+            and challenges. We don't believe in cookie-cutter approaches or em
+            pty promises
           </h1>
         </div>
-        <div className="flex-center gap-10  md:mx-6 lg:mx-10 xl:mx-32 mb-12 ">
+        <div className="flex-center flex-col lg:flex-row gap-10  md:mx-6 lg:mx-10 xl:mx-32 mb-12 ">
           <div className="hidden sm:block basis-full">
             <Image
               src="/b2c/we_are_different.png"
@@ -27,19 +27,19 @@ const B2CWeAreDifferent = () => {
             />
           </div>
 
-          <div className=" basis-full px-10 ">
+          <div className=" basis-full pl-2 lg:pl-12 ">
             <h3 className="text-2xl font-[700] font-gray-800 text-left mb-10 ">
               Here's how we're different
             </h3>
             <div className="mb-8">
-              <p className="text-xl font-[700] mb-3">We listen</p>
+              <p className="text-xl font-[700] mb-2">We listen</p>
               <p>
                 We've interviewed over 100 retail store owners and experts to
                 understand their unique challenges
               </p>
             </div>
             <div className="mb-8">
-              <p className="text-xl font-[700] mb-3">
+              <p className="text-xl font-[700] mb-2">
                 We focus on your needs, not ours
               </p>
               <p>
@@ -48,7 +48,7 @@ const B2CWeAreDifferent = () => {
               </p>
             </div>
             <div className="mb-8">
-              <p className="text-xl font-[700] mb-3">
+              <p className="text-xl font-[700] mb-2">
                 We don't follow trends,we set them
               </p>
               <p>
