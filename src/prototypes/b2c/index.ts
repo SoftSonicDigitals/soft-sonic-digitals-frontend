@@ -1,4 +1,6 @@
-export const WE_ARE_DIFF_REASONS = {
+import { WeAreDifferentReasons } from "@/models/b2c";
+
+export const WE_ARE_DIFF_REASONS: WeAreDifferentReasons = {
   title: "Here's how we're different",
   reasons: [
     {
