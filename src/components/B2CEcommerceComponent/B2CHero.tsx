@@ -11,7 +11,7 @@ const B2CHero = () => {
   const heroHeadingSplit = B2C_HERO_HEADING.split("B2C e-commerce");
   return (
     <section id="b2c_hero" className="bg-white-100">
-      <div className="wrapper_container mb-24 mt-[48px] lg:mt-[88px] py-8 lg:py-16 flex-center flex-col-reverse  min-[955px]:flex-row  gap-8 md:gap-16  text-center min-[955px]:text-left ">
+      <div className="wrapper_container mb-12 md:mb-24 mt-[48px] lg:mt-[88px] py-8 lg:py-16 flex-center flex-col-reverse  min-[955px]:flex-row  gap-8 md:gap-16  text-center min-[955px]:text-left ">
         <div className="lg:max-w-[600px]  md:px-8 tracking-wide ">
           <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-[700] text-gray-800  mb-8 !leading-[1.15]">
             {heroHeadingSplit[0]}
