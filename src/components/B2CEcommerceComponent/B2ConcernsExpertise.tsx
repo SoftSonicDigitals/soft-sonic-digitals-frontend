@@ -17,6 +17,7 @@ const B2ConcernsExpertise = () => {
             width={496}
             height={600}
             style={{ objectFit: "contain" }}
+            className="hidden md:block"
           />
         </div>
       </div>
