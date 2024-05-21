@@ -10,7 +10,7 @@ const B2ConcernsExpertise = () => {
           <div className="max-w-[650px] basis-full">
             <ConcernExpertiseContainer />
           </div>
-          <div className="w-[496px] h-[600px] relative">
+          <div className="md:w-[496px] md:h-[600px] relative">
             <Image
               src="/b2c/shape.png"
               alt="shape"
