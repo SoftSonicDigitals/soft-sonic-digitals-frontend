@@ -9,7 +9,7 @@ const B2ConcernsExpertise = () => {
         <div className="md:mx-6 lg:mx-10 xl:mx-32 mb-12 flex">
           <div className="max-w-[650px]">
             <div className="border-l-2 border-gray-700 pl-8  py-3 tracking-wide mb-10">
-              <h3 className="text-4xl font-[700] text-gray-800">
+              <h3 className="text-4xl font-[700] text-gray-900">
                 {RETAILERS_CONCERNS.title}
               </h3>
               <div className="mt-8">
