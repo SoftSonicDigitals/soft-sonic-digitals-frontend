@@ -21,7 +21,7 @@ export const WE_ARE_DIFF_REASONS: WeAreDifferentReasons = {
   ],
 };
 
-export const RETAILERS_CONCERNS: ConcernsAndExpertise = {
+const RETAILERS_CONCERNS = {
   title: "Retailer’s Immediate Concerns while going digital",
   list: [
     {
@@ -60,7 +60,7 @@ export const RETAILERS_CONCERNS: ConcernsAndExpertise = {
   ],
 };
 
-export const RETAILERS_GOALS: ConcernsAndExpertise = {
+const RETAILERS_GOALS = {
   title: "Retailer’s Long-Term Goals, Our Expertise",
   list: [
     {
@@ -94,3 +94,8 @@ export const RETAILERS_GOALS: ConcernsAndExpertise = {
     },
   ],
 };
+
+export const CONCERNS_AND_GOALS: ConcernsAndExpertise[] = [
+  RETAILERS_CONCERNS,
+  RETAILERS_GOALS,
+];
