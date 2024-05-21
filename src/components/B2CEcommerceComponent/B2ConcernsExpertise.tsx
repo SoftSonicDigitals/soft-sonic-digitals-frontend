@@ -1,3 +1,4 @@
+import { RETAILERS_CONCERNS } from "@/prototypes/b2c";
 import Image from "next/image";
 import React from "react";
 
@@ -8,22 +9,20 @@ const B2ConcernsExpertise = () => {
         <div className="md:mx-6 lg:mx-10 xl:mx-32 mb-12 flex">
           <div className="max-w-[650px]">
             <div className="border-l-2 border-gray-700 pl-8  py-3 tracking-wide mb-10">
-              <h3 className="text-4xl font-[700] text-gray-900">
-                Retailer’s Immediate Concerns while going digital
+              <h3 className="text-4xl font-[700] text-gray-800">
+                {RETAILERS_CONCERNS.title}
               </h3>
               <div className="mt-8">
-                <div className="mb-3">
-                  <p className="text-2xl font-[700] text-gray-900 mb-1">
-                    Quick time-to-market
-                  </p>
-                  <p>We've got your back.</p>
-                </div>
-                <div className="mb-4">
-                  <p className="text-2xl font-[700] text-gray-900 mb-1">
-                    No more complex backend systems
-                  </p>
-                  <p>We simplify them for you.</p>
-                </div>
+                {RETAILERS_CONCERNS.list.map(
+                  ({ title, description }, index) => (
+                    <div key={index} className="mb-3">
+                      <p className="text-2xl font-[700] text-gray-800 mb-1">
+                        {title}
+                      </p>
+                      <p>{description}</p>
+                    </div>
+                  )
+                )}
               </div>
             </div>
             <div className="border-l-2 border-gray-700 pl-8  py-3 tracking-wide ">
