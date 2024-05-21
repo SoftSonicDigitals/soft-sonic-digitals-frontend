@@ -1,7 +1,6 @@
-import { RETAILERS_CONCERNS, RETAILERS_GOALS } from "@/prototypes/b2c";
 import Image from "next/image";
 import React from "react";
-import RetailerListLayout from "./RetailerListLayout";
+import ConcernExpertiseContainer from "./ConcernExpertiseContainer";
 
 const B2ConcernsExpertise = () => {
   return (
@@ -9,15 +8,9 @@ const B2ConcernsExpertise = () => {
       <div className="wrapper_container mb-24">
         <div className="md:mx-6 lg:mx-10 xl:mx-16 mb-12 flex gap-6">
           <div className="max-w-[650px] basis-full">
-           { <RetailerListLayout
-              title={RETAILERS_CONCERNS.title}
-              list={RETAILERS_CONCERNS.list}
-            />
-            <RetailerListLayout
-              title={RETAILERS_GOALS.title}
-              list={RETAILERS_GOALS.list}
-            />}
+            <ConcernExpertiseContainer />
           </div>
+
           <Image
             src="/b2c/shape.png"
             alt="shape"
