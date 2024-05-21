@@ -10,15 +10,15 @@ const B2ConcernsExpertise = () => {
           <div className="max-w-[650px] basis-full">
             <ConcernExpertiseContainer />
           </div>
-
-          <Image
-            src="/b2c/shape.png"
-            alt="shape"
-            width={496}
-            height={600}
-            style={{ objectFit: "contain" }}
-            className="hidden md:block"
-          />
+          <div className="w-[496px] h-[600px] relative">
+            <Image
+              src="/b2c/shape.png"
+              alt="shape"
+              fill
+              style={{ objectFit: "contain" }}
+              className="hidden md:block"
+            />
+          </div>
         </div>
       </div>
     </section>
