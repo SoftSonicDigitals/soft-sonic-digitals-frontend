@@ -7,7 +7,7 @@ const useDropDown = () => {
     if (selected === index) {
       return setSelected(null);
     }
-    setSelected(index);
+    setSelected(() => index);
   };
 
   const isOpen = (selected: number | null, index: number) => {
