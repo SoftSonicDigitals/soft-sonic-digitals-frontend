@@ -16,8 +16,8 @@ const B2CWeAreDifferent = () => {
             empty promises
           </h1>
         </div>
-        <div className="flex-center flex-col">
-          <div className="hidden sm:block sm:mx-16 md:mx-8 lg:mx-10 xl:mx-32 ">
+        <div className="flex-center gap-10  md:mx-6 lg:mx-10 xl:mx-32 mb-12 ">
+          <div className="hidden sm:block basis-full">
             <Image
               src="/b2c/we_are_different.png"
               alt="we are different"
@@ -27,7 +27,35 @@ const B2CWeAreDifferent = () => {
             />
           </div>
 
-          <div>Key</div>
+          <div className=" basis-full px-10 ">
+            <h3 className="text-2xl font-[700] font-gray-800 text-left mb-10 ">
+              Here's how we're different
+            </h3>
+            <div className="mb-8">
+              <p className="text-xl font-[700] mb-3">We listen</p>
+              <p>
+                We've interviewed over 100 retail store owners and experts to
+                understand their unique challenges
+              </p>
+            </div>
+            <div className="mb-8">
+              <p className="text-xl font-[700] mb-3">
+                We focus on your needs, not ours
+              </p>
+              <p>
+                We've interviewed over 100 retail store owners and experts to
+                understand their unique challenges
+              </p>
+            </div>
+            <div className="mb-8">
+              <p className="text-xl font-[700] mb-3">
+                We don't follow trends,we set them
+              </p>
+              <p>
+                Our proven methods and creative approach can help you stand out
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
