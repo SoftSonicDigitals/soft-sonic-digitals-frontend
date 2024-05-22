@@ -10,6 +10,7 @@ const B2CHelpTabs = () => {
           key={index}
           title={helpItem.title}
           whatWeDo={helpItem.whatWeDo}
+          outcomes={helpItem.outcomes}
         />
       ))}
     </div>
