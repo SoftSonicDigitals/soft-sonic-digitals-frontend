@@ -101,11 +101,39 @@ export const CONCERNS_AND_GOALS: ConcernsAndExpertise[] = [
 ];
 
 export const HELP_PROVIDED = [
-  { title: "Technology Platform Assessments" },
-  { title: "Store Design (UI/UX)" },
-  { title: "Store Development" },
-  { title: "System Integration" },
-  { title: "Support & Monitoring" },
-  { title: "Customer Experience Management" },
-  { title: "Replatforming" },
+  {
+    title: "Technology Platform Assessments",
+    whatWeDo:
+      "Our in-depth analysis goes beyond features, helping you discover the B2C e-commerce platform that fuels your business ambitions.",
+  },
+  {
+    title: "Store Design (UI/UX)",
+    whatWeDo:
+      "It's about understanding your retail customers, crafting exceptional experiences, and building thriving brands.",
+  },
+  {
+    title: "Store Development",
+    whatWeDo:
+      "We work as an engineering & tech innovation partner, walking beside you every step of the way. We work together to turn your ideas into safe and effective B2C ecommerce solutions that work well and capture attention.",
+  },
+  {
+    title: "System Integration",
+    whatWeDo:
+      "We simplify integration with many systems, such as ERP, CRM, PIM, and POS, enabling seamless system connection to meet unique demands.",
+  },
+  {
+    title: "Support & Monitoring",
+    whatWeDo:
+      "The right support, is always on tap. From proactive guidance to seamless 24/7 assistance, we deliver the expertise you need, at the time you want.",
+  },
+  {
+    title: "Customer Experience Management",
+    whatWeDo:
+      "We transform data into knowledge, using a data-driven approach to craft personalized experiences that turn visitors into loyal customers & increase revenue.",
+  },
+  {
+    title: "Replatforming",
+    whatWeDo:
+      "We help you to transform your existing infrastructure to ensure that you can adapt to the evolving needs of your customers and business. This helps you remain relevant for an extended period.",
+  },
 ];
