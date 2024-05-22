@@ -11,6 +11,8 @@ const B2CHelpTabs = () => {
           title={helpItem.title}
           whatWeDo={helpItem.whatWeDo}
           outcomes={helpItem.outcomes}
+          serviceTitle={helpItem?.services?.serviceTitle}
+          serviceList={helpItem?.services?.serviceList}
         />
       ))}
     </div>
