@@ -1,4 +1,5 @@
 import B2CHelp from "./B2CHelp";
+import B2CHelpTab from "./B2CHelpTab";
 import B2CHelpTabs from "./B2CHelpTabs";
 import B2CHero from "./B2CHero";
 import B2CWeAreDifferent from "./B2CWeAreDifferent";
@@ -13,4 +14,5 @@ export {
   ConcernExpertiseContainer,
   B2CHelp,
   B2CHelpTabs,
+  B2CHelpTab,
 };
