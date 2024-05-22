@@ -6,7 +6,11 @@ const B2CHelpTabs = () => {
   return (
     <div className="basis-full  text-gray-800">
       {HELP_PROVIDED.map((helpItem, index) => (
-        <B2CHelpTab key={index} />
+        <B2CHelpTab
+          key={index}
+          title={helpItem.title}
+          whatWeDo={helpItem.whatWeDo}
+        />
       ))}
     </div>
   );

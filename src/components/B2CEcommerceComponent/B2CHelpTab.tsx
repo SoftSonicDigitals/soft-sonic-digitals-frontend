@@ -1,31 +1,33 @@
+import { WHAT_WE_DO, THE_OUTCOME } from "@/constants/b2c_ecommerce";
 import React from "react";
 import { FaPlus } from "react-icons/fa6";
+type B2CHelpTabProps = {
+  title: string;
+  whatWeDo: string;
+  outcomes: string[];
+};
 
-const B2CHelpTab = () => {
+const B2CHelpTab = ({ title, whatWeDo, outcomes }: B2CHelpTabProps) => {
   return (
     <>
       <div className="flex gap-4 mb-6">
         <div className="bg-gray-100 p-2 rounded-full">
           <FaPlus className="cursor-pointer" />
         </div>
-        <p className="font-[700] text-2xl">Technology platform assessments</p>
+        <p className="font-[700] text-2xl">{title}</p>
       </div>
       <div className="ml-12 pl-0.5 mb-6">
-        <h4 className="font-[700] text-xl mb-2">WHAT WE DO</h4>
-        <p className="mb-6">
-          Our in-depth analysis goes beyond features, helping you discover the
-          B2C e-commerce platform that fuels your business ambitions.
-        </p>
+        <h4 className="font-[700] text-xl mb-2">{WHAT_WE_DO}</h4>
+        <p className="mb-6">{whatWeDo}</p>
 
-        <h4 className="font-[700] text-xl mb-2">THE OUTCOME</h4>
+        <h4 className="font-[700] text-xl mb-2">{THE_OUTCOME}</h4>
+
         <ul className="list-decimal list-inside mb-6">
-          <li className="mb-1">
-            Find the perfect fit for your existing systems and long-term vision.
-          </li>
-          <li>
-            Find the perfect fit for your existing systems and long-term vision.
-          </li>
-          <li>Align seamlessly with your short-term goals.</li>
+          {outcomes.map((outcome, index) => (
+            <li key={index} className="mb-1">
+              {outcome}
+            </li>
+          ))}
         </ul>
 
         <h4 className="font-[700] text-xl mb-2">KEY SERVICES INCLUDE</h4>
