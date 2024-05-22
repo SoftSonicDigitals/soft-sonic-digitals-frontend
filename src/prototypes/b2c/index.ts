@@ -105,35 +105,71 @@ export const HELP_PROVIDED = [
     title: "Technology Platform Assessments",
     whatWeDo:
       "Our in-depth analysis goes beyond features, helping you discover the B2C e-commerce platform that fuels your business ambitions.",
+    outcomes: [
+      "Find the perfect fit for your existing systems and long-term vision.",
+      "Understand the strengths and limitations of different eCommerce platforms.",
+      "Align seamlessly with your short-term goals.",
+    ],
   },
   {
     title: "Store Design (UI/UX)",
     whatWeDo:
       "It's about understanding your retail customers, crafting exceptional experiences, and building thriving brands.",
+    outcomes: [
+      "Unified content and commerce for a cohesive experience.",
+      "An upgraded brand experience that captivates.",
+      "A smooth user journey that converts.",
+    ],
   },
   {
     title: "Store Development",
     whatWeDo:
       "We work as an engineering & tech innovation partner, walking beside you every step of the way. We work together to turn your ideas into safe and effective B2C ecommerce solutions that work well and capture attention.",
+    outcomes: [
+      "Faster time to market with your online store.",
+      "World-class performance and security you can trust.",
+      "A tested solution that grabs attention and drives results.",
+    ],
   },
   {
     title: "System Integration",
     whatWeDo:
       "We simplify integration with many systems, such as ERP, CRM, PIM, and POS, enabling seamless system connection to meet unique demands.",
+    outcomes: [
+      "It reduces data redundancy, human involvement, and error",
+      "Increases internal productivity",
+      "Provides better customer experiences",
+      "Better control of your business",
+      "It reduces operational costs",
+    ],
   },
   {
     title: "Support & Monitoring",
     whatWeDo:
       "The right support, is always on tap. From proactive guidance to seamless 24/7 assistance, we deliver the expertise you need, at the time you want.",
+    outcomes: [
+      "Minimized downtime and customer complaints.",
+      "Improved customer experience and higher revenue.",
+      "Your store stays up-to-date and optimized for success.",
+    ],
   },
   {
     title: "Customer Experience Management",
     whatWeDo:
       "We transform data into knowledge, using a data-driven approach to craft personalized experiences that turn visitors into loyal customers & increase revenue.",
+    outcomes: [
+      "Strategic roadmap building for long-term success.",
+      "Conversion that drives customer loyalty.",
+    ],
   },
   {
     title: "Replatforming",
     whatWeDo:
       "We help you to transform your existing infrastructure to ensure that you can adapt to the evolving needs of your customers and business. This helps you remain relevant for an extended period.",
+    outcomes: [
+      "Reduced management costs and improved team productivity.",
+      "Expanded market reach and future-proofed success.",
+      "Soaring brand experience and smooth user journey.",
+    ],
   },
 ];

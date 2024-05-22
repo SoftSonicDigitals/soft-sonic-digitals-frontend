@@ -11,3 +11,7 @@ export const B2C_HERO_QUOTE =
 export const WE_ARE_DIFF_HEADING_TIMEFRAME = "For over a decade,";
 export const WE_ARE_DIFF_HEADING =
   "we've been working with online retailers, learning their business and challenges. We don't believe in cookie-cutter approaches or empty promises";
+
+export const WHAT_WE_DO = "WHAT WE DO";
+
+export const THE_OUTCOME = "THE OUTCOME";
