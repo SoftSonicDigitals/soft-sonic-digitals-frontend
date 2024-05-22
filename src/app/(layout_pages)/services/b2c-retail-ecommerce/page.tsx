@@ -3,6 +3,7 @@ import {
   B2CWeAreDifferent,
   B2ConcernsExpertise,
 } from "@/components/B2CEcommerceComponent";
+import B2CHelp from "@/components/B2CEcommerceComponent/B2CHelp";
 import React from "react";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <B2CHero />
       <B2CWeAreDifferent />
       <B2ConcernsExpertise />
+      <B2CHelp />
     </main>
   );
 };
