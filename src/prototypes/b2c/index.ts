@@ -99,3 +99,13 @@ export const CONCERNS_AND_GOALS: ConcernsAndExpertise[] = [
   RETAILERS_CONCERNS,
   RETAILERS_GOALS,
 ];
+
+export const HELP_PROVIDED = [
+  { title: "Technology Platform Assessments" },
+  { title: "Store Design (UI/UX)" },
+  { title: "Store Development" },
+  { title: "System Integration" },
+  { title: "Support & Monitoring" },
+  { title: "Customer Experience Management" },
+  { title: "Replatforming" },
+];
