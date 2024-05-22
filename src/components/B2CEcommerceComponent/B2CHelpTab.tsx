@@ -5,9 +5,17 @@ type B2CHelpTabProps = {
   title: string;
   whatWeDo: string;
   outcomes: string[];
+  serviceTitle?: string;
+  serviceList?: string[];
 };
 
-const B2CHelpTab = ({ title, whatWeDo, outcomes }: B2CHelpTabProps) => {
+const B2CHelpTab = ({
+  title,
+  whatWeDo,
+  outcomes,
+  serviceTitle,
+  serviceList,
+}: B2CHelpTabProps) => {
   return (
     <>
       <div className="flex gap-4 mb-6">
@@ -30,11 +38,13 @@ const B2CHelpTab = ({ title, whatWeDo, outcomes }: B2CHelpTabProps) => {
           ))}
         </ul>
 
-        <h4 className="font-[700] text-xl mb-2">KEY SERVICES INCLUDE</h4>
+        <h4 className="font-[700] text-xl mb-2">{serviceTitle}</h4>
         <ul className="list-decimal list-inside">
-          <li className="mb-1">In-depth user research and profiling.</li>
-          <li>Seamless user journey mapping and prototyping.</li>
-          <li>eamless user journey mapping and prototyping.</li>
+          {serviceList?.map((service, index) => (
+            <li key={index} className="mb-1">
+              {service}
+            </li>
+          ))}
         </ul>
       </div>
     </>
