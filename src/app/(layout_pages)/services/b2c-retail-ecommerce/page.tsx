@@ -2,8 +2,8 @@ import {
   B2CHero,
   B2CWeAreDifferent,
   B2ConcernsExpertise,
+  B2CHelp,
 } from "@/components/B2CEcommerceComponent";
-import B2CHelp from "@/components/B2CEcommerceComponent/B2CHelp";
 import React from "react";
 
 const page = () => {
