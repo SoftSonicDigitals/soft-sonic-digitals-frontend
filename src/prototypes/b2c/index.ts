@@ -120,6 +120,14 @@ export const HELP_PROVIDED = [
       "An upgraded brand experience that captivates.",
       "A smooth user journey that converts.",
     ],
+    services: {
+      serviceTitle: "KEY PROCESS",
+      serviceList: [
+        "In-depth user research and profiling.",
+        "Seamless user journey mapping and prototyping.",
+        "Brand and tone-of-voice development.",
+      ],
+    },
   },
   {
     title: "Store Development",
@@ -130,6 +138,21 @@ export const HELP_PROVIDED = [
       "World-class performance and security you can trust.",
       "A tested solution that grabs attention and drives results.",
     ],
+    services: {
+      serviceTitle: "KEY SERVICES INCLUDE",
+      serviceList: [
+        "Solution Architecture Design",
+        "Database Design",
+        "Frontend Development",
+        "Backend Development",
+        "Custom Extension Development",
+        "Integration",
+        "Implementation",
+        "Performance Enhancement",
+        "Omnichannel",
+        "Security & Compliance",
+      ],
+    },
   },
   {
     title: "System Integration",
@@ -142,6 +165,18 @@ export const HELP_PROVIDED = [
       "Better control of your business",
       "It reduces operational costs",
     ],
+    services: {
+      serviceTitle: "Platform Expertise",
+      serviceList: [
+        "SAP",
+        "SalesForce",
+        "Microsoft Dynamic",
+        "Oracle Netsuite",
+        "Zoho",
+        "Odoo",
+        "Any Custom ERP...",
+      ],
+    },
   },
   {
     title: "Support & Monitoring",
@@ -152,6 +187,19 @@ export const HELP_PROVIDED = [
       "Improved customer experience and higher revenue.",
       "Your store stays up-to-date and optimized for success.",
     ],
+    services: {
+      serviceTitle: "KEY SERVICES INCLUDE",
+      serviceList: [
+        "Proactive Monitoring",
+        "Break/Fix Support",
+        "Updating security holes",
+        "Improve webpage performance",
+        "Maintenance of security measures",
+        "On-demand troubleshooting",
+        "Administration assistance and training",
+        "Malware scanning and analysis",
+      ],
+    },
   },
   {
     title: "Customer Experience Management",
@@ -161,6 +209,17 @@ export const HELP_PROVIDED = [
       "Strategic roadmap building for long-term success.",
       "Conversion that drives customer loyalty.",
     ],
+    services: {
+      serviceTitle: "KEY SERVICES INCLUDE",
+      serviceList: [
+        "Roadmap building",
+        "Customer Experience Strategy",
+        "Conversion Rate Optimization",
+        "Technical SEO",
+        "Web Vitals Optimization",
+        "Strategic Monitoring",
+      ],
+    },
   },
   {
     title: "Replatforming",
@@ -171,5 +230,19 @@ export const HELP_PROVIDED = [
       "Expanded market reach and future-proofed success.",
       "Soaring brand experience and smooth user journey.",
     ],
+    services: {
+      serviceTitle: "KEY SERVICES INCLUDE",
+      serviceList: [
+        "Examine existing architecture",
+        "Identify the improvement areas",
+        "Design a Roadmap & New Architecture",
+        "Build a Team",
+        "Existing customer behavior Analysis",
+        "Design New UI/UX",
+        "Data Migration",
+        "Integration with Existing systems",
+        "Implementation",
+      ],
+    },
   },
 ];
