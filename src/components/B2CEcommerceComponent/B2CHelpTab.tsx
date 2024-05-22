@@ -10,7 +10,7 @@ const B2CHelpTab = () => {
         </div>
         <p className="font-[700] text-2xl">Technology platform assessments</p>
       </div>
-      <div className="ml-12 pl-0.5">
+      <div className="ml-12 pl-0.5 mb-6">
         <h4 className="font-[700] text-xl mb-2">WHAT WE DO</h4>
         <p className="mb-6">
           Our in-depth analysis goes beyond features, helping you discover the
