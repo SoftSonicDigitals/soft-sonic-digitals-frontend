@@ -4,15 +4,17 @@ import B2CHelpTabs from "./B2CHelpTabs";
 const B2CHelp = () => {
   return (
     <section id="help_every_step">
-      <div className="wrapper_container mb-24 flex-center">
-        <div>
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-[700] text-gray-800 !leading-[1.25]   ">
-            We help you on every step of your B2C eCommerce journey, so you can
-            always focus on what truly matters.
-          </h1>
-        </div>
+      <div className="wrapper_container mb-24 ">
+        <div className=" md:mx-6 lg:mx-10 xl:mx-16 flex flex-col lg:flex-row gap-8 lg:gap-16 xl:gap-16  2xl:gap-28 max-w-[725px] lg:max-w-fit mx-auto">
+          <div className="lg:basis-[70%] xl:basis-[60%]">
+            <h1 className=" text-2xl sm:text-2xl  xl:text-4xl font-[700] text-gray-800 !leading-[1.25]   ">
+              We help you on every step of your B2C eCommerce journey, so you
+              can always focus on what truly matters.
+            </h1>
+          </div>
 
-        <B2CHelpTabs />
+          <B2CHelpTabs />
+        </div>
       </div>
     </section>
   );
