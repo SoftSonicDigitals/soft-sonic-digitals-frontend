@@ -1,12 +1,16 @@
 import { WHAT_WE_DO, THE_OUTCOME } from "@/constants/b2c_ecommerce";
 import React from "react";
-import { FaPlus } from "react-icons/fa6";
+import { FaMinus, FaPlus } from "react-icons/fa6";
 type B2CHelpTabProps = {
   title: string;
   whatWeDo: string;
   outcomes: string[];
   serviceTitle?: string;
   serviceList?: string[];
+  indexOfTab: number;
+  toggleTab: (index: number) => void;
+  isTabOpen: (selected: number | null, index: number) => boolean;
+  selectedTab: number | null;
 };
 
 const B2CHelpTab = ({
@@ -15,38 +19,48 @@ const B2CHelpTab = ({
   outcomes,
   serviceTitle,
   serviceList,
+  indexOfTab,
+  toggleTab,
+  isTabOpen,
+  selectedTab,
 }: B2CHelpTabProps) => {
   return (
     <>
-      <div className="flex gap-4 mb-6">
+      <div onClick={() => toggleTab(indexOfTab)} className="flex gap-4 mb-6">
         <div className="bg-gray-100 p-2 rounded-full">
-          <FaPlus className="cursor-pointer" />
+          {!isTabOpen(selectedTab, indexOfTab) ? (
+            <FaPlus className="cursor-pointer" />
+          ) : (
+            <FaMinus className="cursor-pointer" />
+          )}
         </div>
         <p className="font-[700] text-2xl">{title}</p>
       </div>
-      <div className="ml-12 pl-0.5 mb-6">
-        <h4 className="font-[700] text-xl mb-2">{WHAT_WE_DO}</h4>
-        <p className="mb-6">{whatWeDo}</p>
+      {isTabOpen(selectedTab, indexOfTab) && (
+        <div className="ml-12 pl-0.5 mb-6">
+          <h4 className="font-[700] text-xl mb-2">{WHAT_WE_DO}</h4>
+          <p className="mb-6">{whatWeDo}</p>
 
-        <h4 className="font-[700] text-xl mb-2">{THE_OUTCOME}</h4>
+          <h4 className="font-[700] text-xl mb-2">{THE_OUTCOME}</h4>
 
-        <ul className="list-decimal list-inside mb-6">
-          {outcomes.map((outcome, index) => (
-            <li key={index} className="mb-1">
-              {outcome}
-            </li>
-          ))}
-        </ul>
+          <ul className="list-decimal list-inside mb-6">
+            {outcomes.map((outcome, index) => (
+              <li key={index} className="mb-1">
+                {outcome}
+              </li>
+            ))}
+          </ul>
 
-        <h4 className="font-[700] text-xl mb-2">{serviceTitle}</h4>
-        <ul className="list-decimal list-inside">
-          {serviceList?.map((service, index) => (
-            <li key={index} className="mb-1">
-              {service}
-            </li>
-          ))}
-        </ul>
-      </div>
+          <h4 className="font-[700] text-xl mb-2">{serviceTitle}</h4>
+          <ul className="list-decimal list-inside">
+            {serviceList?.map((service, index) => (
+              <li key={index} className="mb-1">
+                {service}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 };
