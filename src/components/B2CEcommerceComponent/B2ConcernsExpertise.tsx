@@ -5,7 +5,7 @@ import ConcernExpertiseContainer from "./ConcernExpertiseContainer";
 const B2ConcernsExpertise = () => {
   return (
     <section id="concerns_and_expertise">
-      <div className="wrapper_container mb-24">
+      <div className="wrapper_container mb-12 md:mb-24">
         <div className="md:mx-6 lg:mx-10 xl:mx-16 mb-12 flex gap-6">
           <div className="max-w-[650px] basis-full">
             <ConcernExpertiseContainer />
