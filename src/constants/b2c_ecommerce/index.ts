@@ -15,3 +15,5 @@ export const WE_ARE_DIFF_HEADING =
 export const WHAT_WE_DO = "WHAT WE DO";
 
 export const THE_OUTCOME = "THE OUTCOME";
+export const B2C_HELP_HEADING =
+  "We help you on every step of your B2C eCommerce journey, so you can always focus on what truly matters.";
