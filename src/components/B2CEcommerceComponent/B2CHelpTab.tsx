@@ -1,6 +1,7 @@
 import { WHAT_WE_DO, THE_OUTCOME } from "@/constants/b2c_ecommerce";
 import React from "react";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+
 type B2CHelpTabProps = {
   title: string;
   whatWeDo: string;
