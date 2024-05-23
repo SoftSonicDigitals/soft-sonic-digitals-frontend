@@ -246,3 +246,12 @@ export const HELP_PROVIDED = [
     },
   },
 ];
+
+export const B2C_ECOMMERCE_STATS = [
+  { title: "Store Launched", value: "260" },
+  { title: "Product Management Experience", value: "10m" },
+  { title: "Daily Order Management Experience", value: "4m" },
+  { title: "Shipping Gateway Integrated", value: "50" },
+  { title: "Payment Gateway Integrated", value: "30" },
+  { title: "ERP and CRM, Pim, and Dam Integrated", value: "35" },
+];
