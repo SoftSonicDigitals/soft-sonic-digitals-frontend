@@ -6,9 +6,11 @@ import B2CStats from "./B2CStats";
 import B2CStatsContainer from "./B2CStatsContainer";
 import B2CStatsTile from "./B2CStatsTile";
 import B2CWeAreDifferent from "./B2CWeAreDifferent";
+import B2CaseStudies from "./B2CaseStudies";
 import B2ConcernsExpertise from "./B2ConcernsExpertise";
 import ConcernExpertiseContainer from "./ConcernExpertiseContainer";
 import RetailerListLayout from "./RetailerListLayout";
+
 export {
   B2CHero,
   B2CWeAreDifferent,
@@ -21,4 +23,5 @@ export {
   B2CStats,
   B2CStatsContainer,
   B2CStatsTile,
+  B2CaseStudies,
 };
