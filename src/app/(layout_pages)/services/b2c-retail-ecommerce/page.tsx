@@ -5,6 +5,7 @@ import {
   B2CHelp,
   B2CStats,
 } from "@/components/B2CEcommerceComponent";
+import B2CaseStudy from "@/components/B2CEcommerceComponent/B2CaseStudy";
 import { Clients } from "@/components/Clients";
 import React from "react";
 
@@ -17,6 +18,7 @@ const page = () => {
       <B2CHelp />
       <B2CStats />
       <Clients />
+      <B2CaseStudy />
     </main>
   );
 };
