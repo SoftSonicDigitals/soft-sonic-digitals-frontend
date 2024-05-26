@@ -7,7 +7,6 @@ import {
 } from "@/components/B2CEcommerceComponent";
 import B2CaseStudy from "@/components/B2CEcommerceComponent/B2CaseStudy";
 import { Clients } from "@/components/Clients";
-import { EcommerceProjectBanner } from "@/components/Reusable";
 import React from "react";
 
 const page = () => {
@@ -20,7 +19,6 @@ const page = () => {
       <B2CStats />
       <Clients />
       <B2CaseStudy />
-      <EcommerceProjectBanner />
     </main>
   );
 };
