@@ -7,6 +7,7 @@ import ViewAllBtn from "./ViewAllBtn";
 import RequestProposalBtn from "./RequestProposalBtn";
 import PrimaryInfoSection from "./PrimaryInfoSection";
 import SecondaryInfoSection from "./SecondaryInfoSection";
+import EcommerceProjectBanner from "./EcommerceProjectBanner";
 export {
   PrimaryButton,
   Platform,
@@ -17,4 +18,5 @@ export {
   RequestProposalBtn,
   PrimaryInfoSection,
   SecondaryInfoSection,
+  EcommerceProjectBanner,
 };
