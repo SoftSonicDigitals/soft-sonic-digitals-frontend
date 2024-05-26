@@ -1,13 +1,13 @@
 import { Clients } from "@/components/Clients";
 import {
   EcommerceFrameworks,
-  EcommerceProjectBanner,
   IndustryFeatureTabs,
   IndustryHero,
   ServedIndustries,
   SpecializationTiles,
+  IndustryBanner,
 } from "@/components/IndustryComponents";
-import IndustryBanner from "@/components/IndustryComponents/IndustryBanner";
+import EcommerceProjectBanner from "@/components/Reusable/EcommerceProjectBanner";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
 import {
   PrimaryInfoSection,
