@@ -20,3 +20,8 @@ export const B2C_HELP_HEADING =
 
 export const B2C_STATS_HEADING =
   "Uplift eCommerce experience for globally renowned brands through expertise";
+
+export const B2C_CASE_STUDIES_HEADING =
+  "Explore the brands who choose us as their partner";
+export const B2C_CASE_STUDIES_DESCRIPTION =
+  "Improve your business outcomes with our expertise";
