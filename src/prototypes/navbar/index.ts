@@ -28,7 +28,7 @@ export const SOLUTIONS_MENU: SolutionsMenuType = {
         },
         {
           title: "B2B ecommerce",
-          link: "/",
+          link: "/services/b2b-ecommerce-solutions",
           description: "Empower your wholesale operations",
         },
         {
