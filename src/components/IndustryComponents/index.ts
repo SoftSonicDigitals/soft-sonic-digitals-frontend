@@ -8,7 +8,6 @@ import ServedIndustries from "./ServedIndustries";
 import IndustriesCard from "./IndustriesCard";
 import EcommerceFrameworks from "./EcommerceFrameworks";
 import FrameworkSlider from "./FrameworkSlider";
-import EcommerceProjectBanner from "./EcommerceProjectBanner";
 export {
   IndustryHero,
   SpecializationTiles,
@@ -19,6 +18,5 @@ export {
   IndustriesCard,
   EcommerceFrameworks,
   FrameworkSlider,
-  EcommerceProjectBanner,
+  IndustryBanner,
 };
-IndustryBanner;
