@@ -2,10 +2,10 @@ import React from "react";
 import { GetInTouchContactBtn } from "../GetInTouch";
 import { ECOMMERCE_PROJECT_BANNER_HEADING } from "@/constants/industry";
 
-const EcommerceProjectBanner = () => {
+const EcommerceProjectBanner = ({ verticalPadding = "py-8" }) => {
   return (
     <section id="banner" className="bg-black">
-      <div className="wrapper_container py-8 mb-12 md:mb-24">
+      <div className={`wrapper_container ${verticalPadding} mb-12 md:mb-24`}>
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 xl:mx-16">
           <h1 className="text-xl md:text-2xl font-[500] text-white text-center lg:text-left xl:max-w-max">
             {ECOMMERCE_PROJECT_BANNER_HEADING}
