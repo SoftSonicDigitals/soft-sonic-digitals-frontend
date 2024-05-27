@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import B2BHeroInfo from "./B2BHeroInfo";
 
 const B2BHero = () => {
   return (
-    <section>
+    <section id="b2b_hero">
       <div className="pt-[48px] lg:pt-[88px] ">
         <div className="relative w-[100vw] h-[40vh] xl:h-[100vh] 3xl:h-[55vh] sm:mb-12 lg:mb-24">
           <Image
