@@ -6,7 +6,7 @@ const B2BHero = () => {
   return (
     <section id="b2b_hero">
       <div className="pt-[48px] lg:pt-[88px] ">
-        <div className="relative w-[100vw] h-[40vh] xl:h-[100vh] 3xl:h-[55vh] sm:mb-12 lg:mb-24">
+        <div className="relative w-[100vw] h-[40vh] sm:h-[65vh]  xl:h-[100vh] 3xl:h-[55vh] sm:mb-12 lg:mb-24">
           <Image
             src={`/b2b/hero.png`}
             alt="hero"
