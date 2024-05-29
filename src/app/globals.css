@@ -114,3 +114,11 @@
   justify-content: center !important;
   align-items: center !important;
 }
+
+.section_heading {
+  @apply text-2xl md:text-3xl lg:text-4xl font-[700] text-gray-800 !leading-[1.25];
+}
+
+.section_description {
+  @apply text-xl text-center font-[500];
+}
