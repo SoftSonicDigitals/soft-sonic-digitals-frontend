@@ -2,16 +2,17 @@ import React from "react";
 
 const B2BDigitalEcommerceDetails = () => {
   return (
-    <div className="flex-center gap-12">
-      <div>
+    <div className="flex-center lg:flex-row flex-col gap-8 lg:gap-12">
+      <div className="w-full max-w-[700px] lg:max-w-[550px] ">
         <iframe
           src="https://www.youtube.com/embed/hCCpvsfmiGI"
           title="Best B2B Commerce Solution for Wholesaler and Manufacturer"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          className="w-[550px] h-[310px]"
+          className=" w-full  h-[310px] mx-auto"
         />
       </div>
-      <div className="max-w-[550px]">
+
+      <div className="max-w-[700px] lg:max-w-[550px] ">
         <div className="mb-6">
           <p className="font-[700] text-xl text-gray-800 mb-2">
             B2B Digital Commerce
