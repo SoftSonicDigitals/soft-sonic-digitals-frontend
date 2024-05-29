@@ -18,7 +18,7 @@ const B2BHero = () => {
             <B2BHeroInfo />
           </div>
         </div>
-        <div className="-mt-20 z-[999] relative sm:hidden">
+        <div className="-mt-20 z-100 relative sm:hidden">
           <B2BHeroInfo />
         </div>
       </div>
