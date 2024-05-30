@@ -16,3 +16,48 @@ export const B2B_DIGITAL_ECOMMERCE_INFO: B2BDigitalEcommerceInfo = {
     },
   ],
 };
+
+export const B2B_DIGITIZATION_LIST = [
+  {
+    title: "Wants",
+    list: [
+      "Digitize all business processes (Like catalogue sharing with all dealers and sub dealers)",
+      "24/7 flexibility to customers for placing orders",
+      "Automate order processing",
+      "Clients, vendors & employees to be adept with latest B2B technology",
+      "Robust, bug-free B2B system to improve efficiency",
+    ],
+  },
+  {
+    title: "Aspirations",
+    list: [
+      "Run the company on auto-mode by eliminating all manual processes",
+      "Retaining and gaining market share",
+      "Provide a Seamless Omnichannel experience",
+      "Improve data quality and management",
+      "Reduce costs by streamlining the workforce management",
+      "Increasing sales through personalization",
+      "Improve Customer Satisfaction",
+    ],
+  },
+  {
+    title: "Frustrations",
+    list: [
+      "Dependency on manual order processing systems",
+      "Human errors in managing data and business processes",
+      "Unorganised and scattered data",
+      "No accountability of sales team due to lack of proper data management systems",
+      "High operational costs due to lack of digitization",
+    ],
+  },
+  {
+    title: "Fears",
+    list: [
+      "Losing out to competitors overtime",
+      "Reduced profit margins due to increase in costs",
+      "Not able to attract new customers & vendors or sustain the existing ones",
+      "Unproductive workforce due to advancements in technology",
+      "Unable to scale up the business and ultimately shutting down",
+    ],
+  },
+];
