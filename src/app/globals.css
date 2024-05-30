@@ -120,5 +120,5 @@
 }
 
 .section_description {
-  @apply text-xl text-center font-[500];
+  @apply text-xl  font-[500];
 }
