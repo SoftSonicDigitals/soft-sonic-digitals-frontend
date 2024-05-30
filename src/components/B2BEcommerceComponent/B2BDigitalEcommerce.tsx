@@ -11,7 +11,7 @@ const B2BDigitalEcommerce = () => {
         <h1 className="section_heading text-center mb-5">
           {B2B_DIGITAL_ECOMMERCE_HEADING}
         </h1>
-        <p className="section_description px-3 lg:px-10 mb-10">
+        <p className="section_description text-center px-3 lg:px-10 mb-10">
           {B2B_DIGITAL_ECOMMERCE_DESCRIPTION}
         </p>
         <B2BDigitalEcommerceDetails />
