@@ -3,7 +3,7 @@ import {
   B2B_DIGITAL_ECOMMERCE_HEADING,
 } from "@/constants/b2b_ecommerce";
 import React from "react";
-import B2BDigitalEcommerceDetails from "./B2BDigitalEcommerceDetails";
+import { B2BDigitalEcommerceDetails } from "./index";
 const B2BDigitalEcommerce = () => {
   return (
     <section id="digital_ecommerce" className="bg-white-100 ">
