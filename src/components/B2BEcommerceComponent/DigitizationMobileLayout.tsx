@@ -5,19 +5,31 @@ import Image from "next/image";
 import React from "react";
 import { Collapse } from "react-collapse";
 import { FaMinus, FaPlus } from "react-icons/fa6";
-const DigitizationMobileLayout = () => {
+
+type DigitizationMobileLayoutProps = {
+  reasons: {
+    title: string;
+    list: string[];
+  }[];
+  imagePath: string;
+};
+
+const DigitizationMobileLayout = ({
+  reasons,
+  imagePath,
+}: DigitizationMobileLayoutProps) => {
   const { selected, isOpen, toggle } = useDropDown();
   return (
     <>
       <Image
-        src={"/b2b/mobile_diagram.png"}
+        src={imagePath}
         alt="title"
         width={336}
         height={342}
         className="mb-10 lg:hidden"
       />
       <div className="max-w-[700px] w-full lg:hidden">
-        {B2B_DIGITIZATION_LIST.map(({ title, list }, index) => (
+        {reasons.map(({ title, list }, index) => (
           <div
             onClick={() => toggle(index)}
             key={index}
