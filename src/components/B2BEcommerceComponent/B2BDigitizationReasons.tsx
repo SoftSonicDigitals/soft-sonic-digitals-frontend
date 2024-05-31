@@ -23,7 +23,10 @@ const B2BDigitizationReasons = () => {
           imagePath="/b2b/Diagram.png"
           reasons={B2B_DIGITIZATION_LIST}
         />
-        <DigitizationMobileLayout />
+        <DigitizationMobileLayout
+          imagePath="/b2b/mobile_diagram.png"
+          reasons={B2B_DIGITIZATION_LIST}
+        />
       </div>
     </section>
   );
