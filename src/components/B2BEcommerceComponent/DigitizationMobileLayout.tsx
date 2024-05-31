@@ -13,19 +13,26 @@ const DigitizationMobileLayout = () => {
         className="mb-10"
       />
       <div className="max-w-[700px] w-full">
-        <div className=" bg-white-100 p-12 rounded-[1rem] shadow-xl">
-          <div className="mb-4 flex item-center justify-between ">
-            <p className="text-2xl font-[600] text-gray-800"> WANTS</p>
-            <FaPlus />
+        {B2B_DIGITIZATION_LIST.map(({ title, list }, index) => (
+          <div
+            key={index}
+            className=" bg-white sm:bg-white-100 p-8 sm:p-12 rounded-[1rem] sm:shadow-xl mb-6"
+          >
+            <div className="mb-8 flex item-center justify-between ">
+              <p className="text-2xl font-[600] text-gray-800 uppercase">
+                {title}
+              </p>
+              <FaPlus />
+            </div>
+            <ul className="list-disc text-sm xl:text-sm text-gray-700">
+              {B2B_DIGITIZATION_LIST[0].list.map((item, index) => (
+                <li key={index} className="mb-1">
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="list-disc text-sm xl:text-sm text-gray-700">
-            {B2B_DIGITIZATION_LIST[0].list.map((item, index) => (
-              <li key={index} className="mb-1">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        ))}
       </div>
     </>
   );
