@@ -5,6 +5,7 @@ import {
 import { B2B_DIGITIZATION_LIST } from "@/prototypes/b2b";
 import React from "react";
 import DigitizationDetails from "./DigitizationDetails";
+import DigitizationMobileLayout from "./DigitizationMobileLayout";
 
 const B2BDigitizationReasons = () => {
   return (
@@ -22,6 +23,7 @@ const B2BDigitizationReasons = () => {
           imagePath="/b2b/Diagram.png"
           reasons={B2B_DIGITIZATION_LIST}
         />
+        <DigitizationMobileLayout />
       </div>
     </section>
   );
