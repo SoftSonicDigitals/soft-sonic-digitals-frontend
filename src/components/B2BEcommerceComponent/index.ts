@@ -2,6 +2,7 @@ import B2BDigitalEcommerce from "./B2BDigitalEcommerce";
 import B2BDigitalEcommerceDetails from "./B2BDigitalEcommerceDetails";
 import B2BHero from "./B2BHero";
 import B2BHeroInfo from "./B2BHeroInfo";
+import B2BPortal from "./B2BPortal";
 import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 export {
@@ -11,4 +12,5 @@ export {
   B2BDigitalEcommerceDetails,
   DigitizationDetails,
   DigitizationMobileLayout,
+  B2BPortal,
 };
