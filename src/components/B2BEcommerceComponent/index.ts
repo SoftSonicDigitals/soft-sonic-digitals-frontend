@@ -6,7 +6,7 @@ import B2BPortal from "./B2BPortal";
 import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
-
+import DropdownMenuItem from "./DropdownMenuItem";
 export {
   B2BHero,
   B2BHeroInfo,
@@ -16,4 +16,5 @@ export {
   DigitizationMobileLayout,
   B2BPortal,
   DropdownMenu,
+  DropdownMenuItem,
 };
