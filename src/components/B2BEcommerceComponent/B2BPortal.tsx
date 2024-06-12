@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
+import {
+  B2B_PORTAL_HEADING,
+  B2B_PORTAL_SUBHEADING,
+} from "@/constants/b2b_ecommerce";
 
 const B2BPortal = () => {
   return (
@@ -9,12 +13,10 @@ const B2BPortal = () => {
         <div>
           <div className="px-24 mb-16">
             <h1 className="section_heading text-center mb-4">
-              B2B portal development for a digital first world
+              {B2B_PORTAL_HEADING}
             </h1>
             <p className="section_description text-center">
-              We develop bespoke B2B portals that promote business partnerships
-              between partners, assist in connecting vendors and clients, enable
-              efficient self-service, and give users full assistance.
+              {B2B_PORTAL_SUBHEADING}
             </p>
           </div>
           <div className="flex items-start justify-center gap-16">
