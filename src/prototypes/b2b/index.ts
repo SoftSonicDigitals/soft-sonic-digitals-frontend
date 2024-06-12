@@ -61,3 +61,27 @@ export const B2B_DIGITIZATION_LIST = [
     ],
   },
 ];
+
+export const B2B_PORTAL_LIST = [
+  {
+    title: "B2B Customer Portal",
+  },
+  {
+    title: "B2B Vendor Portal",
+  },
+  {
+    title: "B2B Order Management Portal",
+  },
+  {
+    title: "B2B Digital Catalog Management",
+  },
+  {
+    title: "B2B Product Information Management",
+  },
+  {
+    title: "B2B Digital Asset Management",
+  },
+  {
+    title: "B2B Master Data Management",
+  },
+];
