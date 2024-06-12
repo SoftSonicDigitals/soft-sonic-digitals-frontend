@@ -14,6 +14,10 @@ const B2B_DIGITIZATION_REASON_HEADING =
 const B2B_DIGITIZATION_REASON_DESCRIPTION =
   "As someone who is into Manufacturing, Distribution or any business that involves B2B selling and management, you're under pressure to implement solutions that meet expectations of the modern times. For that, you will need a partner like us who understands your expectations and provides you with a reliable B2B platform that automates your business today and effortlessly scales it for the future.";
 
+const B2B_PORTAL_HEADING = "B2B portal development for a digital first world";
+const B2B_PORTAL_SUBHEADING =
+  "We develop bespoke B2B portals that promote business partnerships between partners, assist in connecting vendors and clients, enable efficient self-service, and give users full assistance.";
+
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -22,4 +26,6 @@ export {
   B2B_DIGITAL_ECOMMERCE_DESCRIPTION,
   B2B_DIGITIZATION_REASON_HEADING,
   B2B_DIGITIZATION_REASON_DESCRIPTION,
+  B2B_PORTAL_HEADING,
+  B2B_PORTAL_SUBHEADING,
 };
