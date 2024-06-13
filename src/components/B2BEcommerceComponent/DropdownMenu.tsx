@@ -8,7 +8,7 @@ const DropdownMenu = () => {
   const { selected, isOpen, toggle } = useDropDown();
 
   return (
-    <div>
+    <div className="basis-full flex xl:items-center justify-center flex-col mx-auto">
       {B2B_PORTAL_LIST.map(({ title, description }, index) => (
         <DropdownMenuItem
           title={title}
