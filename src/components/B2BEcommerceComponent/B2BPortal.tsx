@@ -19,7 +19,7 @@ const B2BPortal = () => {
               {B2B_PORTAL_SUBHEADING}
             </p>
           </div>
-          <div className="flex-col md:flex-row flex  items-start justify-center gap-10 lg:gap-16">
+          <div className="flex-col md:flex-row flex items-start justify-center gap-10 lg:gap-16">
             <DropdownMenu />
             <div className="basis-full mx-auto">
               <Image
@@ -27,7 +27,7 @@ const B2BPortal = () => {
                 alt="list image"
                 width={560}
                 height={793}
-                className="px-4 md:px-0"
+                className="px-2.5 md:px-0"
               />
             </div>
           </div>
