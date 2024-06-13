@@ -1,4 +1,8 @@
-import { B2BDigitalEcommerceInfo } from "@/models/b2b";
+import {
+  B2BDigitalEcommerceInfo,
+  B2BDigitizationList,
+  B2BDropdownList,
+} from "@/models/b2b";
 
 export const B2B_DIGITAL_ECOMMERCE_INFO: B2BDigitalEcommerceInfo = {
   videoTitle: "Best B2B Commerce Solution for Wholesaler and Manufacturer",
@@ -17,7 +21,7 @@ export const B2B_DIGITAL_ECOMMERCE_INFO: B2BDigitalEcommerceInfo = {
   ],
 };
 
-export const B2B_DIGITIZATION_LIST = [
+export const B2B_DIGITIZATION_LIST: B2BDigitizationList = [
   {
     title: "Wants",
     list: [
@@ -62,7 +66,7 @@ export const B2B_DIGITIZATION_LIST = [
   },
 ];
 
-export const B2B_PORTAL_LIST = [
+export const B2B_PORTAL_LIST: B2BDropdownList = [
   {
     title: "B2B Customer Portal",
     description:

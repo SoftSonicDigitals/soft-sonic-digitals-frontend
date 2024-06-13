@@ -6,3 +6,10 @@ export type B2BDigitalEcommerceInfo = {
     description: string;
   }[];
 };
+
+export type B2BDigitizationList = { title: string; list: string[] }[];
+
+export type B2BDropdownList = {
+  title: string;
+  description: string;
+}[];
