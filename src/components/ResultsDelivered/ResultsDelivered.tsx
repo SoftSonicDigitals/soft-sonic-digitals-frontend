@@ -10,7 +10,10 @@ type ResultsDeliveredProps = {
 
 const ResultsDelivered = ({ sectionStyles }: ResultsDeliveredProps) => {
   return (
-    <section id="results" className={`my-20 xl:mb-24 ${sectionStyles}`}>
+    <section
+      id="results"
+      className={`mb-12 md:my-20 xl:mb-24 ${sectionStyles}`}
+    >
       <div className="wrapper_container ">
         <PrimaryStyledHeadings
           mainHeading={RESULTS_DELIVERED_HEADING}
