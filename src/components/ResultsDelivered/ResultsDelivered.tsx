@@ -4,9 +4,13 @@ import { ResultsDeliveredItem } from ".";
 import { RESULTS_DELIVERED_HEADING } from "@/constants/results";
 import { PrimaryStyledHeadings } from "../Reusable";
 
-const ResultsDelivered = () => {
+type ResultsDeliveredProps = {
+  sectionStyles?: string;
+};
+
+const ResultsDelivered = ({ sectionStyles }: ResultsDeliveredProps) => {
   return (
-    <section id="results" className="my-20 xl:mb-24">
+    <section id="results" className={`my-20 xl:mb-24 ${sectionStyles}`}>
       <div className="wrapper_container ">
         <PrimaryStyledHeadings
           mainHeading={RESULTS_DELIVERED_HEADING}

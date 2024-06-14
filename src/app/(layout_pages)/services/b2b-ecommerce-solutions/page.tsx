@@ -4,6 +4,7 @@ import {
   B2BPortal,
 } from "@/components/B2BEcommerceComponent";
 import B2BDigitizationReasons from "@/components/B2BEcommerceComponent/B2BDigitizationReasons";
+import { ResultsDelivered } from "@/components/ResultsDelivered";
 import React from "react";
 
 const page = () => {
@@ -13,6 +14,7 @@ const page = () => {
       <B2BDigitalEcommerce />
       <B2BDigitizationReasons />
       <B2BPortal />
+      <ResultsDelivered sectionStyles="bg-white-100 py-16 " />
     </main>
   );
 };
