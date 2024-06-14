@@ -4,6 +4,7 @@ import {
   B2C_CASE_STUDIES_DESCRIPTION,
   B2C_CASE_STUDIES_HEADING,
 } from "@/constants/b2c_ecommerce";
+import { CaseStudiesLayout } from "../CaseStudies";
 
 const B2CaseStudy = () => {
   return (
@@ -17,8 +18,8 @@ const B2CaseStudy = () => {
           <p className="text-center md:text-lg  mb-10">
             {B2C_CASE_STUDIES_DESCRIPTION}
           </p>
-
-          <B2CaseStudies />
+          <CaseStudiesLayout alignment="horizontal" />
+          {/* <B2CaseStudies /> */}
         </div>
       </div>
     </section>

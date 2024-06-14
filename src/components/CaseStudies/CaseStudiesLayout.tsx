@@ -5,15 +5,34 @@ import { ViewAllBtn } from "../Reusable";
 
 type CaseStudiesLayoutProps = {
   showInfo?: boolean;
+  alignment?: "horizontal" | "vertical";
 };
 
-const CaseStudiesLayout = ({ showInfo = false }: CaseStudiesLayoutProps) => {
+const CaseStudiesLayout = ({
+  showInfo = false,
+  alignment = "vertical",
+}: CaseStudiesLayoutProps) => {
+  const containerHorizontalAlignPadding = "md:px-[2%] lg:mx-4";
+  const containerVerticalAlignPadding = "md:px-[2%] lg:px-10 xl:px-6 2xl:p-0";
+  const horizontalAlignGridGap = "gap-10 2xl:gap-y-12";
+  const VerticalAlignGridGap = "gap-8 md:gap-4 2xl:gap-x-8 2xl:gap-y-0";
+
   return (
     <>
       <div className="flex-center mb-16 ">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 items-center justify-center max-w-[1300px] md:px-[2%] lg:px-10 xl:px-6 2xl:p-0 2xl:gap-x-8 2xl:gap-y-0">
+        <div
+          className={`grid grid-cols-1 ${
+            alignment == "vertical"
+              ? `md:grid-cols-2
+            ${containerVerticalAlignPadding} ${VerticalAlignGridGap}`
+              : `${containerHorizontalAlignPadding} ${horizontalAlignGridGap}`
+          } items-center justify-center max-w-[1300px] m`}
+        >
           {CASE_STUDIES.map(
-            ({ title, link, imageName, id, description }, index) => (
+            (
+              { title, link, imageName, id, description, caseStudyPhrase },
+              index
+            ) => (
               <CaseStudy
                 title={title}
                 link={link}
@@ -22,6 +41,8 @@ const CaseStudiesLayout = ({ showInfo = false }: CaseStudiesLayoutProps) => {
                 key={id}
                 description={description}
                 showInfo={showInfo}
+                caseStudyPhrase={caseStudyPhrase}
+                alignment={alignment}
               />
             )
           )}
