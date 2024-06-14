@@ -1,4 +1,3 @@
-import { CASE_STUDIES } from "@/prototypes/case_studies";
 import React from "react";
 import { CaseStudiesLayout, CaseStudy } from ".";
 import { PrimaryStyledHeadings, ViewAllBtn } from "../Reusable";
