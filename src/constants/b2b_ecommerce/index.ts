@@ -18,6 +18,10 @@ const B2B_PORTAL_HEADING = "B2B portal development for a digital first world";
 const B2B_PORTAL_SUBHEADING =
   "We develop bespoke B2B portals that promote business partnerships between partners, assist in connecting vendors and clients, enable efficient self-service, and give users full assistance.";
 
+const B2B_PORTFOLIO_HEADING = "Take a look at our eCommerce work portfolio";
+const B2B_PORTAL_DESCRIPTION =
+  "We've successfully launched over 100 online enterprises in countries like the United States, Australia, and the United Kingdom. You can rely on us to deliver because of our expertise in professional eCommerce website and app development services.\n\nView our more than 100+ completed projects of our eCommerce development and our ecommerce programmers team's remarkable attention to detail and unique skills. Take a look at our impressive portfolio of happy clients.";
+
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -28,4 +32,6 @@ export {
   B2B_DIGITIZATION_REASON_DESCRIPTION,
   B2B_PORTAL_HEADING,
   B2B_PORTAL_SUBHEADING,
+  B2B_PORTFOLIO_HEADING,
+  B2B_PORTAL_DESCRIPTION,
 };

@@ -1,3 +1,4 @@
+import B2BPortfolio from "./B2BPortfolio";
 import B2CHelp from "./B2CHelp";
 import B2CHelpTab from "./B2CHelpTab";
 import B2CHelpTabs from "./B2CHelpTabs";
@@ -22,4 +23,5 @@ export {
   B2CStats,
   B2CStatsContainer,
   B2CStatsTile,
+  B2BPortfolio,
 };

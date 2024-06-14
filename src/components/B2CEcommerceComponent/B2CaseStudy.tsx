@@ -17,6 +17,7 @@ const B2CaseStudy = () => {
           <p className="text-center md:text-lg  mb-10">
             {B2C_CASE_STUDIES_DESCRIPTION}
           </p>
+
           <CaseStudiesLayout alignment="horizontal" />
         </div>
       </div>
