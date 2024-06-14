@@ -18,7 +18,8 @@ const page = () => {
       <B2BPortal />
       <ResultsDelivered sectionStyles="bg-white-100 py-16" />
       <Clients />
-      <CaseStudiesLayout showInfo={true} />
+
+      <CaseStudiesLayout showInfo={false} alignment="horizontal" />
     </main>
   );
 };
