@@ -17,7 +17,7 @@ const CaseStudies = () => {
           containerStyles="mb-16 gap-4 px-5 md:px-8"
         />
 
-        <CaseStudiesLayout />
+        <CaseStudiesLayout showAllButton={true} />
       </div>
     </section>
   );
