@@ -32,7 +32,7 @@ const CaseStudy = ({
   const caseItemHorizonalFlexGap = " gap-6 md:gap-10";
   return (
     <div
-      className={`flex  flex-col ${
+      className={`flex-center  flex-col ${
         alignment === "horizontal"
           ? `${flexHorizontalLayout} 
             ${caseItemHorizontalAlignPadding}
@@ -42,7 +42,7 @@ const CaseStudy = ({
     >
       <Link
         href={link}
-        className={` basis-full ${
+        className={` basis-full  ${
           alignment !== "horizontal" ? caseItemMargin : ""
         } `}
       >
@@ -63,7 +63,7 @@ const CaseStudy = ({
       </Link>
 
       {alignment === "horizontal" && (
-        <div className="basis-full px-2 mt-4">
+        <div className="basis-full lg:self-start px-2 mt-4 ">
           <h4 className="text-base sm:text-2xl font-[700] text-gray-800 mb-4 tracking-normal">
             {caseStudyPhrase}
           </h4>
