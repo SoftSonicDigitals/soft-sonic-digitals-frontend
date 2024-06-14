@@ -3,10 +3,12 @@ import B2BDigitalEcommerceDetails from "./B2BDigitalEcommerceDetails";
 import B2BHero from "./B2BHero";
 import B2BHeroInfo from "./B2BHeroInfo";
 import B2BPortal from "./B2BPortal";
+import B2BPortfolio from "./B2BPortfolio";
 import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
+
 export {
   B2BHero,
   B2BHeroInfo,
@@ -17,4 +19,5 @@ export {
   B2BPortal,
   DropdownMenu,
   DropdownMenuItem,
+  B2BPortfolio,
 };
