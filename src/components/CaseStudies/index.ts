@@ -1,4 +1,4 @@
 import CaseStudies from "./CaseStudies";
-import CaseStudiesContainer from "./CaseStudiesContainer";
+import CaseStudiesLayout from "./CaseStudiesLayout";
 import CaseStudy from "./CaseStudy";
-export { CaseStudies, CaseStudy };
+export { CaseStudies, CaseStudy, CaseStudiesLayout };
