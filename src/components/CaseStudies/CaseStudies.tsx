@@ -1,12 +1,11 @@
 import { CASE_STUDIES } from "@/prototypes/case_studies";
 import React from "react";
-import { CaseStudy } from ".";
+import { CaseStudiesLayout, CaseStudy } from ".";
 import { PrimaryStyledHeadings, ViewAllBtn } from "../Reusable";
 import {
   CASE_STUDIES_HEADING,
   CASE_STUDIES_SUBHEADING,
 } from "@/constants/case_studies";
-import CaseStudiesContainer from "./CaseStudiesContainer";
 
 const CaseStudies = () => {
   return (
@@ -19,7 +18,7 @@ const CaseStudies = () => {
           containerStyles="mb-16 gap-4 px-5 md:px-8"
         />
 
-        <CaseStudiesContainer />
+        <CaseStudiesLayout />
       </div>
     </section>
   );
