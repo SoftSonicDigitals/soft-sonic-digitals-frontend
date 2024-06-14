@@ -6,8 +6,8 @@ import { PrimaryStyledHeadings } from "../Reusable";
 
 const ResultsDelivered = () => {
   return (
-    <section id="results">
-      <div className="wrapper_container my-24 ">
+    <section id="results" className="my-20 xl:mb-24">
+      <div className="wrapper_container ">
         <PrimaryStyledHeadings
           mainHeading={RESULTS_DELIVERED_HEADING}
           containerStyles="mb-12"
