@@ -6,11 +6,13 @@ import { ViewAllBtn } from "../Reusable";
 type CaseStudiesLayoutProps = {
   showInfo?: boolean;
   alignment?: "horizontal" | "vertical";
+  showAllButton?: boolean;
 };
 
 const CaseStudiesLayout = ({
   showInfo = false,
   alignment = "vertical",
+  showAllButton = false,
 }: CaseStudiesLayoutProps) => {
   const containerHorizontalAlignPadding = "md:px-[2%] lg:mx-4";
   const containerVerticalAlignPadding = "md:px-[2%] lg:px-10 xl:px-6 2xl:p-0";
@@ -19,7 +21,7 @@ const CaseStudiesLayout = ({
 
   return (
     <>
-      <div className="flex-center mb-16 ">
+      <div className="flex-center  ">
         <div
           className={`grid grid-cols-1 ${
             alignment == "vertical"
@@ -49,7 +51,11 @@ const CaseStudiesLayout = ({
         </div>
       </div>
 
-      <ViewAllBtn />
+      {showAllButton && (
+        <div className="mt-16">
+          <ViewAllBtn />
+        </div>
+      )}
     </>
   );
 };

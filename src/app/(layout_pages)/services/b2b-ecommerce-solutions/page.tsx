@@ -4,6 +4,7 @@ import {
   B2BPortal,
 } from "@/components/B2BEcommerceComponent";
 import B2BDigitizationReasons from "@/components/B2BEcommerceComponent/B2BDigitizationReasons";
+import { B2BPortfolio } from "@/components/B2CEcommerceComponent";
 import { CaseStudiesLayout } from "@/components/CaseStudies";
 import { Clients } from "@/components/Clients";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
@@ -19,7 +20,7 @@ const page = () => {
       <ResultsDelivered sectionStyles="bg-white-100 py-16" />
       <Clients />
 
-      <CaseStudiesLayout showInfo={false} alignment="horizontal" />
+      <B2BPortfolio />
     </main>
   );
 };
