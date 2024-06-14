@@ -8,6 +8,7 @@ type CaseStudyType = {
   index: number;
   imageName: string;
   description?: string;
+  showInfo?: boolean;
 };
 
 const CaseStudy = ({
@@ -16,6 +17,7 @@ const CaseStudy = ({
   index,
   imageName,
   description,
+  showInfo = false,
 }: CaseStudyType) => {
   return (
     <div className="flex-center px-4 2xl:px-0">
@@ -29,10 +31,12 @@ const CaseStudy = ({
             className="mb-3"
             style={{ objectFit: "contain" }}
           />
-          <div className="px-3 tracking-wide">
-            <p className="text-xl font-[700] mb-3 text-gray-900">{title}</p>
-            <p className="">{description}</p>
-          </div>
+          {showInfo && (
+            <div className="px-3 tracking-wide">
+              <p className="text-xl font-[700] mb-3 text-gray-900">{title}</p>
+              <p className="">{description}</p>
+            </div>
+          )}
         </div>
       </Link>
     </div>

@@ -18,7 +18,7 @@ const page = () => {
       <B2BPortal />
       <ResultsDelivered sectionStyles="bg-white-100 py-16" />
       <Clients />
-      <CaseStudiesLayout />
+      <CaseStudiesLayout showInfo={true} />
     </main>
   );
 };

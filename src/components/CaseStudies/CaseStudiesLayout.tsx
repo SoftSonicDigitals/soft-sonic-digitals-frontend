@@ -3,7 +3,11 @@ import React from "react";
 import CaseStudy from "./CaseStudy";
 import { ViewAllBtn } from "../Reusable";
 
-const CaseStudiesLayout = () => {
+type CaseStudiesLayoutProps = {
+  showInfo?: boolean;
+};
+
+const CaseStudiesLayout = ({ showInfo = false }: CaseStudiesLayoutProps) => {
   return (
     <>
       <div className="flex-center mb-16 ">
@@ -17,6 +21,7 @@ const CaseStudiesLayout = () => {
                 index={index}
                 key={id}
                 description={description}
+                showInfo={showInfo}
               />
             )
           )}
