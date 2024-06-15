@@ -28,7 +28,7 @@ const B2B_BENEFIT_HEADING =
   "Benefits that will keep your business always ahead";
 const B2B_BENEFIT_DESCRIPTION =
   "Empower your team with modern & headless b2b commerce platforms, built for handling vast catalogues, account-level pricing, shipping and fulfilment options across branches, and more, all while exceeding your customers' expectations.";
-
+const B2B_FAQ_HEADING = "Frequently asked questions";
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -44,4 +44,5 @@ export {
   B2B_INDUSTRIES_HEADING,
   B2B_BENEFIT_HEADING,
   B2B_BENEFIT_DESCRIPTION,
+  B2B_FAQ_HEADING,
 };
