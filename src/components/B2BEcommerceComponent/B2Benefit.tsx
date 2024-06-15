@@ -23,7 +23,7 @@ const B2Benefit = () => {
           <DropdownMenu />
           <div className="basis-full mx-auto">
             <Image
-              src="/b2b/list.png"
+              src="/b2b/list2.png"
               alt="list image"
               width={560}
               height={793}
