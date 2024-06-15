@@ -21,7 +21,8 @@ const B2B_PORTAL_SUBHEADING =
 const B2B_PORTFOLIO_HEADING = "Take a look at our eCommerce work portfolio";
 const B2B_PORTAL_DESCRIPTION =
   "We've successfully launched over 100 online enterprises in countries like the United States, Australia, and the United Kingdom. You can rely on us to deliver because of our expertise in professional eCommerce website and app development services.\n\nView our more than 100+ completed projects of our eCommerce development and our ecommerce programmers team's remarkable attention to detail and unique skills. Take a look at our impressive portfolio of happy clients.";
-
+const B2B_INDUSTRIES_HEADING =
+  "Our B2B commerce solutions cover the following industries";
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -34,4 +35,5 @@ export {
   B2B_PORTAL_SUBHEADING,
   B2B_PORTFOLIO_HEADING,
   B2B_PORTAL_DESCRIPTION,
+  B2B_INDUSTRIES_HEADING,
 };
