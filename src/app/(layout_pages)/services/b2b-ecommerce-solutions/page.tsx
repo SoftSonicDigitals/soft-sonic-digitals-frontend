@@ -1,6 +1,7 @@
 import {
   B2BDigitalEcommerce,
   B2BHero,
+  B2BIndustries,
   B2BPortal,
   B2BPortfolio,
 } from "@/components/B2BEcommerceComponent";
@@ -19,6 +20,7 @@ const page = () => {
       <ResultsDelivered sectionStyles="bg-white-100 py-16" />
       <Clients />
       <B2BPortfolio />
+      <B2BIndustries />
     </main>
   );
 };
