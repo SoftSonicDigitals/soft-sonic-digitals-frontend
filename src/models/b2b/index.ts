@@ -12,6 +12,7 @@ export type B2BDigitizationList = { title: string; list: string[] }[];
 export type B2BDropdownList = {
   title: string;
   description: string;
+  iconPath?: string;
 }[];
 
 export type B2BIndustriesType = {
