@@ -19,3 +19,8 @@ export type B2BIndustriesType = {
   title: string;
   iconPath: string;
 }[];
+
+export type B2BFaqList = {
+  question: string;
+  answer: string | string[];
+}[];
