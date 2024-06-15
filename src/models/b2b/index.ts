@@ -13,3 +13,8 @@ export type B2BDropdownList = {
   title: string;
   description: string;
 }[];
+
+export type B2BIndustriesType = {
+  title: string;
+  iconPath: string;
+}[];

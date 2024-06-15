@@ -2,6 +2,7 @@ import {
   B2BDigitalEcommerceInfo,
   B2BDigitizationList,
   B2BDropdownList,
+  B2BIndustriesType,
 } from "@/models/b2b";
 
 export const B2B_DIGITAL_ECOMMERCE_INFO: B2BDigitalEcommerceInfo = {
@@ -104,7 +105,7 @@ export const B2B_PORTAL_LIST: B2BDropdownList = [
   },
 ];
 
-export const B2B_INDUSTRIES = [
+export const B2B_INDUSTRIES: B2BIndustriesType = [
   {
     title: "Manufacturing",
     iconPath: "/b2b/icons/1.png",
