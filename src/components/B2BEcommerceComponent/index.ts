@@ -9,6 +9,7 @@ import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
+import IndustryItem from "./IndustryItem";
 
 export {
   B2BHero,
@@ -22,4 +23,5 @@ export {
   DropdownMenuItem,
   B2BPortfolio,
   B2BIndustries,
+  IndustryItem,
 };

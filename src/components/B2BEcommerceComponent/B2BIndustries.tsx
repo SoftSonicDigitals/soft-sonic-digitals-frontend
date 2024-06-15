@@ -1,6 +1,7 @@
 import { B2B_INDUSTRIES } from "@/prototypes/b2b";
 import Image from "next/image";
 import React from "react";
+import IndustryItem from "./IndustryItem";
 
 const B2BIndustries = () => {
   return (
@@ -12,21 +13,7 @@ const B2BIndustries = () => {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-4   p-4 ">
             {B2B_INDUSTRIES.map(({ title, iconPath }, index) => (
-              <div
-                key={index}
-                className="flex-col  flex-center w-[175px] lg:w-[155px] xl:w-[175px] h-[200px] border-[1.5px] border-gray-100"
-              >
-                <Image
-                  src={iconPath}
-                  alt={title}
-                  width={72}
-                  height={72}
-                  className="mb-6"
-                />
-                <p className="text-center text-lg mb-6 font-[500] text-gray-800">
-                  {title}
-                </p>
-              </div>
+              <IndustryItem key={index} title={title} iconPath={iconPath} />
             ))}
           </div>
         </div>
