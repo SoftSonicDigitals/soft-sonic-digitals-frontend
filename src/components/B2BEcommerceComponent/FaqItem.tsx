@@ -3,13 +3,13 @@ import { FaPlus } from "react-icons/fa6";
 
 type FaqItemProps = {
   question: string;
-  answer: string;
+  answer: string | string[];
 };
 const FaqItem = ({ question, answer }: FaqItemProps) => {
   return (
     <div
       className="flex items-center justify-start
- gap-8 pb-4 border-b-[1px] border-gray-200 text-gray-800 mx-4 md:mx-8 lg:mx-12"
+ gap-8 pb-4 border-b-[1px] border-gray-200 text-gray-800 mx-4 md:mx-8 lg:mx-12  mb-4"
     >
       <div className="flex flex-col ">
         <div className="flex items-center gap-4 mb-2 md:mb-4">
