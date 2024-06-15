@@ -139,3 +139,36 @@ export const B2B_INDUSTRIES: B2BIndustriesType = [
     iconPath: "/b2b/icons/8.png",
   },
 ];
+
+export const B2B_BENEFIT_LIST: B2BDropdownList = [
+  {
+    title: "Simplify B2B commerce",
+    description:
+      "Make it more convenient for customers to purchase from your digital storefront. Customise experiences to meet your business needs with B2B marketplace development capabilities.",
+    iconPath: "/b2b/icons/Simplify-B2B-Commerce.png",
+  },
+  {
+    title: "Boost your visibility",
+    description:
+      "With Headless commerce solutions, strengthen partners by providing straightforward online ordering, branded storefronts, and marketplace experiences and be found wherever they are.",
+    iconPath: "/b2b/icons/Boost-your-visibility.png",
+  },
+  {
+    title: "Simplify your processes",
+    description:
+      "Minimise client service expenses by growing online sales with a single, cloud-based platform which is simple to administer and always updated.",
+    iconPath: "/b2b/icons/Simplify-your-Processes.png",
+  },
+  {
+    title: "Generate more revenue quickly",
+    description:
+      "Utilise self-service headless commerce for heavy sales transactions. Get B2B accounts which are easy and facilitate efficient checkout, order, and support.",
+    iconPath: "/b2b/icons/Generate-more-revenue-Quickly.png",
+  },
+  {
+    title: "Reduce your serving costs",
+    description:
+      "Provide customers with self-service tools and guided purchase experiences that are similar to the ones in B2C. To increase efficiencies, manage both B2C and B2B from one platform.",
+    iconPath: "/b2b/icons/Reduce-your-serving-costs.png",
+  },
+];
