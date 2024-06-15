@@ -5,6 +5,7 @@ import {
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
 import Image from "next/image";
+import { B2B_BENEFIT_LIST } from "@/prototypes/b2b";
 
 const B2Benefit = () => {
   return (
@@ -20,7 +21,7 @@ const B2Benefit = () => {
         </div>
 
         <div className="flex-col md:flex-row flex items-start justify-center gap-10 lg:gap-16">
-          <DropdownMenu />
+          <DropdownMenu dropDownList={B2B_BENEFIT_LIST} />
           <div className="basis-full mx-auto">
             <Image
               src="/b2b/list2.png"
