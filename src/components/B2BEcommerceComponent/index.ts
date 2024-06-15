@@ -12,6 +12,7 @@ import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
 import FaqContainer from "./FaqContainer";
+import FaqItem from "./FaqItem";
 import IndustryItem from "./IndustryItem";
 export {
   B2BHero,
@@ -29,4 +30,5 @@ export {
   B2Benefit,
   B2BFaq,
   FaqContainer,
+  FaqItem,
 };
