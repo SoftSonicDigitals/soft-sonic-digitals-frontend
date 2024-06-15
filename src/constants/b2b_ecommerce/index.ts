@@ -23,6 +23,12 @@ const B2B_PORTAL_DESCRIPTION =
   "We've successfully launched over 100 online enterprises in countries like the United States, Australia, and the United Kingdom. You can rely on us to deliver because of our expertise in professional eCommerce website and app development services.\n\nView our more than 100+ completed projects of our eCommerce development and our ecommerce programmers team's remarkable attention to detail and unique skills. Take a look at our impressive portfolio of happy clients.";
 const B2B_INDUSTRIES_HEADING =
   "Our B2B commerce solutions cover the following industries";
+
+const B2B_BENEFIT_HEADING =
+  "Benefits that will keep your business always ahead";
+const B2B_BENEFIT_DESCRIPTION =
+  "Empower your team with modern & headless b2b commerce platforms, built for handling vast catalogues, account-level pricing, shipping and fulfilment options across branches, and more, all while exceeding your customers' expectations.";
+
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -36,4 +42,6 @@ export {
   B2B_PORTFOLIO_HEADING,
   B2B_PORTAL_DESCRIPTION,
   B2B_INDUSTRIES_HEADING,
+  B2B_BENEFIT_HEADING,
+  B2B_BENEFIT_DESCRIPTION,
 };
