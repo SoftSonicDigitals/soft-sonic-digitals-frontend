@@ -5,6 +5,7 @@ import B2BHeroInfo from "./B2BHeroInfo";
 import B2BIndustries from "./B2BIndustries";
 import B2BPortal from "./B2BPortal";
 import B2BPortfolio from "./B2BPortfolio";
+import B2Benefit from "./B2Benefit";
 import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
@@ -24,4 +25,5 @@ export {
   B2BPortfolio,
   B2BIndustries,
   IndustryItem,
+  B2Benefit,
 };

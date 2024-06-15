@@ -4,6 +4,7 @@ import {
   B2BIndustries,
   B2BPortal,
   B2BPortfolio,
+  B2Benefit,
 } from "@/components/B2BEcommerceComponent";
 import B2BDigitizationReasons from "@/components/B2BEcommerceComponent/B2BDigitizationReasons";
 import { Clients } from "@/components/Clients";
@@ -21,6 +22,7 @@ const page = () => {
       <Clients />
       <B2BPortfolio />
       <B2BIndustries />
+      <B2Benefit />
     </main>
   );
 };
