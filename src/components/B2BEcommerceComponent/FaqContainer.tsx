@@ -7,7 +7,7 @@ import useDropDown from "@/hooks/useDropDown";
 const FaqContainer = () => {
   const { toggle, isOpen, selected } = useDropDown();
   return (
-    <div>
+    <div className=" sm:px-8 lg:px-20">
       {B2B_FAQ_LIST.map(({ answer, question }, index) => (
         <FaqItem
           answer={answer}

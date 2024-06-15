@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { Collapse } from "react-collapse";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 
 type FaqItemProps = {
@@ -37,9 +39,11 @@ const FaqItem = ({
         <div className="flex items-center gap-4 mb-2 md:mb-4">
           {!isItemOpen(itemSelected, index) ? <FaPlus /> : <FaMinus />}
 
-          <p className="text-base md:text-xl  font-[600]">{question}</p>
+          <p className="text-base md:text-xl  font-[700]">{question}</p>
         </div>
-        {isItemOpen(itemSelected, index) && renderAnswer}
+        <Collapse isOpened={isItemOpen(itemSelected, index)}>
+          {isItemOpen(itemSelected, index) && renderAnswer}
+        </Collapse>
       </div>
     </div>
   );
