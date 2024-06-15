@@ -2,6 +2,7 @@ import {
   B2BDigitalEcommerceInfo,
   B2BDigitizationList,
   B2BDropdownList,
+  B2BFaqList,
   B2BIndustriesType,
 } from "@/models/b2b";
 
@@ -170,5 +171,66 @@ export const B2B_BENEFIT_LIST: B2BDropdownList = [
     description:
       "Provide customers with self-service tools and guided purchase experiences that are similar to the ones in B2C. To increase efficiencies, manage both B2C and B2B from one platform.",
     iconPath: "/b2b/icons/Reduce-your-serving-costs.png",
+  },
+];
+
+export const B2B_FAQ_LIST: B2BFaqList = [
+  {
+    question: "What is B2B eCommerce?",
+    answer:
+      "B2B stands for business-to-business, and B2B commerce refers to companies selling items to other companies. Many businesses sell to both businesses and consumers via eCommerce.",
+  },
+  {
+    question: "What is B2B eCommerce?",
+    answer: [
+      "Maintain customer expectations: B2B buyers are increasingly likely to be digitally knowledgeable and expect to be able to purchase through digital channels.",
+      "Increase revenue: Compared to typical B2B sales, you can make more sales with a lower LOE.",
+      "Expand your capabilities so that more businesses can learn about your brand and purchase your product.",
+      "Expand your sales territory by swiftly launching sites in additional states or countries.",
+      "Faster Product Launch: New product and service information spreads faster than conventional word of mouth.",
+    ],
+  },
+  {
+    question: "What Are the Most Important B2B eCommerce Features?",
+    answer:
+      "Account administration, role-based access control, account-specific catalogues, negotiated pricing, product & service bundling, product configurators, support for rapid order, bulk order, and reorder, flexible promotion, quotation, and more are all aspects that B2B companies search for. B2B companies, in general, require the ability to manage various and extensive catalogues.",
+  },
+  {
+    question:
+      "Why should I hire Magneto for B2B Headless eCommerce Development?",
+    answer:
+      "Our team of developers worked on several B2B eCommerce website designs for some of the most thriving online businesses. Bringing us onboard gives you the opportunity to tap into this wealth of experience and also a guarantee that you will find solutions that match your business goals.",
+  },
+  {
+    question:
+      "Why should I hire Magneto for B2B Headless eCommerce Development?",
+    answer:
+      "Our team of developers worked on several B2B eCommerce website designs for some of the most thriving online businesses. Bringing us onboard gives you the opportunity to tap into this wealth of experience and also a guarantee that you will find solutions that match your business goals.",
+  },
+  {
+    question:
+      "Will I be offered Enterprise Resource Planning (ERP) integration?",
+    answer:
+      "Yes. Our B2B commerce solutions integrate seamlessly with your existing business tools. We will connect in-house solutions, ERP, and supply chain inventory to maintain fast and efficient performance. You will also be able to control the entire customer experience, from variable product images to specialised discounts and upselling.",
+  },
+  {
+    question: "Can you integrate third party payment solutions?",
+    answer:
+      "Yes. Our B2B eCommerce developers integrate payment solutions such as credit and debit cards, PayPal, and other third-party gateways to receive payment from customers.",
+  },
+  {
+    question: "How much does B2B eCommerce website design cost?",
+    answer:
+      "The total cost would depend on the number of features such as the platform to be used, the interaction capabilities and the potential customer base. For this reason, we can only provide you with an estimated budget after the initial B2B website design consultation.",
+  },
+  {
+    question: "Will the solution work perfectly on mobile?",
+    answer:
+      "Yes. We also develop native mobile versions of your Headless B2B eCommerce solutions, allowing you to sell to customers irrespective of the device they use.",
+  },
+  {
+    question: "Can you upgrade an existing B2B eCommerce Website?",
+    answer:
+      "Yes. Aside from building Headless b2b commerce platforms from scratch, we can also upgrade and optimise existing ones to meet your expectations. If you need help boosting the performance of your website or want to introduce new features, feel free to get in touch with us.",
   },
 ];
