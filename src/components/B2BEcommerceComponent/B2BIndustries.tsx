@@ -1,5 +1,4 @@
 import { B2B_INDUSTRIES } from "@/prototypes/b2b";
-import Image from "next/image";
 import React from "react";
 import IndustryItem from "./IndustryItem";
 import { B2B_INDUSTRIES_HEADING } from "@/constants/b2b_ecommerce";

@@ -8,7 +8,7 @@ type IndustryItemProps = {
 
 const IndustryItem = ({ title, iconPath }: IndustryItemProps) => {
   return (
-    <div className="flex-col  flex-center w-[175px] lg:w-[155px] xl:w-[175px] h-[200px] border-[1.5px] border-gray-100">
+    <div className="flex-col  flex-center max-w-[175px]  lg:w-[155px] xl:w-[175px] h-[200px] border-[1.5px] border-gray-100">
       <Image
         src={iconPath}
         alt={title}
