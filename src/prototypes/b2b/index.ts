@@ -103,3 +103,38 @@ export const B2B_PORTAL_LIST: B2BDropdownList = [
       "We offer master data management solutions that are scalable and flexible by utilising adaptable data models. Our clients in the B2B manufacturing and distribution sector can manage their B2B data accurately and conveniently in one place with other company data thanks to our expertise in master data management.",
   },
 ];
+
+export const B2B_INDUSTRIES = [
+  {
+    title: "Manufacturing",
+    iconPath: "/b2b/icons/1.png",
+  },
+  {
+    title: "Distribution & Dealerships",
+    iconPath: "/b2b/icons/2.png",
+  },
+  {
+    title: "Wholesale & Retail",
+    iconPath: "/b2b/icons/3.png",
+  },
+  {
+    title: "FMCG",
+    iconPath: "/b2b/icons/4.png",
+  },
+  {
+    title: "Medical Supplies",
+    iconPath: "/b2b/icons/5.png",
+  },
+  {
+    title: "Automotive",
+    iconPath: "/b2b/icons/6.png",
+  },
+  {
+    title: "Wine & Spirit",
+    iconPath: "/b2b/icons/7.png",
+  },
+  {
+    title: "eCommerce",
+    iconPath: "/b2b/icons/8.png",
+  },
+];
