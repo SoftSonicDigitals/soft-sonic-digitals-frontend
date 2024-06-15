@@ -6,15 +6,15 @@ const B2BIndustries = () => {
   return (
     <section id="b2b_industries">
       <div className="wrapper_container mb-24">
-        <div className="flex-center  gap-6 px-10">
-          <p className="text-3xl basis-[30%]">
+        <div className="flex-center  gap-6 ">
+          <p className="text-4xl font-[500] basis-[30%] text-gray-800 tracking-wide">
             Our B2B commerce solutions cover the following industries
           </p>
-          <div className="grid grid-cols-4  border-2 p-4 ">
+          <div className="grid grid-cols-4   p-4 ">
             {B2B_INDUSTRIES.map(({ title, iconPath }, index) => (
               <div
                 key={index}
-                className="flex-col flex-center w-[175px] h-[200px]"
+                className="flex-col flex-center w-[175px] h-[200px] border-[1.5px]"
               >
                 <Image
                   src={iconPath}
@@ -23,7 +23,9 @@ const B2BIndustries = () => {
                   height={72}
                   className="mb-6"
                 />
-                <p className="text-center mb-6">{title}</p>
+                <p className="text-center text-lg mb-6 font-[500] text-gray-800">
+                  {title}
+                </p>
               </div>
             ))}
           </div>
