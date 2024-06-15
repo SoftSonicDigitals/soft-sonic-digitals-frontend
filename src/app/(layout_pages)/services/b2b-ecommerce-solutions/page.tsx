@@ -1,5 +1,6 @@
 import {
   B2BDigitalEcommerce,
+  B2BFaq,
   B2BHero,
   B2BIndustries,
   B2BPortal,
@@ -23,6 +24,7 @@ const page = () => {
       <B2BPortfolio />
       <B2BIndustries />
       <B2Benefit />
+      <B2BFaq />
     </main>
   );
 };

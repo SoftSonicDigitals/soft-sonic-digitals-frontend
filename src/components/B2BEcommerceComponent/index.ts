@@ -1,5 +1,6 @@
 import B2BDigitalEcommerce from "./B2BDigitalEcommerce";
 import B2BDigitalEcommerceDetails from "./B2BDigitalEcommerceDetails";
+import B2BFaq from "./B2BFaq";
 import B2BHero from "./B2BHero";
 import B2BHeroInfo from "./B2BHeroInfo";
 import B2BIndustries from "./B2BIndustries";
@@ -26,4 +27,5 @@ export {
   B2BIndustries,
   IndustryItem,
   B2Benefit,
+  B2BFaq,
 };
