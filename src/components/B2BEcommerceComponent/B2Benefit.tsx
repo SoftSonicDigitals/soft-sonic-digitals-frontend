@@ -20,7 +20,7 @@ const B2Benefit = () => {
           </p>
         </div>
 
-        <div className="flex-col md:flex-row flex items-start justify-center gap-10 lg:gap-16">
+        <div className="flex-col-reverse sm:flex-col md:flex-row flex items-start justify-center gap-10 lg:gap-16">
           <DropdownMenu dropDownList={B2B_BENEFIT_LIST} />
           <div className="basis-full mx-auto">
             <Image
