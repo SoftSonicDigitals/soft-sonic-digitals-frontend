@@ -52,7 +52,7 @@ const config: Config = {
         900: "#212529",
         950: "#212121",
       },
-      orange: { DEFAULT: "#F6702D", 100: "#fff8f2" },
+      orange: { DEFAULT: "#F6702D", 100: "#fff8f2", 600: "#ed4c37" },
       pink: "#e83556",
       black: "#000000",
       green: "#f0fcfa",
