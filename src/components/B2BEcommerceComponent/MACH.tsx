@@ -1,5 +1,6 @@
 import { B2B_MACH, B2B_MACH_DESCRIPTION } from "@/constants/b2b_ecommerce";
 import React from "react";
+import MACHInfo from "./MACHInfo";
 
 const MACH = () => {
   return (
@@ -11,6 +12,7 @@ const MACH = () => {
             {B2B_MACH_DESCRIPTION}
           </p>
         </div>
+        <MACHInfo />
       </div>
     </section>
   );
