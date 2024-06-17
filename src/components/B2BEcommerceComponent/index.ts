@@ -14,6 +14,8 @@ import DropdownMenuItem from "./DropdownMenuItem";
 import FaqContainer from "./FaqContainer";
 import FaqItem from "./FaqItem";
 import IndustryItem from "./IndustryItem";
+import MACH from "./MACH";
+
 export {
   B2BHero,
   B2BHeroInfo,
@@ -31,4 +33,5 @@ export {
   B2BFaq,
   FaqContainer,
   FaqItem,
+  MACH,
 };
