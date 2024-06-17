@@ -28,6 +28,12 @@ const B2B_BENEFIT_HEADING =
   "Benefits that will keep your business always ahead";
 const B2B_BENEFIT_DESCRIPTION =
   "Empower your team with modern & headless b2b commerce platforms, built for handling vast catalogues, account-level pricing, shipping and fulfilment options across branches, and more, all while exceeding your customers' expectations.";
+
+const B2B_MACH = "Get lean with MACH-powered B2B ecommerce solution";
+
+const B2B_MACH_DESCRIPTION =
+  "Get Lean and be smarter with MACH architecture. With rapidly changing industry trends, it's always better to have a high level of power and flexibility to fulfil today's and tomorrow's client needs. Microservices-based, API-first, cloud-native, and headless technologies that make up the MACH foundation provide a genuinely open, customizable environment that enables businesses to embrace innovation and respond to change proactively.";
+
 const B2B_FAQ_HEADING = "Frequently asked questions";
 export {
   B2B_HERO_HEADING,
@@ -45,4 +51,6 @@ export {
   B2B_BENEFIT_HEADING,
   B2B_BENEFIT_DESCRIPTION,
   B2B_FAQ_HEADING,
+  B2B_MACH,
+  B2B_MACH_DESCRIPTION,
 };
