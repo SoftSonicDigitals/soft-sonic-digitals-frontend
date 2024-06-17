@@ -234,3 +234,26 @@ export const B2B_FAQ_LIST: B2BFaqList = [
       "Yes. Aside from building Headless b2b commerce platforms from scratch, we can also upgrade and optimise existing ones to meet your expectations. If you need help boosting the performance of your website or want to introduce new features, feel free to get in touch with us.",
   },
 ];
+
+export const B2B_MACH_FEATURES = [
+  {
+    title: "Microservices",
+    description:
+      "Microservices are industry-specific capabilities that are developed and managed by their own teams. Microservices can be hosted separately, allowing for faster updates and access to new capabilities.",
+  },
+  {
+    title: "API-first",
+    description:
+      "APIs are crucial in many advanced systems for connecting information between users. Our APIs are robust — they perform efficiently, consistently, and reliably — and fully documented, as the Magneto’s Headless eCommerce Solutions are built with APIs as a critical priority.",
+  },
+  {
+    title: "Cloud-native",
+    description:
+      "Magneto’s b2b ecommerce solutions have endless scalability, no environments, no upgrades, and the freedom to extend and modify the commerce experience to meet the demands and behaviours of your customers. The managed infrastructure supports low TCO by providing dependability, scalability, and flexibility.",
+  },
+  {
+    title: "Headless",
+    description:
+      "The separation of the backend and frontend is referred to as headless commerce. With Magneto, you would be able to work more freely and quickly without being bound to specific channels or a single software stack. This newfound independence allows you to reach out to customers through new channels and generate more income.",
+  },
+];
