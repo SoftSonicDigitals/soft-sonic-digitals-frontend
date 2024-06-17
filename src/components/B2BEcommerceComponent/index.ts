@@ -15,7 +15,7 @@ import FaqContainer from "./FaqContainer";
 import FaqItem from "./FaqItem";
 import IndustryItem from "./IndustryItem";
 import MACH from "./MACH";
-
+import MACHInfo from "./MACHInfo";
 export {
   B2BHero,
   B2BHeroInfo,
@@ -34,4 +34,5 @@ export {
   FaqContainer,
   FaqItem,
   MACH,
+  MACHInfo,
 };
