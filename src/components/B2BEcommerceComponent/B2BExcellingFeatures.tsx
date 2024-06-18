@@ -6,8 +6,8 @@ const B2BExcellingFeatures = () => {
   return (
     <section id="b2b_excelling_features" className="bg-white-100 py-20 mb-24">
       <div className="wrapper_container ">
-        <div className="flex-center gap-20 mb-16">
-          <h1 className="section_heading mb-4   !w-[488px] flex-shrink-0">
+        <div className="flex-center gap-24 mb-24">
+          <h1 className="section_heading mb-4   !w-[488px] flex-shrink-0 px-3">
             Grow how you want with excelling features
           </h1>
           <p className="section_description  ">
@@ -19,13 +19,13 @@ const B2BExcellingFeatures = () => {
           </p>
         </div>
 
-        <div className="flex-center gap-20 mb-16">
+        <div className="flex-center gap-20 ">
           <Image
             src="/b2b/excelling_features.png"
             alt="excelling features"
             width={488}
             height={396}
-            className="basis-2/5 "
+            className="basis-2/5 self-start"
           />
           <ExcellingFeaturesContainer />
         </div>
