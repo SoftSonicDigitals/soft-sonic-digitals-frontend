@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import ExcellingFeaturesContainer from "./ExcellingFeaturesContainer";
 
 const B2BExcellingFeatures = () => {
   return (
@@ -26,8 +27,7 @@ const B2BExcellingFeatures = () => {
             height={396}
             className="basis-2/5 "
           />
-
-          <div className="basis-3/5 bg-white"></div>
+          <ExcellingFeaturesContainer />
         </div>
       </div>
     </section>
