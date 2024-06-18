@@ -13,7 +13,10 @@ import {
 import B2BDigitizationReasons from "@/components/B2BEcommerceComponent/B2BDigitizationReasons";
 import { Clients } from "@/components/Clients";
 import { ResultsDelivered } from "@/components/ResultsDelivered";
-import { EcommerceProjectBanner } from "@/components/Reusable";
+import {
+  EcommerceProjectBanner,
+  RequestProposalBtn,
+} from "@/components/Reusable";
 import React from "react";
 
 const page = () => {
@@ -33,6 +36,7 @@ const page = () => {
       <B2BCommerceBanner />
       <B2BFaq />
       <EcommerceProjectBanner />
+      <RequestProposalBtn />
     </main>
   );
 };

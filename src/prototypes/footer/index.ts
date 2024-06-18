@@ -42,7 +42,7 @@ export const FOOTER_LINKS: FooterLinksType = [
     title: "Expertise",
     links: [
       { title: "B2C eCommerce", link: "/services/b2c-retail-ecommerce" },
-      { title: "B2B eCommerce", link: "/" },
+      { title: "B2B eCommerce", link: "/services/b2b-ecommerce-solutions" },
       { title: "Marketplace", link: "/" },
       { title: "Headless Commerce", link: "/" },
       { title: "Mobile Commerce", link: "/" },
