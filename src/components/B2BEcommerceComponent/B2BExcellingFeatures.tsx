@@ -1,6 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import ExcellingFeaturesContainer from "./ExcellingFeaturesContainer";
+import {
+  B2B_EXCELLING_FEATURES_DESCRIPTION,
+  B2B_EXCELLING_FEATURES_HEADING,
+} from "@/constants/b2b_ecommerce";
 
 const B2BExcellingFeatures = () => {
   return (
@@ -8,14 +12,10 @@ const B2BExcellingFeatures = () => {
       <div className="wrapper_container ">
         <div className="flex-center gap-24 mb-24">
           <h1 className="section_heading mb-4   !w-[488px] flex-shrink-0 px-3">
-            Grow how you want with excelling features
+            {B2B_EXCELLING_FEATURES_HEADING}
           </h1>
           <p className="section_description  ">
-            When you avail our B2B website development services, you get robust
-            B2B marketplaces, websites etc. with a comprehensive set of features
-            which are ready to take your business to new heights. We have
-            designed our solution so that it can be used with any B2B eCommerce
-            company model at any time.
+            {B2B_EXCELLING_FEATURES_DESCRIPTION}
           </p>
         </div>
 
