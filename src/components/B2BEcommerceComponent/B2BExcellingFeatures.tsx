@@ -20,7 +20,7 @@ const B2BExcellingFeatures = () => {
         </div>
 
         <div className="flex-center flex-col xl:flex-row gap-4 xl:gap-24 ">
-          <div className="w-[488px] h-[396px] flex-shrink-0 xl:self-start sticky ">
+          <div className="w-[410px] h-[360px] sm:w-[488px] sm:h-[396px] flex-shrink-0 xl:self-start sticky ">
             <Image
               src="/b2b/excelling_features.png"
               alt="excelling features"
