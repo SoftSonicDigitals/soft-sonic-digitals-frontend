@@ -13,12 +13,14 @@ import DigitizationDetails from "./DigitizationDetails";
 import DigitizationMobileLayout from "./DigitizationMobileLayout";
 import DropdownMenu from "./DropdownMenu";
 import DropdownMenuItem from "./DropdownMenuItem";
+import ExcellingFeaturesContainer from "./ExcellingFeaturesContainer";
 import FaqContainer from "./FaqContainer";
 import FaqItem from "./FaqItem";
 import IndustryItem from "./IndustryItem";
 import MACH from "./MACH";
 import MACHInfo from "./MACHInfo";
 import MACHItem from "./MACHItem";
+
 export {
   B2BHero,
   B2BHeroInfo,
@@ -41,4 +43,5 @@ export {
   MACHItem,
   B2BCommerceBanner,
   B2BExcellingFeatures,
+  ExcellingFeaturesContainer,
 };
