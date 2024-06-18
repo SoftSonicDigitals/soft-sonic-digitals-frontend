@@ -24,3 +24,8 @@ export type B2BFaqList = {
   question: string;
   answer: string | string[];
 }[];
+
+export type B2BMach = {
+  title: string;
+  description: string;
+}[];
