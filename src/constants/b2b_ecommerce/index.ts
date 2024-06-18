@@ -35,6 +35,9 @@ const B2B_MACH_DESCRIPTION =
   "Get Lean and be smarter with MACH architecture. With rapidly changing industry trends, it's always better to have a high level of power and flexibility to fulfil today's and tomorrow's client needs. Microservices-based, API-first, cloud-native, and headless technologies that make up the MACH foundation provide a genuinely open, customizable environment that enables businesses to embrace innovation and respond to change proactively.";
 
 const B2B_FAQ_HEADING = "Frequently asked questions";
+
+const B2B_BANNER_MSG =
+  "Are you ready to take your business to next level? Avail our B2B commerce services now!";
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -53,4 +56,5 @@ export {
   B2B_FAQ_HEADING,
   B2B_MACH,
   B2B_MACH_DESCRIPTION,
+  B2B_BANNER_MSG,
 };

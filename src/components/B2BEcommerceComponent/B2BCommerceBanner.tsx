@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { ContactUs } from "../Navbar";
+import { B2B_BANNER_MSG } from "@/constants/b2b_ecommerce";
 
 const B2BCommerceBanner = () => {
   return (
@@ -16,8 +17,7 @@ const B2BCommerceBanner = () => {
           />
           <div className="px-4 lg:px-16 text-center lg:text-left">
             <p className="text-[1.65rem] md:text-[2rem] font-[600] text-gray-800  !leading-normal mb-3">
-              Are you ready to take your business to next level? Avail our B2B
-              commerce services now!
+              {B2B_BANNER_MSG}
             </p>
             <ContactUs buttonStyles="px-7 py-2.5 text-base" />
           </div>
