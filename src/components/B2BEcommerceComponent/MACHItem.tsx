@@ -5,7 +5,7 @@ type MACHItemProps = {
 };
 const MACHItem = ({ title, description }: MACHItemProps) => {
   return (
-    <div className="flex-center flex-col sm:flex-row  sm:gap-12 mb-6 md:mb-16 text-gray-900 last:mb-0">
+    <div className="flex-center flex-col sm:flex-row  sm:gap-12 mb-6 md:mb-16 text-gray-900 last:mb-5">
       <div className="text-[4rem] font-[700] w-[52.5px] text-orange-600 ">
         {title.slice(0, 1)}
       </div>
