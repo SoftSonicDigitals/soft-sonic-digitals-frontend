@@ -258,3 +258,46 @@ export const B2B_MACH_FEATURES: B2BMach = [
       "The separation of the backend and frontend is referred to as headless commerce. With Magneto, you would be able to work more freely and quickly without being bound to specific channels or a single software stack. This newfound independence allows you to reach out to customers through new channels and generate more income.",
   },
 ];
+
+export const B2B_EXCELLING_FEATURES = [
+  {
+    title: "Quote",
+    description:
+      "Depending on their role, buyers and sellers can develop, request, and negotiate quotations on Headless b2b ecommerce platform",
+  },
+  {
+    title: " Management of Multiple Site",
+    description:
+      "Follow a productive, time-saving, and cost-efficient approach for your business, and manage sites for both B2C and B2B eCommerce from a single platform.",
+  },
+  {
+    title: "B2B Payments",
+    description:
+      "Payment alternatives that are both convenient and secure, with pre-integrated payment gateways and PCI-compliant credit card storage.",
+  },
+  {
+    title: "Pricing and Promotions by Account",
+    description:
+      "Establish B2B account-level pricing and handle price and offers by product, category, customer segment, or account with ease.",
+  },
+  {
+    title: "Corporate Accounts that are Self-Serviced",
+    description:
+      "Throughout the buyer experience, the buyer can request an account, manage users, seek quotations, and convert quotes to orders without the involvement of a salesperson.",
+  },
+  {
+    title: "Favourite Lists & Quick Orders",
+    description:
+      "Add products to wish lists as reminders for future orders and place recurring orders.",
+  },
+  {
+    title: "Launch Instantly in the market",
+    description:
+      "Deliver personalised experiences quickly to meet Buyer's self-service purchasing expectations.",
+  },
+  {
+    title: "Solve the challenges of B2B selling",
+    description:
+      "With Features like bulk and reorders, account management, customer-specific pricing, product bundles, AI-driven search, and more make buying easier.",
+  },
+];
