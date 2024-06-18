@@ -2,6 +2,7 @@ import {
   B2BDigitalEcommerceInfo,
   B2BDigitizationList,
   B2BDropdownList,
+  B2BExcellingFeatures,
   B2BFaqList,
   B2BIndustriesType,
   B2BMach,
@@ -259,7 +260,7 @@ export const B2B_MACH_FEATURES: B2BMach = [
   },
 ];
 
-export const B2B_EXCELLING_FEATURES = [
+export const B2B_EXCELLING_FEATURES: B2BExcellingFeatures = [
   {
     title: "Quote",
     description:

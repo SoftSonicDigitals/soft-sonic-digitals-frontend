@@ -29,3 +29,8 @@ export type B2BMach = {
   title: string;
   description: string;
 }[];
+
+export type B2BExcellingFeatures = {
+  title: string;
+  description: string;
+}[];
