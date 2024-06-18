@@ -1,4 +1,5 @@
 import {
+  B2BCommerceBanner,
   B2BDigitalEcommerce,
   B2BFaq,
   B2BHero,
@@ -27,6 +28,7 @@ const page = () => {
       <B2Benefit />
       <MACH />
       <B2BFaq />
+      <B2BCommerceBanner />
     </main>
   );
 };
