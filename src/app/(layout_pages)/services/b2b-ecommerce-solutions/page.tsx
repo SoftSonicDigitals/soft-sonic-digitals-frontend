@@ -27,8 +27,8 @@ const page = () => {
       <B2BIndustries />
       <B2Benefit />
       <MACH />
-      <B2BFaq />
       <B2BCommerceBanner />
+      <B2BFaq />
     </main>
   );
 };
