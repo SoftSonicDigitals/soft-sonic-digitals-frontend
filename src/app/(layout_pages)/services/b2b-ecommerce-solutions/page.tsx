@@ -1,6 +1,7 @@
 import {
   B2BCommerceBanner,
   B2BDigitalEcommerce,
+  B2BExcellingFeatures,
   B2BFaq,
   B2BHero,
   B2BIndustries,
@@ -21,6 +22,7 @@ const page = () => {
       <B2BHero />
       <B2BDigitalEcommerce />
       <B2BDigitizationReasons />
+      <B2BExcellingFeatures />
       <B2BPortal />
       <ResultsDelivered sectionStyles="bg-white-100 py-16" />
       <Clients />
