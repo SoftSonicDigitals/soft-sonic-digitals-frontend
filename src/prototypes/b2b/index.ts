@@ -4,6 +4,7 @@ import {
   B2BDropdownList,
   B2BFaqList,
   B2BIndustriesType,
+  B2BMach,
 } from "@/models/b2b";
 
 export const B2B_DIGITAL_ECOMMERCE_INFO: B2BDigitalEcommerceInfo = {
@@ -235,7 +236,7 @@ export const B2B_FAQ_LIST: B2BFaqList = [
   },
 ];
 
-export const B2B_MACH_FEATURES = [
+export const B2B_MACH_FEATURES: B2BMach = [
   {
     title: "Microservices",
     description:
