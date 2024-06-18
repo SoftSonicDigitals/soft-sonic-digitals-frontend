@@ -7,7 +7,10 @@ import {
 } from "@/components/B2CEcommerceComponent";
 import B2CaseStudy from "@/components/B2CEcommerceComponent/B2CaseStudy";
 import { Clients } from "@/components/Clients";
-import { EcommerceProjectBanner } from "@/components/Reusable";
+import {
+  EcommerceProjectBanner,
+  RequestProposalBtn,
+} from "@/components/Reusable";
 import React from "react";
 
 const page = () => {
@@ -21,6 +24,7 @@ const page = () => {
       <Clients />
       <B2CaseStudy />
       <EcommerceProjectBanner verticalPadding="py-8 lg:py-12" />
+      <RequestProposalBtn />
     </main>
   );
 };
