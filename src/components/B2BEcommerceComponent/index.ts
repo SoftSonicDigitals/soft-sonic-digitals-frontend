@@ -1,3 +1,4 @@
+import B2BCommerceBanner from "./B2BCommerceBanner";
 import B2BDigitalEcommerce from "./B2BDigitalEcommerce";
 import B2BDigitalEcommerceDetails from "./B2BDigitalEcommerceDetails";
 import B2BFaq from "./B2BFaq";
@@ -37,4 +38,5 @@ export {
   MACH,
   MACHInfo,
   MACHItem,
+  B2BCommerceBanner,
 };
