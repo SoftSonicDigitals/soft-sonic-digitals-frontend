@@ -5,7 +5,7 @@ import { B2B_BANNER_MSG } from "@/constants/b2b_ecommerce";
 
 const B2BCommerceBanner = () => {
   return (
-    <section id="b2b_commerce_banner" className="bg-orange-100 mb-24">
+    <section id="b2b_commerce_banner" className="bg-orange-100 mb-12 md:mb-24">
       <div className="wrapper_container ">
         <div className="flex-center flex-col md:flex-row gap-6 lg:gap-10 py-10 lg:py-0">
           <Image
