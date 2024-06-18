@@ -1,4 +1,5 @@
 "use client";
+
 import { CONTACT_TESTIMONIALS } from "@/prototypes/contact_page";
 import { TestimonialCard } from ".";
 import "slick-carousel/slick/slick.css";

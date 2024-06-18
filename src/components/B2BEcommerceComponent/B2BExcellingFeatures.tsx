@@ -10,8 +10,8 @@ const B2BExcellingFeatures = () => {
   return (
     <section id="b2b_excelling_features" className="bg-white-100 py-20 mb-24">
       <div className="wrapper_container ">
-        <div className="flex-center gap-24 mb-24">
-          <h1 className="section_heading mb-4   !w-[488px] flex-shrink-0 px-3">
+        <div className="flex-center flex-col xl:flex-row gap-4 xl:gap-24 mb-12 xl:mb-24 text-center md:text-left">
+          <h1 className="section_heading mb-4 xl:w-[488px] flex-shrink-0 px-3">
             {B2B_EXCELLING_FEATURES_HEADING}
           </h1>
           <p className="section_description  ">
@@ -19,14 +19,14 @@ const B2BExcellingFeatures = () => {
           </p>
         </div>
 
-        <div className="flex-center gap-20 ">
-          <Image
-            src="/b2b/excelling_features.png"
-            alt="excelling features"
-            width={488}
-            height={396}
-            className="basis-2/5 self-start"
-          />
+        <div className="flex-center flex-col xl:flex-row gap-4 xl:gap-24 ">
+          <div className="w-[488px] h-[396px] flex-shrink-0 xl:self-start sticky ">
+            <Image
+              src="/b2b/excelling_features.png"
+              alt="excelling features"
+              fill
+            />
+          </div>
           <ExcellingFeaturesContainer />
         </div>
       </div>
