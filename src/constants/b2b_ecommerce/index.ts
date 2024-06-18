@@ -38,6 +38,12 @@ const B2B_FAQ_HEADING = "Frequently asked questions";
 
 const B2B_BANNER_MSG =
   "Are you ready to take your business to next level? Avail our B2B commerce services now!";
+
+const B2B_EXCELLING_FEATURES_HEADING =
+  "Grow how you want with excelling features";
+
+const B2B_EXCELLING_FEATURES_DESCRIPTION =
+  "When you avail our B2B website development services, you get robust B2B marketplaces, websites etc. with a comprehensive set of features which are ready to take your business to new heights. We have designed our solution so that it can be used with any B2B eCommerce company model at any time.";
 export {
   B2B_HERO_HEADING,
   B2B_HERO_DESCRIPTION,
@@ -57,4 +63,6 @@ export {
   B2B_MACH,
   B2B_MACH_DESCRIPTION,
   B2B_BANNER_MSG,
+  B2B_EXCELLING_FEATURES_HEADING,
+  B2B_EXCELLING_FEATURES_DESCRIPTION,
 };
