@@ -39,6 +39,7 @@ const Reveal = ({ children, index = null }: RevealProps) => {
       whileInView="animate"
       viewport={{ once: true }}
       custom={index}
+      // added class group since its wraps the div and makes the first and last tailwind classes invalid
       className="group"
     >
       {children}

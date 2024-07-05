@@ -2,6 +2,7 @@ import { CASE_STUDIES } from "@/prototypes/case_studies";
 import React from "react";
 import CaseStudy from "./CaseStudy";
 import { ViewAllBtn } from "../Reusable";
+import Reveal from "../Animation/Reveal";
 
 type CaseStudiesLayoutProps = {
   showInfo?: boolean;
@@ -35,17 +36,18 @@ const CaseStudiesLayout = ({
               { title, link, imageName, id, description, caseStudyPhrase },
               index
             ) => (
-              <CaseStudy
-                title={title}
-                link={link}
-                imageName={imageName}
-                index={index}
-                key={id}
-                description={description}
-                showInfo={showInfo}
-                caseStudyPhrase={caseStudyPhrase}
-                alignment={alignment}
-              />
+              <Reveal index={index} key={id}>
+                <CaseStudy
+                  title={title}
+                  link={link}
+                  imageName={imageName}
+                  index={index}
+                  description={description}
+                  showInfo={showInfo}
+                  caseStudyPhrase={caseStudyPhrase}
+                  alignment={alignment}
+                />
+              </Reveal>
             )
           )}
         </div>
@@ -53,7 +55,9 @@ const CaseStudiesLayout = ({
 
       {showAllButton && (
         <div className="mt-16">
-          <ViewAllBtn />
+          <Reveal>
+            <ViewAllBtn />
+          </Reveal>
         </div>
       )}
     </>

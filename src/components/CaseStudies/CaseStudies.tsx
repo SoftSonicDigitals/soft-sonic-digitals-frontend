@@ -5,17 +5,20 @@ import {
   CASE_STUDIES_HEADING,
   CASE_STUDIES_SUBHEADING,
 } from "@/constants/case_studies";
+import Reveal from "../Animation/Reveal";
 
 const CaseStudies = () => {
   return (
     <section id="case_studies">
       <div className="wrapper_container mb-24">
-        <PrimaryStyledHeadings
-          mainHeading={CASE_STUDIES_HEADING}
-          subHeading={CASE_STUDIES_SUBHEADING}
-          mainHeadingStyles="mx-4"
-          containerStyles="mb-16 gap-4 px-5 md:px-8"
-        />
+        <Reveal>
+          <PrimaryStyledHeadings
+            mainHeading={CASE_STUDIES_HEADING}
+            subHeading={CASE_STUDIES_SUBHEADING}
+            mainHeadingStyles="mx-4"
+            containerStyles="mb-16 gap-4 px-5 md:px-8"
+          />
+        </Reveal>
 
         <CaseStudiesLayout showAllButton={true} />
       </div>
