@@ -5,16 +5,27 @@ import React, { ReactNode, useEffect, useRef } from "react";
 
 type RevealProps = {
   children: ReactNode;
-  width?: "fit-content" | "100%";
+  index?: number | null;
 };
 
-const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
+const fadeInAnimationVariants = {
+  initial: { opacity: 0, y: 100 },
+  animate: (index: number | null) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index !== null ? 0.12 * index : 0.175,
+      duration: 0.4,
+    },
+  }),
+};
+
+const Reveal = ({ children, index = null }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
   const slideControls = useAnimation();
   useEffect(() => {
-    console.log("view", isInView);
     if (isInView) {
       mainControls.start("visible");
       slideControls.start("visible");
@@ -22,26 +33,16 @@ const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
   }, [isInView]);
 
   return (
-    <div
-      ref={ref}
-      style={{
-        position: "relative",
-        width,
-        overflow: "hidden",
-      }}
+    <motion.div
+      variants={fadeInAnimationVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+      custom={index}
+      className="group"
     >
-      <motion.div
-        variants={{
-          hidden: { opacity: 0, y: 75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-      >
-        {children}
-      </motion.div>
-    </div>
+      {children}
+    </motion.div>
   );
 };
 
