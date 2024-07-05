@@ -5,9 +5,9 @@ import { SideMenu, Platforms, Resources, Solutions, ContactUs } from ".";
 
 const Navbar = () => {
   return (
-    <nav className="shadow-md fixed w-full bg-white z-[999]">
+    <nav className="shadow-md fixed w-full bg-white z-[999] ">
       <div
-        className="wrapper_container flex justify-between
+        className="wrapper_container flex justify-between py-2
        "
       >
         <Link href={"/"}>
@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex-center gap-12">
-          <div className="flex-center gap-8 font-[700] tracking-wide h-full ">
+          <div className="hidden lg:flex item-center justify-center gap-8 font-[700] tracking-wide h-full   ">
             <Solutions />
             <Platforms />
             <Resources />
