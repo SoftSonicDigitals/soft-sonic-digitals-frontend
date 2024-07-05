@@ -1,29 +1,50 @@
 "use client";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseOutline } from "react-icons/io5";
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SideMenuLinks } from ".";
+
+// hook to close the navbar when clicked outside
+let useClickOutside = (handler: () => void) => {
+  let domNode: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  useEffect(() => {
+    let maybeHandler = (event: MouseEvent) => {
+      if (!domNode.current?.contains(event.target as Node)) {
+        handler();
+      }
+    };
+    document.addEventListener("mousedown", maybeHandler);
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+  return domNode;
+};
+
+//hook to get screen width
+let useScreenWidht = (handler: (width: number) => void) => {
+  useEffect(() => {
+    let maybeHandler = () => {
+      handler(window.innerWidth);
+    };
+
+    window.addEventListener("resize", maybeHandler);
+
+    // Initial call to set initial screenWidth state
+    maybeHandler();
+
+    // Remove event listener on component unmount
+    return () => window.removeEventListener("resize", maybeHandler);
+  });
+};
 
 const SideMenu = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
   const [screenWidth, setScreenWidth] = useState<number | null>(null);
-
-  useEffect(() => {
-    // Function to update screenWidth state
-    function handleResize() {
-      setScreenWidth(window.innerWidth);
-    }
-
-    // Add event listener to window resize
-    window.addEventListener("resize", handleResize);
-
-    // Initial call to set initial screenWidth state
-    handleResize();
-
-    // Remove event listener on component unmount
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const domeNode = useClickOutside(() => setIsNavMenuOpen(false));
+  useScreenWidht((width) => setScreenWidth(width));
 
   return (
     <>
@@ -39,6 +60,7 @@ const SideMenu = () => {
         {isNavMenuOpen && (
           <motion.div
             key="sidemenu"
+            ref={domeNode}
             initial={{ width: 0 }}
             animate={{
               width:

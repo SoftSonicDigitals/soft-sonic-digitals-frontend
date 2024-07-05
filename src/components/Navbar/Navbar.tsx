@@ -31,7 +31,9 @@ const Navbar = () => {
 
           <div className="flex-center gap-3">
             <ContactUs />
-            <SideMenu />
+            <div className="lg:hidden">
+              <SideMenu />
+            </div>
           </div>
         </div>
       </div>
