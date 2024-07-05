@@ -3,6 +3,7 @@
 import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { useRouter } from "next/navigation";
+import { CONTACT_US } from "@/constants/navbar";
 
 type ContactUsProps = {
   buttonStyles?: string;
@@ -14,7 +15,7 @@ const ContactUs = ({
   return (
     <PrimaryButton
       type="button"
-      title="CONTACT US"
+      title={CONTACT_US}
       className={buttonStyles}
       clickHandler={() => router.push("/contact")}
     />
