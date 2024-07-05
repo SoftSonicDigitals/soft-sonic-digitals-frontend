@@ -210,6 +210,6 @@ export const SIDE_MENU: SideMenuType = [
   },
   {
     title: CUSTOMER,
-    link: "/",
+    link: "/case-studies",
   },
 ];

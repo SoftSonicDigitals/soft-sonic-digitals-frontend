@@ -79,7 +79,7 @@ const SideMenu = () => {
             >
               <IoCloseOutline className="text-2xl font-[700] " />
             </button>
-            <SideMenuLinks />
+            <SideMenuLinks linkClickHandler={() => setIsNavMenuOpen(false)} />
           </motion.div>
         )}
       </AnimatePresence>
