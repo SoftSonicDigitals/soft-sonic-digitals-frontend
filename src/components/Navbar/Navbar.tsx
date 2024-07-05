@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SideMenu, Platforms, Resources, Solutions, ContactUs } from ".";
+import { CUSTOMER } from "@/constants/navbar";
 
 const Navbar = () => {
   return (
@@ -24,8 +25,11 @@ const Navbar = () => {
             <Platforms />
             <Resources />
 
-            <Link href={"/"} className="hidden lg:block text-gray-800">
-              Customer
+            <Link
+              href={"/"}
+              className="hidden lg:flex items-center justify-center text-gray-800"
+            >
+              {CUSTOMER}
             </Link>
           </div>
 

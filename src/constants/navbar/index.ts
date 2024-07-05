@@ -8,3 +8,5 @@ export const BANNER_DETAILS = {
   description:
     "Allow us to get a better understanding of your digital commerce needs.",
 };
+
+export const CONTACT_US = "CONTACT US";
