@@ -18,13 +18,14 @@ const Consultation = () => {
           />
         </Reveal>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12  xl:mx-4 2xl:mx-12 px-4 ">
-          {CONSULTATION.map(({ id, title, description, imageName }) => (
-            <ConsultationCard
-              key={id}
-              title={title}
-              description={description}
-              imageName={imageName}
-            />
+          {CONSULTATION.map(({ id, title, description, imageName }, index) => (
+            <Reveal key={id} index={index}>
+              <ConsultationCard
+                title={title}
+                description={description}
+                imageName={imageName}
+              />
+            </Reveal>
           ))}
         </div>
       </div>
