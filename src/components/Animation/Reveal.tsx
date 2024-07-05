@@ -12,11 +12,12 @@ const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-
+  const slideControls = useAnimation();
   useEffect(() => {
     console.log("view", isInView);
     if (isInView) {
       mainControls.start("visible");
+      slideControls.start("visible");
     }
   }, [isInView]);
 
@@ -31,8 +32,8 @@ const Reveal = ({ children, width = "fit-content" }: RevealProps) => {
     >
       <motion.div
         variants={{
-          hidden: { opacity: 0, x: 75 },
-          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, y: 75 },
+          visible: { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainControls}
