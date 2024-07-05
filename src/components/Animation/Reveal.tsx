@@ -6,6 +6,7 @@ import React, { ReactNode, useEffect, useRef } from "react";
 type RevealProps = {
   children: ReactNode;
   index?: number | null;
+  styles?: string;
 };
 
 const fadeInAnimationVariants = {
@@ -20,7 +21,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const Reveal = ({ children, index = null }: RevealProps) => {
+const Reveal = ({ children, index = null, styles }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -40,7 +41,7 @@ const Reveal = ({ children, index = null }: RevealProps) => {
       viewport={{ once: true }}
       custom={index}
       // added class group since its wraps the div and makes the first and last tailwind classes invalid
-      className="group"
+      className={`group ${styles}`}
     >
       {children}
     </motion.div>
