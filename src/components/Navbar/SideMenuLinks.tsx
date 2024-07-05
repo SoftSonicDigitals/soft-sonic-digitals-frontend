@@ -7,7 +7,11 @@ import { SideMenuLink } from ".";
 import Link from "next/link";
 import useDropDown from "@/hooks/useDropDown";
 
-const SideMenuLinks = () => {
+type SideMenuLinksProps = {
+  linkClickHandler: () => void;
+};
+
+const SideMenuLinks = ({ linkClickHandler }: SideMenuLinksProps) => {
   const {
     selected: selectedMenu,
     toggle: toogleMenu,
@@ -31,7 +35,9 @@ const SideMenuLinks = () => {
                 <FaMinus className="cursor-pointer" />
               ))}
             {!menu.subMenu && menu.link && (
-              <Link href={menu.link}>{menu.title}</Link>
+              <Link href={menu.link} onClick={() => linkClickHandler()}>
+                {menu.title}
+              </Link>
             )}
           </div>
           {isMenuOpen(selectedMenu, indexOfMenu) && (
