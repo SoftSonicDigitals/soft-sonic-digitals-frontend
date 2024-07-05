@@ -42,7 +42,7 @@ const Form = () => {
               <input
                 type="text"
                 id="name"
-                className={`h-[38px] relative border-[1px] ${
+                className={`relative border-[1px] ${
                   errors?.name ? "border-red" : "border-gray-600 "
                 } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
                 {...register("name", {
@@ -67,7 +67,7 @@ const Form = () => {
             <input
               type="text"
               id="email"
-              className={` h-[38px] relative border-[1px] ${
+              className={` relative border-[1px] ${
                 errors?.email ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("email", {
@@ -95,7 +95,7 @@ const Form = () => {
             <input
               type="text"
               id="mobile"
-              className={` h-[38px] relative border-[1px] ${
+              className={`relative border-[1px] ${
                 errors?.mobile ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("mobile", {
@@ -132,7 +132,7 @@ const Form = () => {
             {/* Select a service field */}
             <select
               id="service"
-              className={` h-[38px] relative border-[1px] ${
+              className={`appearance-none relative border-[1px] ${
                 errors?.service ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("service", {
@@ -160,7 +160,7 @@ const Form = () => {
               {/* Select a budget field */}
               <select
                 id="budget"
-                className={` h-[38px] relative border-[1px] ${
+                className={`appearance-none relative border-[1px] ${
                   errors?.budget ? "border-red" : "border-gray-600 "
                 } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
                 {...register("budget", {
@@ -189,7 +189,7 @@ const Form = () => {
 
               <select
                 id="requirement"
-                className={` h-[38px] relative border-[1px] ${
+                className={`appearance-none relative border-[1px] ${
                   errors?.requirement ? "border-red" : "border-gray-600 "
                 } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
                 {...register("requirement", {
@@ -216,7 +216,7 @@ const Form = () => {
             </label>
             <select
               id="start"
-              className={` h-[38px] relative border-[1px] ${
+              className={`appearance-none relative border-[1px] ${
                 errors?.start ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
               {...register("start", {
@@ -235,7 +235,7 @@ const Form = () => {
             )}
           </div>
 
-          {/* Select a project details field */}
+          {/*  project details field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="details" className="font-[600] text-sm">
               {FORM_FIELDS.details}
