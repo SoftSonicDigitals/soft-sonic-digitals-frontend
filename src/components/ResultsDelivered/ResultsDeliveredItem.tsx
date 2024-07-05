@@ -5,10 +5,7 @@ type ResultDeliveredItemProps = {
 };
 const ResultsDeliveredItem = ({ title, value }: ResultDeliveredItemProps) => {
   return (
-    <div
-      key={title}
-      className=" last:hidden md:last:block flex flex-col justify-center items-center  lg:first:pl-0 lg:last:pr-0 md:px-8 lg:px-6 2xl:px-8  lg:border-r-[1px] lg:border-gray-200 last:border-none"
-    >
+    <div className=" group-last:hidden md:group-last:block flex flex-col justify-center items-center  lg:group-first:pl-0 lg:group-last:pr-0 md:px-8 lg:px-6 2xl:px-8  lg:border-r-[1px] lg:border-gray-200 group-last:border-none">
       <div className="flex flex-center">
         <h2 className="text-5xl lg:text-4xl  xl:text-6xl font-[500] text-gray-800">
           {value}

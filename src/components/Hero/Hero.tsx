@@ -12,12 +12,12 @@ const Hero = () => {
       <div className="wrapper_container flex-center  flex-col h-[65vh] sm:h-[57vh] 2xl:h-[45vh] mt-[48px] lg:mt-[88px]">
         <div className="flex flex-col gap-6 px-4 sm:px-0 2xl:mt-28 3xl:mt-0 pt-16 3xl:pt-4">
           <div className="flex-center flex-col gap-6 text-center leading-tight ">
-            <Reveal width="fit-content">
+            <Reveal>
               <h1 className="text-[2.4rem] font-[500] mx-4 ">
                 {HERO_MAIN_HEADING}
               </h1>
             </Reveal>
-            <Reveal width="fit-content">
+            <Reveal>
               <h3 className="text-[.94rem] sm:text-lg md:text-[1.5rem] font-[500] tracking-wide whitespace-pre-wrap">
                 {HERO_SUB_HEADING}
               </h3>
@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
 
           <div className="flex-center">
-            <Reveal width="fit-content">
+            <Reveal>
               <PrimaryButton title={HERO_BUTTON_TEXT} className="px-10 py-3" />
             </Reveal>
           </div>
