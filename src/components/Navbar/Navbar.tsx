@@ -8,8 +8,7 @@ const Navbar = () => {
   return (
     <nav className="shadow-md fixed w-full bg-white z-[999] ">
       <div
-        className="wrapper_container flex justify-between py-2 lg:py-0
-       "
+        className="wrapper_container flex justify-between py-2 lg:py-0"
       >
         <Link href={"/"}>
           <div
