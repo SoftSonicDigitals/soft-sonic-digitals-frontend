@@ -41,7 +41,10 @@ const SideMenuLinks = ({ linkClickHandler }: SideMenuLinksProps) => {
             )}
           </div>
           {isMenuOpen(selectedMenu, indexOfMenu) && (
-            <SideMenuLink navLinks={menu.subMenu} />
+            <SideMenuLink
+              navLinks={menu.subMenu}
+              linkClickHandler={() => linkClickHandler()}
+            />
           )}
         </div>
       ))}

@@ -29,25 +29,24 @@ export type PlatformMenuType = {
   subMenu: PlatformSubMenuItem[];
 };
 
-type ResourcesItemType = {
-  title: string;
-  link: string;
-};
+type ResourcesItemType = NavLink;
 
 export type ResourcesMenuType = {
   title: string;
   submenu: ResourcesItemType[];
 };
 
-type subMenuType = {
-  title: string;
-  link: string;
-};
+type subMenuType = NavLink;
 
 type NavItemLinksType = {
   title: string;
   subMenu?: subMenuType[];
   link?: string;
+};
+
+export type NavLink = {
+  title: string;
+  link: string;
 };
 
 export type SideMenuType = NavItemLinksType[];
