@@ -1,3 +1,4 @@
+import Reveal from "@/components/Animation/Reveal";
 import {
   B2BCommerceBanner,
   B2BDigitalEcommerce,
@@ -23,6 +24,7 @@ const page = () => {
   return (
     <main className="overflow-hidden">
       <B2BHero />
+
       <B2BDigitalEcommerce />
       <B2BDigitizationReasons />
       <B2BExcellingFeatures />
