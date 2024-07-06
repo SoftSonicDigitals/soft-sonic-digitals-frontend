@@ -1,3 +1,4 @@
+import Reveal from "@/components/Animation/Reveal";
 import {
   ContactClients,
   Form,
@@ -10,17 +11,23 @@ import React from "react";
 const Contact = () => {
   return (
     <main className="overflow-hidden">
-      <LetsTalkHeadings />
       <section>
-        <div className="wrapper_container flex-center mb-24">
-          <div className="flex justify-center items-center flex-col-reverse lg:flex-row  gap-8 w-full">
-            <ContactClients />
+        <Reveal>
+          <LetsTalkHeadings />
+        </Reveal>
+        <Reveal>
+          <div className="wrapper_container flex-center mb-24">
+            <div className="flex justify-center items-center flex-col-reverse lg:flex-row  gap-8 w-full">
+              <ContactClients />
 
-            <Form />
+              <Form />
+            </div>
           </div>
-        </div>
+        </Reveal>
       </section>
-      <WhereToFind />
+      <Reveal>
+        <WhereToFind />
+      </Reveal>
     </main>
   );
 };
