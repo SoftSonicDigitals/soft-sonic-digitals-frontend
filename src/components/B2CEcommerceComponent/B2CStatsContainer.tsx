@@ -5,11 +5,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import B2CStatsTile from "./B2CStatsTile";
+import Reveal from "../Animation/Reveal";
 
 const B2CStatsContainer = () => {
   const ecommerceStatsArray = B2C_ECOMMERCE_STATS.map(
     ({ title, value }, index) => (
-      <B2CStatsTile key={index} title={title} value={value} />
+      <Reveal key={index} index={index}>
+        <B2CStatsTile key={index} title={title} value={value} />
+      </Reveal>
     )
   );
 

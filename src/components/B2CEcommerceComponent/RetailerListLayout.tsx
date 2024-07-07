@@ -1,4 +1,5 @@
 import React from "react";
+import Reveal from "../Animation/Reveal";
 
 type RetailerListLayoutProps = {
   title: string;
