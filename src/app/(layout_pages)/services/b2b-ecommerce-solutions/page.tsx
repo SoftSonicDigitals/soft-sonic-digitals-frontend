@@ -37,6 +37,7 @@ const page = () => {
       <MACH />
       <B2BCommerceBanner />
       <B2BFaq />
+
       <EcommerceProjectBanner />
       <RequestProposalBtn />
     </main>
