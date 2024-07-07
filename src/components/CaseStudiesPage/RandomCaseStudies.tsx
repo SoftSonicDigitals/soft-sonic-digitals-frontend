@@ -2,6 +2,7 @@ import React from "react";
 import CaseStudyTiles from "./CaseStudyTiles";
 import { CaseStudyPage } from "@/models/case_study_page";
 import { ViewAllBtn } from "../Reusable";
+import Reveal from "../Animation/Reveal";
 type RandomCaseStudiesProps = {
   randomCases: CaseStudyPage[];
 };
@@ -11,12 +12,14 @@ const RandomCaseStudies = ({ randomCases }: RandomCaseStudiesProps) => {
       <div className="wrapper_container mb-14 md:mb-24 px-4 pt-16">
         <div className="grid  grid-cols-1  md:grid-cols-2 gap-14 max-w-[576px] md:max-w-fit mx-auto mb-16 md:mb-24">
           {randomCases.map((caseStudy, index) => (
-            <CaseStudyTiles
-              key={index}
-              title={caseStudy.caseName}
-              posterPath={caseStudy.posterPath}
-              logoPath={caseStudy.logoPath}
-            />
+            <Reveal key={index} index={index}>
+              <CaseStudyTiles
+                key={index}
+                title={caseStudy.caseName}
+                posterPath={caseStudy.posterPath}
+                logoPath={caseStudy.logoPath}
+              />
+            </Reveal>
           ))}
         </div>
         <ViewAllBtn />
