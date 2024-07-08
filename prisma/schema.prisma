@@ -11,3 +11,19 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+
+model Client {
+   id String @id @default(auto()) @map("_id") @db.ObjectId
+   name String
+   email Int @default(0)
+   mobile String @db.ObjectId
+   company  String?
+   service String
+   budget String 
+   requirement String
+   project_start String
+   project_details String?
+}
+
+
