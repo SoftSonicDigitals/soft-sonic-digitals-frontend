@@ -13,6 +13,7 @@ import {
 import { FormDropDownOption } from ".";
 import { FORM_FIELDS } from "@/constants/contact_page";
 import { addClientDetails } from "@/actions";
+import toast from "react-hot-toast";
 
 const Form = () => {
   const {
@@ -23,13 +24,18 @@ const Form = () => {
   } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    console.log(data);
-    // const client = await addClientDetails({ ...data });
+    try {
+      const client = await addClientDetails({ ...data });
 
-    // if (client) {
-    //   console.log(client);
-    // }
-    reset();
+      if (client) {
+        toast.success("Form Successfully Submitted");
+      }
+
+      reset();
+    } catch (error) {
+      toast.error("Submission Error!");
+      console.log(error);
+    }
   };
 
   return (

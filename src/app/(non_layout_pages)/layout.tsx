@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "../globals.css";
 import { ContactPageFooter, ContactPageNavbar } from "@/components/ContactPage";
+import { Toaster } from "react-hot-toast";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
         <ContactPageNavbar />
         {children}
         <ContactPageFooter />
+        <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>
   );
