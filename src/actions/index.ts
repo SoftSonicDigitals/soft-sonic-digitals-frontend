@@ -1,1 +1,41 @@
 "use server";
+import prismadb from "../../lib/prismadb";
+
+type ClientDetails = {
+  name: string;
+  email: string;
+  mobile: string;
+  company?: string;
+  service: string;
+  budget: string;
+  requirement: string;
+  start: string;
+  projectDetails?: string;
+};
+
+export const addClientDetails = async ({
+  name,
+  email,
+  mobile,
+  company,
+  service,
+  budget,
+  requirement,
+  start,
+  projectDetails,
+}: ClientDetails) => {
+  const client = await prismadb.client.create({
+    data: {
+      name,
+      email,
+      mobile,
+      company,
+      service,
+      budget,
+      requirement,
+      project_start: start,
+      project_details: projectDetails,
+    },
+  });
+  return client;
+};
