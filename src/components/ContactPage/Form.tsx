@@ -12,6 +12,7 @@ import {
 } from "@/prototypes/contact_page";
 import { FormDropDownOption } from ".";
 import { FORM_FIELDS } from "@/constants/contact_page";
+import { addClientDetails } from "@/actions";
 
 const Form = () => {
   const {
@@ -21,8 +22,13 @@ const Form = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
+  const onSubmit: SubmitHandler<FormFields> = async (data) => {
     console.log(data);
+    // const client = await addClientDetails({ ...data });
+
+    // if (client) {
+    //   console.log(client);
+    // }
     reset();
   };
 
