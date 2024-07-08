@@ -16,8 +16,8 @@ datasource db {
 model Client {
    id String @id @default(auto()) @map("_id") @db.ObjectId
    name String
-   email Int @default(0)
-   mobile String @db.ObjectId
+   email String 
+   mobile String 
    company  String?
    service String
    budget String 
