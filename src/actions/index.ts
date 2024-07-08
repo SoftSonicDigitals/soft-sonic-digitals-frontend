@@ -10,7 +10,7 @@ type ClientDetails = {
   budget: string;
   requirement: string;
   start: string;
-  projectDetails?: string;
+  details?: string;
 };
 
 export const addClientDetails = async ({
@@ -22,7 +22,7 @@ export const addClientDetails = async ({
   budget,
   requirement,
   start,
-  projectDetails,
+  details,
 }: ClientDetails) => {
   const client = await prismadb.client.create({
     data: {
@@ -34,7 +34,7 @@ export const addClientDetails = async ({
       budget,
       requirement,
       project_start: start,
-      project_details: projectDetails,
+      project_details: details,
     },
   });
   return client;
