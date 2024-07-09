@@ -12,7 +12,7 @@ import {
 } from "@/prototypes/contact_page";
 import { FormDropDownOption } from ".";
 import { FORM_FIELDS } from "@/constants/contact_page";
-import { addClientDetails } from "@/actions";
+import { addClientDetails, getNextClientID } from "@/actions";
 import toast from "react-hot-toast";
 
 const Form = () => {
@@ -25,7 +25,9 @@ const Form = () => {
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
-      const client = await addClientDetails({ ...data });
+      const clientID = await getNextClientID();
+
+      const client = await addClientDetails({ ...data, clientID });
 
       if (client) {
         toast.success("Form Successfully Submitted");
