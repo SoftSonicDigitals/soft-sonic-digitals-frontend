@@ -1,0 +1,26 @@
+import { UserButton } from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+
+const DashboardNav = () => {
+  return (
+    <section className="shadow-md">
+      <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0">
+        <Link href={"/"}>
+          <div
+            className="cursor-pointer relative w-24 h-12 
+      lg:w-28 lg:h-16 lg:my-3"
+          >
+            <Image src="/logo.svg" fill alt="logo" />
+          </div>
+        </Link>
+        <div className="my-auto">
+          <UserButton />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default DashboardNav;
