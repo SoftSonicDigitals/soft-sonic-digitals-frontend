@@ -107,6 +107,7 @@ const Form = () => {
             <input
               type="text"
               id="mobile"
+              maxLength={10}
               className={`relative border-[1px] ${
                 errors?.mobile ? "border-red" : "border-gray-600 "
               } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
