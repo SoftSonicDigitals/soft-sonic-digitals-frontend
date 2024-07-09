@@ -5,8 +5,8 @@ import React from "react";
 
 const DashboardNav = () => {
   return (
-    <section className="shadow-md">
-      <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0">
+    <section className="shadow-md fixed w-full bg-white z-[999]">
+      <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0 ">
         <Link href={"/"}>
           <div
             className="cursor-pointer relative w-24 h-12 
