@@ -3,6 +3,7 @@ import React from "react";
 import {
   Table,
   TableBody,
+  TableCell,
   TableHead,
   TableHeader,
   TableRow,
@@ -10,9 +11,10 @@ import {
 import { DASHBOARD_TABLE_HEADING } from "@/constants/dashboard";
 import { getClients } from "@/actions";
 import ClientRow from "./ClientRow";
+import useSWR from "swr";
 
 const ClientTables = () => {
-  const clients = [];
+  const { data: clients, error, isLoading } = useSWR("clients", getClients);
 
   return (
     <section id="clients_table" className="pt-32">
@@ -28,18 +30,32 @@ const ClientTables = () => {
               <TableHead className="text-right">Service</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {clients?.map(({ client_id, name, email, mobile, service, id }) => (
-              <ClientRow
-                id={id}
-                key={id}
-                clientID={client_id}
-                name={name}
-                email={email}
-                mobile={mobile}
-                service={service}
-              />
-            ))}
+          <TableBody className="">
+            {!isLoading &&
+              clients?.map(
+                ({ client_id, name, email, mobile, service, id }) => (
+                  <ClientRow
+                    id={id}
+                    key={id}
+                    clientID={client_id}
+                    name={name}
+                    email={email}
+                    mobile={mobile}
+                    service={service}
+                  />
+                )
+              )}
+
+            {/* loading */}
+            {isLoading && (
+              <TableRow>
+                <TableCell colSpan={5} className="h-24 text-center">
+                  <div className="flex-center">
+                    <div className="border-gray-300 h-10 w-10 animate-spin rounded-full border-4 border-t-black" />
+                  </div>
+                </TableCell>
+              </TableRow>
+            )}
           </TableBody>
         </Table>
       </div>
