@@ -1,20 +1,9 @@
 "use server";
 
+import { ClientDetails } from "@/models/dashboard";
 import prismadb from "../../lib/prismadb";
 
-type ClientDetails = {
-  clientID: string;
-  name: string;
-  email: string;
-  mobile: string;
-  company?: string;
-  service: string;
-  budget: string;
-  requirement: string;
-  start: string;
-  details?: string;
-};
-
+// add client
 export const addClientDetails = async ({
   clientID,
   name,
@@ -44,19 +33,7 @@ export const addClientDetails = async ({
   return client;
 };
 
-export const getClients = async () => {
-  const clients = await prismadb.client.findMany({
-    select: {
-      id: true,
-      name: true,
-      email: true,
-      mobile: true,
-      service: true,
-    },
-  });
-  return clients;
-};
-
+// generate a custom client id cause prisma doesnt support custom id
 export async function getNextClientID() {
   // Fetch the current counter
   let sequence = await prismadb.sequence.findFirst();
@@ -75,3 +52,18 @@ export async function getNextClientID() {
   }
   return `SC${sequence.counter.toString().padStart(3, "0")}`;
 }
+
+// get array of the clients
+export const getClients = async () => {
+  const clients = await prismadb.client.findMany({
+    select: {
+      client_id: true,
+      id: true,
+      name: true,
+      email: true,
+      mobile: true,
+      service: true,
+    },
+  });
+  return clients;
+};
