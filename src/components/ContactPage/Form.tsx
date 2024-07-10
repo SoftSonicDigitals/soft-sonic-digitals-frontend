@@ -14,7 +14,7 @@ import { FormDropDownOption } from ".";
 import { FORM_FIELDS } from "@/constants/contact_page";
 import { addClientDetails, getNextClientID } from "@/actions";
 import toast from "react-hot-toast";
-
+import useSWR from "swr";
 const Form = () => {
   const {
     register,
@@ -22,6 +22,8 @@ const Form = () => {
     reset,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
+
+  const { mutate } = useSWR("clients");
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
@@ -31,6 +33,7 @@ const Form = () => {
 
       if (client) {
         toast.success("Form Successfully Submitted");
+        mutate();
       }
 
       reset();
