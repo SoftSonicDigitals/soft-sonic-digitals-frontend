@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -9,12 +9,23 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { DASHBOARD_TABLE_HEADING } from "@/constants/dashboard";
-import { getClients } from "@/actions";
+import { getClientCount, getClients } from "@/actions";
 import ClientRow from "./ClientRow";
 import useSWR from "swr";
+import { useSearchParams } from "next/navigation";
 
 const ClientTables = () => {
-  const { data: clients, error, isLoading } = useSWR("clients", getClients);
+  const searchParmas = useSearchParams();
+  const page = searchParmas.get("page?") ?? "1";
+  const perPage = searchParmas.get("per_page") ?? "5";
+
+  const [totalClients, setTotalClients] = useState<number | null>(null);
+
+  const clientsPerPage = async () => {
+    return await getClients(+page, +perPage);
+  };
+
+  const { data: clients, error, isLoading } = useSWR("clients", clientsPerPage);
 
   return (
     <section id="clients_table" className="pt-32">

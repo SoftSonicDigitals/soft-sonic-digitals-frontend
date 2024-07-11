@@ -1,7 +1,7 @@
 "use server";
 
 import { ClientDetails } from "@/models/dashboard";
-import prismadb from "../../lib/prismadb";
+import prismadb from "../lib/prismadb";
 
 // add client
 export const addClientDetails = async ({
@@ -54,7 +54,10 @@ export async function getNextClientID() {
 }
 
 // get array of the clients
-export const getClients = async () => {
+export const getClients = async (
+  pageNumber: number,
+  paginationTableLimit: number
+) => {
   const clients = await prismadb.client.findMany({
     select: {
       client_id: true,
@@ -64,6 +67,13 @@ export const getClients = async () => {
       mobile: true,
       service: true,
     },
+    skip: (pageNumber - 1) * paginationTableLimit,
+    take: paginationTableLimit,
   });
+
   return clients;
+};
+
+export const getClientCount = async () => {
+  return await prismadb.client.count();
 };
