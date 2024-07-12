@@ -1,10 +1,16 @@
+"use client";
 import React from "react";
 import { TableCell, TableRow } from "../ui/table";
 import { Clients } from "@/models/dashboard";
-
-const ClientRow = ({ clientID, name, email, mobile, service }: Clients) => {
+import { useRouter } from "next/navigation";
+const ClientRow = ({ clientID, name, email, mobile, service, id }: Clients) => {
+  const router = useRouter();
   return (
-    <TableRow>
+    <TableRow
+      onClick={() => {
+        router.push(`/admin/client/${id}`);
+      }}
+    >
       <TableCell className="font-medium">{clientID}</TableCell>
       <TableCell className="font-medium">{name}</TableCell>
       <TableCell>{email}</TableCell>
