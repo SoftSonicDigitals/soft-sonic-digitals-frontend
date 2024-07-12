@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   Table,
   TableBody,
@@ -13,19 +13,10 @@ import { getClientCount, getClients } from "@/actions";
 import ClientRow from "./ClientRow";
 import useSWR from "swr";
 import { useSearchParams } from "next/navigation";
+import usePagination from "@/hooks/usePagination";
 
 const ClientTables = () => {
-  const searchParmas = useSearchParams();
-  const page = searchParmas.get("page?") ?? "1";
-  const perPage = searchParmas.get("per_page") ?? "5";
-
-  const [totalClients, setTotalClients] = useState<number | null>(null);
-
-  const clientsPerPage = async () => {
-    return await getClients(+page, +perPage);
-  };
-
-  const { data: clients, error, isLoading } = useSWR("clients", clientsPerPage);
+  const { isLoading, clients } = usePagination();
 
   return (
     <section id="clients_table" className="pt-32">
