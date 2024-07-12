@@ -12,20 +12,9 @@ import {
   CLIENT_TABLE_LIMIT,
   DASHBOARD_TABLE_HEADING,
 } from "@/constants/dashboard";
-import { getClientCount, getClients } from "@/actions";
 import ClientRow from "./ClientRow";
-import useSWR from "swr";
-import { useRouter, useSearchParams } from "next/navigation";
 import usePagination from "@/hooks/usePagination";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
+import PaginationSection from "./PaginationSection";
 
 const ClientTables = () => {
   const { totalClientCount, isLoading, clients, page } = usePagination();
@@ -77,39 +66,12 @@ const ClientTables = () => {
             )}
           </TableBody>
         </Table>
-        <Pagination>
-          <PaginationContent>
-            <PaginationItem>
-              {canPrevPage ? (
-                <PaginationPrevious
-                  href={`/admin/dashboard?page=${page - 1}`}
-                  className="bg-gray-200 text-black pointer-events-auto"
-                />
-              ) : (
-                <PaginationPrevious className="bg-gray-200 text-black pointer-events-none opacity-60 " />
-              )}
-            </PaginationItem>
-            <PaginationItem>
-              <PaginationLink
-                className=" mx-10"
-                href={`/admin/dashboard?page=${page}`}
-              >
-                Page {page} of {totalPage}
-              </PaginationLink>
-            </PaginationItem>
-
-            <PaginationItem>
-              {canNextPage ? (
-                <PaginationNext
-                  href={`/admin/dashboard?page=${page + 1}`}
-                  className="bg-gray-200 text-black pointer-events-auto"
-                />
-              ) : (
-                <PaginationNext className="bg-gray-200 text-black pointer-events-none opacity-60 " />
-              )}
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+        <PaginationSection
+          canNextPage={canNextPage}
+          canPrevPage={canPrevPage}
+          totalPage={totalPage}
+          currentPage={page}
+        />
       </div>
     </section>
   );
