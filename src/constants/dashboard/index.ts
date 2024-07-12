@@ -1,1 +1,3 @@
 export const DASHBOARD_TABLE_HEADING = "Clients";
+
+export const CLIENT_TABLE_LIMIT = 5;
