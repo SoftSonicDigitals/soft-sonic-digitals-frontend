@@ -25,10 +25,20 @@ model Client {
    requirement String
    project_start String
    project_details String?
-}
+   notes            Note[]   
+   }
 
 
 model Sequence {
   id     String  @id @default(auto()) @map("_id") @db.ObjectId
   counter Int
+}
+
+model Note {
+   id               String    @id @default(auto()) @map("_id") @db.ObjectId
+   created_by       String
+   created_at       DateTime  @default(now())
+   note             String
+   clientID String @db.ObjectId
+   client Client @relation(fields: [clientID], references: [id])
 }
