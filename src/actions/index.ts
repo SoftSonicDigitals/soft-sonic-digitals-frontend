@@ -77,3 +77,7 @@ export const getClients = async (
 export const getClientCount = async () => {
   return await prismadb.client.count();
 };
+
+export const getClientInfo = async (id: string) => {
+  return await prismadb.client.findUnique({ where: { id } });
+};
