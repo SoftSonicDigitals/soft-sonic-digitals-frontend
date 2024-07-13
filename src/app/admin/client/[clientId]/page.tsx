@@ -1,5 +1,6 @@
 import { getClientInfo } from "@/actions";
 import { ClientDetailsTable, DashboardNav } from "@/components/Dashboard";
+import Link from "next/link";
 
 import React from "react";
 

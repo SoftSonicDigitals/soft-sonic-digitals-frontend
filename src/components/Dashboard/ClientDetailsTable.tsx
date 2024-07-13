@@ -26,63 +26,67 @@ type ClientDetailsTableProps = {
 
 const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow>
-          <TableHead className="w-[20px]">Detail</TableHead>
-          <TableHead className="w-[150px]">Information</TableHead>
-        </TableRow>
-      </TableHeader>
+    <>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-[20px]">Detail</TableHead>
+            <TableHead className="w-[150px]">Information</TableHead>
+          </TableRow>
+        </TableHeader>
 
-      <TableBody>
-        <TableRow>
-          <TableCell>ClientId</TableCell>
-          <TableCell>{clientInfo?.client_id}</TableCell>
-        </TableRow>
+        <TableBody>
+          <TableRow>
+            <TableCell>ClientId</TableCell>
+            <TableCell>{clientInfo?.client_id}</TableCell>
+          </TableRow>
 
-        <TableRow>
-          <TableCell>Name</TableCell>
-          <TableCell>{clientInfo?.name}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Email</TableCell>
-          <TableCell>{clientInfo?.email}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Mobile</TableCell>
-          <TableCell>{clientInfo?.mobile}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Company</TableCell>
-          <TableCell>
-            {!clientInfo?.company ? "----" : clientInfo.company}
-          </TableCell>
-        </TableRow>
+          <TableRow>
+            <TableCell>Name</TableCell>
+            <TableCell>{clientInfo?.name}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Email</TableCell>
+            <TableCell>{clientInfo?.email}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Mobile</TableCell>
+            <TableCell>{clientInfo?.mobile}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Company</TableCell>
+            <TableCell>
+              {!clientInfo?.company ? "----" : clientInfo.company}
+            </TableCell>
+          </TableRow>
 
-        <TableRow>
-          <TableCell>Service</TableCell>
-          <TableCell>{clientInfo?.service}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Budget</TableCell>
-          <TableCell>{clientInfo?.budget}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Requirement</TableCell>
-          <TableCell>{clientInfo?.requirement}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Project Start</TableCell>
-          <TableCell>{clientInfo?.project_start}</TableCell>
-        </TableRow>
-        <TableRow>
-          <TableCell>Project Details</TableCell>
-          <TableCell>
-            {!clientInfo?.project_details ? "----" : clientInfo.project_details}
-          </TableCell>
-        </TableRow>
-      </TableBody>
-    </Table>
+          <TableRow>
+            <TableCell>Service</TableCell>
+            <TableCell>{clientInfo?.service}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Budget</TableCell>
+            <TableCell>{clientInfo?.budget}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Requirement</TableCell>
+            <TableCell>{clientInfo?.requirement}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Project Start</TableCell>
+            <TableCell>{clientInfo?.project_start}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell>Project Details</TableCell>
+            <TableCell>
+              {!clientInfo?.project_details
+                ? "----"
+                : clientInfo.project_details}
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>
+    </>
   );
 };
 

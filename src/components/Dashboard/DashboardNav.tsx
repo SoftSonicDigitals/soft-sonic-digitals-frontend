@@ -1,25 +1,42 @@
+"use client";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const DashboardNav = () => {
+  const pathname = usePathname();
+
   return (
-    <section className="shadow-md fixed w-full bg-white z-[999]">
-      <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0 ">
-        <Link href={"/"}>
-          <div
-            className="cursor-pointer relative w-24 h-12 
+    <nav>
+      <div className="shadow-md top-0 fixed w-full bg-white z-[999]">
+        <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0 ">
+          <Link href={"/"}>
+            <div
+              className="cursor-pointer relative w-24 h-12 
       lg:w-28 lg:h-16 lg:my-3"
-          >
-            <Image src="/logo.svg" fill alt="logo" />
+            >
+              <Image src="/logo.svg" fill alt="logo" />
+            </div>
+          </Link>
+
+          <div className="my-auto flex items-center gap-16">
+            <Link
+              scroll={false}
+              href={"/admin/dashboard"}
+              className={`font-[600] ${
+                pathname === "/admin/dashboard" ? "hidden" : ""
+              }`}
+            >
+              Dashboard
+            </Link>
+
+            <UserButton />
           </div>
-        </Link>
-        <div className="my-auto">
-          <UserButton />
         </div>
       </div>
-    </section>
+    </nav>
   );
 };
 
