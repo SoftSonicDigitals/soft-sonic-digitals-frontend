@@ -86,8 +86,8 @@ const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
             </TableCell>
           </TableRow>
         </TableBody>
-        <NotesSection />
       </Table>
+      <NotesSection />
     </>
   );
 };
