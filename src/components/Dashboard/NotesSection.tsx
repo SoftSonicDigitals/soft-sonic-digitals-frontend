@@ -1,23 +1,16 @@
 "use client";
 import { useUser } from "@clerk/nextjs";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Textarea } from "../ui/textarea";
-import { useForm } from "react-hook-form";
 
 const NotesSection = () => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<{ note: string }>();
-
+  const noteInputRef = useRef<HTMLTextAreaElement | null>(null);
   const user = useUser();
-
   const [toogleTextArea, setToogleTextArea] = useState(false);
 
   const onAddNoteHandler = () => {
-    if (toogleTextArea) {
+    if (noteInputRef.current) {
+      console.log("Textarea content:", noteInputRef.current.value);
     } else {
       setToogleTextArea(true);
     }
@@ -29,10 +22,8 @@ const NotesSection = () => {
 
       {toogleTextArea && (
         <Textarea
-          className={` border-gray-600 mt-8 ${
-            errors?.note ? "border-red" : "border-gray-600 "
-          } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
-          {...register("note")}
+          ref={noteInputRef}
+          className={` border-gray-600 mt-8  w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
         />
       )}
       <div className="flex gap-4 items-center mt-6 ">
@@ -42,6 +33,7 @@ const NotesSection = () => {
         >
           Add Note
         </button>
+
         {toogleTextArea && (
           <button
             onClick={() => setToogleTextArea(false)}
