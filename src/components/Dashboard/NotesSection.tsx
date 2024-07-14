@@ -2,15 +2,23 @@
 import { useUser } from "@clerk/nextjs";
 import React, { useRef, useState } from "react";
 import { Textarea } from "../ui/textarea";
-
-const NotesSection = () => {
+import toast from "react-hot-toast";
+type NotesSectionProps = {
+  id: string;
+};
+const NotesSection = ({ id }: NotesSectionProps) => {
   const noteInputRef = useRef<HTMLTextAreaElement | null>(null);
   const user = useUser();
   const [toogleTextArea, setToogleTextArea] = useState(false);
 
-  const onAddNoteHandler = () => {
+  const onAddNoteHandler = async () => {
     if (noteInputRef.current) {
-      console.log("Textarea content:", noteInputRef.current.value);
+      if (noteInputRef.current.value.length < 8) {
+        toast.error("Note needs to be more detailed!");
+      } else {
+        const note = noteInputRef.current.value;
+        addNote(note, user, id);
+      }
     } else {
       setToogleTextArea(true);
     }

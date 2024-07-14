@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "../globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "react-hot-toast";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -23,7 +24,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={raleway.className}>{children}</body>
+        <body className={raleway.className}>
+          {children}
+          <Toaster position="top-right" reverseOrder={false} />
+        </body>
       </html>
     </ClerkProvider>
   );
