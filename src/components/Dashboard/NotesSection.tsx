@@ -3,12 +3,14 @@ import { useUser } from "@clerk/nextjs";
 import React, { useRef, useState } from "react";
 import { Textarea } from "../ui/textarea";
 import toast from "react-hot-toast";
+import { addClientNote } from "@/actions";
+import client from "@/lib/prismadb";
 type NotesSectionProps = {
   id: string;
 };
 const NotesSection = ({ id }: NotesSectionProps) => {
   const noteInputRef = useRef<HTMLTextAreaElement | null>(null);
-  const user = useUser();
+  const { user } = useUser();
   const [toogleTextArea, setToogleTextArea] = useState(false);
 
   const onAddNoteHandler = async () => {
@@ -16,8 +18,17 @@ const NotesSection = ({ id }: NotesSectionProps) => {
       if (noteInputRef.current.value.length < 8) {
         toast.error("Note needs to be more detailed!");
       } else {
-        const note = noteInputRef.current.value;
-        addNote(note, user, id);
+        const note = noteInputRef.current.value.trim();
+        const clientNote = await addClientNote(
+          note,
+          user?.primaryEmailAddress?.emailAddress!,
+          id
+        );
+        if (clientNote) {
+          toast.success("Note Added!");
+          noteInputRef.current.value = "";
+          setToogleTextArea(false);
+        }
       }
     } else {
       setToogleTextArea(true);
