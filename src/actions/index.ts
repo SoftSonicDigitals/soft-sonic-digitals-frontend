@@ -81,3 +81,17 @@ export const getClientCount = async () => {
 export const getClientInfo = async (id: string) => {
   return await prismadb.client.findUnique({ where: { id } });
 };
+
+export const addClientNote = async (
+  note: string,
+  email: string,
+  clientId: string
+) => {
+  return await prismadb.note.create({
+    data: {
+      created_by: email,
+      note,
+      clientID: clientId,
+    },
+  });
+};
