@@ -87,7 +87,7 @@ const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
           </TableRow>
         </TableBody>
       </Table>
-      <NotesSection />
+      <NotesSection id={clientInfo?.id!} />
     </>
   );
 };
