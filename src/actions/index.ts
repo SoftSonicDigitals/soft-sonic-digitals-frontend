@@ -95,3 +95,12 @@ export const addClientNote = async (
     },
   });
 };
+
+export const getClientNotes = async (clientId: string) => {
+  console.log(clientId);
+  return await prismadb.note.findMany({
+    where: {
+      clientID: clientId,
+    },
+  });
+};
