@@ -20,7 +20,7 @@ const NotesTable = ({ id }: { id?: string }) => {
   const { data: notes, error, isLoading } = useSWR("notes", fetchClientNotes);
 
   return (
-    <div className="mx-4 mt-8">
+    <div className="mx-4 my-8">
       <Table>
         <TableHeader>
           <TableRow>
