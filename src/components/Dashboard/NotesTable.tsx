@@ -17,7 +17,7 @@ const NotesTable = ({ id }: { id?: string }) => {
     return await getClientNotes(id!);
   };
 
-  const { data: notes, error, isLoading } = useSWR("notes", fetchClientNotes);
+  const { data: notes, isLoading } = useSWR("notes", fetchClientNotes);
 
   return (
     <div className="mx-4 my-8">
