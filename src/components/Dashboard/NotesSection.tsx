@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 import { Textarea } from "../ui/textarea";
 import toast from "react-hot-toast";
 import { addClientNote } from "@/actions";
-import useSWR from "swr";
+import { useSWRConfig } from "swr";
 
 type NotesSectionProps = {
   id: string;
@@ -14,7 +14,7 @@ const NotesSection = ({ id }: NotesSectionProps) => {
   const noteInputRef = useRef<HTMLTextAreaElement | null>(null);
   const { user } = useUser();
   const [toogleTextArea, setToogleTextArea] = useState(false);
-  const { mutate } = useSWR("note");
+  const { mutate } = useSWRConfig();
 
   const onAddNoteHandler = async () => {
     if (noteInputRef.current) {
@@ -25,10 +25,10 @@ const NotesSection = ({ id }: NotesSectionProps) => {
         const email = user?.primaryEmailAddress?.emailAddress!;
         const clientNote = await addClientNote(note, email, id);
         if (clientNote) {
+          mutate("notes");
           toast.success("Note Added!");
           noteInputRef.current.value = "";
-          setToogleTextArea(false);
-          mutate();
+          // setToogleTextArea(false);
         }
       }
     } else {

@@ -11,12 +11,13 @@ import {
 import useSWR from "swr";
 import { getClientNotes } from "@/actions";
 import { format } from "date-fns";
+
 const NotesTable = ({ id }: { id?: string }) => {
-  const {
-    data: notes,
-    error,
-    isLoading,
-  } = useSWR(["note", id], async () => await getClientNotes(id!));
+  const fetchClientNotes = async () => {
+    return await getClientNotes(id!);
+  };
+
+  const { data: notes, error, isLoading } = useSWR("notes", fetchClientNotes);
 
   return (
     <div className="mx-4 mt-8">
