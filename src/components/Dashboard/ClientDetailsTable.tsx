@@ -89,7 +89,7 @@ const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
         </TableBody>
       </Table>
       <NotesSection id={clientInfo?.id!} />
-      <NotesTable />
+      <NotesTable id={clientInfo?.id} />
     </>
   );
 };
