@@ -7,8 +7,7 @@ import {
   TableBody,
   TableCell,
 } from "@/components/ui/table";
-import NotesSection from "./AddNoteSection";
-import NotesTable from "./NotesTable";
+import { AddNotesSection, NotesTable } from ".";
 
 type ClientDetailsTableProps = {
   clientInfo: {
@@ -88,7 +87,7 @@ const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
           </TableRow>
         </TableBody>
       </Table>
-      <NotesSection id={clientInfo?.id!} />
+      {clientInfo && <AddNotesSection id={clientInfo?.id!} />}
       <NotesTable id={clientInfo?.id} />
     </>
   );

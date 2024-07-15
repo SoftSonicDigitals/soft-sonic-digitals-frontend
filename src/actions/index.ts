@@ -1,5 +1,5 @@
 "use server";
-
+import { ObjectId } from "mongodb";
 import { ClientDetails } from "@/models/dashboard";
 import prismadb from "../lib/prismadb";
 
@@ -79,7 +79,13 @@ export const getClientCount = async () => {
 };
 
 export const getClientInfo = async (id: string) => {
-  return await prismadb.client.findUnique({ where: { id } });
+  const isValid = ObjectId.isValid(id);
+  if (isValid) {
+    const clientInfo = await prismadb.client.findUnique({ where: { id } });
+    return clientInfo;
+  } else {
+    return null;
+  }
 };
 
 export const addClientNote = async (
@@ -96,11 +102,14 @@ export const addClientNote = async (
   });
 };
 
-export const getClientNotes = async (clientId: string) => {
-  console.log(clientId);
-  return await prismadb.note.findMany({
+export const getClientNotes = async (clientId: string | undefined) => {
+  if (!clientId) {
+    return null;
+  }
+  const notes = await prismadb.note.findMany({
     where: {
       clientID: clientId,
     },
   });
+  return notes;
 };
