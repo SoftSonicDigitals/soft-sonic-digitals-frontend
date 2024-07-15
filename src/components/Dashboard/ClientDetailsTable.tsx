@@ -7,7 +7,7 @@ import {
   TableBody,
   TableCell,
 } from "@/components/ui/table";
-import NotesSection from "./NotesSection";
+import NotesSection from "./AddNoteSection";
 import NotesTable from "./NotesTable";
 
 type ClientDetailsTableProps = {

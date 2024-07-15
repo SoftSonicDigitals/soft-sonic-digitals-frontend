@@ -7,6 +7,7 @@ const ClientRow = ({ clientID, name, email, mobile, service, id }: Clients) => {
   const router = useRouter();
   return (
     <TableRow
+      className="cursor-pointer"
       onClick={() => {
         router.push(`/admin/client/${id}`);
       }}

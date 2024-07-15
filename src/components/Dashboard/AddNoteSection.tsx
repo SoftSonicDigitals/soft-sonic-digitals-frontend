@@ -6,11 +6,11 @@ import toast from "react-hot-toast";
 import { addClientNote } from "@/actions";
 import { useSWRConfig } from "swr";
 
-type NotesSectionProps = {
+type AddNoteSectionProps = {
   id: string;
 };
 
-const NotesSection = ({ id }: NotesSectionProps) => {
+const AddNoteSection = ({ id }: AddNoteSectionProps) => {
   const noteInputRef = useRef<HTMLTextAreaElement | null>(null);
   const { user } = useUser();
   const [toogleTextArea, setToogleTextArea] = useState(false);
@@ -28,7 +28,7 @@ const NotesSection = ({ id }: NotesSectionProps) => {
           mutate("notes");
           toast.success("Note Added!");
           noteInputRef.current.value = "";
-          // setToogleTextArea(false);
+          setToogleTextArea(false);
         }
       }
     } else {
@@ -67,4 +67,4 @@ const NotesSection = ({ id }: NotesSectionProps) => {
   );
 };
 
-export default NotesSection;
+export default AddNoteSection;
