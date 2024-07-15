@@ -8,6 +8,7 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import NotesSection from "./NotesSection";
+import NotesTable from "./NotesTable";
 
 type ClientDetailsTableProps = {
   clientInfo: {
@@ -88,6 +89,7 @@ const ClientDetailsTable = ({ clientInfo }: ClientDetailsTableProps) => {
         </TableBody>
       </Table>
       <NotesSection id={clientInfo?.id!} />
+      <NotesTable />
     </>
   );
 };
