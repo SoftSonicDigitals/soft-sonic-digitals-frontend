@@ -5,6 +5,8 @@ import DashboardNav from "./DashboardNav";
 import AddNotesSection from "./AddNoteSection";
 import NotesTable from "./NotesTable";
 import PaginationSection from "./PaginationSection";
+import SearchBar from "./SearchBar";
+
 export {
   DashboardNav,
   ClientTables,
@@ -13,4 +15,5 @@ export {
   ClientDetailsTable,
   AddNotesSection,
   NotesTable,
+  SearchBar,
 };

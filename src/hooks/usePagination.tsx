@@ -1,11 +1,12 @@
 import { getClientCount, getClients } from "@/actions";
 import { CLIENT_TABLE_LIMIT } from "@/constants/dashboard";
 import { useSearchParams } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 const usePagination = () => {
   const searchParmas = useSearchParams();
+
   // get params
   let page = Number(searchParmas.get("page"));
   if (!page || page < 1) {

@@ -15,6 +15,7 @@ import {
 import ClientRow from "./ClientRow";
 import usePagination from "@/hooks/usePagination";
 import PaginationSection from "./PaginationSection";
+import SearchBar from "./SearchBar";
 
 const ClientTables = () => {
   const { totalClientCount, isLoading, clients, page } = usePagination();
@@ -23,12 +24,14 @@ const ClientTables = () => {
 
   const canPrevPage = page > 1;
   const totalPage = Math.ceil(totalClientCount / CLIENT_TABLE_LIMIT);
-
   return (
     <section id="clients_table" className="pt-32">
       <div className="wrapper_container">
         <div className="text-4xl mb-8">{DASHBOARD_TABLE_HEADING}</div>
-        <Table>
+
+        <SearchBar />
+
+        <Table className="mb-4">
           <TableHeader>
             <TableRow>
               <TableHead className="w-[100px]">Client ID</TableHead>
