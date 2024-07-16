@@ -1,10 +1,10 @@
-import { getClientCount, getClients } from "@/actions";
+import { getClientCount, getClients, searchClients } from "@/actions";
 import { CLIENT_TABLE_LIMIT } from "@/constants/dashboard";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 
-const usePagination = () => {
+const usePagination = (searchQuery: string) => {
   const searchParmas = useSearchParams();
 
   // get params
@@ -16,6 +16,20 @@ const usePagination = () => {
   //   getTotalClients
   const [totalClientCount, setTotalClientCount] = useState<number>(0);
 
+  const clientsPerPage = async () => {
+    if (searchQuery.length >= 5) {
+      return await searchClients(searchQuery);
+    } else {
+      return await getClients(page, CLIENT_TABLE_LIMIT);
+    }
+  };
+
+  const {
+    data: clients,
+    error,
+    isLoading,
+  } = useSWR(["clients", page, searchQuery], clientsPerPage);
+
   const fetchTotalClient = async () => {
     const totalClient = await getClientCount();
     setTotalClientCount(totalClient);
@@ -24,12 +38,6 @@ const usePagination = () => {
   useEffect(() => {
     fetchTotalClient();
   }, []);
-
-  const clientsPerPage = async () => {
-    return await getClients(page, CLIENT_TABLE_LIMIT);
-  };
-
-  const { data: clients, error, isLoading } = useSWR("clients", clientsPerPage);
 
   return { totalClientCount, clients, isLoading, page };
 };

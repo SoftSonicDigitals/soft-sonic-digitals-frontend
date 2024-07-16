@@ -2,7 +2,11 @@
 import React, { useRef } from "react";
 import { IoIosSearch } from "react-icons/io";
 
-const SearchBar = () => {
+const SearchBar = ({
+  searchQueryHandler,
+}: {
+  searchQueryHandler: (query: string) => void;
+}) => {
   const searchref = useRef<HTMLInputElement | null>(null);
 
   return (
@@ -12,7 +16,7 @@ const SearchBar = () => {
           placeholder="Search"
           className="  w-64  outline-0"
           ref={searchref}
-          onChange={() => console.log(searchref.current?.value)}
+          onChange={() => searchQueryHandler(searchref.current?.value!)}
         />
         <IoIosSearch className="w-[24px] h-[24px] text-gray-400" />
       </div>
