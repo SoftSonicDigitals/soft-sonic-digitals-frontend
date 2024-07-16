@@ -70,10 +70,15 @@ export const getClients = async (
     skip: (pageNumber - 1) * paginationTableLimit,
     take: paginationTableLimit,
   });
-  return clients;
+  const totalClientCount = await prismadb.client.count();
+  return { clients, totalClientCount };
 };
 
-export const searchClients = async (searchQuery: string) => {
+export const searchClients = async (
+  pageNumber: number,
+  paginationTableLimit: number,
+  searchQuery: string
+) => {
   const clients = await prismadb.client.findMany({
     select: {
       client_id: true,
@@ -95,12 +100,25 @@ export const searchClients = async (searchQuery: string) => {
         },
       ],
     },
+    skip: (pageNumber - 1) * paginationTableLimit,
+    take: paginationTableLimit,
   });
-  return clients;
-};
 
-export const getClientCount = async () => {
-  return await prismadb.client.count();
+  const totalClientCount = await prismadb.client.count({
+    where: {
+      OR: [
+        {
+          name: {
+            contains: searchQuery,
+          },
+        },
+        {
+          client_id: { contains: searchQuery },
+        },
+      ],
+    },
+  });
+  return { clients, totalClientCount };
 };
 
 export const getClientInfo = async (id: string) => {

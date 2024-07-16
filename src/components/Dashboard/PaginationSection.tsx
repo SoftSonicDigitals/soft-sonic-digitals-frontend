@@ -7,6 +7,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 type PaginationSectionProps = {
   canPrevPage: boolean;
@@ -20,13 +21,26 @@ const PaginationSection = ({
   totalPage,
   currentPage,
 }: PaginationSectionProps) => {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const onPagePrevNextHandler = (goTO: "next" | "prev") => {
+    const params = new URLSearchParams(searchParams);
+    params.set(
+      "page",
+      `${goTO === "next" ? currentPage + 1 : currentPage - 1}`
+    );
+    return `${pathname}?${params.toString()}`;
+  };
+
   return (
     <Pagination>
       <PaginationContent>
         <PaginationItem>
           {canPrevPage ? (
             <PaginationPrevious
-              href={`/admin/dashboard?page=${currentPage - 1}`}
+              href={onPagePrevNextHandler("prev")}
               className="bg-gray-200 text-black pointer-events-auto"
             />
           ) : (
@@ -45,7 +59,7 @@ const PaginationSection = ({
         <PaginationItem>
           {canNextPage ? (
             <PaginationNext
-              href={`/admin/dashboard?page=${currentPage + 1}`}
+              href={onPagePrevNextHandler("next")}
               className="bg-gray-200 text-black pointer-events-auto"
             />
           ) : (

@@ -4,11 +4,7 @@ import { useRouter } from "next/navigation";
 import React, { useRef } from "react";
 import { IoIosSearch } from "react-icons/io";
 
-const SearchBar = ({
-  searchQueryHandler,
-}: {
-  searchQueryHandler: (query: string) => void;
-}) => {
+const SearchBar = () => {
   const searchref = useRef<HTMLInputElement | null>(null);
 
   const searchParams = useSearchParams();
@@ -17,7 +13,8 @@ const SearchBar = ({
 
   const onSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
-    params.set("query", searchref.current?.value!);
+    params.set("query", searchref.current?.value!?.trim());
+    params.set("page", "1");
     router.replace(`${pathname}?${params.toString()}`);
   };
 
