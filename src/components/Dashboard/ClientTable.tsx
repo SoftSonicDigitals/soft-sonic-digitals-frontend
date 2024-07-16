@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Table,
   TableBody,
@@ -18,20 +18,26 @@ import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
 
 const ClientTables = () => {
-  const { totalClientCount, isLoading, clients, page } = usePagination();
+  const [searchQuery, setsearchQuery] = useState("");
+  const { totalClientCount, isLoading, clients, page } =
+    usePagination(searchQuery);
 
   const canNextPage = totalClientCount > page * CLIENT_TABLE_LIMIT;
-
   const canPrevPage = page > 1;
   const totalPage = Math.ceil(totalClientCount / CLIENT_TABLE_LIMIT);
+
+  const queryHandler = (query: string) => {
+    setsearchQuery(query);
+  };
+
   return (
     <section id="clients_table" className="pt-32">
       <div className="wrapper_container">
         <div className="text-4xl mb-8">{DASHBOARD_TABLE_HEADING}</div>
 
-        <SearchBar />
+        <SearchBar searchQueryHandler={queryHandler} />
 
-        <Table className="mb-4">
+        <Table className="mb-4 hover:">
           <TableHeader>
             <TableRow>
               <TableHead className="w-[100px]">Client ID</TableHead>

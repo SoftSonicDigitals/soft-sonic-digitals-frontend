@@ -70,7 +70,32 @@ export const getClients = async (
     skip: (pageNumber - 1) * paginationTableLimit,
     take: paginationTableLimit,
   });
+  return clients;
+};
 
+export const searchClients = async (searchQuery: string) => {
+  const clients = await prismadb.client.findMany({
+    select: {
+      client_id: true,
+      id: true,
+      name: true,
+      email: true,
+      mobile: true,
+      service: true,
+    },
+    where: {
+      OR: [
+        {
+          name: {
+            contains: searchQuery,
+          },
+        },
+        {
+          client_id: { contains: searchQuery },
+        },
+      ],
+    },
+  });
   return clients;
 };
 
