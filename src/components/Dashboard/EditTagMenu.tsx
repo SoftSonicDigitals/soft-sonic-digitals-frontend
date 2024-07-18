@@ -1,3 +1,4 @@
+"use client";
 import {
   Dialog,
   DialogContent,
@@ -7,13 +8,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import React from "react";
+import React, { useRef } from "react";
 import { BsTags } from "react-icons/bs";
 import { PRIORITY_TAGS, STATUS_TAGS } from "@/prototypes/dashboard";
 import { FormDropDownOption } from "../ContactPage";
 import { Button } from "../ui/button";
+import { Tags } from "@/models/dashboard";
 
-const EditTagMenu = () => {
+const EditTagMenu = ({ priority, status, id }: Tags) => {
+  const priorityRef = useRef<HTMLSelectElement | null>(null);
+  const statusRef = useRef<HTMLSelectElement | null>(null);
+
+  const updateTagHandler = () => {};
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -31,10 +38,10 @@ const EditTagMenu = () => {
             Priority
           </label>
           <select
+            ref={priorityRef}
             id="priority"
-            className={`appearance-none relative border-[1px] 
-          w-full  py-2 outline-0 px-4 text-sm text-gray-700 rounded-md `}
-            defaultValue={""}
+            className={`appearance-none relative border-[1px] w-full  py-2 outline-0 px-4 text-sm text-gray-700 rounded-md `}
+            defaultValue={priority}
           >
             {PRIORITY_TAGS.map(({ title, value }, index) => (
               <FormDropDownOption value={value} title={title} key={index} />
@@ -47,10 +54,11 @@ const EditTagMenu = () => {
             Status
           </label>
           <select
-            id="priority"
+            ref={statusRef}
+            id="status"
             className={`appearance-none relative border-[1px] 
           w-full  py-2 outline-0 px-4 text-sm text-gray-700 rounded-md`}
-            defaultValue={""}
+            defaultValue={status}
           >
             {STATUS_TAGS.map(({ title, value }, index) => (
               <FormDropDownOption value={value} title={title} key={index} />
@@ -61,7 +69,10 @@ const EditTagMenu = () => {
         <DialogFooter>
           <Button
             type="submit"
-            className="bg-gray-400 text-white hover:bg-gray-700"
+            className="bg-gray-400 text-white hover:bg-white hover:text-black border-white hover:border-black border-[1px] transition duration-300"
+            onClick={() => {
+              updateTagHandler();
+            }}
           >
             Save changes
           </Button>

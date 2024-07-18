@@ -18,7 +18,13 @@ const page = async ({
 
       <div className="wrapper_container pt-32">
         <div className="text-4xl mb-10">Project Details</div>
-        <Tags />
+        {clientInfo && (
+          <Tags
+            priority={clientInfo.priority}
+            status={clientInfo.status}
+            id={clientInfo.id}
+          />
+        )}
         <ClientDetailsTable clientInfo={clientInfo} />
       </div>
     </>
