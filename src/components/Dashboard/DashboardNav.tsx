@@ -10,7 +10,7 @@ const DashboardNav = () => {
 
   return (
     <nav>
-      <div className="shadow-md top-0 fixed w-full bg-white z-[999]">
+      <div className="shadow-md top-0 fixed w-full bg-white z-[10]">
         <div className="wrapper_container flex items-stretch justify-between py-2 lg:py-0 ">
           <Link href={"/"}>
             <div
