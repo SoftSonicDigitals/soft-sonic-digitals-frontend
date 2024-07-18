@@ -6,6 +6,7 @@ import AddNotesSection from "./AddNoteSection";
 import NotesTable from "./NotesTable";
 import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
+import Tags from "./Tags";
 
 export {
   DashboardNav,
@@ -16,4 +17,5 @@ export {
   AddNotesSection,
   NotesTable,
   SearchBar,
+  Tags,
 };

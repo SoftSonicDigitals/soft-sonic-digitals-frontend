@@ -12,7 +12,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Client {
    id String @id @default(auto()) @map("_id") @db.ObjectId
    client_id String
@@ -25,6 +24,8 @@ model Client {
    requirement String
    project_start String
    project_details String?
+   priority String?
+   status String?
    notes            Note[]   
    }
 
