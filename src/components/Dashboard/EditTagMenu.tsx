@@ -8,23 +8,34 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { BsTags } from "react-icons/bs";
 import { PRIORITY_TAGS, STATUS_TAGS } from "@/prototypes/dashboard";
 import { FormDropDownOption } from "../ContactPage";
 import { Button } from "../ui/button";
 import { Tags } from "@/models/dashboard";
+import { updateTags } from "@/actions";
 
 const EditTagMenu = ({ priority, status, id }: Tags) => {
   const priorityRef = useRef<HTMLSelectElement | null>(null);
   const statusRef = useRef<HTMLSelectElement | null>(null);
+  const [open, setOpen] = useState(false);
 
-  const updateTagHandler = () => {};
+  const updateTagHandler = async () => {
+    const tags = await updateTags(
+      priorityRef.current?.value!,
+      statusRef.current?.value!,
+      id
+    );
+  };
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <div className="hover:bg-gray-300 p-1.5 rounded-lg cursor-pointer border-[1px] transition duration-200">
+        <div
+          className="hover:bg-gray-300 p-1.5 rounded-lg cursor-pointer border-[1px] transition duration-200"
+          onClick={() => setOpen(true)}
+        >
           <BsTags className="h-[24px] w-[24px]" />
         </div>
       </DialogTrigger>
@@ -72,6 +83,7 @@ const EditTagMenu = ({ priority, status, id }: Tags) => {
             className="bg-gray-400 text-white hover:bg-white hover:text-black border-white hover:border-black border-[1px] transition duration-300"
             onClick={() => {
               updateTagHandler();
+              setOpen(false);
             }}
           >
             Save changes

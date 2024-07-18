@@ -2,6 +2,7 @@
 import { ObjectId } from "mongodb";
 import { ClientDetails } from "@/models/dashboard";
 import prismadb from "../lib/prismadb";
+import { revalidatePath } from "next/cache";
 
 // add client
 export const addClientDetails = async ({
@@ -159,4 +160,26 @@ export const getClientNotes = async (clientId: string | undefined) => {
     },
   });
   return notes;
+};
+
+export const updateTags = async (
+  priority: string,
+  status: string,
+  id: string
+) => {
+  const result = await prismadb.client.update({
+    data: {
+      priority,
+      status,
+    },
+    where: {
+      id,
+    },
+    select: {
+      priority: true,
+      status: true,
+    },
+  });
+  revalidatePath(`/admin/client/${id}`);
+  return result;
 };
