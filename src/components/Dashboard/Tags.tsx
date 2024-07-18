@@ -8,12 +8,12 @@ const Tags = ({ priority, status, id }: TagsType) => {
       <div>
         <div
           className="inline-block px-3 py-2 rounded-xl  
-      text-sm font-[700] tracking-wider text-white bg-[#F57C00] mr-3"
+      text-sm font-[700] tracking-wider text-white bg-[#F57C00] mr-3 capitalize"
         >
           {priority}
         </div>
 
-        <div className="inline-block px-3 py-2 rounded-xl text-sm  font-[700] tracking-wider text-white bg-[#D32F2F]">
+        <div className="inline-block px-3 py-2 rounded-xl text-sm  font-[700] tracking-wider text-white bg-[#D32F2F] capitalize">
           {status}
         </div>
       </div>
