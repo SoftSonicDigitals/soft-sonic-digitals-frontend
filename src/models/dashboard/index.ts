@@ -9,6 +9,8 @@ export type ClientDetails = {
   requirement: string;
   start: string;
   details?: string;
+  priority: string;
+  status: string;
 };
 
 export type Clients = {
@@ -18,4 +20,10 @@ export type Clients = {
   email: string;
   mobile: string;
   service: string;
+};
+
+export type Tags = {
+  priority: string;
+  status: string;
+  id: string;
 };

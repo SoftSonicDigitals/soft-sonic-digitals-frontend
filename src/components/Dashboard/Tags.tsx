@@ -1,14 +1,8 @@
 import React from "react";
-import { BsTags } from "react-icons/bs";
-
-import { Button } from "../ui/button";
-
-import { FormDropDownOption } from "../ContactPage";
-import { DialogDescription } from "@radix-ui/react-dialog";
-import { PRIORITY_TAGS, STATUS_TAGS } from "@/prototypes/dashboard";
 import EditTagMenu from "./EditTagMenu";
+import { Tags as TagsType } from "@/models/dashboard";
 
-const Tags = () => {
+const Tags = ({ priority, status, id }: TagsType) => {
   return (
     <div className="mb-8 flex items-center gap-4">
       <div>
@@ -16,14 +10,14 @@ const Tags = () => {
           className="inline-block px-3 py-2 rounded-xl  
       text-sm font-[700] tracking-wider text-white bg-[#F57C00] mr-3"
         >
-          Critical
+          {priority}
         </div>
 
         <div className="inline-block px-3 py-2 rounded-xl text-sm  font-[700] tracking-wider text-white bg-[#D32F2F]">
-          Urgent
+          {status}
         </div>
       </div>
-      <EditTagMenu />
+      <EditTagMenu priority={priority} status={status} id={id} />
     </div>
   );
 };

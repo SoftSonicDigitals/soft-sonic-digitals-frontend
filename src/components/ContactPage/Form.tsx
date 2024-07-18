@@ -29,7 +29,12 @@ const Form = () => {
     try {
       const clientID = await getNextClientID();
 
-      const client = await addClientDetails({ ...data, clientID });
+      const client = await addClientDetails({
+        ...data,
+        clientID,
+        priority: "",
+        status: "",
+      });
 
       if (client) {
         toast.success("Form Successfully Submitted");
