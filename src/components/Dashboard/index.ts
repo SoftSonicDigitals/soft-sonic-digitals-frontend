@@ -7,7 +7,7 @@ import NotesTable from "./NotesTable";
 import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
 import Tags from "./Tags";
-
+import EditTagMenu from "./EditTagMenu";
 export {
   DashboardNav,
   ClientTables,
@@ -18,4 +18,5 @@ export {
   NotesTable,
   SearchBar,
   Tags,
+  EditTagMenu,
 };
