@@ -1,5 +1,5 @@
 import { getClientInfo } from "@/actions";
-import { ClientDetailsTable, DashboardNav } from "@/components/Dashboard";
+import { ClientDetailsTable, DashboardNav, Tags } from "@/components/Dashboard";
 
 import React from "react";
 
@@ -15,8 +15,10 @@ const page = async ({
   return (
     <>
       <DashboardNav />
+
       <div className="wrapper_container pt-32">
         <div className="text-4xl mb-10">Project Details</div>
+        <Tags />
         <ClientDetailsTable clientInfo={clientInfo} />
       </div>
     </>
