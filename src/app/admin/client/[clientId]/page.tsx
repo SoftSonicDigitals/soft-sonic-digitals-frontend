@@ -4,6 +4,7 @@ import {
   DashboardNav,
   TagsContainer,
 } from "@/components/Dashboard";
+import { PriorityKey, StatusKey } from "@/models/dashboard";
 
 import React from "react";
 
@@ -24,8 +25,8 @@ const page = async ({
         <div className="text-4xl mb-10">Project Details</div>
         {clientInfo && (
           <TagsContainer
-            priority={clientInfo.priority}
-            status={clientInfo.status}
+            priority={clientInfo.priority as PriorityKey}
+            status={clientInfo.status as StatusKey}
             id={clientInfo.id}
           />
         )}
