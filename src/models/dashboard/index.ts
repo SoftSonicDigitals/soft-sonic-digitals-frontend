@@ -24,7 +24,7 @@ export type Clients = {
   status: StatusKey;
 };
 
-export type PriorityKey = "critical" | "blocker" | "urgent" | "normal" | "";
+export type PriorityKey = "critical" | "blocker" | "urgent" | "normal";
 export type StatusKey =
   | "in-progress"
   | "review"
@@ -32,8 +32,7 @@ export type StatusKey =
   | "reopened"
   | "pending"
   | "verified"
-  | "duplicate"
-  | "";
+  | "duplicate";
 
 export type Tags = {
   priority: PriorityKey;
@@ -41,9 +40,15 @@ export type Tags = {
   id: string;
 };
 
-export type TagColor = {
-  [key in PriorityKey | StatusKey]: {
-    tagName: string;
-    color: string;
-  };
+type TagInfo = {
+  tagName: string;
+  color: string;
+};
+
+export type PriorityTagColor = {
+  [key in PriorityKey]: TagInfo;
+};
+
+export type StatusTagColor = {
+  [key in StatusKey]: TagInfo;
 };

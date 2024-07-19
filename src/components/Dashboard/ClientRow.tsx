@@ -19,6 +19,7 @@ const ClientRow = ({
   status,
 }: Clients) => {
   const router = useRouter();
+  console.log(id, priority, status);
   return (
     <TableRow
       className="cursor-pointer"
@@ -34,13 +35,13 @@ const ClientRow = ({
       <TableCell className="text-right">
         <div>
           <Tag
-            tagName={PRIORITY_TAGS_COLORS[`${priority}`].tagName}
-            color={PRIORITY_TAGS_COLORS[`${priority}`].color}
+            tagName={PRIORITY_TAGS_COLORS[`${priority}`]?.tagName}
+            color={PRIORITY_TAGS_COLORS[`${priority}`]?.color}
             variant="small"
           />
           <Tag
-            tagName={STATUS_TAGS_COLORS[`${status}`].tagName}
-            color={STATUS_TAGS_COLORS[`${status}`].color}
+            tagName={STATUS_TAGS_COLORS[`${status}`]?.tagName}
+            color={STATUS_TAGS_COLORS[`${status}`]?.color}
             variant="small"
           />
         </div>

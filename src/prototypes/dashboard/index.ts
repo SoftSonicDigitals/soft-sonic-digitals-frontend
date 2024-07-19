@@ -1,5 +1,5 @@
 import { FormDropDownOptionsType } from "@/models/contact_page";
-import { TagColor } from "@/models/dashboard";
+import { PriorityTagColor, StatusTagColor } from "@/models/dashboard";
 
 export const PRIORITY_TAGS: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
@@ -20,7 +20,7 @@ export const STATUS_TAGS: FormDropDownOptionsType = [
   { value: "duplicate", title: "Duplicate" },
 ];
 
-export const PRIORITY_TAGS_COLORS: TagColor = {
+export const PRIORITY_TAGS_COLORS: PriorityTagColor = {
   critical: {
     tagName: "critical",
     color: "#D32F2F", // Matte Red
@@ -39,7 +39,7 @@ export const PRIORITY_TAGS_COLORS: TagColor = {
   },
 };
 
-export const STATUS_TAGS_COLORS: TagColor = {
+export const STATUS_TAGS_COLORS: StatusTagColor = {
   "in-progress": {
     tagName: "in-progress",
     color: "#0288D1", // Matte Light Blue
@@ -58,7 +58,7 @@ export const STATUS_TAGS_COLORS: TagColor = {
   },
   pending: {
     tagName: "pending",
-    color: "#F57F17", // Matte Amber
+    color: "#00796B", // Matte Teal
   },
   verified: {
     tagName: "verified",
