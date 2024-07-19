@@ -32,7 +32,7 @@ const usePagination = () => {
     clients: [],
     totalClientCount: 0,
   };
-  console.log("pagination :", { totalClientCount, clients, isLoading, page });
+
   return { totalClientCount, clients, isLoading, page };
 };
 
