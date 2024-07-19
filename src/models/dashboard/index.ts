@@ -20,9 +20,11 @@ export type Clients = {
   email: string;
   mobile: string;
   service: string;
+  priority: PriorityKey;
+  status: StatusKey;
 };
 
-export type PriorityKey = "critical" | "blocker" | "urgent" | "normal";
+export type PriorityKey = "critical" | "blocker" | "urgent" | "normal" | "";
 export type StatusKey =
   | "in-progress"
   | "review"
@@ -30,7 +32,8 @@ export type StatusKey =
   | "reopened"
   | "pending"
   | "verified"
-  | "duplicate";
+  | "duplicate"
+  | "";
 
 export type Tags = {
   priority: PriorityKey;

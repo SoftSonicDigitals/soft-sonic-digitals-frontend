@@ -3,7 +3,21 @@ import React from "react";
 import { TableCell, TableRow } from "../ui/table";
 import { Clients } from "@/models/dashboard";
 import { useRouter } from "next/navigation";
-const ClientRow = ({ clientID, name, email, mobile, service, id }: Clients) => {
+import Tag from "./Tag";
+import {
+  PRIORITY_TAGS_COLORS,
+  STATUS_TAGS_COLORS,
+} from "@/prototypes/dashboard";
+const ClientRow = ({
+  clientID,
+  name,
+  email,
+  mobile,
+  service,
+  id,
+  priority,
+  status,
+}: Clients) => {
   const router = useRouter();
   return (
     <TableRow
@@ -16,7 +30,21 @@ const ClientRow = ({ clientID, name, email, mobile, service, id }: Clients) => {
       <TableCell className="font-medium">{name}</TableCell>
       <TableCell>{email}</TableCell>
       <TableCell>{mobile}</TableCell>
-      <TableCell className="text-right">{service}</TableCell>
+      <TableCell>{service}</TableCell>
+      <TableCell className="text-right">
+        <div>
+          <Tag
+            tagName={PRIORITY_TAGS_COLORS[`${priority}`].tagName}
+            color={PRIORITY_TAGS_COLORS[`${priority}`].color}
+            variant="small"
+          />
+          <Tag
+            tagName={STATUS_TAGS_COLORS[`${status}`].tagName}
+            color={STATUS_TAGS_COLORS[`${status}`].color}
+            variant="small"
+          />
+        </div>
+      </TableCell>
     </TableRow>
   );
 };
