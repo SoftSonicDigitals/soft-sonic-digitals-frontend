@@ -71,6 +71,8 @@ export const getClients = async (
       email: true,
       mobile: true,
       service: true,
+      priority: true,
+      status: true,
     },
     skip: (pageNumber - 1) * paginationTableLimit,
     take: paginationTableLimit,
@@ -92,6 +94,8 @@ export const searchClients = async (
       email: true,
       mobile: true,
       service: true,
+      priority: true,
+      status: true,
     },
     where: {
       OR: [

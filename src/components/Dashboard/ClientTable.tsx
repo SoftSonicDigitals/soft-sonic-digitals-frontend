@@ -16,6 +16,7 @@ import ClientRow from "./ClientRow";
 import usePagination from "@/hooks/usePagination";
 import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
+import { PriorityKey, StatusKey } from "@/models/dashboard";
 
 const ClientTables = () => {
   const { totalClientCount, isLoading, clients, page } = usePagination();
@@ -38,13 +39,23 @@ const ClientTables = () => {
               <TableHead className="w-[150px]">Name</TableHead>
               <TableHead>Email</TableHead>
               <TableHead>Mobile</TableHead>
-              <TableHead className="text-right">Service</TableHead>
+              <TableHead>Service</TableHead>
+              <TableHead className="text-right">Tags</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody className="">
             {!isLoading &&
               clients?.map(
-                ({ client_id, name, email, mobile, service, id }) => (
+                ({
+                  client_id,
+                  name,
+                  email,
+                  mobile,
+                  priority,
+                  status,
+                  service,
+                  id,
+                }) => (
                   <ClientRow
                     id={id}
                     key={id}
@@ -53,6 +64,8 @@ const ClientTables = () => {
                     email={email}
                     mobile={mobile}
                     service={service}
+                    priority={priority as PriorityKey}
+                    status={status as StatusKey}
                   />
                 )
               )}
