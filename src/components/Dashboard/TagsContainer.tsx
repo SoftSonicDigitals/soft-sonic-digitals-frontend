@@ -8,18 +8,19 @@ import {
 } from "@/prototypes/dashboard";
 
 const TagsContainer = ({ priority, status, id }: TagsType) => {
+  const priorityTagInfo = PRIORITY_TAGS_COLORS[`${priority}`];
+  const statusTagInfo = STATUS_TAGS_COLORS[`${status}`];
   return (
     <div className="mb-8 flex items-center gap-4">
-      <div>
-        <Tag
-          tagName={PRIORITY_TAGS_COLORS[`${priority}`].tagName}
-          color={PRIORITY_TAGS_COLORS[`${priority}`].color}
-        />
-        <Tag
-          tagName={STATUS_TAGS_COLORS[`${status}`].tagName}
-          color={STATUS_TAGS_COLORS[`${status}`].color}
-        />
-      </div>
+      {(priorityTagInfo || statusTagInfo) && (
+        <div>
+          <Tag
+            tagName={priorityTagInfo?.tagName}
+            color={priorityTagInfo?.color}
+          />
+          <Tag tagName={statusTagInfo?.tagName} color={statusTagInfo?.color} />
+        </div>
+      )}
       <EditTagMenu priority={priority} status={status} id={id} />
     </div>
   );
