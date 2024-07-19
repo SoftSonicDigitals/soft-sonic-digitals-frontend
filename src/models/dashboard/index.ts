@@ -22,25 +22,24 @@ export type Clients = {
   service: string;
 };
 
-("critical");
-("blocker");
-("urgent");
-("normal");
+export type PriorityKey = "critical" | "blocker" | "urgent" | "normal";
+export type StatusKey =
+  | "in-progress"
+  | "review"
+  | "resolved"
+  | "reopened"
+  | "pending"
+  | "verified"
+  | "duplicate";
+
 export type Tags = {
-  priority: "critical" | "blocker" | "urgent" | "normal";
-  status:
-    | "in-progress"
-    | "review"
-    | "resolved"
-    | "reopened"
-    | "pending"
-    | "verified"
-    | "duplicate";
+  priority: PriorityKey;
+  status: StatusKey;
   id: string;
 };
 
 export type TagColor = {
-  [key: string]: {
+  [key in PriorityKey | StatusKey]: {
     tagName: string;
     color: string;
   };
