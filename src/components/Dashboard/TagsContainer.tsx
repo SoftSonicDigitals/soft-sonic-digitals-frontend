@@ -13,7 +13,7 @@ const TagsContainer = ({ priority, status, id }: TagsType) => {
   return (
     <div className="mb-8 flex items-center gap-4">
       {(priorityTagInfo || statusTagInfo) && (
-        <div>
+        <div className="flex gap-2">
           <Tag
             tagName={priorityTagInfo?.tagName}
             color={priorityTagInfo?.color}
