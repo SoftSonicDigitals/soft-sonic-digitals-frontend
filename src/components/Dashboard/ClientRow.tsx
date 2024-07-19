@@ -22,7 +22,7 @@ const ClientRow = ({
   console.log(id, priority, status);
   return (
     <TableRow
-      className="cursor-pointer"
+      className="cursor-pointer hover:bg-white-100"
       onClick={() => {
         router.push(`/admin/client/${id}`);
       }}
@@ -33,7 +33,7 @@ const ClientRow = ({
       <TableCell>{mobile}</TableCell>
       <TableCell>{service}</TableCell>
       <TableCell className="text-right">
-        <div>
+        <div className="flex justify-end flex-col md:flex-row gap-2">
           <Tag
             tagName={PRIORITY_TAGS_COLORS[`${priority}`]?.tagName}
             color={PRIORITY_TAGS_COLORS[`${priority}`]?.color}
