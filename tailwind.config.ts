@@ -57,6 +57,12 @@ const config: Config = {
       black: "#000000",
       green: "#f0fcfa",
       rose_white: "#fff7f7",
+
+      purple: {
+        DEFAULT: "#5247e6",
+        300: "#6366f2",
+        600: "#5247e6",
+      },
     },
   },
 
