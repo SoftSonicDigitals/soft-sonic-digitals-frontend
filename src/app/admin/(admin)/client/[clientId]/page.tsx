@@ -1,9 +1,5 @@
 import { getClientInfo } from "@/actions";
-import {
-  ClientDetailsTable,
-  DashboardNav,
-  TagsContainer,
-} from "@/components/Dashboard";
+import { ClientDetailsTable, TagsContainer } from "@/components/Dashboard";
 import { PriorityKey, StatusKey } from "@/models/dashboard";
 
 import React from "react";
@@ -19,8 +15,6 @@ const page = async ({
 
   return (
     <>
-      <DashboardNav />
-
       <div className="wrapper_container pt-32">
         <div className="text-4xl mb-10">Project Details</div>
         {clientInfo && (

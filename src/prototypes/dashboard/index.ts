@@ -1,6 +1,12 @@
 import { FormDropDownOptionsType } from "@/models/contact_page";
 import { PriorityTagColor, StatusTagColor } from "@/models/dashboard";
-
+import { FaChartSimple } from "react-icons/fa6";
+import { FiUser } from "react-icons/fi";
+import { LuClipboard } from "react-icons/lu";
+import { HiMiniSquares2X2 } from "react-icons/hi2";
+import { GoGraph } from "react-icons/go";
+import { PiHeadphonesBold } from "react-icons/pi";
+import { IoSettingsOutline } from "react-icons/io5";
 export const PRIORITY_TAGS: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "critical", title: "Critical" },
@@ -69,3 +75,37 @@ export const STATUS_TAGS_COLORS: StatusTagColor = {
     color: "#616161", // Matte Gray
   },
 };
+
+export const DASHBOARD_NAVLINKS = [
+  {
+    title: "Overview",
+    icons: HiMiniSquares2X2,
+    link: "/dashboard",
+  },
+
+  {
+    title: "Growth",
+    icons: GoGraph,
+    link: "/",
+  },
+  {
+    title: "Customers",
+    icons: FiUser,
+    link: "/",
+  },
+  {
+    title: "Reports",
+    icons: LuClipboard,
+    link: "/",
+  },
+  {
+    title: "Support",
+    icons: PiHeadphonesBold,
+    link: "/",
+  },
+  {
+    title: "Settings",
+    icons: IoSettingsOutline,
+    link: "/",
+  },
+];
