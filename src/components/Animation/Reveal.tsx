@@ -26,6 +26,7 @@ const Reveal = ({ children, index = null, styles }: RevealProps) => {
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
   const slideControls = useAnimation();
+
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");

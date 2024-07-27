@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
-import "../globals.css";
+import "../../globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "react-hot-toast";
+import { SideNavBar } from "@/components/Dashboard";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -24,7 +25,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={raleway.className}>
+        <body className={`${raleway.className} `}>
+          <SideNavBar />
           {children}
           <Toaster position="top-right" reverseOrder={false} />
         </body>

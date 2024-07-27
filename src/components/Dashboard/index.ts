@@ -8,8 +8,7 @@ import SearchBar from "./SearchBar";
 import TagsContainer from "./TagsContainer";
 import EditTagMenu from "./EditTagMenu";
 import Tag from "./Tag";
-import SideNavbar from "./SideNavbar";
-
+import SideNavBar from "./SideNavBar";
 export {
   ClientTables,
   ClientRow,
@@ -21,5 +20,5 @@ export {
   TagsContainer,
   EditTagMenu,
   Tag,
-  SideNavbar,
+  SideNavBar,
 };
