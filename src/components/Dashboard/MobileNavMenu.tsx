@@ -75,7 +75,7 @@ const MobileNavMenu = () => {
                           pathname === `/admin${item.link}`
                             ? "border-white"
                             : ""
-                        } hover:border-white border-[#12131c] flex justify-center mx-0.5 transition duration-200 
+                        } border-l-[3px] hover:border-white border-[#12131c] flex justify-center mx-0.5 transition duration-200 
                       `}
                       >
                         <div className="text-white flex items-center gap-4 py-1.5 px-2 tracking-wider font-[500] text-sm rounded-lg">

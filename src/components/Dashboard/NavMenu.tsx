@@ -67,9 +67,9 @@ const NavMenu = () => {
                   href={item.link}
                   className={`${
                     pathname === `/admin${item.link}` ? "border-white" : ""
-                  }   hover:border-white border-[#12131c] flex justify-center mx-0.5 trasnition duration-200 ${
-                    isOpen ? "border-l-[3px]" : "border-none"
-                  }
+                  }  border-l-[3px] hover:border-white border-[#12131c] flex justify-center mx-0.5 trasnition duration-200 
+                    "
+                  
             `}
                 >
                   <div className="text-white flex items-center gap-4 py-1.5 px-2 tracking-wider font-[500] text-sm  rounded-lg ">
