@@ -1,6 +1,4 @@
-"use client";
-import { useAnimationControls } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import NavMenu from "./NavMenu";
 import MobileNavMenu from "./MobileNavMenu";
 
