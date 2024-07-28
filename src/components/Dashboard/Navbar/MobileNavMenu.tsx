@@ -8,6 +8,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { LuArrowLeftToLine } from "react-icons/lu";
 import { mobileNavbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
+import Logout from "./Logout";
 
 const MobileNavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,9 +63,7 @@ const MobileNavMenu = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex-center my-10 gap-4 text-white font-[500] tracking-wider text-sm">
-                <LuArrowLeftToLine className="h-6 w-6" /> {isOpen && "Logout"}
-              </div>
+              <Logout isOpen={isOpen} />
             </div>
           </motion.div>
         )}
