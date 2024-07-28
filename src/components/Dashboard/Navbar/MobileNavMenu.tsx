@@ -58,7 +58,7 @@ const MobileNavMenu = () => {
 
                 <div>
                   <div className="flex flex-col gap-8 my-10">
-                    <NavLinksContainer isOpen={isOpen} />
+                    <NavLinksContainer isOpen={isOpen} setIsOpen={setIsOpen} />
                   </div>
                 </div>
               </div>
