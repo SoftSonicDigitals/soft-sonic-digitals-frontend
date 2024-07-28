@@ -79,33 +79,33 @@ export const STATUS_TAGS_COLORS: StatusTagColor = {
 export const DASHBOARD_NAVLINKS = [
   {
     title: "Overview",
-    icons: HiMiniSquares2X2,
+    icon: HiMiniSquares2X2,
     link: "/dashboard",
   },
 
   {
     title: "Growth",
-    icons: GoGraph,
+    icon: GoGraph,
     link: "/",
   },
   {
     title: "Customers",
-    icons: FiUser,
+    icon: FiUser,
     link: "/",
   },
   {
     title: "Reports",
-    icons: LuClipboard,
+    icon: LuClipboard,
     link: "/",
   },
   {
     title: "Support",
-    icons: PiHeadphonesBold,
+    icon: PiHeadphonesBold,
     link: "/",
   },
   {
     title: "Settings",
-    icons: IoSettingsOutline,
+    icon: IoSettingsOutline,
     link: "/",
   },
 ];

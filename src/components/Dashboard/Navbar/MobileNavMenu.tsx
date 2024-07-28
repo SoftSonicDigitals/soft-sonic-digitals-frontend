@@ -1,33 +1,24 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
-import { DASHBOARD_NAVLINKS } from "@/prototypes/dashboard";
-import { usePathname } from "next/navigation";
 import { LuArrowLeftToLine } from "react-icons/lu";
-const variants = {
-  close: {
-    width: "0",
-    transition: { ease: "easeInOut", duration: 0.2 },
-  },
-  open: {
-    width: "100vw",
-    transition: { ease: "easeInOut", duration: 0.2 },
-  },
-};
+import { mobileNavbarVariants } from "@/animation";
+import NavLinksContainer from "./NavLinksContainer";
 
 const MobileNavMenu = () => {
-  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+
   const handleOpenClose = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <>
-      <nav className="fixed md:hidden h-16 shadow-md w-full z-20">
+      <nav className="fixed md:hidden h-16 shadow-md w-full z-20 bg-white">
         <div className="flex items-center justify-between mx-7 h-full">
           <Link href="/">
             <Image src="/Logo.svg" width={100} height={100} alt="logo" />
@@ -41,7 +32,7 @@ const MobileNavMenu = () => {
         {isOpen && (
           <motion.div
             className="block md:hidden bg-[#12131c] gap-20 w-64 fixed top-0 left-0 h-screen shadow z-50"
-            variants={variants}
+            variants={mobileNavbarVariants}
             initial="close"
             animate={isOpen ? "open" : "close"}
             exit="close"
@@ -67,23 +58,7 @@ const MobileNavMenu = () => {
 
                 <div>
                   <div className="flex flex-col gap-8 my-10">
-                    {DASHBOARD_NAVLINKS.map((item, index) => (
-                      <Link
-                        key={index}
-                        href={item.link}
-                        className={`${
-                          pathname === `/admin${item.link}`
-                            ? "border-white"
-                            : ""
-                        } border-l-[3px] hover:border-white border-[#12131c] flex justify-center mx-0.5 transition duration-200 
-                      `}
-                      >
-                        <div className="text-white flex items-center gap-4 py-1.5 px-2 tracking-wider font-[500] text-sm rounded-lg">
-                          <item.icons className="h-6 w-6" />
-                          {isOpen && item.title}
-                        </div>
-                      </Link>
-                    ))}
+                    <NavLinksContainer isOpen={isOpen} />
                   </div>
                 </div>
               </div>
