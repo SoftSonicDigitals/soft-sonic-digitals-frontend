@@ -1,17 +1,23 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { IconType } from "react-icons";
 type NavLinkProps = {
   link: string;
   icon: IconType;
   isOpen: boolean;
   title: string;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
-const NavLink = ({ link, icon: Icon, isOpen, title }: NavLinkProps) => {
+const NavLink = ({
+  link,
+  icon: Icon,
+  isOpen,
+  title,
+  setIsOpen,
+}: NavLinkProps) => {
   const pathname = usePathname();
-  console.log(pathname);
-  console.log(pathname === `/admin${link}`);
+
   return (
     <Link
       href={`/admin${link}`}
@@ -20,6 +26,7 @@ const NavLink = ({ link, icon: Icon, isOpen, title }: NavLinkProps) => {
       } border-l-[3px] hover:border-white  flex justify-center mx-0.5 transition duration-200"
         
   `}
+      onClick={() => setIsOpen(false)}
     >
       <div className="text-white flex items-center gap-4 py-1.5 px-2 tracking-wider font-[500] text-sm  rounded-lg ">
         <Icon className="h-6 w-6 " />
