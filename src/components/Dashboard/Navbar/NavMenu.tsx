@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { LuArrowLeftToLine } from "react-icons/lu";
+
 import { navbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import Logout from "./Logout";
 
 const NavMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,9 +37,7 @@ const NavMenu = () => {
           <div>
             <NavLinksContainer isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
-        </div>
-        <div className="flex-center my-10 gap-4 text-white font-[500] tracking-wider text-sm">
-          <LuArrowLeftToLine className="h-6 w-6" /> {isOpen && "Logout"}
+          <Logout isOpen={isOpen} />
         </div>
       </div>
     </motion.nav>
