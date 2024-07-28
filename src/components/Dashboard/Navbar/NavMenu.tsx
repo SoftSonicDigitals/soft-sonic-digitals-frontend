@@ -34,7 +34,7 @@ const NavMenu = () => {
           />
 
           <div>
-            <NavLinksContainer isOpen={isOpen} />
+            <NavLinksContainer isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
         </div>
         <div className="flex-center my-10 gap-4 text-white font-[500] tracking-wider text-sm">
