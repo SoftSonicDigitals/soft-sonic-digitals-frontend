@@ -37,8 +37,8 @@ const NavMenu = () => {
           <div>
             <NavLinksContainer isOpen={isOpen} setIsOpen={setIsOpen} />
           </div>
-          <Logout isOpen={isOpen} />
         </div>
+        <Logout isOpen={isOpen} />
       </div>
     </motion.nav>
   );
