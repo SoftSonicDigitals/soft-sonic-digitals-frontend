@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${raleway.className} `}>
+        <body className={`${raleway.className} overflow-hidden`}>
           <SideNavBar />
           {children}
           <Toaster position="top-right" reverseOrder={false} />
