@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
 import { IoCloseSharp } from "react-icons/io5";
-import { LuArrowLeftToLine } from "react-icons/lu";
 import { mobileNavbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
 import Logout from "./Logout";
