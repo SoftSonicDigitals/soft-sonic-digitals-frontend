@@ -17,6 +17,8 @@ import usePagination from "@/hooks/usePagination";
 import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
 import { PriorityKey, StatusKey } from "@/models/dashboard";
+import { useNavbarOpenContext } from "@/context";
+import { motion } from "framer-motion";
 
 const ClientTables = () => {
   const { totalClientCount, isLoading, clients, page } = usePagination();
@@ -24,10 +26,15 @@ const ClientTables = () => {
   const canNextPage = totalClientCount > page * CLIENT_TABLE_LIMIT;
   const canPrevPage = page > 1;
   const totalPage = Math.ceil(totalClientCount / CLIENT_TABLE_LIMIT);
-
+  const { isNavbarOpen } = useNavbarOpenContext();
   return (
-    <section id="clients_table" className="pt-32">
-      <div className="wrapper_container">
+    <section id="clients_table" className="pt-32 md:pl-[5rem]">
+      <motion.div
+        className={` wrapper_container  `}
+        initial={{ paddingLeft: "0rem" }}
+        animate={{ paddingLeft: isNavbarOpen ? "11rem" : "0rem" }}
+        transition={{ duration: 0.25 }}
+      >
         <div className="text-4xl mb-8">{DASHBOARD_TABLE_HEADING}</div>
 
         <SearchBar />
@@ -88,7 +95,7 @@ const ClientTables = () => {
           totalPage={totalPage}
           currentPage={page}
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
