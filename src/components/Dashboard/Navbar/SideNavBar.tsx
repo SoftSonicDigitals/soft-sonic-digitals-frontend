@@ -5,8 +5,12 @@ import MobileNavMenu from "./MobileNavMenu";
 const SideNavBar = () => {
   return (
     <>
-      <NavMenu />
-      <MobileNavMenu />
+      <div className="hidden md:block">
+        <NavMenu />
+      </div>
+      <div className="block md:hidden">
+        <MobileNavMenu />
+      </div>
     </>
   );
 };
