@@ -7,12 +7,16 @@ import { navbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import Logout from "./Logout";
+import { useNavbarOpenContext } from "@/context";
 
 const NavMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isNavbarOpen: isOpen, setIsNavbarOpen: setIsOpen } =
+    useNavbarOpenContext();
+
   const handleOpenClose = () => {
     setIsOpen(!isOpen);
   };
+
   const domeNode = useClickOutside(() => setIsOpen(false));
   return (
     <motion.nav
@@ -23,7 +27,7 @@ const NavMenu = () => {
       ref={domeNode}
     >
       <div className="flex flex-col justify-between h-screen">
-        <div className="flex flex-col ">
+        <div className="flex flex-col cursor-pointer ">
           <Image
             src="/WhiteLogo.svg"
             alt="logo"
