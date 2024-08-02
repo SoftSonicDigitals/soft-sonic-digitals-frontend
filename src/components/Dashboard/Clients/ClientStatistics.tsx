@@ -1,14 +1,8 @@
 import React from "react";
+import { IoAddSharp } from "react-icons/io5";
 
 const ClientStatistics = () => {
-  return (
-    <section className="client_statistics wrapper_container">
-      <div>
-        <h1 className="text-3xl font-[600] my-10">Clients</h1>
-        <button></button>
-      </div>
-    </section>
-  );
+  return <></>;
 };
 
 export default ClientStatistics;
