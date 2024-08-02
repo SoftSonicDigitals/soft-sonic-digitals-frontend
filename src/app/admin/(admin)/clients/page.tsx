@@ -1,6 +1,7 @@
 import {
   ClientLayoutAnimator,
   ClientStatistics,
+  ClientTable,
 } from "@/components/Dashboard/Clients";
 import { ADD_CLIENT_BTN_TEXT, CLIENTS } from "@/constants/dashboard";
 import Link from "next/link";
@@ -24,6 +25,7 @@ const page = () => {
           </div>
         </div>
         <ClientStatistics />
+        <ClientTable />
       </ClientLayoutAnimator>
     </main>
   );

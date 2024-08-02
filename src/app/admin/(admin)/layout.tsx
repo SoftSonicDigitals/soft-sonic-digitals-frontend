@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${raleway.className} overflow-hidden`}>
+        <body className={`${raleway.className} overflow-x-hidden`}>
           <NavbarOpenWrapper>
             <SideNavBar />
             {children}
