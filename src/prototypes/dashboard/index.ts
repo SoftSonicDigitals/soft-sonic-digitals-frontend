@@ -89,9 +89,9 @@ export const DASHBOARD_NAVLINKS = [
     link: "/",
   },
   {
-    title: "Customers",
+    title: "Clients",
     icon: FiUser,
-    link: "/",
+    link: "/clients",
   },
   {
     title: "Reports",
