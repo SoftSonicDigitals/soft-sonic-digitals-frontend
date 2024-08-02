@@ -2,14 +2,11 @@ import React from "react";
 import { IoFilterSharp } from "react-icons/io5";
 const Filters = () => {
   return (
-    <div>
-      <div>
-        <button className="flex-center gap-2 px-4 py-2 border-2 border-gray-300 text-xs font-[500]">
-          <IoFilterSharp className="text-lg" />
-          More filters
-        </button>
-      </div>
-    </div>
+    <button className="flex-center gap-2 px-5 py-2.5 border-[1.5px] border-gray-500 text-sm font-[500]">
+      <IoFilterSharp className="text-lg" />
+
+      <p className="font-[600]">More filters</p>
+    </button>
   );
 };
 
