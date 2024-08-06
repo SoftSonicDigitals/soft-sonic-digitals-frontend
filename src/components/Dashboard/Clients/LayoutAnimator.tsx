@@ -3,7 +3,7 @@ import { useNavbarOpenContext } from "@/context";
 import { motion } from "framer-motion";
 import React from "react";
 
-const ClientLayoutAnimator = ({ children }: { children: React.ReactNode }) => {
+const LayoutAnimator = ({ children }: { children: React.ReactNode }) => {
   const { isNavbarOpen } = useNavbarOpenContext();
   return (
     <motion.div
@@ -17,4 +17,4 @@ const ClientLayoutAnimator = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default ClientLayoutAnimator;
+export default LayoutAnimator;
