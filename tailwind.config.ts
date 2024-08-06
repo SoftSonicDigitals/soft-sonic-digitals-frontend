@@ -54,9 +54,14 @@ const config: Config = {
       },
       orange: { DEFAULT: "#F6702D", 100: "#fff8f2", 600: "#ed4c37" },
       pink: "#e83556",
-      black: { DEFAULT: "#000000", 500: "#12131c" },
-      green: "#f0fcfa",
+      black: { DEFAULT: "#000000", 200: "#1d2938", 500: "#12131c" },
+
       rose_white: "#fff7f7",
+      purple: {
+        DEFAULT: "#4263eb",
+        300: "#91a7ff",
+        700: "#4263eb",
+      },
     },
   },
 

@@ -13,9 +13,9 @@ const StatsCard = ({ title, data, change }: StatsCardProps) => {
       </div>
       <div className="flex items-center justify-between">
         <p className="text-5xl font-[600]">{data}</p>
-        <div className="flex-center gap-1 bg-gray-300 rounded-full px-2.5  py-1.5 text-xs font-[600]">
-          <BiUpArrowAlt className="text-lg" />
-          <p>{change}%</p>
+        <div className="flex-center gap-1 bg-[#d7f7dc] rounded-full px-2.5  py-1.5 text-xs font-[600]">
+          <BiUpArrowAlt className="text-lg text-[#2f9e44]" />
+          <p className="text-[#2f9e44]">{change}%</p>
         </div>
       </div>
     </div>
