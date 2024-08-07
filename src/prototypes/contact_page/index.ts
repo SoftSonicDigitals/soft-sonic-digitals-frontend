@@ -100,7 +100,7 @@ export const FORM_BUDGET: FormDropDownOptionsType = [
   { value: "$500k+", title: "$500k+" },
 ];
 
-export const FORM_REQUIREMENT: FormDropDownOptionsType = [
+export const FORM_REQUIREMENTS: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "Hire Dedicated Team", title: "Hire Dedicated Team" },
   { value: "New Project", title: "New Project" },

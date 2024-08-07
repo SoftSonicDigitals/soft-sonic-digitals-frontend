@@ -1,18 +1,10 @@
-export type ClientDetails = {
-  clientID: string;
-  name: string;
-  email: string;
-  mobile: string;
-  company?: string;
-  service: string;
-  budget: string;
-  requirement: string;
-  start: string;
-  details?: string;
-  priority: string;
-  status: string;
-  address?: string;
-};
+import { FormFields } from "../contact_page";
+
+export interface ClientDetails extends FormFields {
+  clientId: string;
+  priority?: string;
+  status?: string;
+}
 
 export type Clients = {
   id: string;
