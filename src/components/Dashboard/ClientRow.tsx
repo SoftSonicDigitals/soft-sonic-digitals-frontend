@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { TableCell, TableRow } from "../ui/table";
-import { Clients } from "@/models/dashboard";
+import { Clients } from "@/models/admin";
 import { useRouter } from "next/navigation";
 import Tag from "./Tag";
 import {
