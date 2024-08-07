@@ -19,11 +19,13 @@ model Client {
    email String 
    mobile String 
    company  String?
-   address String?
+   address_line String?
+   postcode String?
+   state String?
    service String
    budget String 
    requirement String
-   project_start String
+   estimated_start_time String
    project_details String?
    priority String
    status String
