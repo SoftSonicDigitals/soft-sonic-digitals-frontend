@@ -11,6 +11,7 @@ export type ClientDetails = {
   details?: string;
   priority: string;
   status: string;
+  address?: string;
 };
 
 export type Clients = {

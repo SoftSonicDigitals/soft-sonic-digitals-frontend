@@ -19,6 +19,7 @@ model Client {
    email String 
    mobile String 
    company  String?
+   address String?
    service String
    budget String 
    requirement String

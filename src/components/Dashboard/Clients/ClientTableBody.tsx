@@ -1,13 +1,11 @@
 "use client";
 import React from "react";
 import ClientTableRow from "./ClientTableRow";
-import useSWR from "swr";
-import { getClients } from "@/actions";
 
 const ClientTableBody = () => {
   const clients = [
     {
-      clientId: "SC001",
+      address: "SC001",
       name: "Olivia Rhye",
       email: "olivia@untitleui.com",
       plan: "Plan A",
@@ -17,7 +15,7 @@ const ClientTableBody = () => {
       status: "Active",
     },
     {
-      clientId: "SC002",
+      address: "SC002",
       name: "Olivia Rhye",
       email: "olivia@untitleui.com",
       plan: "Plan A",
@@ -27,7 +25,7 @@ const ClientTableBody = () => {
       status: "Active",
     },
     {
-      clientId: "SC003",
+      address: "SC003",
       name: "Olivia Rhye",
       email: "olivia@untitleui.com",
       plan: "Plan A",
@@ -37,7 +35,7 @@ const ClientTableBody = () => {
       status: "Active",
     },
     {
-      clientId: "SC004",
+      address: "SC004",
       name: "Olivia Rhye",
       email: "olivia@untitleui.com",
       plan: "Plan A",
@@ -57,7 +55,7 @@ const ClientTableBody = () => {
           email={client.email}
           mobile={client.mobile}
           service={client.service}
-          clientId={client.clientId}
+          address={client.address}
         />
       ))}
     </tbody>

@@ -107,6 +107,18 @@ export const FORM_REQUIREMENT: FormDropDownOptionsType = [
   { value: "Existing Project", title: "Existing Project" },
 ];
 
+export const FORM_AUSTRALIAN_STATES: FormDropDownOptionsType = [
+  { value: "", title: "-Select-" },
+  { value: "NSW", title: "New South Wales" },
+  { value: "VIC", title: "Victoria" },
+  { value: "QLD", title: "Queensland" },
+  { value: "SA", title: "South Australia" },
+  { value: "WA", title: "Western Australia" },
+  { value: "TAS", title: "Tasmania" },
+  { value: "ACT", title: "Australian Capital Territory" },
+  { value: "NT", title: "Northern Territory" },
+];
+
 export const FORM_START: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "Right now", title: "Right now" },

@@ -3,8 +3,9 @@
 import React from "react";
 import { PrimaryButton } from "../Reusable";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { FormFields } from "@/models/contact_page";
+import { FieldId, FormFields } from "@/models/contact_page";
 import {
+  FORM_AUSTRALIAN_STATES,
   FORM_BUDGET,
   FORM_REQUIREMENT,
   FORM_SERVICES,
@@ -15,6 +16,7 @@ import { FORM_FIELDS } from "@/constants/contact_page";
 import { addClientDetails, getNextClientID } from "@/actions";
 import toast from "react-hot-toast";
 import useSWR from "swr";
+import InputField from "./Form/InputField";
 const Form = () => {
   const {
     register,
@@ -48,6 +50,8 @@ const Form = () => {
     }
   };
 
+  const name = { name: "name" };
+
   return (
     <section id="contact_form" className="max-w-[555px]  basis-full  w-full ">
       <div className=" px-0.5 md:pr-8">
@@ -55,57 +59,23 @@ const Form = () => {
           className="px-3.5 py-8 flex flex-col gap-3  bg-gray-300  "
           onSubmit={handleSubmit(onSubmit)}
         >
-          {/* name field */}
-          <div className="flex flex-col gap-1 text-gray-700">
-            <label htmlFor="name" className="font-[600] text-sm">
-              {FORM_FIELDS.name} <span className="text-red text-xl">*</span>
-            </label>
-            <div>
-              <input
-                type="text"
-                id="name"
-                className={`relative border-[1px] ${
-                  errors?.name ? "border-red" : "border-gray-600 "
-                } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
-                {...register("name", {
-                  required: "Name is required",
-                })}
-              />
-              {errors.name && (
-                <div className="text-sm font-[500] text-red mt-1">
-                  {errors.name.message}
-                </div>
-              )}
-            </div>
-          </div>
+          <InputField
+            fieldId={FORM_FIELDS.name.id as FieldId}
+            errors={errors}
+            register={register}
+            label={FORM_FIELDS.name.label}
+          />
 
-          {/* email field */}
-          <div className="flex flex-col gap-1 text-gray-700">
-            <label htmlFor="email" className="font-[600] text-sm">
-              {FORM_FIELDS.email}
-              <span className="text-red text-xl">*</span>
-            </label>
-
-            <input
-              type="text"
-              id="email"
-              className={` relative border-[1px] ${
-                errors?.email ? "border-red" : "border-gray-600 "
-              } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
-                  message: "Please enter a valid email",
-                },
-              })}
-            />
-            {errors.email && (
-              <div className="text-sm font-[500] text-red mt-1">
-                {errors.email.message}
-              </div>
-            )}
-          </div>
+          <InputField
+            fieldId={FORM_FIELDS.email.id as FieldId}
+            errors={errors}
+            register={register}
+            label={FORM_FIELDS.email.label}
+            customValidation={{
+              value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
+              message: "Please enter a valid email",
+            }}
+          />
 
           {/* mobile field */}
           <div className="flex flex-col gap-1 text-gray-700">
@@ -144,6 +114,50 @@ const Form = () => {
               className=" h-[38px] border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm"
               {...register("company")}
             />
+          </div>
+
+          <div className="grid grid-cols-1  sm:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-1 text-gray-700">
+              <label htmlFor="budget" className="font-[600] text-sm">
+                {FORM_FIELDS.address}
+                <span className="text-red text-xl">*</span>
+              </label>
+              {/* Select a Address field */}
+              <input
+                id="address"
+                className={`appearance-none relative border-[1px] 
+                  border-gray-600 
+                 w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+                {...register("address")}
+                defaultValue={""}
+              />
+            </div>
+
+            {/* Select a State field */}
+            <div className="flex flex-col gap-1 text-gray-700">
+              <label htmlFor="state" className="font-[600] text-sm">
+                {FORM_FIELDS.state}
+                <span className="text-red text-xl">*</span>
+              </label>
+
+              <select
+                id="state"
+                className={`appearance-none relative border-[1px]
+                 border-gray-600 
+                w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+                {...register("states")}
+                defaultValue={""}
+              >
+                {FORM_AUSTRALIAN_STATES.map(({ value, title }, index) => (
+                  <FormDropDownOption value={value} title={title} key={index} />
+                ))}
+              </select>
+              {errors.requirement && (
+                <div className="text-sm font-[500] text-red mt-1">
+                  {errors.requirement.message}
+                </div>
+              )}
+            </div>
           </div>
 
           <div className="flex flex-col gap-1 text-gray-700">
@@ -261,13 +275,13 @@ const Form = () => {
           {/*  project details field */}
           <div className="flex flex-col gap-1 text-gray-700">
             <label htmlFor="details" className="font-[600] text-sm">
-              {FORM_FIELDS.details}
+              {FORM_FIELDS.project_details}
             </label>
 
             <textarea
               id="details"
               className="border-[1px] border-gray-600 w-full  py-2 outline-0 px-4 text-sm h-40"
-              {...register("details")}
+              {...register("project_details")}
             />
           </div>
 

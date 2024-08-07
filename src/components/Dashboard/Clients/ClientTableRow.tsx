@@ -7,14 +7,14 @@ type ClientTableRowProps = {
   name: string;
   service: string;
   mobile: string;
-  clientId: string;
+  address: string;
 };
 const ClientTableRow = ({
   email,
   name,
   service,
   mobile,
-  clientId,
+  address,
 }: ClientTableRowProps) => {
   return (
     <tr className="hover:bg-black-200 transition duration-300 hover:text-white border-b">
@@ -31,7 +31,7 @@ const ClientTableRow = ({
           </div>
         </div>
       </td>
-      <td className="py-2 px-4 text-left">{clientId}</td>
+      <td className="py-2 px-4 text-left">{address}</td>
       <td className="py-2 px-4 text-left">{service}</td>
       <td className="py-2 px-4 text-left">{mobile}</td>
       <td className="py-2 px-4 text-left">
