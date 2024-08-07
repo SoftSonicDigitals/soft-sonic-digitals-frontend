@@ -6,35 +6,41 @@ import { FieldErrors, UseFormRegister, ValidationRule } from "react-hook-form";
 
 type InputFieldProps = {
   fieldId: FieldId;
+  maxLength?: number;
   label: string;
   errors: FieldErrors<FormFields>;
   register: UseFormRegister<FormFields>;
   customValidation?: ValidationRule<RegExp>;
   isRequired?: boolean;
+  placeholder?: string;
 };
 
 const InputField = ({
   fieldId,
   label,
   errors,
+  maxLength,
   register,
   customValidation,
   isRequired = true,
+  placeholder,
 }: InputFieldProps) => {
   return (
     <div className="flex flex-col gap-1 text-gray-700">
       <label htmlFor={fieldId} className="font-[600] text-sm">
-        {label} <span className="text-red text-xl">*</span>
+        {label} {isRequired && <span className="text-red text-xl">*</span>}
       </label>
       <div>
         <input
           type="text"
           id={fieldId}
+          placeholder={placeholder}
           className={`relative border-[1px] ${
             errors[fieldId] ? "border-red" : "border-gray-600 "
           } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
           {...register(fieldId, {
             required: isRequired ? `${label} is required` : false,
+            maxLength: maxLength ? maxLength : undefined,
             pattern: customValidation ? customValidation : undefined,
           })}
         />

@@ -36,23 +36,23 @@ export type FieldId =
   | "service"
   | "budget"
   | "requirement"
-  | "start"
+  | "estimated_start_time"
   | "project_details";
 
-export type FormFields = {
+export interface FormFields {
   name: string;
   email: string;
   mobile: string;
-  company: string;
-  address_line: string;
-  state: string;
-  postcode: string;
+  company?: string;
+  address_line?: string;
+  state?: string;
+  postcode?: string;
   service: string;
   budget: string;
   requirement: string;
-  start: string;
-  project_details: string;
-};
+  estimated_start_time: string;
+  project_details?: string;
+}
 
 export type FormDropDownOptionsType = {
   value: string;
