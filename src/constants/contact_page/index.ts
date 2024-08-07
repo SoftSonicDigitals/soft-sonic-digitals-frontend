@@ -8,13 +8,16 @@ export const CALL_US = "Call us";
 export const ADDRESS = "Address";
 
 export const FORM_FIELDS = {
-  name: "Name",
-  email: "Email",
-  mobile: "Mobile",
-  company: "Company",
-  service: "Select a service",
-  budget: "Budget",
-  requirement: "Requirement",
-  start: "How soon you want to start?",
-  details: "Project Details",
+  name: { id: "name", label: "Name" },
+  email: { id: "email", label: "Email" },
+  mobile: { id: "mobile", label: "Mobile" },
+  company: { id: "company", label: "Company" },
+  street_address: { id: "street_address", label: "Street Address" },
+  postcode: { id: "postcode", label: "Postcode" },
+  state: { id: "state", label: "State" },
+  service: { id: "service", label: "Select a service" },
+  budget: { id: "budget", label: "Budget" },
+  requirement: { id: "requirement", label: "Requirement" },
+  start: { id: "start", label: "How soon you want to start?" },
+  project_details: { id: "project_details", label: "Project Details" },
 };

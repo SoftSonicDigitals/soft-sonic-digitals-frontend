@@ -25,16 +25,33 @@ export type ContactFooterLinks = {
   link?: string;
 }[];
 
+export type FieldId =
+  | "name"
+  | "email"
+  | "mobile"
+  | "company"
+  | "address_line"
+  | "postcode"
+  | "state"
+  | "service"
+  | "budget"
+  | "requirement"
+  | "start"
+  | "project_details";
+
 export type FormFields = {
   name: string;
   email: string;
   mobile: string;
   company: string;
+  address_line: string;
+  state: string;
+  postcode: string;
   service: string;
   budget: string;
   requirement: string;
   start: string;
-  details: string;
+  project_details: string;
 };
 
 export type FormDropDownOptionsType = {

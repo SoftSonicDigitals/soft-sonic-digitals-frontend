@@ -7,12 +7,12 @@ const ClientTableHead = () => {
         <th className="py-2 px-4 min-w-72  text-left tracking-wide">
           Customers
         </th>
-        <th className="py-2 px-4 min-w-36  text-left tracking-wide hidden md:block">
-          Customer Id
-        </th>
+
         <th className="py-2 px-4 min-w-36  text-left tracking-wide">Mobile</th>
         <th className="py-2 px-4 min-w-36  text-left tracking-wide">Service</th>
-
+        <th className="py-2 px-4 min-w-36  text-left tracking-wide hidden md:block">
+          Address
+        </th>
         <th className="py-2 px-4  min-w-36  text-left tracking-wide">Tags</th>
       </tr>
     </thead>

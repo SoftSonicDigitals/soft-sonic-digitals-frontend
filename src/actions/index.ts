@@ -18,6 +18,7 @@ export const addClientDetails = async ({
   details,
   priority,
   status,
+  address,
 }: ClientDetails) => {
   const client = await prismadb.client.create({
     data: {
@@ -33,6 +34,7 @@ export const addClientDetails = async ({
       project_details: details,
       priority,
       status,
+      address,
     },
   });
   return client;
