@@ -1,6 +1,6 @@
 import { getClientInfo } from "@/actions";
 import { ClientDetailsTable, TagsContainer } from "@/components/Dashboard";
-import { PriorityKey, StatusKey } from "@/models/dashboard";
+import { PriorityKey, StatusKey } from "@/models/admin";
 
 import React from "react";
 

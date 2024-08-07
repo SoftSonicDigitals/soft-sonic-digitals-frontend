@@ -1,43 +1,65 @@
 "use server";
 import { ObjectId } from "mongodb";
-import { ClientDetails } from "@/models/dashboard";
+import { ClientDetails } from "@/models/admin";
 import prismadb from "../lib/prismadb";
 import { revalidatePath } from "next/cache";
 
 // add client
-export const addClientDetails = async ({
-  clientID,
+export const addClient = async ({
+  clientId,
   name,
   email,
   mobile,
   company,
+  address_line,
+  postcode,
+  state,
   service,
   budget,
   requirement,
-  start,
-  details,
+  estimated_start_time,
+  project_details,
   priority,
   status,
-  address,
 }: ClientDetails) => {
-  const client = await prismadb.client.create({
-    data: {
-      client_id: clientID,
-      name,
-      email,
-      mobile,
-      company,
-      service,
-      budget,
-      requirement,
-      project_start: start,
-      project_details: details,
-      priority,
-      status,
-      address,
-    },
-  });
-  return client;
+  try {
+    const client = await prismadb.client.create({
+      data: {
+        client_id: clientId,
+        name,
+        email,
+        mobile,
+        company,
+        address_line,
+        postcode,
+        state,
+        service,
+        budget,
+        requirement,
+        estimated_start_time,
+        project_details,
+        priority: priority ? priority : "",
+        status: status ? status : "",
+      },
+    });
+
+    return {
+      status: "success",
+      data: { client },
+    };
+  } catch (err) {
+    if (err instanceof Error) {
+      return {
+        status: "fail",
+        message: "Submission Error: " + err.message,
+      };
+    } else {
+      return {
+        status: "fail",
+        message: "Submission Error!",
+      };
+    }
+  }
 };
 
 // generate a custom client id cause prisma doesnt support custom id

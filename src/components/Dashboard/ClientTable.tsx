@@ -16,7 +16,7 @@ import ClientRow from "./ClientRow";
 import usePagination from "@/hooks/usePagination";
 import PaginationSection from "./PaginationSection";
 import SearchBar from "./SearchBar";
-import { PriorityKey, StatusKey } from "@/models/dashboard";
+import { PriorityKey, StatusKey } from "@/models/admin";
 import { useNavbarOpenContext } from "@/context";
 import { motion } from "framer-motion";
 

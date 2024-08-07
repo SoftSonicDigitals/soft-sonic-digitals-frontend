@@ -1,6 +1,6 @@
 import React from "react";
 import EditTagMenu from "./EditTagMenu";
-import { Tags as TagsType } from "@/models/dashboard";
+import { Tags as TagsType } from "@/models/admin";
 import Tag from "./Tag";
 import {
   PRIORITY_TAGS_COLORS,

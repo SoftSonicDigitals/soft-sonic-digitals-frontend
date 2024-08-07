@@ -13,7 +13,7 @@ import { BsTags } from "react-icons/bs";
 import { PRIORITY_TAGS, STATUS_TAGS } from "@/prototypes/dashboard";
 import { FormDropDownOption } from "../ContactPage";
 import { Button } from "../ui/button";
-import { Tags } from "@/models/dashboard";
+import { Tags } from "@/models/admin";
 import { updateTags } from "@/actions";
 
 const EditTagMenu = ({ priority, status, id }: Tags) => {
