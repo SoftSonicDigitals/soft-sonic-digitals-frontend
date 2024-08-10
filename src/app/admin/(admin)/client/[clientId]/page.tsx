@@ -24,7 +24,6 @@ const page = async ({
             id={clientInfo.id}
           />
         )}
-        <ClientDetailsTable clientInfo={clientInfo} />
       </div>
     </>
   );
