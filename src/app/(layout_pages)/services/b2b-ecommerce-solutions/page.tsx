@@ -12,8 +12,8 @@ import {
   MACH,
 } from "@/components/B2BEcommerceComponent";
 import B2BDigitizationReasons from "@/components/B2BEcommerceComponent/B2BDigitizationReasons";
-import { Clients } from "@/components/Clients";
-import { ResultsDelivered } from "@/components/ResultsDelivered";
+import { Clients } from "@/components/Home/Clients";
+import { ResultsDelivered } from "@/components/Home/ResultsDelivered";
 import {
   EcommerceProjectBanner,
   RequestProposalBtn,

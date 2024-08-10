@@ -1,7 +1,7 @@
 import React from "react";
-import { GetInTouchContactBtn } from "../GetInTouch";
 import { PrimaryStyledHeadings } from "../Reusable";
 import Reveal from "../Animation/Reveal";
+import { GetInTouchContactBtn } from "../Home/GetInTouch";
 
 type IndustryBanner = {
   title: string;

@@ -2,7 +2,6 @@
 import { JEWELLERY } from "@/prototypes/industries/jewellery";
 import React, { useState } from "react";
 import FeatureDetails from "./FeatureDetails";
-import { IoAddOutline } from "react-icons/io5";
 import IndustryFeaturesMobile from "./IndustryFeaturesMobile";
 import Reveal from "../Animation/Reveal";
 type IndustryFeatureTabsProps = {

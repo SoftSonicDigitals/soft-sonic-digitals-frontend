@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { ContactUs } from "../Navbar";
+import { ContactUs } from "../LayoutComponents/Navbar";
 import { B2B_BANNER_MSG } from "@/constants/b2b_ecommerce";
 import Reveal from "../Animation/Reveal";
 

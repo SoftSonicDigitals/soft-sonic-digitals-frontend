@@ -2,11 +2,11 @@ import {
   BannerImage,
   CaseHeadings,
   CaseStudyInfo,
+  CaseStudyLists,
   LetsTalkBanner,
+  RandomCaseStudies,
   ShowCaseImg,
-} from "@/components/CaseStudiesPage";
-import CaseStudyLists from "@/components/CaseStudiesPage/CaseStudyLists";
-import RandomCaseStudies from "@/components/CaseStudiesPage/RandomCaseStudies";
+} from "@/components/CaseStudyPage";
 import { RequestProposalBtn } from "@/components/Reusable";
 
 import {
@@ -18,6 +18,7 @@ import {
   TAKE_AWAY,
   THE_ASK,
 } from "@/constants/case_studies_page";
+
 import { CASE_STUDIES_ARRAY } from "@/prototypes/case_study_pages";
 import { redirect } from "next/navigation";
 

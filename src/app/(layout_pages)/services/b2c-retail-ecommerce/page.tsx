@@ -6,7 +6,7 @@ import {
   B2CStats,
 } from "@/components/B2CEcommerceComponent";
 import B2CaseStudy from "@/components/B2CEcommerceComponent/B2CaseStudy";
-import { Clients } from "@/components/Clients";
+import { Clients } from "@/components/Home/Clients";
 import {
   EcommerceProjectBanner,
   RequestProposalBtn,
