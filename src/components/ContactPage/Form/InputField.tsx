@@ -46,7 +46,7 @@ const InputField = ({
         />
         {errors[fieldId] && (
           <div className="text-sm font-[500] text-red mt-1">
-            {errors[fieldId].message}
+            {errors[fieldId]?.message}
           </div>
         )}
       </div>
