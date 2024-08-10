@@ -1,7 +1,7 @@
 import React from "react";
-import { GetInTouchContactBtn } from "../GetInTouch";
 import { ECOMMERCE_PROJECT_BANNER_HEADING } from "@/constants/industry";
 import Reveal from "../Animation/Reveal";
+import { GetInTouchContactBtn } from "../Home/GetInTouch";
 
 const EcommerceProjectBanner = ({ verticalPadding = "py-8" }) => {
   return (

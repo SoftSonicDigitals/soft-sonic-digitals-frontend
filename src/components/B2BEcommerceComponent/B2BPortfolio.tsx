@@ -1,5 +1,5 @@
 import React from "react";
-import { CaseStudiesLayout } from "../CaseStudies";
+import { CaseStudiesLayout } from "../Home/CaseStudies";
 import {
   B2B_PORTAL_DESCRIPTION,
   B2B_PORTFOLIO_HEADING,

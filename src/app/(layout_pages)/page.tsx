@@ -1,14 +1,16 @@
-import { Awards } from "@/components/Awards";
-import { CaseStudies } from "@/components/CaseStudies";
-import { Clients } from "@/components/Clients";
-import { Commerce } from "@/components/Commerce";
-import { Consultation } from "@/components/Consultation";
-import { DigitalPlatforms } from "@/components/DigitalPlatforms";
-import { GetInTouch } from "@/components/GetInTouch";
-import { Hero } from "@/components/Hero";
-import { ResultsDelivered } from "@/components/ResultsDelivered";
-import { Reviews } from "@/components/Reviews";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
+import {
+  Hero,
+  Commerce,
+  Reviews,
+  GetInTouch,
+  ResultsDelivered,
+  Clients,
+  CaseStudies,
+  DigitalPlatforms,
+  Awards,
+  Consultation,
+  WhyChooseUs,
+} from "@/components/Home";
 import React from "react";
 
 const page = () => {
@@ -24,7 +26,7 @@ const page = () => {
       <Consultation />
       <Reviews />
       <WhyChooseUs />
-      <GetInTouch/>
+      <GetInTouch />
     </main>
   );
 };

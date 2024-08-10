@@ -3,7 +3,7 @@ import {
   B2C_CASE_STUDIES_DESCRIPTION,
   B2C_CASE_STUDIES_HEADING,
 } from "@/constants/b2c_ecommerce";
-import { CaseStudiesLayout } from "../CaseStudies";
+import { CaseStudiesLayout } from "../Home/CaseStudies";
 
 const B2CaseStudy = () => {
   return (

@@ -1,4 +1,3 @@
-import { Clients } from "@/components/Clients";
 import {
   EcommerceFrameworks,
   IndustryFeatureTabs,
@@ -7,18 +6,17 @@ import {
   SpecializationTiles,
   IndustryBanner,
 } from "@/components/IndustryComponents";
-import EcommerceProjectBanner from "@/components/Reusable/EcommerceProjectBanner";
-import { ResultsDelivered } from "@/components/ResultsDelivered";
 import {
+  EcommerceProjectBanner,
   PrimaryInfoSection,
   SecondaryInfoSection,
 } from "@/components/Reusable";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
 import { SPECIALIZATION_TILES_DATA } from "@/constants/industry";
 import { INDUSTRY_ARRAY } from "@/prototypes/industries";
 
 import { redirect } from "next/navigation";
 import React from "react";
+import { ResultsDelivered, WhyChooseUs, Clients } from "@/components/Home";
 
 const page = ({ params }: { params: { industry_name: string } }) => {
   const industryIndex = INDUSTRY_ARRAY.findIndex(
