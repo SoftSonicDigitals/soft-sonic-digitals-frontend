@@ -5,11 +5,11 @@ import Searchbar from "./Searchbar";
 import ClientTableHead from "./ClientTableHead";
 import ClientTableBody from "./ClientTableBody";
 import useSWR from "swr";
-import { usePathname } from "next/navigation";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 const ClientTableSection = () => {
-  const { data } = useSWR("http://localhost:3000/api/clients", fetcher);
+  const { data } = useSWR("/api/clients", fetcher);
   console.log(data);
 
   return (
