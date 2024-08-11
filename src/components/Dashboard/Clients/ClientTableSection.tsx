@@ -5,11 +5,12 @@ import Searchbar from "./Searchbar";
 import ClientTableHead from "./ClientTableHead";
 import ClientTableBody from "./ClientTableBody";
 import useSWR from "swr";
+import { Clients } from "@/models/admin";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const ClientTableSection = () => {
-  const { data } = useSWR("/api/clients", fetcher);
+  const { data, isLoading, error } = useSWR("/api/clients", fetcher);
   console.log(data);
 
   return (
@@ -21,7 +22,7 @@ const ClientTableSection = () => {
       <div className="overflow-x-auto">
         <table className="w-full bg-white border-b-[1.5px] border-gray-300 ">
           <ClientTableHead />
-          <ClientTableBody />
+          <ClientTableBody isLoading={isLoading} clients={data?.data} />
         </table>
       </div>
     </section>

@@ -8,11 +8,13 @@ export interface ClientDetails extends FormFields {
 
 export type Clients = {
   id: string;
-  clientID: string;
   name: string;
   email: string;
   mobile: string;
   service: string;
+  address_line: string;
+  postcode: string;
+  state: string;
   priority: PriorityKey;
   status: StatusKey;
 };

@@ -3,19 +3,33 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 
 type ClientTableRowProps = {
+  id: string;
   email: string;
   name: string;
   service: string;
   mobile: string;
-  address: string;
+  address_line: string;
+  postcode: string;
+  state: string;
+  priority: string;
+  status: string;
 };
 const ClientTableRow = ({
+  id,
   email,
   name,
   service,
   mobile,
-  address,
+  address_line,
+  postcode,
+  state,
+  priority,
+  status,
 }: ClientTableRowProps) => {
+  const formattedAddress = [address_line, postcode, state]
+    .filter(Boolean)
+    .join(", ");
+
   return (
     <tr className="hover:bg-black-200 transition duration-300 hover:text-white border-b">
       <td className="py-3.5 px-4  text-left">
@@ -31,10 +45,12 @@ const ClientTableRow = ({
           </div>
         </div>
       </td>
-      <td className="py-2 px-4 text-left">{address}</td>
-      <td className="py-2 px-4 text-left">{service}</td>
-      <td className="py-2 px-4 text-left">{mobile}</td>
-      <td className="py-2 px-4 text-left">
+      <td className="py-2 px-4 text-left text-sm">{mobile}</td>
+      <td className="py-2 px-4 text-left  text-sm">{service}</td>
+      <td className="py-2 px-4 text-left   text-sm">
+        {formattedAddress || "-"}
+      </td>
+      <td className="py-2 px-4 text-left ">
         <div className="inline-block text-xs px-3 py-1.5 rounded-full bg-[#c3c7f8] font-[700] text-[#4e5dff]">
           Active
         </div>
