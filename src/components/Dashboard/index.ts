@@ -1,6 +1,6 @@
 import ClientDetailsTable from "./ClientDetailsTable";
-import ClientRow from "./ClientRow";
-import ClientTables from "./ClientTable";
+// import ClientRow from "./ClientRow";
+// import ClientTables from "./ClientTable";
 import AddNotesSection from "./AddNoteSection";
 import NotesTable from "./NotesTable";
 import PaginationSection from "./PaginationSection";
@@ -10,8 +10,8 @@ import EditTagMenu from "./EditTagMenu";
 import Tag from "./Tag";
 import SideNavBar from "./Navbar/SideNavBar";
 export {
-  ClientTables,
-  ClientRow,
+  // ClientTables,
+  // ClientRow,
   PaginationSection,
   ClientDetailsTable,
   AddNotesSection,

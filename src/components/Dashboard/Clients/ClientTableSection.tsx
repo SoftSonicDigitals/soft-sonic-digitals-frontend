@@ -5,7 +5,6 @@ import Searchbar from "./Searchbar";
 import ClientTableHead from "./ClientTableHead";
 import ClientTableBody from "./ClientTableBody";
 import useSWR from "swr";
-import { Clients } from "@/models/admin";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
