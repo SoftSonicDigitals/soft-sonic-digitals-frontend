@@ -1,10 +1,11 @@
-import { ClientTables } from "@/components/Dashboard";
+// import { ClientTables } from "@/components/Dashboard";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <ClientTables />
+      <div></div>
+      {/* ( <ClientTables />) */}
     </>
   );
 };
