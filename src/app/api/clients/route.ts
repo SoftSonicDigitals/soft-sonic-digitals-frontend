@@ -1,6 +1,9 @@
 import prismadb from "../../../lib/prismadb";
 import { NextRequest, NextResponse } from "next/server";
 
+// make the route dynamic
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest) {
   try {
     const pageNumber = 1;
