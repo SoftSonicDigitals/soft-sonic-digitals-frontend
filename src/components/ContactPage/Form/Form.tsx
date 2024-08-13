@@ -14,7 +14,8 @@ import {
 import { FORM_FIELDS } from "@/constants/contact_page";
 import { addClient, getNextClientID } from "@/actions";
 import toast from "react-hot-toast";
-import useSWR from "swr";
+import { useSWRConfig } from "swr";
+
 import { InputField, SelectField, TextAreaField } from "../Form";
 
 const Form = () => {
@@ -25,7 +26,7 @@ const Form = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
-  const { mutate } = useSWR("/api/clients");
+  const { mutate } = useSWRConfig();
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
@@ -37,7 +38,7 @@ const Form = () => {
       });
       if (result.status === "success") {
         toast.success("Form Successfully Submitted");
-        mutate();
+        mutate("/api/clients");
         reset();
       }
       if (result.status === "fail") {
