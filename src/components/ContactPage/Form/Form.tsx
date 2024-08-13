@@ -25,7 +25,7 @@ const Form = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
-  const { mutate } = useSWR("clients");
+  const { mutate } = useSWR("/api/clients");
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
