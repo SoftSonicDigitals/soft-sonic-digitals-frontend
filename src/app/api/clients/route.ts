@@ -1,13 +1,18 @@
 import prismadb from "../../../lib/prismadb";
 import { NextRequest, NextResponse } from "next/server";
-
+import { CLIENT_TABLE_LIMIT as limit } from "@/constants/dashboard";
 // make the route dynamic
 export const revalidate = 0;
 
 export async function GET(request: NextRequest) {
   try {
-    const pageNumber = 1;
-    const limit = 5;
+    const { searchParams } = new URL(request.url);
+
+    let pageNumber = Number(searchParams.get("page"));
+
+    if (pageNumber < 1 || !pageNumber) {
+      pageNumber = 1;
+    }
 
     const clients = await prismadb.client.findMany({
       select: {
@@ -26,11 +31,13 @@ export async function GET(request: NextRequest) {
       take: limit,
     });
 
+    const totalClient = await prismadb.client.count();
+
     return NextResponse.json(
       {
         status: 200,
         message: "Request successful",
-        data: clients,
+        data: { clients, totalCount: totalClient, page: pageNumber },
       },
       { status: 200 }
     );

@@ -7,6 +7,8 @@ import ClientTableSection from "./ClientTableSection";
 import Filters from "./Filters";
 import Searchbar from "./Searchbar";
 import StatsCard from "./StatsCard";
+import Pagination from "./Pagination";
+import PaginationBtn from "./PaginationBtn";
 
 export {
   LayoutAnimator,
@@ -18,4 +20,6 @@ export {
   ClientTableRow,
   ClientTableHead,
   ClientTableBody,
+  Pagination,
+  PaginationBtn,
 };

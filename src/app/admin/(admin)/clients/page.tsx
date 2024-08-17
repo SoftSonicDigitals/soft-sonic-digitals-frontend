@@ -17,7 +17,7 @@ const page = () => {
             <h1 className="text-4xl font-[700] tracking-wide ">{CUSTOMERS}</h1>
 
             <Link
-              className="bg-black-200 text-white text-sm flex flex-center gap-2 py-2.5 px-5 hover:bg-black-500 w-36"
+              className="bg-black-200 text-white text-sm flex flex-center gap-2 py-2.5 px-5 hover:bg-black-500 w-fit-content"
               href="/contact"
             >
               <IoAddSharp className="text-lg" />
