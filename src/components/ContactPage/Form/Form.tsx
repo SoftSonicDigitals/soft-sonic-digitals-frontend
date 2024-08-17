@@ -38,7 +38,7 @@ const Form = () => {
       });
       if (result.status === "success") {
         toast.success("Form Successfully Submitted");
-        await mutate("/api/clients");
+        mutate("/api/clients");
         reset();
       }
       if (result.status === "fail") {

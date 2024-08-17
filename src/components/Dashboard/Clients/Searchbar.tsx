@@ -10,7 +10,7 @@ const Searchbar = () => {
   };
 
   return (
-    <div className="py-2.5 px-4 border-[1.5px] border-gray-500 flex sm:items-center sm:justify-center gap-3 max-w-full sm:max-w-68">
+    <div className="py-2.5 px-4 border-[1.5px] border-gray-200 flex sm:items-center sm:justify-center gap-3 max-w-full sm:max-w-68">
       <IoSearch
         className="text-lg cursor-pointer
       "
