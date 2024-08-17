@@ -10,11 +10,28 @@ export async function GET(request: NextRequest) {
 
     let pageNumber = Number(searchParams.get("page"));
 
+    const searchQuery = searchParams.get("query") || "";
+
     if (pageNumber < 1 || !pageNumber) {
       pageNumber = 1;
     }
 
+    const whereClause = searchQuery
+      ? {
+          OR: [
+            { name: { contains: searchQuery, mode: "insensitive" } },
+            { email: { contains: searchQuery, mode: "insensitive" } },
+            { mobile: { contains: searchQuery, mode: "insensitive" } },
+            { address_line: { contains: searchQuery, mode: "insensitive" } },
+            { postcode: { contains: searchQuery, mode: "insensitive" } },
+            { state: { contains: searchQuery, mode: "insensitive" } },
+            { service: { contains: searchQuery, mode: "insensitive" } },
+          ],
+        }
+      : {};
+
     const clients = await prismadb.client.findMany({
+      where: whereClause as any,
       select: {
         id: true,
         name: true,
@@ -31,7 +48,9 @@ export async function GET(request: NextRequest) {
       take: limit,
     });
 
-    const totalClient = await prismadb.client.count();
+    const totalClient = await prismadb.client.count({
+      where: whereClause as any,
+    });
 
     return NextResponse.json(
       {
