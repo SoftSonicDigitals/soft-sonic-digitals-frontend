@@ -1,12 +1,19 @@
 "use client";
 
-import React, { RefObject, useRef } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+import React, { useRef } from "react";
 import { IoSearch } from "react-icons/io5";
 const Searchbar = () => {
+  const pathname = usePathname();
+  const router = useRouter();
   const searchRef = useRef<HTMLInputElement | null>(null);
-
+  const searchParams = useSearchParams();
   const onSearchSubmit = () => {
-    console.log(searchRef.current?.value);
+    const params = new URLSearchParams(searchParams);
+    params.set("query", searchRef.current?.value!);
+    params.set("page", "1");
+    router.push(`${pathname}?${params.toString()}`);
   };
 
   return (
