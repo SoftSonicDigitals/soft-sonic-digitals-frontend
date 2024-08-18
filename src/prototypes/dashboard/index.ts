@@ -7,6 +7,7 @@ import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { GoGraph } from "react-icons/go";
 import { PiHeadphonesBold } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
+
 export const PRIORITY_TAGS: FormDropDownOptionsType = [
   { value: "", title: "-Select-" },
   { value: "critical", title: "Critical" },
@@ -26,53 +27,64 @@ export const STATUS_TAGS: FormDropDownOptionsType = [
   { value: "duplicate", title: "Duplicate" },
 ];
 
-export const PRIORITY_TAGS_COLORS: PriorityTagColor = {
+export const PRIORITY_TAGS_COLORS = {
   critical: {
     tagName: "critical",
-    color: "#D32F2F", // Matte Red
+    tagColor: "#F28B82", // Light Red
+    tagTextColor: "#C62828", // More Saturated Red
   },
   blocker: {
     tagName: "blocker",
-    color: "#7B1FA2", // Matte Purple
+    tagColor: "#CE93D8", // Light Purple
+    tagTextColor: "#6A1B9A", // More Saturated Purple
   },
   urgent: {
     tagName: "urgent",
-    color: "#F57C00", // Matte Orange
+    tagColor: "#FFCC80", // Light Orange
+    tagTextColor: "#F57C00", // More Saturated Orange
   },
   normal: {
     tagName: "normal",
-    color: "#1976D2", // Matte Blue
+    tagColor: "#c3c7f8", // Light Blue
+    tagTextColor: "#4e5dff", // More Saturated Blue
   },
 };
 
-export const STATUS_TAGS_COLORS: StatusTagColor = {
+export const STATUS_TAGS_COLORS = {
   "in-progress": {
     tagName: "in-progress",
-    color: "#0288D1", // Matte Light Blue
+    tagColor: "#80deea", // Light Cyan
+    tagTextColor: "#00acc1", // More Saturated Cyan
   },
   review: {
     tagName: "review",
-    color: "#7E57C2", // Matte Deep Purple
+    tagColor: "#e1bee7", // Light Pink
+    tagTextColor: "#ab47bc", // More Saturated Pink
   },
   resolved: {
     tagName: "resolved",
-    color: "#388E3C", // Matte Green
+    tagColor: "#c5e1a5", // Light Green
+    tagTextColor: "#7cb342", // More Saturated Green
   },
   reopened: {
     tagName: "reopened",
-    color: "#FBC02D", // Matte Yellow
+    tagColor: "#ffab91", // Light Coral
+    tagTextColor: "#ff5722", // More Saturated Coral
   },
   pending: {
     tagName: "pending",
-    color: "#00796B", // Matte Teal
+    tagColor: "#ffecb3", // Light Yellow
+    tagTextColor: "#fbc02d", // More Saturated Yellow
   },
   verified: {
     tagName: "verified",
-    color: "#0288D1", // Matte Light Blue
+    tagColor: "#b3e5fc", // Light Blue
+    tagTextColor: "#03a9f4", // More Saturated Blue
   },
   duplicate: {
     tagName: "duplicate",
-    color: "#616161", // Matte Gray
+    tagColor: "#e0e0e0", // Light Gray
+    tagTextColor: "#b0bec5", // More Saturated Gray
   },
 };
 
