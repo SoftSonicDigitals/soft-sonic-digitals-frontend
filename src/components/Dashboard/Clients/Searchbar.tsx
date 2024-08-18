@@ -6,9 +6,10 @@ import React, { useRef } from "react";
 import { IoSearch } from "react-icons/io5";
 const Searchbar = () => {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const searchRef = useRef<HTMLInputElement | null>(null);
-  const searchParams = useSearchParams();
+
   const onSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
     params.set("query", searchRef.current?.value!);
@@ -27,6 +28,7 @@ const Searchbar = () => {
         ref={searchRef}
         placeholder="Search"
         className="w-64  outline-none border-gray-300 text-sm font-[600] text-gray-700"
+        defaultValue={searchParams.get("query") || ""}
         onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
           e.key == "Enter" ? onSearchSubmit() : null;
         }}

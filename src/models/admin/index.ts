@@ -37,7 +37,8 @@ export type Tags = {
 
 type TagInfo = {
   tagName: string;
-  color: string;
+  tagColor: string;
+  tagTextColor: string;
 };
 
 export type PriorityTagColor = {

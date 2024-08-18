@@ -9,6 +9,7 @@ import Searchbar from "./Searchbar";
 import StatsCard from "./StatsCard";
 import Pagination from "./Pagination";
 import PaginationBtn from "./PaginationBtn";
+import Tag from "./Tag";
 
 export {
   LayoutAnimator,
@@ -22,4 +23,5 @@ export {
   ClientTableBody,
   Pagination,
   PaginationBtn,
+  Tag,
 };

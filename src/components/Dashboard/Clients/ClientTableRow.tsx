@@ -1,6 +1,12 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
+import Tag from "./Tag";
+import {
+  PRIORITY_TAGS_COLORS,
+  STATUS_TAGS_COLORS,
+} from "@/prototypes/dashboard";
+import { PriorityKey, StatusKey } from "@/models/admin";
 
 type ClientTableRowProps = {
   id: string;
@@ -11,8 +17,8 @@ type ClientTableRowProps = {
   address_line: string;
   postcode: string;
   state: string;
-  priority: string;
-  status: string;
+  priority: PriorityKey;
+  status: StatusKey;
 };
 const ClientTableRow = ({
   id,
@@ -51,8 +57,17 @@ const ClientTableRow = ({
         {formattedAddress || "-"}
       </td>
       <td className="py-2 px-4 text-left ">
-        <div className="inline-block text-xs px-3 py-1.5 rounded-full bg-[#c3c7f8] font-[700] text-[#4e5dff]">
-          Active
+        <div className="flex items-center gap-2 ">
+          <Tag
+            tagName={priority}
+            tagColor={PRIORITY_TAGS_COLORS[`${priority}`]?.tagColor}
+            tagTextColor={PRIORITY_TAGS_COLORS[`${priority}`]?.tagTextColor}
+          />
+          <Tag
+            tagName={status}
+            tagColor={STATUS_TAGS_COLORS[`${status}`]?.tagColor}
+            tagTextColor={STATUS_TAGS_COLORS[`${status}`]?.tagTextColor}
+          />
         </div>
       </td>
       <td className="py-2 px-4 text-left w-6">
