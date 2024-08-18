@@ -1,6 +1,4 @@
 import { getClientInfo } from "@/actions";
-import { ClientDetailsTable, TagsContainer } from "@/components/Dashboard";
-import { PriorityKey, StatusKey } from "@/models/admin";
 
 import React from "react";
 
@@ -17,13 +15,13 @@ const page = async ({
     <>
       <div className="wrapper_container pt-32">
         <div className="text-4xl mb-10">Project Details</div>
-        {clientInfo && (
+        {/* {clientInfo && (
           <TagsContainer
             priority={clientInfo.priority as PriorityKey}
             status={clientInfo.status as StatusKey}
             id={clientInfo.id}
           />
-        )}
+        )} */}
       </div>
     </>
   );
