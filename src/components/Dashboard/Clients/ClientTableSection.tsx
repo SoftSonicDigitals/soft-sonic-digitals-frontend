@@ -21,9 +21,9 @@ const ClientTableSection = () => {
 
   return (
     <section id="client_table">
-      <div className="flex flex-col-reverse gap-4 sm:flex-row lg:items-center justify-between mb-10">
-        <Filters />
+      <div className="flex flex-col gap-4 sm:flex-row lg:items-center  mb-10">
         <Searchbar />
+        <Filters />
       </div>
       <div className="overflow-x-auto mb-10">
         <table className="w-full bg-white border-b-[1.5px] border-gray-300 ">

@@ -31,7 +31,7 @@ const ClientTableRow = ({
     .join(", ");
 
   return (
-    <tr className="hover:bg-black-200 transition duration-300 hover:text-white border-b">
+    <tr className="hover:bg-black-200 transition duration-300 hover:text-white border-b ">
       <td className="py-3.5 px-4  text-left">
         <div className="flex items-center gap-5 ">
           <div className="p-2.5 rounded-full bg-gray-200">
