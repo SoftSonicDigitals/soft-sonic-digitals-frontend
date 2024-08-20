@@ -12,7 +12,7 @@ const Searchbar = () => {
 
   const onSearchSubmit = () => {
     const params = new URLSearchParams(searchParams);
-    params.set("query", searchRef.current?.value!);
+    params.set("query", searchRef.current?.value.trim()!);
     params.set("page", "1");
     router.push(`${pathname}?${params.toString()}`);
   };

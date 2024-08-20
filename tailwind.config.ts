@@ -38,7 +38,12 @@ const config: Config = {
       },
     },
     colors: {
-      red: "#ed4542",
+      red: {
+        DEFAULT: "#ed4542",
+        100: "#fceaea",
+        300: "#E03131",
+        500: "#ca2c2c",
+      },
       white: { DEFAULT: "#ffffff", 100: "#fafafa", 200: "#ededed" },
       gray: {
         0: "#f8f9fa",
