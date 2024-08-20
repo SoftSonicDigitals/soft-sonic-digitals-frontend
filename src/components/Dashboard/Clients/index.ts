@@ -10,7 +10,7 @@ import StatsCard from "./StatsCard";
 import Pagination from "./Pagination";
 import PaginationBtn from "./PaginationBtn";
 import Tag from "./Tag";
-
+import FiltersMenu from "./FiltersMenu";
 export {
   LayoutAnimator,
   ClientStatistics,
@@ -24,4 +24,5 @@ export {
   Pagination,
   PaginationBtn,
   Tag,
+  FiltersMenu,
 };

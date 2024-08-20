@@ -45,7 +45,7 @@ const ClientTableRow = ({
           </div>
           <div>
             <p className="font-[700]">{name}</p>
-            <p className="text-sm font-gray-700 font-[600] text-[#E03131]">
+            <p className="text-sm font-gray-700 font-[600] text-red-300">
               {email}
             </p>
           </div>
