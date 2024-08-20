@@ -1,10 +1,13 @@
 import prismadb from "../../../lib/prismadb";
 import { NextRequest, NextResponse } from "next/server";
 import { CLIENT_TABLE_LIMIT as limit } from "@/constants/dashboard";
+import { auth } from "@clerk/nextjs/server";
+
 // make the route dynamic
 export const revalidate = 0;
 
 export async function GET(request: NextRequest) {
+  auth().protect();
   try {
     const { searchParams } = new URL(request.url);
 
