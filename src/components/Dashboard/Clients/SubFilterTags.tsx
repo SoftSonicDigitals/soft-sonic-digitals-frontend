@@ -8,13 +8,8 @@ type FilterTagsProps = {
   }[];
 };
 
-const FilterTags = ({ tags }: FilterTagsProps) => {
-  const [selectedTags, setSelectedTags] = useState<
-    {
-      id: string;
-      label: string;
-    }[]
-  >([]);
+const SubFilterTags = ({ tags }: FilterTagsProps) => {
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   const handleTagSelect = (tag: any) => {
     setSelectedTags((prevSelectedTags: any) => {
@@ -38,7 +33,7 @@ const FilterTags = ({ tags }: FilterTagsProps) => {
                 ? "bg-orange text-white border-orange"
                 : "bg-white text-black border-gray-700"
             }
-            )}`}
+          `}
             key={tag.id}
             onClick={() => handleTagSelect(tag)}
           >
@@ -53,4 +48,4 @@ const FilterTags = ({ tags }: FilterTagsProps) => {
   );
 };
 
-export default FilterTags;
+export default SubFilterTags;

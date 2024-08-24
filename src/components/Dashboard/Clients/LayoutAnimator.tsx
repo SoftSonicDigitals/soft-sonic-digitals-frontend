@@ -1,5 +1,5 @@
 "use client";
-import { useNavbarOpenContext } from "@/context";
+import { useNavbarOpenContext } from "@/context/NavbarContext";
 import { motion } from "framer-motion";
 import React from "react";
 

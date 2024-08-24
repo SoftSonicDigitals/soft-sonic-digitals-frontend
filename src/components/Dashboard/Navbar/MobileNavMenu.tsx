@@ -8,7 +8,7 @@ import { IoCloseSharp } from "react-icons/io5";
 import { mobileNavbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
 import Logout from "./Logout";
-import { useNavbarOpenContext } from "@/context";
+import { useNavbarOpenContext } from "@/context/NavbarContext";
 
 const MobileNavMenu = () => {
   const { isNavbarOpen: isOpen, setIsNavbarOpen: setIsOpen } =

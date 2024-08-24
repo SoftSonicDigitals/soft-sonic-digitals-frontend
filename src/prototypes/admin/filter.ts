@@ -68,9 +68,9 @@ export const filterService = [
   { id: "Ecommerce Replatforming", label: "Ecommerce Replatforming" },
   {
     id: "Mobile Application Development",
-    label: "Mobile Application Development",
+    label: "Mobile App Development",
   },
-  { id: "Web Application Development", label: "Web Application Development" },
+  { id: "Web Application Development", label: "Web App Development" },
   { id: "Digital Marketing", label: "Digital Marketing" },
   { id: "UI & UX design", label: "UI & UX design" },
 ];

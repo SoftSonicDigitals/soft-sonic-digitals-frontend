@@ -4,8 +4,8 @@ import "../../globals.css";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "react-hot-toast";
-import { SideNavBar } from "@/components/Dashboard";
-import { NavbarOpenWrapper } from "@/context";
+import { SideNavBar } from "@/components/Dashboard/Navbar";
+import { NavbarOpenWrapper } from "@/context/NavbarContext";
 
 const raleway = Raleway({
   subsets: ["latin"],
