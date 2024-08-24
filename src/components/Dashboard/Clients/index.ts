@@ -11,7 +11,7 @@ import Pagination from "./Pagination";
 import PaginationBtn from "./PaginationBtn";
 import Tag from "./Tag";
 import FiltersMenu from "./FiltersMenu";
-import FilterTags from "./FilterTags";
+import SubFilterTags from "./SubFilterTags";
 
 export {
   LayoutAnimator,
@@ -27,5 +27,5 @@ export {
   PaginationBtn,
   Tag,
   FiltersMenu,
-  FilterTags,
+  SubFilterTags,
 };

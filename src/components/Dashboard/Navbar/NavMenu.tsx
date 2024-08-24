@@ -7,7 +7,7 @@ import { navbarVariants } from "@/animation";
 import NavLinksContainer from "./NavLinksContainer";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import Logout from "./Logout";
-import { useNavbarOpenContext } from "@/context";
+import { useNavbarOpenContext } from "@/context/NavbarContext";
 
 const NavMenu = () => {
   const { isNavbarOpen: isOpen, setIsNavbarOpen: setIsOpen } =
