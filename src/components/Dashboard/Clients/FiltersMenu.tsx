@@ -56,6 +56,7 @@ const FiltersMenu = ({
             className="text-sm font-[700] mb-4"
             onClick={() => {
               router.push(pathname);
+              closeFilterMenu();
             }}
           >
             Reset
