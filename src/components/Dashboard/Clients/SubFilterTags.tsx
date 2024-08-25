@@ -39,7 +39,13 @@ const SubFilterTags = ({
   };
 
   const handleMonthFilter = (tag: Tag) => {
-    setSelectedTags([tag.id]);
+    setSelectedTags((prevSelectedTags) => {
+      if (prevSelectedTags[0] === tag.id) {
+        return [];
+      } else {
+        return [tag.id];
+      }
+    });
   };
 
   const handleTagSelect = (tag: Tag) => {
