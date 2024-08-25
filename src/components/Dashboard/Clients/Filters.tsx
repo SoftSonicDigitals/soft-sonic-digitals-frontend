@@ -15,7 +15,9 @@ const Filters = () => {
 
           <p className="font-[600]">More filters</p>
         </button>
-        {isFilterMenuOpen && <FiltersMenu />}
+        {isFilterMenuOpen && (
+          <FiltersMenu setIsFilterMenuOpen={setIsFilterMenuOpen} />
+        )}
       </div>
     </>
   );

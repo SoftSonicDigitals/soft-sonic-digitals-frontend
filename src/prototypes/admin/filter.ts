@@ -2,27 +2,28 @@ import { HiOutlineCalendar } from "react-icons/hi2";
 import { GoTag } from "react-icons/go";
 import { HiOutlineGlobeAsiaAustralia } from "react-icons/hi2";
 import { LuUserCog2 } from "react-icons/lu";
+import { FilterCategoryTypes } from "@/constants/admin";
 
 export const filterMenuOptions = [
   {
-    name: "date",
+    name: FilterCategoryTypes.MONTH,
     icon: HiOutlineCalendar,
   },
   {
-    name: "tags",
+    name: FilterCategoryTypes.TAGS,
     icon: GoTag,
   },
   {
-    name: "state",
+    name: FilterCategoryTypes.STATE,
     icon: HiOutlineGlobeAsiaAustralia,
   },
   {
-    name: "service",
+    name: FilterCategoryTypes.SERVICES,
     icon: LuUserCog2,
   },
 ];
 
-export const filterDate = [
+export const filterMonth = [
   { id: "1", label: "January" },
   { id: "2", label: "February" },
   { id: "3", label: "March" },

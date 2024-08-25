@@ -1,27 +1,69 @@
 "use client";
-import React, { useState } from "react";
+import { FilterCategoryTypes } from "@/constants/admin";
+import { ValueOf } from "next/dist/shared/lib/constants";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useState } from "react";
 
-type FilterTagsProps = {
-  tags: {
-    id: string;
-    label: string;
-  }[];
+type Tag = {
+  id: ValueOf<typeof FilterCategoryTypes>;
+  label: string;
 };
 
-const SubFilterTags = ({ tags }: FilterTagsProps) => {
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+type FilterTagsProps = {
+  tags: Array<Tag>;
+  category: ValueOf<typeof FilterCategoryTypes>;
+  closeFilterMenu: () => void;
+};
 
-  const handleTagSelect = (tag: any) => {
-    setSelectedTags((prevSelectedTags: any) => {
+const SubFilterTags = ({
+  tags,
+  category,
+  closeFilterMenu,
+}: FilterTagsProps) => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  // for the ones which are selected already and added in the url
+  const activeSelectedTags = searchParams.get(category)?.split(",") || [];
+
+  const [selectedTags, setSelectedTags] =
+    useState<Array<ValueOf<typeof FilterCategoryTypes>>>(activeSelectedTags);
+
+  const onFilterNow = () => {
+    const params = new URLSearchParams(searchParams);
+    params.set(category, selectedTags.join(","));
+    params.set("page", "1");
+    router.push(`${pathname}?${params.toString()}`);
+    closeFilterMenu();
+  };
+
+  const handleMonthFilter = (tag: Tag) => {
+    setSelectedTags([tag.id]);
+  };
+
+  const handleTagSelect = (tag: Tag) => {
+    setSelectedTags((prevSelectedTags) => {
       if (prevSelectedTags.includes(tag.id)) {
         return prevSelectedTags.filter(
-          (selectedTagId: any) => selectedTagId !== tag.id
+          (selectedTagId: string) => selectedTagId !== tag.id
         );
       } else {
         return [...prevSelectedTags, tag.id];
       }
     });
   };
+
+  const handler = useCallback(
+    (tag: Tag) => {
+      if (category === FilterCategoryTypes.MONTH) {
+        handleMonthFilter(tag);
+      } else {
+        handleTagSelect(tag);
+      }
+    },
+    [category] // The function is only redefined if 'category' changes
+  );
 
   return (
     <>
@@ -35,13 +77,16 @@ const SubFilterTags = ({ tags }: FilterTagsProps) => {
             }
           `}
             key={tag.id}
-            onClick={() => handleTagSelect(tag)}
+            onClick={() => handler(tag)}
           >
             {tag.label}
           </button>
         ))}
       </div>
-      <button className="mt-6  py-2 px-4 bg-black-200 text-white rounded-md  w-full">
+      <button
+        className="mt-6  py-2 px-4 bg-black-200 text-white rounded-md  w-full"
+        onClick={() => onFilterNow()}
+      >
         Filter Now
       </button>
     </>
