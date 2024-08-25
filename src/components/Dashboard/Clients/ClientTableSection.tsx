@@ -13,7 +13,6 @@ const fetcher = (url: string) => fetch(url).then((res) => res.json());
 const ClientTableSection = () => {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
-
   const { data, isLoading, error } = useSWR(
     `/api/clients?${params.toString()}`,
     fetcher

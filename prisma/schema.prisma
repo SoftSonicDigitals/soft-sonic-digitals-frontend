@@ -29,6 +29,7 @@ model Client {
    project_details String?
    priority String
    status String
+   date       DateTime @default(now()) 
    notes            Note[]   
    }
 

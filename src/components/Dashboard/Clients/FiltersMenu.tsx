@@ -1,43 +1,66 @@
 "use client";
 import {
-  filterDate,
+  filterMonth,
   filterMenuOptions,
   filterService,
   filterState,
   filterTags,
 } from "@/prototypes/admin/filter";
-import React, { useState } from "react";
+import React, { Dispatch, useState } from "react";
 import SubFilterTags from "./SubFilterTags";
+import { usePathname, useRouter } from "next/navigation";
+import { ValueOf } from "next/dist/shared/lib/constants";
+import { FilterCategoryTypes } from "@/constants/admin";
 
-const FiltersMenu = () => {
+const FiltersMenu = ({
+  setIsFilterMenuOpen,
+}: {
+  setIsFilterMenuOpen: Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const [showSubFilters, setShowSubFilters] = useState(false);
-
   const [filterCategory, setFilterCategory] =
-    useState<(typeof filterMenuOptions)[number]["name"]>("");
+    useState<ValueOf<typeof FilterCategoryTypes>>("");
 
   let filterCategoryTags: { id: string; label: string }[] = [];
 
   switch (filterCategory) {
-    case "date":
-      filterCategoryTags = filterDate;
+    case FilterCategoryTypes.MONTH:
+      filterCategoryTags = filterMonth;
       break;
-    case "tags":
+    case FilterCategoryTypes.TAGS:
       filterCategoryTags = filterTags;
       break;
-    case "service":
+    case FilterCategoryTypes.SERVICES:
       filterCategoryTags = filterService;
       break;
-    case "state":
+    case FilterCategoryTypes.STATE:
       filterCategoryTags = filterState;
       break;
     default:
       filterCategoryTags = [];
   }
 
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const closeFilterMenu = () => {
+    setIsFilterMenuOpen(false);
+  };
+
   return (
     <div className="absolute top-12 left-0 w-64 z-100">
       <div className="border rounded-2xl  shadow-lg border-gray-200 bg-white p-4">
-        <p className="text-sm font-[700] mb-4">Add Filter</p>
+        <div className="flex items-center justify-between">
+          <p className="text-sm font-[700] mb-4">Add Filter</p>
+          <button
+            className="text-sm font-[700] mb-4"
+            onClick={() => {
+              router.push(pathname);
+            }}
+          >
+            Reset
+          </button>
+        </div>
         {!showSubFilters && (
           <div className="grid grid-cols-2 gap-3">
             {filterMenuOptions.map((menu, index) => (
@@ -55,7 +78,13 @@ const FiltersMenu = () => {
             ))}
           </div>
         )}
-        {showSubFilters && <SubFilterTags tags={filterCategoryTags} />}
+        {showSubFilters && (
+          <SubFilterTags
+            tags={filterCategoryTags}
+            category={filterCategory}
+            closeFilterMenu={closeFilterMenu}
+          />
+        )}
       </div>
     </div>
   );
