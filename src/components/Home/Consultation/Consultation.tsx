@@ -1,6 +1,6 @@
 import React from "react";
 import { PrimaryStyledHeadings } from "../../Reusable";
-import { MAIN_HEADING, SUB_HEADING } from "@/constants/consultation";
+import { MAIN_HEADING, SUB_HEADING } from "@/constants/home";
 import { CONSULTATION } from "@/prototypes/consultation";
 import { ConsultationCard } from ".";
 import Reveal from "../../Animation/Reveal";

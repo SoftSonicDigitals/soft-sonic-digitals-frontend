@@ -1,7 +1,6 @@
 import { CLIENTS } from "@/prototypes/clients";
 import Image from "next/image";
 import React from "react";
-import { CLIENT_IMG_WIDTH, CLIENT_IMG_HEIGHT } from "@/constants/clients";
 import Reveal from "../../Animation/Reveal";
 
 const Clients = () => {
@@ -13,8 +12,8 @@ const Clients = () => {
             {CLIENTS.map(({ id, imgName }) => (
               <div key={id} className="card py-3 md:py-4">
                 <Image
-                  width={CLIENT_IMG_WIDTH}
-                  height={CLIENT_IMG_HEIGHT}
+                  width={288}
+                  height={88}
                   src={`/clients/${imgName}`}
                   alt="client logo"
                   style={{ objectFit: "contain" }}

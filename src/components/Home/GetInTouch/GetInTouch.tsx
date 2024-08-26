@@ -3,7 +3,7 @@ import { CONTACTS } from "@/prototypes/get_in_touch";
 import {
   GET_IN_TOUCH_MAIN_HEADING,
   GET_IN_TOUCH_SUB_HEADING,
-} from "@/constants/get_in_touch";
+} from "@/constants/home";
 import { GetInTouchContactBtn, LocationCard } from ".";
 import Reveal from "@/components/Animation/Reveal";
 import { PrimaryStyledHeadings } from "@/components/Reusable";

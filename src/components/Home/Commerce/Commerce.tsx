@@ -1,9 +1,6 @@
 import React from "react";
 import { Categories } from ".";
-import {
-  COMMERCE_MAIN_HEADING,
-  COMMERCE_SUB_HEADING,
-} from "@/constants/commerce";
+import { COMMERCE_MAIN_HEADING, COMMERCE_SUB_HEADING } from "@/constants/home";
 import Reveal from "@/components/Animation/Reveal";
 
 const Commerce = () => {

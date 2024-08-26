@@ -1,7 +1,7 @@
 import { RESULTS_DELIVERED } from "@/prototypes/results";
 import React from "react";
 import { ResultsDeliveredItem } from ".";
-import { RESULTS_DELIVERED_HEADING } from "@/constants/results";
+import { RESULTS_DELIVERED_HEADING } from "@/constants/home";
 import { PrimaryStyledHeadings } from "../../Reusable";
 import Reveal from "../../Animation/Reveal";
 

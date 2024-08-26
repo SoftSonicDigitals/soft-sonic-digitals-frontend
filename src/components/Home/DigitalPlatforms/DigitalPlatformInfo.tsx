@@ -1,7 +1,7 @@
 import {
   DIGITAL_PLATFORM_DESCRIPTION,
   DIGITAL_PLATFORM_HEADING,
-} from "@/constants/digital_platforms";
+} from "@/constants/home";
 import React from "react";
 
 const DigitalPlatformInfo = () => {

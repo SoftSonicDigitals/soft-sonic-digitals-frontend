@@ -1,6 +1,4 @@
 import { FormDropDownOptionsType } from "@/models/contact_page";
-import { PriorityTagColor, StatusTagColor } from "@/models/admin";
-import { FaChartSimple } from "react-icons/fa6";
 import { FiUser } from "react-icons/fi";
 import { LuClipboard } from "react-icons/lu";
 import { HiMiniSquares2X2 } from "react-icons/hi2";

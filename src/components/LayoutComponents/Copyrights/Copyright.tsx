@@ -1,4 +1,4 @@
-import { COPYRIGHTS_INFO } from "@/constants/copyrights";
+import { COPYRIGHTS_INFO } from "@/constants/home";
 import React from "react";
 import Reveal from "../../Animation/Reveal";
 

@@ -4,7 +4,7 @@ import {
   HERO_BUTTON_TEXT,
   HERO_MAIN_HEADING,
   HERO_SUB_HEADING,
-} from "@/constants/hero";
+} from "@/constants/home";
 import Reveal from "../../Animation/Reveal";
 const Hero = () => {
   return (

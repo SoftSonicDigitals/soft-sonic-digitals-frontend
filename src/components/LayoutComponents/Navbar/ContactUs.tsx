@@ -3,7 +3,7 @@
 import React from "react";
 import { PrimaryButton } from "../../Reusable";
 import { useRouter } from "next/navigation";
-import { CONTACT_US } from "@/constants/navbar";
+import { CONTACT_US } from "@/constants/home";
 
 type ContactUsProps = {
   buttonStyles?: string;
