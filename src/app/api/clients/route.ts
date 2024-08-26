@@ -3,6 +3,7 @@ import { CLIENT_TABLE_LIMIT as limit } from "@/constants/dashboard";
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import prismadb from "../../../lib/prismadb";
+import { Prisma } from "@prisma/client";
 
 // make the route dynamic
 export const revalidate = 0;
@@ -97,7 +98,7 @@ export async function GET(request: NextRequest) {
     }
 
     const clients = await prismadb.client.findMany({
-      where: whereClause as any,
+      where: whereClause as Prisma.ClientWhereInput | undefined,
       select: {
         id: true,
         name: true,
@@ -115,7 +116,7 @@ export async function GET(request: NextRequest) {
     });
 
     const totalClient = await prismadb.client.count({
-      where: whereClause as any,
+      where: whereClause as Prisma.ClientWhereInput | undefined,
     });
 
     return NextResponse.json(

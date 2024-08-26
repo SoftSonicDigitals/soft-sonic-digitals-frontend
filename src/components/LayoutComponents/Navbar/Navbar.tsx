@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SideMenu, Platforms, Resources, Solutions, ContactUs } from ".";
-import { CUSTOMER } from "@/constants/navbar";
+import { CUSTOMER } from "@/constants/home";
 
 const Navbar = () => {
   return (

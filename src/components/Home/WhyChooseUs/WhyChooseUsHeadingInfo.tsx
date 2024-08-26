@@ -2,7 +2,7 @@ import React from "react";
 import {
   WHY_CHOOSE_US_DESCRIPTION,
   WHY_CHOOSE_US_HEADING,
-} from "@/constants/why_choose_us";
+} from "@/constants/home";
 
 const WhyChooseUsHeadingInfo = () => {
   return (

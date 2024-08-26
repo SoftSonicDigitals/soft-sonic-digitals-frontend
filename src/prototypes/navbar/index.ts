@@ -4,7 +4,7 @@ import {
   RESOURCES,
   INDUSTRY,
   CUSTOMER,
-} from "@/constants/navbar";
+} from "@/constants/home";
 
 import {
   PlatformMenuType,

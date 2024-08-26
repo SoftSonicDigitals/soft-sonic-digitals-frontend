@@ -4,7 +4,7 @@ import { PrimaryStyledHeadings, ViewAllBtn } from "../../Reusable";
 import {
   CASE_STUDIES_HEADING,
   CASE_STUDIES_SUBHEADING,
-} from "@/constants/case_studies";
+} from "@/constants/home";
 import Reveal from "../../Animation/Reveal";
 
 const CaseStudies = () => {

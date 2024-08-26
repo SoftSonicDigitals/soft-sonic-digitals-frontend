@@ -1,4 +1,4 @@
-import { AWARDS_HEADING } from "@/constants/awards";
+import { AWARDS_HEADING } from "@/constants/home";
 import { AWARDS } from "@/prototypes/awards";
 import React from "react";
 import { Award } from ".";
