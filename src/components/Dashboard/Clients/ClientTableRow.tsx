@@ -7,6 +7,7 @@ import {
   STATUS_TAGS_COLORS,
 } from "@/prototypes/dashboard";
 import { PriorityKey, StatusKey } from "@/models/admin";
+import { useRouter } from "next/navigation";
 
 type ClientTableRowProps = {
   id: string;
@@ -32,12 +33,18 @@ const ClientTableRow = ({
   priority,
   status,
 }: ClientTableRowProps) => {
+  const router = useRouter();
   const formattedAddress = [address_line, postcode, state]
     .filter(Boolean)
     .join(", ");
 
   return (
-    <tr className="hover:bg-black-200 transition duration-300 hover:text-white border-b ">
+    <tr
+      className="hover:bg-black-200 transition duration-300 hover:text-white border-b "
+      onClick={() => {
+        router.push(`/admin/leads/${id}`);
+      }}
+    >
       <td className="py-3.5 px-4  text-left">
         <div className="flex items-center gap-5 ">
           <div className="p-2.5 rounded-full bg-gray-200">

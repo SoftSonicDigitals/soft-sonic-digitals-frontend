@@ -1,10 +1,20 @@
 "use client";
 import { useNavbarOpenContext } from "@/context/NavbarContext";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const LayoutAnimator = ({ children }: { children: React.ReactNode }) => {
   const { isNavbarOpen } = useNavbarOpenContext();
+  const [isClient, setIsClient] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Set isClient to true once the component has mounted
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // or a fallback component
+  }
 
   return (
     <motion.div
