@@ -5,7 +5,7 @@ import FiltersMenu from "./FiltersMenu";
 const Filters = () => {
   const [isFilterMenuOpen, setIsFilterMenuOpen] = useState(false);
   return (
-    <div className="flex-grow-0 flex-shrink-0  relative">
+    <div className="  relative">
       <button
         className="flex-center gap-2 px-5 py-2.5 border-[1.5px] border-gray-200 text-sm font-[500]"
         onClick={() => setIsFilterMenuOpen((prev) => !prev)}

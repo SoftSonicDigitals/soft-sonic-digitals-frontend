@@ -21,7 +21,7 @@ const ClientTableSection = () => {
   return (
     <section id="client_table">
       <div
-        className="flex gap-4 sm:flex-row lg:items-center mb-10 
+        className="flex gap-4 flex-col sm:flex-row lg:items-center mb-10 
       "
       >
         <Searchbar />
