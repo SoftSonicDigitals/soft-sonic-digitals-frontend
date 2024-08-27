@@ -14,13 +14,16 @@ const ClientTableSection = () => {
   const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
   const { data, isLoading, error } = useSWR(
-    `/api/clients?${params.toString()}`,
+    `/api/leads?${params.toString()}`,
     fetcher
   );
 
   return (
     <section id="client_table">
-      <div className="flex flex-col gap-4 sm:flex-row lg:items-center  mb-10">
+      <div
+        className="flex gap-4 sm:flex-row lg:items-center mb-10 
+      "
+      >
         <Searchbar />
         <Filters />
       </div>
