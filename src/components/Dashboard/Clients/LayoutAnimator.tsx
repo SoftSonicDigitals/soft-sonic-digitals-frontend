@@ -5,11 +5,15 @@ import React from "react";
 
 const LayoutAnimator = ({ children }: { children: React.ReactNode }) => {
   const { isNavbarOpen } = useNavbarOpenContext();
+
   return (
     <motion.div
-      className={` wrapper_container  `}
+      className={`wrapper_container`}
       initial={{ paddingLeft: "0rem" }}
-      animate={{ paddingLeft: isNavbarOpen ? "11rem" : "0rem" }}
+      animate={{
+        paddingLeft:
+          window.innerWidth < 768 ? "0rem" : isNavbarOpen ? "11rem" : "0rem",
+      }}
       transition={{ duration: 0.25 }}
     >
       {children}
