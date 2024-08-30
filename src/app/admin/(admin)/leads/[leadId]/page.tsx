@@ -1,5 +1,10 @@
 import { LayoutAnimator } from "@/components/Dashboard/Clients";
-import { InfoBox, Profile } from "@/components/Dashboard/Details";
+import {
+  CapturedDate,
+  LeadSource,
+  Profile,
+  StatusContainer,
+} from "@/components/Dashboard/Details";
 import React from "react";
 
 const page = () => {
@@ -9,12 +14,11 @@ const page = () => {
         <div className="flex justify-between lg:items-center  my-10 gap-6">
           <h1 className="text-3xl font-[700] tracking-wide ">Lead Details</h1>
         </div>
-
         <Profile />
-        <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center  border gap-[1px] bg-gray-200  ">
-          {[1, 1, 1, 1].map((item, index) => (
-            <InfoBox key={index} />
-          ))}
+        <StatusContainer />
+        <div className="flex flex-col md:flex-row justify-between md:items-center">
+          <LeadSource />
+          <CapturedDate date={"2024-08-25T09:57:14.244+00:00"} />
         </div>
       </LayoutAnimator>
     </main>

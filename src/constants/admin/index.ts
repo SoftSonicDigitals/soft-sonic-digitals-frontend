@@ -14,3 +14,20 @@ export const ProfileInfoIcons = {
   PHONE: BsTelephone,
   ADDRESS: GrLocation,
 };
+
+export const StatusTags = {
+  NEW: "new",
+  OPEN: "open",
+  IN_PROGRESS: "in-progress",
+  REVIEWED: "reviewed",
+  CLOSED: "closed",
+};
+
+export const LEAD_SORUCE_TXT = "Lead Source";
+
+export const LEAD_CAPTURED_DATE_TXT = "Lead Captured Date";
+
+export const LeadCaptureDateFormats = {
+  date: "d LLL yyyy",
+  time: "hh:mm aa",
+};

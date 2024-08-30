@@ -1,4 +1,6 @@
+import { ValueOf } from "next/dist/shared/lib/constants";
 import { FormFields } from "../contact_page";
+import { StatusTags } from "@/constants/admin";
 
 export interface ClientDetails extends FormFields {
   clientId: string;
@@ -16,35 +18,17 @@ export type Clients = {
   postcode: string;
   state: string;
   priority: PriorityKey;
-  status: StatusKey;
+  status: ValueOf<typeof StatusTags>;
 };
 
 export type PriorityKey = "critical" | "blocker" | "urgent" | "normal";
-export type StatusKey =
-  | "in-progress"
-  | "review"
-  | "resolved"
-  | "reopened"
-  | "pending"
-  | "verified"
-  | "duplicate";
 
-export type Tags = {
-  priority: PriorityKey;
-  status: StatusKey;
-  id: string;
+export type StatusTagsColorsType = {
+  [key in ValueOf<typeof StatusTags>]: StatusTagColor;
 };
 
-type TagInfo = {
-  tagName: string;
+type StatusTagColor = {
+  tagName: ValueOf<typeof StatusTags>;
   tagColor: string;
   tagTextColor: string;
-};
-
-export type PriorityTagColor = {
-  [key in PriorityKey]: TagInfo;
-};
-
-export type StatusTagColor = {
-  [key in StatusKey]: TagInfo;
 };
