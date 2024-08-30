@@ -1,30 +1,11 @@
-import { FormDropDownOptionsType } from "@/models/contact_page";
 import { FiUser } from "react-icons/fi";
 import { LuClipboard } from "react-icons/lu";
 import { HiMiniSquares2X2 } from "react-icons/hi2";
 import { GoGraph } from "react-icons/go";
 import { PiHeadphonesBold } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
-
-export const PRIORITY_TAGS: FormDropDownOptionsType = [
-  { value: "", title: "-Select-" },
-  { value: "critical", title: "Critical" },
-  { value: "blocker", title: "Blocker" },
-  { value: "urgent", title: "Urgent" },
-  { value: "normal", title: "Normal" },
-];
-
-export const STATUS_TAGS: FormDropDownOptionsType = [
-  { value: "", title: "-Select-" },
-  { value: "in-progress", title: "In Progress" },
-  { value: "review", title: "Review" },
-  { value: "resolved", title: "Resolved" },
-  { value: "reopened", title: "Reopened" },
-  { value: "pending", title: "Pending" },
-  { value: "verified", title: "Verified" },
-  { value: "duplicate", title: "Duplicate" },
-];
-
+import { StatusTags } from "@/constants/admin";
+import { StatusTagsColorsType } from "@/models/admin";
 export const PRIORITY_TAGS_COLORS = {
   critical: {
     tagName: "critical",
@@ -48,41 +29,31 @@ export const PRIORITY_TAGS_COLORS = {
   },
 };
 
-export const STATUS_TAGS_COLORS = {
+export const STATUS_TAGS_COLORS: StatusTagsColorsType = {
   "in-progress": {
-    tagName: "in-progress",
+    tagName: StatusTags.IN_PROGRESS,
     tagColor: "#80deea", // Light Cyan
     tagTextColor: "#00acc1", // More Saturated Cyan
   },
-  review: {
-    tagName: "review",
+  new: {
+    tagName: StatusTags.NEW,
     tagColor: "#e1bee7", // Light Pink
     tagTextColor: "#ab47bc", // More Saturated Pink
   },
-  resolved: {
-    tagName: "resolved",
+  open: {
+    tagName: StatusTags.OPEN,
     tagColor: "#c5e1a5", // Light Green
     tagTextColor: "#7cb342", // More Saturated Green
   },
-  reopened: {
-    tagName: "reopened",
+  reviewed: {
+    tagName: StatusTags.REVIEWED,
     tagColor: "#ffab91", // Light Coral
     tagTextColor: "#ff5722", // More Saturated Coral
   },
-  pending: {
-    tagName: "pending",
+  closed: {
+    tagName: StatusTags.CLOSED,
     tagColor: "#ffecb3", // Light Yellow
     tagTextColor: "#fbc02d", // More Saturated Yellow
-  },
-  verified: {
-    tagName: "verified",
-    tagColor: "#b3e5fc", // Light Blue
-    tagTextColor: "#03a9f4", // More Saturated Blue
-  },
-  duplicate: {
-    tagName: "duplicate",
-    tagColor: "#e0e0e0", // Light Gray
-    tagTextColor: "#b0bec5", // More Saturated Gray
   },
 };
 

@@ -67,6 +67,11 @@ const config: Config = {
         300: "#91a7ff",
         700: "#4263eb",
       },
+      green: {
+        DEFAULT: "#66c255",
+        200: "#e2ffde",
+        700: "#66c255",
+      },
     },
   },
 

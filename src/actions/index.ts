@@ -3,6 +3,7 @@ import { ObjectId } from "mongodb";
 import { ClientDetails } from "@/models/admin";
 import prismadb from "../lib/prismadb";
 import { revalidatePath } from "next/cache";
+import { StatusTags } from "@/constants/admin";
 
 // add client
 export const addClient = async ({
@@ -38,8 +39,8 @@ export const addClient = async ({
         requirement,
         estimated_start_time,
         project_details,
-        priority: priority ? priority : "",
-        status: status ? status : "",
+        priority: "",
+        status: StatusTags.NEW,
       },
     });
 
