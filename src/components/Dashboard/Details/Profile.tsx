@@ -19,12 +19,12 @@ const Profile = () => {
                 <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start ">
                   Jerome Bell
                 </p>
-                <div className="flex flex-1 flex-col md:flex-row gap-2 md:gap-6 ">
+                <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 ">
                   <IconData
                     icon={ProfileInfoIcons.MAIL}
                     data="jeromebell@gmail.com"
                   />
-                  <div className="hidden md:block bg-gray-700 min-w-1 min-h-1 rounded-full  self-center " />
+                  <div className="hidden lg:block bg-gray-700 min-w-1 min-h-1 rounded-full  self-center " />
                   <IconData
                     icon={ProfileInfoIcons.PHONE}
                     data="(405) 555-0128"

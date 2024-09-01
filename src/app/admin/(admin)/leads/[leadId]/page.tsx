@@ -3,6 +3,7 @@ import {
   CapturedDate,
   LeadSource,
   Profile,
+  Requirements,
   StatusContainer,
 } from "@/components/Dashboard/Details";
 import React from "react";
@@ -16,10 +17,12 @@ const page = () => {
         </div>
         <Profile />
         <StatusContainer />
-        <div className="flex flex-col md:flex-row justify-between md:items-center">
+        <div className="flex flex-col md:flex-row justify-between md:items-center my-4">
           <LeadSource />
           <CapturedDate date={"2024-08-25T09:57:14.244+00:00"} />
         </div>
+        <hr className="my-8" />
+        <Requirements />
       </LayoutAnimator>
     </main>
   );
