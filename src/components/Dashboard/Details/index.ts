@@ -1,8 +1,10 @@
 import CapturedDate from "./CapturedDate";
+import DetailBullets from "./DetailBullets";
 import IconData from "./IconData";
 import InfoBox from "./InfoBox";
 import LeadSource from "./LeadSource";
 import Profile from "./Profile";
+import Requirements from "./Requirements";
 import StatusContainer from "./StatusContainer";
 
 export {
@@ -12,4 +14,6 @@ export {
   StatusContainer,
   LeadSource,
   CapturedDate,
+  Requirements,
+  DetailBullets,
 };

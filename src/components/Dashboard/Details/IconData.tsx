@@ -11,9 +11,7 @@ const IconData = ({ icon: Icon, data, styles }: IconDataProps) => {
   return (
     data &&
     data.length > 0 && (
-      <div
-        className={`${styles} flex md:justify-center  items-center gap-2 flex-1 `}
-      >
+      <div className={`${styles} flex lg:justify-center  items-center gap-2  `}>
         <Icon className="h-5 min-w-5 text-gray-700 font-[700]" />
         <p className="text-gray-700 font-[600] text-sm tracking-wide">{data}</p>
       </div>
