@@ -6,7 +6,7 @@ import InfoBox from "./InfoBox";
 const Profile = () => {
   return (
     <section id="profile_details" className="mb-8">
-      <div className="w-full border-x-[1px] border-t-[1px] rounded-t-md border-gray-200 py-8 px-4 md:p-8 ">
+      <div className="w-full border-x-[1px] border-t-[1px]  border-gray-200 py-8 px-4 md:p-8 ">
         <div className="flex justify-between">
           <div>
             <div className="flex gap-8 px-4">

@@ -2,6 +2,7 @@ import { LayoutAnimator } from "@/components/Dashboard/Clients";
 import {
   CapturedDate,
   LeadSource,
+  Notes,
   Profile,
   Requirements,
   StatusContainer,
@@ -23,6 +24,7 @@ const page = () => {
         </div>
         <hr className="my-8" />
         <Requirements />
+        <Notes />
       </LayoutAnimator>
     </main>
   );

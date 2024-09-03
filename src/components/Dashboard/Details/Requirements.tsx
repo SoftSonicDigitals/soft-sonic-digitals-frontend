@@ -1,14 +1,15 @@
 import React from "react";
 import DetailBullets from "./DetailBullets";
+import InfoBox from "./InfoBox";
 
 const Requirements = () => {
   return (
-    <section className="" id="requirement">
+    <section className="mb-12" id="requirement">
       <h1 className="text-2xl font-[600] tracking-wide text-gray-800 mb-5">
         Requirements
       </h1>
 
-      <div className="border rounded-md w-full p-6">
+      <div className="border w-full p-6">
         <DetailBullets
           title="Project Requirements"
           data="Hire A Dedicated Team"
@@ -21,7 +22,11 @@ const Requirements = () => {
           }
         />
 
-        <div></div>
+        <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
+          {[1, 1, 1].map((item, index) => (
+            <InfoBox key={index} />
+          ))}
+        </div>
       </div>
     </section>
   );
