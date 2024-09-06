@@ -2,7 +2,7 @@ import { FilterCategoryTypes } from "@/constants/admin";
 import { CLIENT_TABLE_LIMIT as limit } from "@/constants/dashboard";
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
-import prismadb from "../../../lib/prismadb";
+import prismadb from "@/lib/prismadb";
 import { Prisma } from "@prisma/client";
 
 // make the route dynamic
