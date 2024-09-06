@@ -1,12 +1,15 @@
 import React from "react";
-
-const InfoBox = () => {
+type InfoBoxProps = {
+  title: string;
+  value: string;
+};
+const InfoBox = ({ title, value }: InfoBoxProps) => {
   return (
-    <div className=" p-6 bg-white ">
+    <div className=" p-6 bg-white h-full ">
       <h2 className="font-[600] text-sm text-gray-400 tracking-wide mb-2">
-        Lead owner
+        {title}
       </h2>
-      <p className="text-lg font-[600] ">Esther Howard</p>
+      <p className="text-lg font-[600] ">{value}</p>
     </div>
   );
 };
