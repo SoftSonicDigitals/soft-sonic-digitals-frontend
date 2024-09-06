@@ -6,7 +6,7 @@ import {
   filterState,
   filterTags,
 } from "@/prototypes/admin/filter";
-import React, { Dispatch, useState } from "react";
+import React, { Dispatch, ReactNode, useCallback, useState } from "react";
 import SubFilterTags from "./SubFilterTags";
 import { usePathname, useRouter } from "next/navigation";
 import { ValueOf } from "next/dist/shared/lib/constants";
@@ -43,9 +43,9 @@ const FiltersMenu = ({
   const router = useRouter();
   const pathname = usePathname();
 
-  const closeFilterMenu = () => {
+  const closeFilterMenu = useCallback((): void => {
     setIsFilterMenuOpen(false);
-  };
+  }, []);
 
   return (
     <div className="absolute top-12 left-0 w-64 z-100">

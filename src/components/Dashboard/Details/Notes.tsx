@@ -19,7 +19,9 @@ const Notes = () => {
           <p>Add note</p>
         </div>
       </div>
-      <NoteItem />
+      {[1, 1, 1, 1].map((item, index) => (
+        <NoteItem key={index} />
+      ))}
     </section>
   );
 };
