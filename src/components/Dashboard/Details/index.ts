@@ -7,6 +7,7 @@ import LeadSource from "./LeadSource";
 import NoteItem from "./NoteItem";
 import Notes from "./Notes";
 import Profile from "./Profile";
+import SkeletonLoader from "./SkeletonLoader";
 import Requirements from "./Requirements";
 import StatusContainer from "./StatusContainer";
 
@@ -22,4 +23,5 @@ export {
   Notes,
   NoteItem,
   LeadDetails,
+  SkeletonLoader,
 };

@@ -1,9 +1,52 @@
 import React from "react";
 import { FiUser } from "react-icons/fi";
 import IconData from "./IconData";
-import { ProfileInfoIcons } from "@/constants/admin";
+import { ProfileInfoBox, ProfileInfoIcons } from "@/constants/admin";
 import InfoBox from "./InfoBox";
-const Profile = () => {
+import { ValueOf } from "next/dist/shared/lib/constants";
+
+type ProfileProps = {
+  name: string;
+  email: string;
+  mobile: string;
+  addressLine: string;
+  postcode: string;
+  state: string;
+  company: string;
+  service: string;
+  budget: string;
+};
+const Profile = ({
+  name,
+  email,
+  mobile,
+  addressLine,
+  postcode,
+  state,
+  company,
+  service,
+  budget,
+}: ProfileProps) => {
+  const profileInfoArray: {
+    title: ValueOf<typeof ProfileInfoBox>;
+    value: string;
+  }[] = [
+    {
+      title: ProfileInfoBox.LEAD_OWNER,
+      value: "Ester Howard",
+    },
+    {
+      title: ProfileInfoBox.COMPANY,
+      value: company.length !== 0 ? company : "-",
+    },
+    { title: ProfileInfoBox.SERVICE, value: service },
+    { title: ProfileInfoBox.BUDGET, value: budget },
+  ];
+
+  const formattedAddress = [addressLine, postcode, state]
+    .filter(Boolean)
+    .join(", ");
+
   return (
     <section id="profile_details" className="mb-8">
       <div className="w-full border-x-[1px] border-t-[1px]  border-gray-200 py-8 px-4 md:p-8 ">
@@ -17,22 +60,16 @@ const Profile = () => {
               </div>
               <div className="flex flex-col gap-2">
                 <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start ">
-                  Jerome Bell
+                  {name}
                 </p>
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 ">
-                  <IconData
-                    icon={ProfileInfoIcons.MAIL}
-                    data="jeromebell@gmail.com"
-                  />
+                  <IconData icon={ProfileInfoIcons.MAIL} data={email} />
                   <div className="hidden lg:block bg-gray-700 min-w-1 min-h-1 rounded-full  self-center " />
-                  <IconData
-                    icon={ProfileInfoIcons.PHONE}
-                    data="(405) 555-0128"
-                  />
+                  <IconData icon={ProfileInfoIcons.PHONE} data={mobile} />
                 </div>
                 <IconData
                   icon={ProfileInfoIcons.ADDRESS}
-                  data="7 Jacobs Street, Bankstown,2200, NSW"
+                  data={formattedAddress}
                   styles="self-start"
                 />
               </div>
@@ -41,8 +78,8 @@ const Profile = () => {
         </div>
       </div>
       <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center  border gap-[1px] bg-gray-200  ">
-        {[1, 1, 1, 1].map((item, index) => (
-          <InfoBox key={index} />
+        {profileInfoArray.map((item, index) => (
+          <InfoBox key={index} title={item.title} value={item.value} />
         ))}
       </div>
     </section>

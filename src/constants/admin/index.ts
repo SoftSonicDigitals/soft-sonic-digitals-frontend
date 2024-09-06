@@ -23,6 +23,13 @@ export const StatusTags = {
   CLOSED: "closed",
 };
 
+export const ProfileInfoBox = {
+  LEAD_OWNER: "Lead owner",
+  COMPANY: "Company",
+  SERVICE: "Service",
+  BUDGET: "Budget",
+};
+
 export const LEAD_SORUCE_TXT = "Lead Source";
 
 export const LEAD_CAPTURED_DATE_TXT = "Lead Captured Date";
