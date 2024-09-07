@@ -23,18 +23,21 @@ export const StatusTags = {
   CLOSED: "closed",
 };
 
-export const ProfileInfoBox = {
+export const LeadDetails = {
   LEAD_OWNER: "Lead owner",
   COMPANY: "Company",
   SERVICE: "Service",
   BUDGET: "Budget",
+  PROJECT_REQUIREMENT: "Project requirements",
+  START_TIME: "Estimated start time",
+  PROJECT_DETAILS: "Project details",
 };
 
 export const LEAD_SORUCE_TXT = "Lead Source";
 
 export const LEAD_CAPTURED_DATE_TXT = "Lead Captured Date";
 
-export const LeadCaptureDateFormats = {
+export const CaptureDateFormats = {
   date: "d LLL yyyy",
   time: "hh:mm aa",
 };

@@ -1,6 +1,6 @@
-import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
+import { auth } from "@clerk/nextjs/server";
 
 export async function GET(
   request: NextRequest,
@@ -9,12 +9,6 @@ export async function GET(
   auth().protect();
   try {
     const { leadId } = params;
-
-    const leadDetails = await prismadb.client.findUnique({
-      where: {
-        id: leadId,
-      },
-    });
 
     const notes = await prismadb.note.findMany({
       where: {
@@ -26,7 +20,7 @@ export async function GET(
       {
         status: 200,
         message: "Request successful",
-        data: { lead: leadDetails, notes },
+        data: { notes },
       },
       { status: 200 }
     );
@@ -34,7 +28,7 @@ export async function GET(
     return NextResponse.json(
       {
         status: "error",
-        message: "An error occurred while fetching clients.",
+        message: "An error occurred while fetching notes.",
         error: error.message,
       },
       { status: 500 }

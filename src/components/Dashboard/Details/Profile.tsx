@@ -1,7 +1,7 @@
 import React from "react";
 import { FiUser } from "react-icons/fi";
 import IconData from "./IconData";
-import { ProfileInfoBox, ProfileInfoIcons } from "@/constants/admin";
+import { LeadDetails, ProfileInfoIcons } from "@/constants/admin";
 import InfoBox from "./InfoBox";
 import { ValueOf } from "next/dist/shared/lib/constants";
 
@@ -28,19 +28,19 @@ const Profile = ({
   budget,
 }: ProfileProps) => {
   const profileInfoArray: {
-    title: ValueOf<typeof ProfileInfoBox>;
+    title: ValueOf<typeof LeadDetails>;
     value: string;
   }[] = [
     {
-      title: ProfileInfoBox.LEAD_OWNER,
+      title: LeadDetails.LEAD_OWNER,
       value: "Ester Howard",
     },
     {
-      title: ProfileInfoBox.COMPANY,
+      title: LeadDetails.COMPANY,
       value: company.length !== 0 ? company : "-",
     },
-    { title: ProfileInfoBox.SERVICE, value: service },
-    { title: ProfileInfoBox.BUDGET, value: budget },
+    { title: LeadDetails.SERVICE, value: service },
+    { title: LeadDetails.BUDGET, value: budget },
   ];
 
   const formattedAddress = [addressLine, postcode, state]
@@ -59,7 +59,7 @@ const Profile = ({
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start ">
+                <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start capitalize ">
                   {name}
                 </p>
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 ">

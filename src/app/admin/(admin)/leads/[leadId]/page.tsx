@@ -1,5 +1,5 @@
 import { LayoutAnimator } from "@/components/Dashboard/Clients";
-import { LeadDetails } from "@/components/Dashboard/Details";
+import { LeadDetails, Notes } from "@/components/Dashboard/Details";
 import React from "react";
 
 const page = ({ params }: { params: { leadId: string } }) => {
@@ -10,6 +10,7 @@ const page = ({ params }: { params: { leadId: string } }) => {
           <h1 className="text-3xl font-[700] tracking-wide ">Lead Details</h1>
         </div>
         <LeadDetails leadId={params.leadId} />
+        <Notes leadId={params.leadId} />
       </LayoutAnimator>
     </main>
   );
