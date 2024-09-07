@@ -32,6 +32,7 @@ const InputField = ({
       </label>
       <div>
         <input
+          maxLength={maxLength}
           type="text"
           id={fieldId}
           placeholder={placeholder}

@@ -7,8 +7,7 @@ import ClientTableBody from "./ClientTableBody";
 import useSWR from "swr";
 import Pagination from "./Pagination";
 import { useSearchParams } from "next/navigation";
-
-const fetcher = (url: string) => fetch(url).then((res) => res.json());
+import { fetcher } from "@/utils";
 
 const ClientTableSection = () => {
   const searchParams = useSearchParams();
