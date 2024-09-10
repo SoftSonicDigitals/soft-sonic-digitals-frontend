@@ -14,6 +14,9 @@ export async function GET(
       where: {
         clientID: leadId,
       },
+      orderBy: {
+        created_at: "desc",
+      },
     });
 
     return NextResponse.json(
@@ -29,6 +32,44 @@ export async function GET(
       {
         status: "error",
         message: "An error occurred while fetching notes.",
+        error: error.message,
+      },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(
+  request: NextRequest,
+  { params }: { params: { leadId: string } }
+) {
+  auth().protect();
+
+  try {
+    const { leadId } = params;
+    const { note, createdBy } = await request.json();
+
+    const addedNote = await prismadb.note.create({
+      data: {
+        note,
+        created_by: createdBy,
+        clientID: leadId,
+      },
+    });
+
+    return NextResponse.json(
+      {
+        status: 201,
+        message: "Request successful",
+        data: { note: addedNote },
+      },
+      { status: 201 }
+    );
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        status: "error",
+        message: "An error occurred while adding notes.",
         error: error.message,
       },
       { status: 500 }

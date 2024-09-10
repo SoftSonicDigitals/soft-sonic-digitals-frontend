@@ -12,10 +12,11 @@ const Tiptap = ({ onChange, content, closeEditor }: any) => {
 
   const editor = useEditor({
     extensions: [StarterKit, Underline],
+    immediatelyRender: false, //ssr rendering to false
     editorProps: {
       attributes: {
         class:
-          "flex flex-col px-6 py-6  justify-start border-b border-r border-l border text-gray-400 items-start w-full gap-3 font-medium text-[16px] h-32 outline-none",
+          "flex flex-col px-6 py-6 justify-start border-b border-r border-l border text-gray-400 items-start w-full gap-3 font-medium text-base min-h-32 outline-none  text-editor ",
       },
     },
     onUpdate: ({ editor }) => {
