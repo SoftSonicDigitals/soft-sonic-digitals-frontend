@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { IoMdAdd } from "react-icons/io";
 import useSWR from "swr";
 import { fetcher } from "@/utils";
-import { NoteItem, NotesSkeleton } from "./";
+import { NoteItem, NotesSkeleton, RichTextEditor, TipTap } from "./";
 
 const Notes = ({ leadId }: { leadId: string }) => {
   const { data, isLoading, error } = useSWR(`/api/notes/${leadId}`, fetcher);
+
+  const [openAddNote, setOpenAddNote] = useState(false);
 
   if (data?.status === "error") {
     return;
@@ -16,7 +18,7 @@ const Notes = ({ leadId }: { leadId: string }) => {
   return (
     <>
       {!isLoading && (
-        <section id="notes">
+        <section id="notes" className="mb-16">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-4 ">
               <h1 className="text-2xl font-[600] tracking-wide text-gray-800 ">
@@ -27,11 +29,20 @@ const Notes = ({ leadId }: { leadId: string }) => {
                 {notes.length}
               </div>
             </div>
-            <div className="flex-center gap-3 font-[700] text-sm text-orange cursor-pointer">
+            <div
+              className="flex-center gap-3 font-[700] text-sm text-orange cursor-pointer"
+              onClick={() => {
+                setOpenAddNote(true);
+              }}
+            >
               <IoMdAdd className="text-lg" />
               <p>Add note</p>
             </div>
           </div>
+
+          {/* Rich Text Editor */}
+          {openAddNote && <RichTextEditor setEditorOpen={setOpenAddNote} />}
+
           {notes?.map(
             (item: {
               created_by: string;

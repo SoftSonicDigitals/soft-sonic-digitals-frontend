@@ -11,8 +11,11 @@ import DetailSkeleton from "./DetailSkeleton";
 import Requirements from "./Requirements";
 import StatusContainer from "./StatusContainer";
 import NotesSkeleton from "./NotesSkeleton";
+import TipTap from "./TipTap";
+import RichTextEditor from "./RichTextEditor";
 
 export {
+  RichTextEditor,
   Profile,
   IconData,
   InfoBox,
@@ -26,4 +29,5 @@ export {
   LeadDetails,
   DetailSkeleton,
   NotesSkeleton,
+  TipTap,
 };
