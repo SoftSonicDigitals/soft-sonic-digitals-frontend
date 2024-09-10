@@ -122,3 +122,40 @@
 .section_description {
   @apply text-xl  font-[500];
 }
+
+.text-editor ol,
+ul {
+  margin-bottom: 1rem;
+}
+
+.text-editor ol {
+  list-style: decimal !important;
+  list-style-position: outside !important;
+  margin-left: 20px;
+}
+
+.text-editor li {
+  margin-bottom: 0.5rem;
+}
+
+.text-editor ul {
+  list-style: disc !important;
+  list-style-position: outside !important;
+  margin-left: 20px;
+}
+
+.text-editor h2 {
+  font-size: 2rem; /* Adjust font size */
+  font-weight: 700; /* Makes the heading bold */
+  margin-bottom: 1rem; /* Space below the heading */
+  line-height: 1.3; /* Adjust line height for readability */
+}
+
+.text-editor blockquote {
+  font-size: 1.25rem; /* Slightly larger text */
+  font-style: italic; /* Italic text for emphasis */
+  border-left: 4px solid #ccc; /* Vertical border on the left */
+  padding-left: 1rem; /* Space between the text and the border */
+  margin: 0.5rem 0; /* Spacing above and below the blockquote */
+  quotes: "“" "”" "‘" "’"; /* Optional custom quotes */
+}

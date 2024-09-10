@@ -11,7 +11,9 @@ import {
   Redo,
   Code,
 } from "lucide-react";
+import { LuHeading2 } from "react-icons/lu";
 import { FaBold, FaItalic, FaUnderline, FaStrikethrough } from "react-icons/fa";
+import { MdFormatListBulleted } from "react-icons/md";
 type ToolbarProps = {
   editor: Editor | null;
   content: string;
@@ -24,7 +26,7 @@ const Toolbar = ({ editor, content, closeEditor }: ToolbarProps) => {
   }
 
   return (
-    <div className="px-4 py-6  flex justify-between items-center gap-5 w-full border flex-wrap lg:flex-row">
+    <div className="px-4 py-6  flex justify-between items-center gap-5 w-full border border-t-0 flex-wrap lg:flex-row">
       <div className="flex justify-start items-center gap-2  min-w-fit  ">
         <button
           onClick={(e) => {
@@ -78,6 +80,7 @@ const Toolbar = ({ editor, content, closeEditor }: ToolbarProps) => {
         >
           <FaStrikethrough className="w-4 h-4" />
         </button>
+
         <button
           onClick={(e) => {
             e.preventDefault();
@@ -89,7 +92,7 @@ const Toolbar = ({ editor, content, closeEditor }: ToolbarProps) => {
               : "text-gray-700 bg-white p-2"
           }
         >
-          <Heading2 className="w-4 h-4" />
+          <LuHeading2 className="w-4 h-4" />
         </button>
 
         <button
@@ -103,7 +106,7 @@ const Toolbar = ({ editor, content, closeEditor }: ToolbarProps) => {
               : "text-gray-700 bg-white p-2"
           }
         >
-          <List className="w-4 h-4" />
+          <MdFormatListBulleted className="w-4 h-4" />
         </button>
         <button
           onClick={(e) => {
@@ -171,23 +174,24 @@ const Toolbar = ({ editor, content, closeEditor }: ToolbarProps) => {
           <Redo className="w-4 h-4" />
         </button>
       </div>
-      {content && (
-        <div className="flex  flex-row-reverse md:flex-row gap-2">
-          <button
-            type="button"
-            className="px-6 py-3 bg-white text-orange text-sm font-[500]  "
-            onClick={() => closeEditor()}
-          >
-            Cancel
-          </button>
+
+      <div className="flex  flex-row-reverse md:flex-row gap-2">
+        <button
+          type="button"
+          className="px-6 py-3 bg-white text-orange text-sm font-[500]  "
+          onClick={() => closeEditor()}
+        >
+          Cancel
+        </button>
+        {content && (
           <button
             type="submit"
             className="px-6 py-2.5 bg-orange text-white text-sm font-[500] min-w-fit "
           >
             Add note
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

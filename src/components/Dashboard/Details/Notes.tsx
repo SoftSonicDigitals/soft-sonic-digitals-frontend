@@ -41,7 +41,9 @@ const Notes = ({ leadId }: { leadId: string }) => {
           </div>
 
           {/* Rich Text Editor */}
-          {openAddNote && <RichTextEditor setEditorOpen={setOpenAddNote} />}
+          {openAddNote && (
+            <RichTextEditor setEditorOpen={setOpenAddNote} leadId={leadId} />
+          )}
 
           {notes?.map(
             (item: {
