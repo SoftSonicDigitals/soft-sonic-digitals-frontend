@@ -13,6 +13,7 @@ import StatusContainer from "./StatusContainer";
 import NotesSkeleton from "./NotesSkeleton";
 import TipTap from "./TipTap";
 import RichTextEditor from "./RichTextEditor";
+import DropdownInfoBox from "./DropdownInfoBox";
 
 export {
   RichTextEditor,
@@ -30,4 +31,5 @@ export {
   DetailSkeleton,
   NotesSkeleton,
   TipTap,
+  DropdownInfoBox,
 };
