@@ -2,6 +2,7 @@ import React from "react";
 import DetailBullets from "./DetailBullets";
 import InfoBox from "./InfoBox";
 import { LeadDetails } from "@/constants/admin";
+import DropdownInfoBox from "./DropdownInfoBox";
 
 type RequirementsProps = {
   requirement: string;
@@ -31,9 +32,8 @@ const Requirements = ({
         />
 
         <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
-          {[1, 1, 1].map((item, index) => (
-            <InfoBox key={index} title={"Hello"}/>
-          ))}
+          <InfoBox title={"Reminder"} value="No reminder" />
+          <DropdownInfoBox title={"Task Priority"} />
         </div>
       </div>
     </section>
