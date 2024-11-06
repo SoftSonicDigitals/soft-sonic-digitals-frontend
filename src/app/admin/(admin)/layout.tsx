@@ -10,7 +10,6 @@ import { NavbarOpenWrapper } from "@/context/NavbarContext";
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +25,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${raleway.className} overflow-x-hidden`}>
+        <body className={`${raleway.className}  overflow-x-hidden`}>
           <NavbarOpenWrapper>
             <SideNavBar />
             {children}
