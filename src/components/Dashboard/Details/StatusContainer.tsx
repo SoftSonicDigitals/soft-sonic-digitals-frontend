@@ -25,7 +25,7 @@ const StatusContainer = () => {
           <div
             key={index}
             onClick={() => statusSelectHandler(item)}
-            className={`flex-center capitalize w-full py-2 max-w-[400px]  font-[500] tracking-wide
+            className={`flex-center capitalize w-full py-2 max-w-[400px]  font-[500] tracking-wide min-w-fit
               hover:bg-green-700 hover:text-white ${
                 selected === item
                   ? "bg-green-700 text-white "
