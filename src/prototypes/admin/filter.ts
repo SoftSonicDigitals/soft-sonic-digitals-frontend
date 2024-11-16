@@ -39,17 +39,14 @@ export const filterMonth = [
 ];
 
 export const filterTags = [
-  { id: "blocker", label: "Blocker" },
-  { id: "critical", label: "Critical" },
-  { id: "duplicate", label: "Duplicate" },
+  { id: "high", label: "High" },
+  { id: "medium", label: "Medium" },
+  { id: "low", label: "Low" },
+  { id: "new", label: "New" },
+  { id: "Open", label: "Open" },
   { id: "in-progress", label: "In-Progress" },
-  { id: "normal", label: "Normal" },
-  { id: "pending", label: "Pending" },
-  { id: "reopened", label: "Reopened" },
-  { id: "resolved", label: "Resolved" },
-  { id: "review", label: "Review" },
-  { id: "urgent", label: "Urgent" },
-  { id: "verified", label: "Verified" },
+  { id: "reviewed", label: "reviewed" },
+  { id: "closed", label: "Closed" },
 ];
 
 export const filterState = [

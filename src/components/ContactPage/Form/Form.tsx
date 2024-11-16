@@ -31,7 +31,6 @@ const Form = () => {
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
       const clientId = await getNextClientID();
-      console.log(data);
       const result = await addClient({
         ...data,
         clientId,

@@ -23,6 +23,12 @@ export const StatusTags = {
   CLOSED: "closed",
 };
 
+export const PriorityTags = {
+  HIGH: "high",
+  MEDIUM: "medium",
+  LOW: "low",
+};
+
 export const LeadDetails = {
   LEAD_OWNER: "Lead owner",
   COMPANY: "Company",

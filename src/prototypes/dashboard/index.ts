@@ -5,27 +5,23 @@ import { GoGraph } from "react-icons/go";
 import { PiHeadphonesBold } from "react-icons/pi";
 import { IoSettingsOutline } from "react-icons/io5";
 import { StatusTags } from "@/constants/admin";
-import { StatusTagsColorsType } from "@/models/admin";
-export const PRIORITY_TAGS_COLORS = {
-  critical: {
-    tagName: "critical",
-    tagColor: "#F28B82", // Light Red
+import { PriorityTagsColorsType, StatusTagsColorsType } from "@/models/admin";
+
+export const PRIORITY_TAGS_COLORS: PriorityTagsColorsType = {
+  high: {
+    tagName: "high",
+    tagColor: "#66c255", // Light Red
     tagTextColor: "#C62828", // More Saturated Red
   },
-  blocker: {
-    tagName: "blocker",
-    tagColor: "#CE93D8", // Light Purple
+  medium: {
+    tagName: "medium",
+    tagColor: "#f59f00", // Light Purple
     tagTextColor: "#6A1B9A", // More Saturated Purple
   },
-  urgent: {
-    tagName: "urgent",
-    tagColor: "#FFCC80", // Light Orange
+  low: {
+    tagName: "low",
+    tagColor: "#f03e3e", // Light Orange
     tagTextColor: "#F57C00", // More Saturated Orange
-  },
-  normal: {
-    tagName: "normal",
-    tagColor: "#c3c7f8", // Light Blue
-    tagTextColor: "#4e5dff", // More Saturated Blue
   },
 };
 
