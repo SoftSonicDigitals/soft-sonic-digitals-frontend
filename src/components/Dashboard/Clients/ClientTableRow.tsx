@@ -6,10 +6,9 @@ import {
   PRIORITY_TAGS_COLORS,
   STATUS_TAGS_COLORS,
 } from "@/prototypes/dashboard";
-import { PriorityKey } from "@/models/admin";
 import { useRouter } from "next/navigation";
 import { ValueOf } from "next/dist/shared/lib/constants";
-import { StatusTags } from "@/constants/admin";
+import { PriorityTags, StatusTags } from "@/constants/admin";
 
 type ClientTableRowProps = {
   id: string;
@@ -20,7 +19,7 @@ type ClientTableRowProps = {
   address_line: string;
   postcode: string;
   state: string;
-  priority: PriorityKey;
+  priority: ValueOf<typeof PriorityTags>;
   status: ValueOf<typeof StatusTags>;
 };
 const ClientTableRow = ({

@@ -1,18 +1,18 @@
 import React from "react";
-import DetailBullets from "./DetailBullets";
-import InfoBox from "./InfoBox";
 import { LeadDetails } from "@/constants/admin";
-import DropdownInfoBox from "./DropdownInfoBox";
+import { PriorityInfoBox, InfoBox, DetailBullets } from ".";
 
 type RequirementsProps = {
   requirement: string;
   estimatedStart: string;
   projectDetails?: string;
+  priority: string;
 };
 const Requirements = ({
   requirement,
   estimatedStart,
   projectDetails,
+  priority,
 }: RequirementsProps) => {
   return (
     <section className="mb-12" id="requirement">
@@ -33,7 +33,7 @@ const Requirements = ({
 
         <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
           <InfoBox title={"Reminder"} value="No reminder" />
-          <DropdownInfoBox title={"Task Priority"} />
+          <PriorityInfoBox title={"Task Priority"} value={priority} />
         </div>
       </div>
     </section>

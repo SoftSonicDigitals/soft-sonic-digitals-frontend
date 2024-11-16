@@ -41,3 +41,37 @@ export async function GET(
     );
   }
 }
+
+export async function PATCH(
+  request: NextRequest,
+  { params }: { params: { leadId: string } }
+) {
+  auth().protect();
+  try {
+    console.log("here api");
+    const { leadId } = params;
+
+    const notes = await prismadb.note.findMany({
+      where: {
+        clientID: leadId,
+      },
+    });
+
+    return NextResponse.json(
+      {
+        status: 200,
+        message: "Request successful",
+      },
+      { status: 200 }
+    );
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        status: "error",
+        message: "An error occurred while fetching clients.",
+        error: error.message,
+      },
+      { status: 500 }
+    );
+  }
+}

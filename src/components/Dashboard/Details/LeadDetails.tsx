@@ -19,7 +19,7 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
   }
 
   const { lead } = data?.data || {};
-
+  console.log(lead);
   return (
     <>
       {!isLoading && (
@@ -46,6 +46,7 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
             estimatedStart={lead.estimated_start_time}
             requirement={lead.requirement}
             projectDetails={lead.project_details}
+            priority={lead.priority}
           />
         </>
       )}

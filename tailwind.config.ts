@@ -42,6 +42,7 @@ const config: Config = {
         DEFAULT: "#ed4542",
         100: "#fceaea",
         300: "#E03131",
+        700: "#f03e3e",
       },
       white: { DEFAULT: "#ffffff", 100: "#fafafa", 200: "#ededed" },
       gray: {
@@ -71,6 +72,10 @@ const config: Config = {
         DEFAULT: "#66c255",
         200: "#e2ffde",
         700: "#66c255",
+      },
+      yellow: {
+        DEFAULT: "#66c255",
+        500: "#fcc419",
       },
     },
   },
