@@ -31,7 +31,7 @@ const SubFilterTags = ({
     useState<Array<ValueOf<typeof FilterCategoryTypes>>>(activeSelectedTags);
 
   const onFilterNow = () => {
-    const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(Array.from(searchParams.entries()));
     params.set(category, selectedTags.join(","));
     params.set("page", "1");
     router.push(`${pathname}?${params.toString()}`);
