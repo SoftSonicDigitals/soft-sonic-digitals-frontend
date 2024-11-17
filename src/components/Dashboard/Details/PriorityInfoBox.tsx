@@ -25,13 +25,7 @@ const priorityOptions = [
   },
 ];
 
-const PriorityInfoBox = ({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) => {
+const PriorityInfoBox = ({ value }: { value: string }) => {
   const [selectedPriority, setSelectedPriority] = useState<{
     label: string;
     color: null | string;
@@ -55,7 +49,6 @@ const PriorityInfoBox = ({
     label: string;
     color: string;
   }) => {
-    console.log(priority);
     setSelectedPriority(() => priority);
     setIsDropdownOpen(false);
     try {
@@ -78,7 +71,7 @@ const PriorityInfoBox = ({
   return (
     <div className=" p-6 bg-white h-full ">
       <h2 className="font-[600] text-sm text-gray-400 tracking-wide mb-2">
-        {title}
+        Task Priority
       </h2>
       <div className="relative">
         <div id="priority" className="text-lg font-[600] border-none ">

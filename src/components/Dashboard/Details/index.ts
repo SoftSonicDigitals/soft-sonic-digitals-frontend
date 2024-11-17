@@ -14,6 +14,7 @@ import NotesSkeleton from "./NotesSkeleton";
 import TipTap from "./TipTap";
 import RichTextEditor from "./RichTextEditor";
 import PriorityInfoBox from "./PriorityInfoBox";
+import AssignLeadOwnerBox from "./AssignLeadOwnerBox";
 
 export {
   RichTextEditor,
@@ -32,4 +33,5 @@ export {
   NotesSkeleton,
   TipTap,
   PriorityInfoBox,
+  AssignLeadOwnerBox,
 };

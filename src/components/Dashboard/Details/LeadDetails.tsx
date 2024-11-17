@@ -19,7 +19,6 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
   }
 
   const { lead } = data?.data || {};
-  console.log(lead);
   return (
     <>
       {!isLoading && (

@@ -1,6 +1,6 @@
 import React from "react";
 import { LeadDetails } from "@/constants/admin";
-import { PriorityInfoBox, InfoBox, DetailBullets } from ".";
+import { PriorityInfoBox, InfoBox, DetailBullets, AssignLeadOwnerBox } from ".";
 
 type RequirementsProps = {
   requirement: string;
@@ -33,7 +33,8 @@ const Requirements = ({
 
         <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
           <InfoBox title={"Reminder"} value="No reminder" />
-          <PriorityInfoBox title={"Task Priority"} value={priority} />
+          <PriorityInfoBox value={priority} />
+          <AssignLeadOwnerBox />
         </div>
       </div>
     </section>
