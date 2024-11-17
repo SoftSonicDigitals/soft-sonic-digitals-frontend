@@ -46,6 +46,7 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
             requirement={lead.requirement}
             projectDetails={lead.project_details}
             priority={lead.priority}
+            leadOwner={lead.lead_owner}
           />
         </>
       )}

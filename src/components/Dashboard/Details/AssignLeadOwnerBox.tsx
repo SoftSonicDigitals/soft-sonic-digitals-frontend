@@ -9,29 +9,38 @@ import axios from "axios";
 import { useParams } from "next/navigation";
 import toast from "react-hot-toast";
 
-const AssignLeadOwnerBox = () => {
+type UserDetails = {
+  firstName: string | null;
+  lastName: string | null;
+  email: string;
+};
+
+const AssignLeadOwnerBox = ({ value }: { value: string }) => {
   const {
     data: users,
     isLoading,
     error,
-  } = useSWR<
-    {
-      firstName: string | null;
-      lastName: string | null;
-      email: string | null;
-    }[]
-  >("/api/users", fetcher);
+  } = useSWR<UserDetails[]>("/api/users", fetcher);
 
   const params = useParams();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [leadOwner, setLeadOwner] = useState();
+  const [leadOwner, setLeadOwner] = useState(
+    value?.length > 0 ? value : "Select"
+  );
 
   const domeNode = useClickOutside(() => setIsDropdownOpen(false));
 
-  const assignHandler = async (user: any) => {
-    setLeadOwner(() => user);
+  const displayNameOrEmail = (user: UserDetails) => {
+    return user.firstName && user.lastName
+      ? `${user.firstName} ${user.lastName}`
+      : user.email;
+  };
+
+  const assignHandler = async (user: UserDetails) => {
+    setLeadOwner(() => displayNameOrEmail(user));
     setIsDropdownOpen(false);
+    console.log(user);
     try {
       const result = await axios.patch(`/api/leads/${params.leadId}`, {
         leadOwner: user,
@@ -60,8 +69,13 @@ const AssignLeadOwnerBox = () => {
             onClick={() => setIsDropdownOpen(true)}
             className="flex-center gap-2 focus:outline-none "
           >
-            <div className="py-2  cursor-pointer flex items-center gap-1">
-              <span className="capitalize">{"Esther Howard"}</span>
+            <div className="py-2  cursor-pointer flex items-center justify-center gap-2">
+              {leadOwner !== "Select" && (
+                <div className="p-1 bg-gray-600 rounded-full">
+                  <FaUser className="text-white text-xs " />
+                </div>
+              )}
+              <span className="capitalize">{leadOwner}</span>
             </div>
             <MdKeyboardArrowDown />
           </button>
@@ -74,22 +88,19 @@ const AssignLeadOwnerBox = () => {
             ref={domeNode}
           >
             {users &&
-              users.map((item, index) => {
-                console.log(item);
+              users.map((user, index) => {
                 return (
                   <div
                     key={index}
                     className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-1"
-                    onClick={() => assignHandler(item)}
+                    onClick={() => assignHandler(user)}
                   >
                     <div className="p-2 bg-gray-600 rounded-full">
                       <FaUser className="text-white" />
                     </div>
 
                     <span className="capitalize">
-                      {item.firstName && item.lastName
-                        ? `${item.firstName} ${item.lastName}`
-                        : item.email}
+                      {displayNameOrEmail(user)}
                     </span>
                   </div>
                 );

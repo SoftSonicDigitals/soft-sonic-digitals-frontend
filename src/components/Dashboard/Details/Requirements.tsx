@@ -7,12 +7,14 @@ type RequirementsProps = {
   estimatedStart: string;
   projectDetails?: string;
   priority: string;
+  leadOwner: string;
 };
 const Requirements = ({
   requirement,
   estimatedStart,
   projectDetails,
   priority,
+  leadOwner,
 }: RequirementsProps) => {
   return (
     <section className="mb-12" id="requirement">
@@ -34,7 +36,7 @@ const Requirements = ({
         <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
           <InfoBox title={"Reminder"} value="No reminder" />
           <PriorityInfoBox value={priority} />
-          <AssignLeadOwnerBox />
+          <AssignLeadOwnerBox value={leadOwner} />
         </div>
       </div>
     </section>
