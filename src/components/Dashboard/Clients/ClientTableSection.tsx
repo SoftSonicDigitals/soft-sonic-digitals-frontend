@@ -11,11 +11,13 @@ import { fetcher } from "@/utils";
 
 const ClientTableSection = () => {
   const searchParams = useSearchParams();
-  const params = new URLSearchParams(searchParams);
-  const { data, isLoading, error } = useSWR(
-    `/api/leads?${params.toString()}`,
-    fetcher
-  );
+  const params = new URLSearchParams(Array.from(searchParams.entries()));
+
+  const {
+    data: leads,
+    isLoading,
+    error,
+  } = useSWR(`/api/leads?${params.toString()}`, fetcher);
 
   return (
     <section id="client_table">
@@ -29,14 +31,17 @@ const ClientTableSection = () => {
       <div className="overflow-x-auto mb-10">
         <table className="w-full bg-white border-b-[1.5px] border-gray-300 ">
           <ClientTableHead />
-          <ClientTableBody isLoading={isLoading} clients={data?.data.clients} />
+          <ClientTableBody
+            isLoading={isLoading}
+            clients={leads?.data.clients}
+          />
         </table>
       </div>
 
       {!isLoading && (
         <Pagination
-          currentPage={data?.data.page}
-          totalCount={data?.data.totalCount}
+          currentPage={leads?.data.page}
+          totalCount={leads?.data.totalCount}
         />
       )}
     </section>

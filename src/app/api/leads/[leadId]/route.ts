@@ -16,17 +16,11 @@ export async function GET(
       },
     });
 
-    const notes = await prismadb.note.findMany({
-      where: {
-        clientID: leadId,
-      },
-    });
-
     return NextResponse.json(
       {
         status: 200,
         message: "Request successful",
-        data: { lead: leadDetails, notes },
+        data: { lead: leadDetails },
       },
       { status: 200 }
     );
@@ -48,12 +42,14 @@ export async function PATCH(
 ) {
   auth().protect();
   try {
-    console.log("here api");
     const { leadId } = params;
 
-    const notes = await prismadb.note.findMany({
+    const { priority } = await request.json();
+
+    const lead = await prismadb.client.update({
+      data: { priority },
       where: {
-        clientID: leadId,
+        id: leadId,
       },
     });
 
@@ -61,6 +57,7 @@ export async function PATCH(
       {
         status: 200,
         message: "Request successful",
+        data: { lead },
       },
       { status: 200 }
     );

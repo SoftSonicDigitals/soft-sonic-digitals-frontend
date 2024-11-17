@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     const stateParam = searchParams.get(FilterCategoryTypes.STATE);
     const stateArray = stateParam ? stateParam.split(",") : null;
 
-    //state param
+    //service param
     const serviceParam = searchParams.get(FilterCategoryTypes.SERVICES);
     const serviceArray = serviceParam ? serviceParam.split(",") : null;
 
