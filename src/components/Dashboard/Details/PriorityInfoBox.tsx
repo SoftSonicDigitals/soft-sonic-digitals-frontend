@@ -1,12 +1,14 @@
 "use client";
 
 import { PriorityTags } from "@/constants/admin";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import { PRIORITY_TAGS_COLORS } from "@/prototypes/dashboard";
 import axios from "axios";
-import { useParams, usePathname } from "next/navigation";
-//  note close the dropdown when clicked outside
+import { useParams } from "next/navigation";
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { useSWRConfig } from "swr";
 
 const priorityOptions = [
   {
@@ -36,23 +38,41 @@ const PriorityInfoBox = ({
   }>({
     label: value.length > 0 ? value.trim() : "Select",
     color:
-      value.length > 0 ? PRIORITY_TAGS_COLORS[value.trim()].tagColor : null,
+      value.length > 0 ? PRIORITY_TAGS_COLORS[value.trim()]?.tagColor : null,
   });
 
+  const { mutate } = useSWRConfig();
   const params = useParams();
-  console.log(params);
+
+  // states
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // for closing menu when clicked outside
+  const domeNode = useClickOutside(() => setIsDropdownOpen(false));
+
+  // handler for selecetion
   const selectPriorityHandler = async (priority: {
     label: string;
     color: string;
   }) => {
-    setSelectedPriority(priority);
+    console.log(priority);
+    setSelectedPriority(() => priority);
     setIsDropdownOpen(false);
+    try {
+      const result = await axios.patch(`/api/leads/${params.leadId}`, {
+        priority: priority.label,
+      });
 
-    await axios.patch(`/api/leads/${params.leadId}`, {
-      priority: selectedPriority,
-    });
+      if (result.status === 200) {
+        toast.success(`Priority  ${priority.label}.`);
+      }
+    } catch (err: any) {
+      console.log(err);
+      toast.error(err.message);
+    }
+
+    // revalidate
+    mutate(`/api/leads/${params.leadId}`);
   };
 
   return (
@@ -83,24 +103,28 @@ const PriorityInfoBox = ({
           <div
             id="dropdownMenu"
             className="absolute z-10 mt-2 w-full bg-white border border-gray-200 rounded-lg shadow-lg"
+            ref={domeNode}
           >
             {priorityOptions
               .filter(
                 (item) => item.label !== selectedPriority.label.toLowerCase()
               )
-              .map((item, index) => (
-                <div
-                  key={index}
-                  className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-1"
-                  onClick={() => selectPriorityHandler(item)}
-                >
-                  <span
-                    className="w-5 h-5 rounded-sm mr-2"
-                    style={{ backgroundColor: `${item.color}` }}
-                  ></span>
-                  {item.label}
-                </div>
-              ))}
+              .map((item, index) => {
+                console.log(`item-${index}`, item);
+                return (
+                  <div
+                    key={index}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center gap-1"
+                    onClick={() => selectPriorityHandler(item)}
+                  >
+                    <span
+                      className="w-5 h-5 rounded-sm mr-2"
+                      style={{ backgroundColor: `${item.color}` }}
+                    ></span>
+                    <span className="capitalize">{item.label}</span>
+                  </div>
+                );
+              })}
           </div>
         )}
       </div>

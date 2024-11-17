@@ -10,7 +10,7 @@ import { PriorityTagsColorsType, StatusTagsColorsType } from "@/models/admin";
 export const PRIORITY_TAGS_COLORS: PriorityTagsColorsType = {
   high: {
     tagName: "high",
-    tagColor: "#66c255", // Light Red
+    tagColor: "#f03e3e", // Light Red
     tagTextColor: "#C62828", // More Saturated Red
   },
   medium: {
@@ -20,7 +20,7 @@ export const PRIORITY_TAGS_COLORS: PriorityTagsColorsType = {
   },
   low: {
     tagName: "low",
-    tagColor: "#f03e3e", // Light Orange
+    tagColor: "#66c255", // Light Orange
     tagTextColor: "#F57C00", // More Saturated Orange
   },
 };
