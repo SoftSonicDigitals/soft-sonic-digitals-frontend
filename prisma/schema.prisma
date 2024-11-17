@@ -30,7 +30,9 @@ model Client {
    priority String
    status String
    date       DateTime @default(now()) 
+   lead_owner String?
    notes            Note[]   
+
    }
 
 
