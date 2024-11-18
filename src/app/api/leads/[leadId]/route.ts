@@ -44,10 +44,14 @@ export async function PATCH(
   try {
     const { leadId } = params;
 
-    const { priority, leadOwner } = await request.json();
+    const data = await request.json();
+
+    const updateData = Object.fromEntries(
+      Object.entries(data).filter(([_, value]) => value !== undefined)
+    );
 
     const lead = await prismadb.client.update({
-      data: { priority },
+      data: updateData,
       where: {
         id: leadId,
       },
