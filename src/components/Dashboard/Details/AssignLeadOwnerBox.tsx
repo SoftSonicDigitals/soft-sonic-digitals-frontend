@@ -43,11 +43,12 @@ const AssignLeadOwnerBox = ({ value }: { value: string }) => {
     console.log(user);
     try {
       const result = await axios.patch(`/api/leads/${params.leadId}`, {
-        leadOwner: user,
+        // name is lead_owner cause the schema is lead_owner
+        lead_owner: displayNameOrEmail(user),
       });
 
       if (result.status === 200) {
-        toast.success(`Leadowner is  ${user.firstName} ${user.lastName}`);
+        toast.success(`Leadowner is ${displayNameOrEmail(user)}`);
       }
     } catch (err: any) {
       console.log(err);
