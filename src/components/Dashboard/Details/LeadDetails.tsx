@@ -33,9 +33,10 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
             budget={lead.budget}
             service={lead.service}
             company={lead.company}
+            leadOwner={lead.lead_owner}
           />
 
-          <StatusContainer />
+          <StatusContainer status={lead.status} />
           <div className="flex flex-col md:flex-row justify-between md:items-center my-4">
             <LeadSource />
             <CapturedDate date={lead.date} />
