@@ -15,6 +15,7 @@ type ProfileProps = {
   company: string;
   service: string;
   budget: string;
+  leadOwner: string | null;
 };
 const Profile = ({
   name,
@@ -26,6 +27,7 @@ const Profile = ({
   company,
   service,
   budget,
+  leadOwner,
 }: ProfileProps) => {
   const profileInfoArray: {
     title: ValueOf<typeof LeadDetails>;
@@ -33,7 +35,7 @@ const Profile = ({
   }[] = [
     {
       title: LeadDetails.LEAD_OWNER,
-      value: "Ester Howard",
+      value: leadOwner ? leadOwner : "-",
     },
     {
       title: LeadDetails.COMPANY,

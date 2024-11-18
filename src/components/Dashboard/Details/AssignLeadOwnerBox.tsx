@@ -40,7 +40,7 @@ const AssignLeadOwnerBox = ({ value }: { value: string }) => {
   const assignHandler = async (user: UserDetails) => {
     setLeadOwner(() => displayNameOrEmail(user));
     setIsDropdownOpen(false);
-    console.log(user);
+
     try {
       const result = await axios.patch(`/api/leads/${params.leadId}`, {
         // name is lead_owner cause the schema is lead_owner

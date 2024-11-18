@@ -9,7 +9,7 @@ const InfoBox = ({ title, value }: InfoBoxProps) => {
       <h2 className="font-[600] text-sm text-gray-400 tracking-wide mb-2">
         {title}
       </h2>
-      <p className="text-lg font-[600] ">{value}</p>
+      <p className="text-lg font-[600] capitalize ">{value}</p>
     </div>
   );
 };

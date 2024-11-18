@@ -45,7 +45,6 @@ export async function PATCH(
     const { leadId } = params;
 
     const data = await request.json();
-
     const updateData = Object.fromEntries(
       Object.entries(data).filter(([_, value]) => value !== undefined)
     );
