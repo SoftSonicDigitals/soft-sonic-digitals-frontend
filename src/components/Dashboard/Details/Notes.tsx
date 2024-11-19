@@ -27,7 +27,7 @@ const Notes = ({ leadId }: { leadId: string }) => {
   return (
     <>
       {!isLoading && (
-        <section id="notes" className="mb-16">
+        <section id="notes" className="mb-10">
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-4 ">
               <h1 className="text-2xl font-[600] tracking-wide text-gray-800 ">
