@@ -72,7 +72,7 @@ const Notes = ({ leadId }: { leadId: string }) => {
         </section>
       )}
       {isLoading && <NotesSkeleton />}
-      {!isLoading && (
+      {!isLoading && totalCount > 0 && (
         <Pagination
           limit={NOTES_LIMIT}
           currentPage={page}
