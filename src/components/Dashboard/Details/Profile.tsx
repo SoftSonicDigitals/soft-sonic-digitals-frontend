@@ -4,7 +4,8 @@ import IconData from "./IconData";
 import { LeadDetails, ProfileInfoIcons } from "@/constants/admin";
 import InfoBox from "./InfoBox";
 import { ValueOf } from "next/dist/shared/lib/constants";
-
+import { HiOutlinePencilAlt } from "react-icons/hi";
+import { EditButton } from "../EditForm";
 type ProfileProps = {
   name: string;
   email: string;
@@ -77,6 +78,7 @@ const Profile = ({
               </div>
             </div>
           </div>
+          <EditButton />
         </div>
       </div>
       <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center  border gap-[1px] bg-gray-200  ">
