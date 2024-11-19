@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
 import { auth } from "@clerk/nextjs/server";
+import { NOTES_LIMIT as limit } from "@/constants/dashboard";
 
 export async function GET(
   request: NextRequest,
@@ -8,7 +9,13 @@ export async function GET(
 ) {
   auth().protect();
   try {
+    const { searchParams } = new URL(request.url);
     const { leadId } = params;
+    let pageNumber = Number(searchParams.get("page"));
+
+    if (pageNumber < 1 || !pageNumber) {
+      pageNumber = 1;
+    }
 
     const notes = await prismadb.note.findMany({
       where: {
@@ -17,13 +24,21 @@ export async function GET(
       orderBy: {
         created_at: "desc",
       },
+      skip: (pageNumber - 1) * limit,
+      take: limit,
+    });
+
+    const totalNotes = await prismadb.note.count({
+      where: {
+        clientID: leadId,
+      },
     });
 
     return NextResponse.json(
       {
         status: 200,
         message: "Request successful",
-        data: { notes },
+        data: { notes, totalCount: totalNotes, page: pageNumber },
       },
       { status: 200 }
     );

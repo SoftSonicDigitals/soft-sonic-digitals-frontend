@@ -4,16 +4,25 @@ import { IoMdAdd } from "react-icons/io";
 import useSWR from "swr";
 import { fetcher } from "@/utils";
 import { NoteItem, NotesSkeleton, RichTextEditor, TipTap } from "./";
+import { Pagination } from "../Clients";
+import { NOTES_LIMIT } from "@/constants/dashboard";
+import { useSearchParams } from "next/navigation";
 
 const Notes = ({ leadId }: { leadId: string }) => {
-  const { data, isLoading, error } = useSWR(`/api/notes/${leadId}`, fetcher);
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(Array.from(searchParams.entries()));
+
+  const { data, isLoading, error } = useSWR(
+    `/api/notes/${leadId}?${params.toString()}`,
+    fetcher
+  );
 
   const [openAddNote, setOpenAddNote] = useState(false);
 
   if (data?.status === "error") {
     return;
   }
-  const { notes } = data?.data || {};
+  const { notes, totalCount, page } = data?.data || {};
 
   return (
     <>
@@ -26,7 +35,7 @@ const Notes = ({ leadId }: { leadId: string }) => {
               </h1>
 
               <div className="w-9 h-9 bg-gray-100 p-2 text-center rounded-lg flex-center text-gray-400 font-[700]">
-                {notes.length}
+                {totalCount}
               </div>
             </div>
             <div
@@ -63,6 +72,13 @@ const Notes = ({ leadId }: { leadId: string }) => {
         </section>
       )}
       {isLoading && <NotesSkeleton />}
+      {!isLoading && (
+        <Pagination
+          limit={NOTES_LIMIT}
+          currentPage={page}
+          totalCount={totalCount}
+        />
+      )}
     </>
   );
 };

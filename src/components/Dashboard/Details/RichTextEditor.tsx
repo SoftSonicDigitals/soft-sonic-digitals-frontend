@@ -4,6 +4,8 @@ import Tiptap from "./TipTap";
 import axios from "axios";
 import { useUser } from "@clerk/nextjs";
 import { useSWRConfig } from "swr";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 const RichTextEditor = ({
   setEditorOpen,
   leadId,
@@ -12,9 +14,11 @@ const RichTextEditor = ({
   setEditorOpen: Dispatch<React.SetStateAction<boolean>>;
 }) => {
   // user
-  const { user } = useUser();
-
+  const router = useRouter();
   const { mutate } = useSWRConfig();
+  const { user } = useUser();
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(Array.from(searchParams.entries()));
 
   const closeEditor = () => {
     setEditorOpen(false);
@@ -31,7 +35,7 @@ const RichTextEditor = ({
       return;
     }
     try {
-      await axios.post(`/api/notes/${leadId}`, {
+      const response = await axios.post(`/api/notes/${leadId}`, {
         note: content,
         createdBy:
           user?.firstName && user.lastName
@@ -40,9 +44,13 @@ const RichTextEditor = ({
       });
 
       // Clear content and close editor after successful submission
-      setContent("");
-      closeEditor();
-      mutate(`/api/notes/${leadId}`);
+
+      if (response.status === 201) {
+        setContent("");
+        closeEditor();
+      }
+      mutate(`/api/notes/${leadId}?${params.toString()}`);
+      router.push(`/admin/leads/${leadId}?page=1`, { scroll: false });
     } catch (err) {
       console.error("Error submitting content:", err);
     }

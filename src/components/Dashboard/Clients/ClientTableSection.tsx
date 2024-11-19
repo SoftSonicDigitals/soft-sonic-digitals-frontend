@@ -8,6 +8,7 @@ import useSWR from "swr";
 import Pagination from "./Pagination";
 import { useSearchParams } from "next/navigation";
 import { fetcher } from "@/utils";
+import { CLIENT_TABLE_LIMIT } from "@/constants/dashboard";
 
 const ClientTableSection = () => {
   const searchParams = useSearchParams();
@@ -40,6 +41,7 @@ const ClientTableSection = () => {
 
       {!isLoading && (
         <Pagination
+          limit={CLIENT_TABLE_LIMIT}
           currentPage={leads?.data.page}
           totalCount={leads?.data.totalCount}
         />
