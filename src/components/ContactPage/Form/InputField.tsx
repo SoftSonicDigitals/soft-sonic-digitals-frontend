@@ -1,19 +1,7 @@
-import { FieldId, FormFields } from "@/models/contact_page";
+import { InputField as InputFieldProps } from "@/models/contact_page";
 import React from "react";
-import { FieldErrors, UseFormRegister, ValidationRule } from "react-hook-form";
 
 // Extract the type for id values
-
-type InputFieldProps = {
-  fieldId: FieldId;
-  maxLength?: number;
-  label: string;
-  errors: FieldErrors<FormFields>;
-  register: UseFormRegister<FormFields>;
-  customValidation?: ValidationRule<RegExp>;
-  isRequired?: boolean;
-  placeholder?: string;
-};
 
 const InputField = ({
   fieldId,

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiOutlinePencilAlt } from "react-icons/hi";
-import EditForm from "./EditForm";
+import EditForm from "./EditFormModal";
 
 const EditButton = () => {
   const [openEditForm, setOpenEditForm] = useState(true);
