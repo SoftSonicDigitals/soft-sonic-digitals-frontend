@@ -18,7 +18,7 @@ const EditFormModal = ({
   setOpen: Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
-    <Dialog open={open} onClose={close} className="relative z-10">
+    <Dialog open={open} onClose={setOpen} className="relative z-10">
       <DialogBackdrop
         transition
         className="fixed inset-0 bg-gray-800/75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
@@ -35,14 +35,14 @@ const EditFormModal = ({
                 <FaUser className="text-gray-500 text-3xl" />
               </div>
             </div>
-            <div className="bg-white border-gray-200 border-[1px] m-[2px] mt-0 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+            <div className="bg-white border-gray-200 border-[1px] m-[2px] mt-0 px- pb-8 pt-5 sm:p-6 sm:pb-4">
               <div className="mt-4">
                 <p className="text-2xl font-[700] ">Amelie Laurent</p>
                 <p className="text-sm text-gray-700 font-[600]">
                   amelie@untitleedui.com
                 </p>
 
-                <EditForm />
+                <EditForm setOpen={setOpen} />
               </div>
             </div>
           </DialogPanel>
