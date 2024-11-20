@@ -1,3 +1,5 @@
+import { FieldErrors, UseFormRegister, ValidationRule } from "react-hook-form";
+
 export type ContactTestimonialType = {
   testimonial: string;
   profile: string;
@@ -53,6 +55,24 @@ export interface FormFields {
   estimated_start_time: string;
   project_details?: string;
 }
+
+export type InputField = {
+  fieldId: FieldId;
+  maxLength?: number;
+  label: string;
+  errors: FieldErrors<FormFields>;
+  register: UseFormRegister<FormFields>;
+  customValidation?: ValidationRule<RegExp>;
+  isRequired?: boolean;
+  placeholder?: string;
+};
+
+export type SelectField = InputField & {
+  options: {
+    title: string;
+    value: string;
+  }[];
+};
 
 export type FormDropDownOptionsType = {
   value: string;

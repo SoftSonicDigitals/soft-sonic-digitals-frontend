@@ -1,15 +1,15 @@
 import React from "react";
-import FormDropDownOption from "./FormDropDownOption";
-import { SelectField as SelectFieldProps } from "@/models/contact_page";
+import { SelectField as EditSelectFieldProps } from "@/models/contact_page";
+import { FormDropDownOption } from "@/components/ContactPage";
 
-const SelectField = ({
+const EditSelectField = ({
   options,
   fieldId,
   label,
   errors,
   register,
   isRequired = true,
-}: SelectFieldProps) => {
+}: EditSelectFieldProps) => {
   const capitalizeString = (str: string) => {
     const firstChar = str.charAt(0).toUpperCase();
     const restOfString = str.slice(1).split("_").join(" ");
@@ -17,16 +17,14 @@ const SelectField = ({
   };
 
   return (
-    <div className="flex flex-col gap-1 text-gray-700">
-      <label htmlFor={fieldId} className="font-[600] text-sm">
-        {label} {isRequired && <span className="text-red text-xl">*</span>}
-      </label>
+    <div className="flex py-4 border-b-2 first:border-t-2">
+      <label className="text-sm font-[700] w-32 text-gray-700">{label}</label>
 
       <select
         id={fieldId}
-        className={`relative border-[1px] ${
+        className={`appearance-none focus:outline-none px-3 py-1 border-[1px] ${
           errors[fieldId] ? "border-red" : "border-gray-600 "
-        } w-full  py-2 outline-0 px-4 text-sm text-gray-700`}
+        }text-sm rounded-md`}
         {...register(fieldId, {
           required: isRequired
             ? `Please select the ${capitalizeString(fieldId)}`
@@ -47,4 +45,4 @@ const SelectField = ({
   );
 };
 
-export default SelectField;
+export default EditSelectField;
