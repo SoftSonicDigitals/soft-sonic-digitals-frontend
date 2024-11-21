@@ -1,3 +1,4 @@
+"use client";
 import React, { Dispatch } from "react";
 import { EditInputField, EditSelectField, FormButtonsSection } from "./";
 
