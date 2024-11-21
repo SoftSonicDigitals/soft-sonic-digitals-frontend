@@ -10,6 +10,7 @@ const EditInputField = ({
   maxLength,
   customValidation,
   inputType,
+  defaultValue,
 }: EditInputFieldProps) => {
   return (
     <div className="flex flex-col sm:flex-row py-4 border-b-2 first:border-t-2 gap-1">
@@ -23,7 +24,7 @@ const EditInputField = ({
           className={`appearance-none focus:outline-none px-3 py-1 border-[1px] w-full ${
             errors[fieldId] ? "border-red-300" : "border-gray-600"
           } text-sm rounded-md`}
-          defaultValue={"Amelie Laurent"}
+          defaultValue={defaultValue}
           {...register(fieldId, {
             required: isRequired ? `${label} is required` : false,
             maxLength: maxLength ? maxLength : undefined,

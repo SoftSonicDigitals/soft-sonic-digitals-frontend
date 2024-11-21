@@ -1,5 +1,6 @@
 "use client";
-import React, { useContext } from "react";
+
+import React, { useEffect } from "react";
 import {
   Profile,
   StatusContainer,
@@ -10,33 +11,53 @@ import {
 } from "./";
 import useSWR from "swr";
 import { fetcher } from "@/utils";
+import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
+import { LeadDetails as LeadDetailsType } from "@/models/admin";
 
 const LeadDetails = ({ leadId }: { leadId: string }) => {
-  const { data, isLoading, error } = useSWR(`/api/leads/${leadId}`, fetcher);
+  const {
+    data: response,
+    isLoading,
+    error,
+  } = useSWR<{
+    status: number | "error";
+    message: string;
+    data?: { lead: LeadDetailsType };
+    error?: string;
+  }>(`/api/leads/${leadId}`, fetcher);
 
-  if (data?.status === "error") {
+  const { setLeadDetails } = useLeadDetailsContext();
+
+  useEffect(() => {
+    if (response?.data?.lead) {
+      setLeadDetails(response.data.lead);
+    }
+  }, [response?.data]);
+
+  if (response?.status === "error") {
+    console.error(response.message);
     return;
   }
 
-  console.log(data);
+  const { lead } = response?.data || {};
 
-  const { lead } = data?.data || {};
+  const shouldProfileLoad = !isLoading && lead;
 
   return (
     <>
-      {!isLoading && (
+      {shouldProfileLoad && (
         <>
           <Profile
             name={lead.name}
             email={lead.email}
             mobile={lead.mobile}
-            postcode={lead.postcode}
-            addressLine={lead.address_line}
-            state={lead.state}
+            postcode={lead.postcode!}
+            addressLine={lead.address_line!}
+            state={lead.state!}
             budget={lead.budget}
             service={lead.service}
-            company={lead.company}
-            leadOwner={lead.lead_owner}
+            company={lead.company!}
+            leadOwner={lead.lead_owner!}
           />
 
           <StatusContainer status={lead.status} />
@@ -50,7 +71,7 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
             requirement={lead.requirement}
             projectDetails={lead.project_details}
             priority={lead.priority}
-            leadOwner={lead.lead_owner}
+            leadOwner={lead.lead_owner!}
           />
         </>
       )}
