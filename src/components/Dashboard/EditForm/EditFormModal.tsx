@@ -35,7 +35,7 @@ const EditFormModal = ({
                 <FaUser className="text-gray-500 text-3xl" />
               </div>
             </div>
-            <div className="bg-white border-gray-200 border-[1px] m-[2px] mt-0 px- pb-8 pt-5 sm:p-6 sm:pb-4">
+            <div className="bg-white border-gray-200 border-[1px] m-[2px] mt-0  pb-8 pt-5 p-6 sm:pb-4">
               <div className="mt-4">
                 <p className="text-2xl font-[700] ">Amelie Laurent</p>
                 <p className="text-sm text-gray-700 font-[600]">

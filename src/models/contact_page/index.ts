@@ -65,6 +65,7 @@ export type InputField = {
   customValidation?: ValidationRule<RegExp>;
   isRequired?: boolean;
   placeholder?: string;
+  inputType?: string;
 };
 
 export type SelectField = InputField & {

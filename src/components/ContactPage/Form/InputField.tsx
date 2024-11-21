@@ -12,6 +12,7 @@ const InputField = ({
   customValidation,
   isRequired = true,
   placeholder,
+  inputType = "text",
 }: InputFieldProps) => {
   return (
     <div className="flex flex-col gap-1 text-gray-700">
@@ -21,7 +22,7 @@ const InputField = ({
       <div>
         <input
           maxLength={maxLength}
-          type="text"
+          type={inputType}
           id={fieldId}
           placeholder={placeholder}
           className={`relative border-[1px] ${
