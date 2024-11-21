@@ -1,10 +1,14 @@
 import React, { Dispatch } from "react";
-import { EditInputField, EditSelectField, FormButton } from "./";
+import {
+  EditInputField,
+  EditSelectField,
+  FormButton,
+  FormButtonsSection,
+} from "./";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { FieldId, FormFields } from "@/models/contact_page";
 import { FORM_FIELDS } from "@/constants/contact_page";
 import { FORM_AUSTRALIAN_STATES } from "@/prototypes/contact_page";
-import { GoTrash } from "react-icons/go";
 const EditForm = ({
   setOpen,
 }: {
@@ -18,7 +22,7 @@ const EditForm = ({
   } = useForm<FormFields>();
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    console.log(data);
+    // error ui for form
   };
 
   return (
@@ -40,12 +44,18 @@ const EditForm = ({
           message: "Please enter a valid email",
         }}
       />
+
       <EditInputField
         fieldId={FORM_FIELDS.mobile.id as FieldId}
         errors={errors}
         register={register}
         label={FORM_FIELDS.mobile.label}
-        maxLength={10}
+        inputType="tel"
+        customValidation={{
+          value:
+            /^\+?(\d{1,4})?[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}$/,
+          message: "Please enter a valid mobile number",
+        }}
       />
 
       {/*street address field */}
@@ -77,33 +87,7 @@ const EditForm = ({
         options={FORM_AUSTRALIAN_STATES}
       />
 
-      <div className="flex justify-between mt-5">
-        <FormButton
-          btnText="Delete lead"
-          btnType="button"
-          btnStyles="bg-red-100 hover:bg-red-700 group "
-          btnTextStyles="text-red-300 group-hover:text-white"
-          iconStyles="text-red-300 group-hover:text-white"
-          Icon={GoTrash}
-        />
-        <div className="flex gap-3">
-          <FormButton
-            btnText="Cancel"
-            btnType="button"
-            btnStyles="bg-white  group  border-[1px] hover:bg-gray-800 group"
-            btnTextStyles="text-gray-800 group-hover:text-white  "
-            iconStyles="text-red-300 group-hover:text-white"
-            clickHandler={() => setOpen(false)}
-          />
-          <FormButton
-            btnText="Save changes"
-            btnType="submit"
-            btnStyles="bg-gray-800  group  border-[1px] hover:bg-white group"
-            btnTextStyles="text-white group-hover:text-gray-800 "
-            iconStyles="text-red-300 group-hover:text-white"
-          />
-        </div>
-      </div>
+      <FormButtonsSection setOpen={setOpen} />
     </form>
   );
 };

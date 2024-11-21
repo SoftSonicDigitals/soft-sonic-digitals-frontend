@@ -4,7 +4,7 @@ import EditInputField from "./EditInputField";
 import EditFormModal from "./EditFormModal";
 import EditSelectField from "./EditSelectField";
 import FormButton from "./FormButton";
-
+import FormButtonsSection from "./FormButtonsSection";
 export {
   FormButton,
   EditButton,
@@ -12,4 +12,5 @@ export {
   EditForm,
   EditInputField,
   EditSelectField,
+  FormButtonsSection,
 };

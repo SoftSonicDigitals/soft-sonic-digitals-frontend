@@ -17,12 +17,14 @@ const EditSelectField = ({
   };
 
   return (
-    <div className="flex py-4 border-b-2 first:border-t-2">
-      <label className="text-sm font-[700] w-32 text-gray-700">{label}</label>
+    <div className="flex flex-col sm:flex-row py-4 border-b-2 first:border-t-2 gap-1">
+      <label className="text-sm font-[700] min-w-40 text-gray-700">
+        {label}
+      </label>
 
       <select
         id={fieldId}
-        className={`appearance-none focus:outline-none px-3 py-1 border-[1px] ${
+        className={`appearance-none focus:outline-none px-3 py-1 border-[1px] w-full ${
           errors[fieldId] ? "border-red" : "border-gray-600 "
         }text-sm rounded-md`}
         {...register(fieldId, {

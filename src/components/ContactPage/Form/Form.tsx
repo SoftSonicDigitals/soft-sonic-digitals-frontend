@@ -82,7 +82,12 @@ const Form = () => {
             errors={errors}
             register={register}
             label={FORM_FIELDS.mobile.label}
-            maxLength={10}
+            inputType="tel"
+            customValidation={{
+              value:
+                /^\+?(\d{1,4})?[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}$/,
+              message: "Please enter a valid mobile number",
+            }}
           />
 
           {/*company field */}

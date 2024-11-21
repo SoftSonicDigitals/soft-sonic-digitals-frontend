@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import {
   Profile,
   StatusContainer,
@@ -18,7 +18,10 @@ const LeadDetails = ({ leadId }: { leadId: string }) => {
     return;
   }
 
+  console.log(data);
+
   const { lead } = data?.data || {};
+
   return (
     <>
       {!isLoading && (

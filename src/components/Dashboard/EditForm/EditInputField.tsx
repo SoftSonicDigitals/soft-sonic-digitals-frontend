@@ -6,26 +6,36 @@ const EditInputField = ({
   fieldId,
   errors,
   register,
-  isRequired,
+  isRequired = true,
   maxLength,
   customValidation,
+  inputType,
 }: EditInputFieldProps) => {
   return (
-    <div className="flex py-4 border-b-2 first:border-t-2">
-      <label className="text-sm font-[700] w-32 text-gray-700">{label}</label>
-      <input
-        type="text"
-        id={fieldId}
-        className={`appearance-none focus:outline-none px-3 py-1 border-[1px] ${
-          errors[fieldId] ? "border-red" : "border-gray-600 "
-        }text-sm rounded-md`}
-        defaultValue={"Amelie Laurent"}
-        {...register(fieldId, {
-          required: isRequired ? `${label} is required` : false,
-          maxLength: maxLength ? maxLength : undefined,
-          pattern: customValidation ? customValidation : undefined,
-        })}
-      ></input>
+    <div className="flex flex-col sm:flex-row py-4 border-b-2 first:border-t-2 gap-1">
+      <label className="text-sm font-[700] min-w-40 text-gray-700">
+        {label}
+      </label>
+      <div className="flex flex-col w-full">
+        <input
+          type={inputType}
+          id={fieldId}
+          className={`appearance-none focus:outline-none px-3 py-1 border-[1px] w-full ${
+            errors[fieldId] ? "border-red-300" : "border-gray-600"
+          } text-sm rounded-md`}
+          defaultValue={"Amelie Laurent"}
+          {...register(fieldId, {
+            required: isRequired ? `${label} is required` : false,
+            maxLength: maxLength ? maxLength : undefined,
+            pattern: customValidation ? customValidation : undefined,
+          })}
+        />
+        {errors[fieldId] && (
+          <div className="text-xs font-[500] text-red mt-1">
+            {errors[fieldId]?.message}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

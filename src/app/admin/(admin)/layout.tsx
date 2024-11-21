@@ -6,6 +6,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "react-hot-toast";
 import { SideNavBar } from "@/components/Dashboard/Navbar";
 import { NavbarOpenWrapper } from "@/context/NavbarContext";
+import { LeadDetailsWrapper } from "@/context/LeadDetailsContext";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -27,9 +28,11 @@ export default function RootLayout({
       <html lang="en">
         <body className={`${raleway.className}  overflow-x-hidden`}>
           <NavbarOpenWrapper>
-            <SideNavBar />
-            {children}
-            <Toaster position="top-right" reverseOrder={false} />
+            <LeadDetailsWrapper>
+              <SideNavBar />
+              {children}
+              <Toaster position="top-right" reverseOrder={false} />
+            </LeadDetailsWrapper>
           </NavbarOpenWrapper>
         </body>
       </html>
