@@ -1,26 +1,6 @@
 "use client";
+import { LeadDetails } from "@/models/admin";
 import { createContext, useState, ReactNode, useContext } from "react";
-
-type LeadDetails = {
-  id: string; // Corresponds to @id with @db.ObjectId
-  client_id: string;
-  name: string;
-  email: string;
-  mobile: string;
-  company?: string; // Optional field
-  address_line?: string; // Optional field
-  postcode?: string; // Optional field
-  state?: string; // Optional field
-  service: string;
-  budget: string;
-  requirement: string;
-  estimated_start_time: string;
-  project_details?: string; // Optional field
-  priority: string;
-  status: string;
-  date: Date; // DateTime field in Prisma
-  lead_owner?: string; // Optional field
-};
 
 type LeadDetailsContextProps = {
   leadDetails: LeadDetails;

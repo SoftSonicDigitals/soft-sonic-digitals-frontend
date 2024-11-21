@@ -2,7 +2,7 @@ import React from "react";
 import { format, formatDate } from "date-fns";
 import { GoDotFill } from "react-icons/go";
 import { LEAD_CAPTURED_DATE_TXT, CaptureDateFormats } from "@/constants/admin";
-const CapturedDate = ({ date }: { date: string }) => {
+const CapturedDate = ({ date }: { date: Date }) => {
   const formattedDate = format(new Date(date), CaptureDateFormats.date);
   const formattedTime = format(new Date(date), CaptureDateFormats.time);
 

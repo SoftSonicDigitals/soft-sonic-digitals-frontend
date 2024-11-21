@@ -10,6 +10,7 @@ import {
 
 import { FaUser } from "react-icons/fa";
 import { EditForm } from "./";
+import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
 const EditFormModal = ({
   open,
   setOpen,
@@ -17,6 +18,9 @@ const EditFormModal = ({
   open: boolean;
   setOpen: Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const {
+    leadDetails: { name, email },
+  } = useLeadDetailsContext();
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-10">
       <DialogBackdrop
@@ -37,10 +41,8 @@ const EditFormModal = ({
             </div>
             <div className="bg-white border-gray-200 border-[1px] m-[2px] mt-0  pb-8 pt-5 p-6 sm:pb-4">
               <div className="mt-4">
-                <p className="text-2xl font-[700] ">Amelie Laurent</p>
-                <p className="text-sm text-gray-700 font-[600]">
-                  amelie@untitleedui.com
-                </p>
+                <p className="text-2xl font-[700] ">{name}</p>
+                <p className="text-sm text-gray-700 font-[600]">{email}</p>
 
                 <EditForm setOpen={setOpen} />
               </div>

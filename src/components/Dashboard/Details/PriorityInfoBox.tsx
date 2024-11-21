@@ -103,7 +103,6 @@ const PriorityInfoBox = ({ value }: { value: string }) => {
                 (item) => item.label !== selectedPriority.label.toLowerCase()
               )
               .map((item, index) => {
-                console.log(`item-${index}`, item);
                 return (
                   <div
                     key={index}

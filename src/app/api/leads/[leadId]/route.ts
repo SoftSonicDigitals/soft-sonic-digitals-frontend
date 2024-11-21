@@ -75,3 +75,45 @@ export async function PATCH(
     );
   }
 }
+
+export async function DELETE(
+  request: NextRequest,
+  { params }: { params: { leadId: string } }
+) {
+  auth().protect();
+  try {
+    const { leadId } = params;
+    console.log("api", leadId);
+
+    const notes = await prismadb.note.deleteMany({
+      where: {
+        id: leadId,
+      },
+    });
+    console.log(notes);
+
+    const lead = await prismadb.client.delete({
+      where: {
+        id: leadId,
+      },
+    });
+
+    return NextResponse.json(
+      {
+        status: 200,
+        message: "Request successful",
+        data: { lead },
+      },
+      { status: 200 }
+    );
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        status: "error",
+        message: "An error occurred while fetching clients.",
+        error: error.message,
+      },
+      { status: 500 }
+    );
+  }
+}

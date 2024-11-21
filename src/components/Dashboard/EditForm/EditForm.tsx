@@ -1,14 +1,16 @@
 import React, { Dispatch } from "react";
-import {
-  EditInputField,
-  EditSelectField,
-  FormButton,
-  FormButtonsSection,
-} from "./";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { EditInputField, EditSelectField, FormButtonsSection } from "./";
+
 import { FieldId, FormFields } from "@/models/contact_page";
 import { FORM_FIELDS } from "@/constants/contact_page";
 import { FORM_AUSTRALIAN_STATES } from "@/prototypes/contact_page";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
+import toast from "react-hot-toast";
+import axios from "axios";
+import { useParams } from "next/navigation";
+import { mutate } from "swr";
+
 const EditForm = ({
   setOpen,
 }: {
@@ -17,12 +19,28 @@ const EditForm = ({
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
+
+    formState: { errors, isSubmitting, isDirty },
   } = useForm<FormFields>();
 
+  const { leadDetails } = useLeadDetailsContext();
+  const params = useParams();
+
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    // error ui for form
+    try {
+      const result = await axios.patch(`/api/leads/${params.leadId}`, {
+        ...data,
+      });
+
+      if (result.status === 200) {
+        toast.success(`Profile Updated`);
+        mutate(`/api/leads/${params.leadId}`);
+        setOpen(false);
+      }
+    } catch (error) {
+      toast.error("Submission Error!");
+      console.error(error);
+    }
   };
 
   return (
@@ -32,6 +50,7 @@ const EditForm = ({
         errors={errors}
         register={register}
         label={FORM_FIELDS.name.label}
+        defaultValue={leadDetails.name}
       />
 
       <EditInputField
@@ -43,6 +62,7 @@ const EditForm = ({
           value: /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/,
           message: "Please enter a valid email",
         }}
+        defaultValue={leadDetails.email}
       />
 
       <EditInputField
@@ -56,6 +76,7 @@ const EditForm = ({
             /^\+?(\d{1,4})?[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}$/,
           message: "Please enter a valid mobile number",
         }}
+        defaultValue={leadDetails.mobile}
       />
 
       {/*street address field */}
@@ -66,6 +87,7 @@ const EditForm = ({
         register={register}
         label={FORM_FIELDS.address_line.label}
         isRequired={false}
+        defaultValue={leadDetails.address_line}
       />
 
       {/*postcode field */}
@@ -75,6 +97,7 @@ const EditForm = ({
         register={register}
         label={FORM_FIELDS.postcode.label}
         isRequired={false}
+        defaultValue={leadDetails.postcode}
       />
 
       {/* Select a State field */}
@@ -85,9 +108,10 @@ const EditForm = ({
         isRequired={false}
         label={FORM_FIELDS.state.label}
         options={FORM_AUSTRALIAN_STATES}
+        defaultValue={leadDetails.state}
       />
 
-      <FormButtonsSection setOpen={setOpen} />
+      <FormButtonsSection setOpen={setOpen} isSubmitting={isSubmitting} />
     </form>
   );
 };

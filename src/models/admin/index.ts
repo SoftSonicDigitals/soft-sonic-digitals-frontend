@@ -22,6 +22,27 @@ export type Clients = {
   status: ValueOf<typeof StatusTags>;
 };
 
+export type LeadDetails = {
+  id: string; // Corresponds to @id with @db.ObjectId
+  client_id: string;
+  name: string;
+  email: string;
+  mobile: string;
+  company?: string; // Optional field
+  address_line?: string; // Optional field
+  postcode?: string; // Optional field
+  state?: string; // Optional field
+  service: string;
+  budget: string;
+  requirement: string;
+  estimated_start_time: string;
+  project_details?: string; // Optional field
+  priority: ValueOf<typeof PriorityTags>;
+  status: ValueOf<typeof StatusTags>;
+  date: Date; // DateTime field in Prisma
+  lead_owner?: string; // Optional field
+};
+
 export type StatusTagsColorsType = {
   [key in ValueOf<typeof StatusTags>]: StatusTagColor;
 };

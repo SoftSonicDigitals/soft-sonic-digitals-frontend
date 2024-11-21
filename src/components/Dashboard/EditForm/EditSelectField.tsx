@@ -9,6 +9,7 @@ const EditSelectField = ({
   errors,
   register,
   isRequired = true,
+  defaultValue,
 }: EditSelectFieldProps) => {
   const capitalizeString = (str: string) => {
     const firstChar = str.charAt(0).toUpperCase();
@@ -32,7 +33,7 @@ const EditSelectField = ({
             ? `Please select the ${capitalizeString(fieldId)}`
             : false,
         })}
-        defaultValue={""}
+        defaultValue={defaultValue}
       >
         {options.map(({ value, title }, index) => (
           <FormDropDownOption value={value} title={title} key={index} />

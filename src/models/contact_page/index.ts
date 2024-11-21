@@ -66,6 +66,7 @@ export type InputField = {
   isRequired?: boolean;
   placeholder?: string;
   inputType?: string;
+  defaultValue?: string;
 };
 
 export type SelectField = InputField & {
