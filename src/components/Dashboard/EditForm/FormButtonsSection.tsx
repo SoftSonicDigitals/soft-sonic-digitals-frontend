@@ -1,11 +1,11 @@
+"use client";
 import React, { Dispatch } from "react";
 import { FormButton } from "./";
 import { GoTrash } from "react-icons/go";
 import axios from "axios";
-import { redirect, useParams } from "next/navigation";
-import { mutate } from "swr";
+import { redirect, useParams, useRouter } from "next/navigation";
+import { useSWRConfig } from "swr";
 import toast from "react-hot-toast";
-import { Router } from "lucide-react";
 
 const FormButtonsSection = ({
   setOpen,
@@ -15,6 +15,8 @@ const FormButtonsSection = ({
   isSubmitting: boolean;
 }) => {
   const params = useParams();
+  const router = useRouter();
+  const { mutate } = useSWRConfig();
 
   const deleteLeadHandler = async () => {
     try {
@@ -24,7 +26,7 @@ const FormButtonsSection = ({
         toast.success(`Lead Deleted Successfully`);
         mutate(`/api/leads`);
         setOpen(false);
-        redirect("/admin/leads");
+        router.push("/admin/leads");
       }
     } catch (error) {
       toast.error("Lead couldn't be deleted. Try again");

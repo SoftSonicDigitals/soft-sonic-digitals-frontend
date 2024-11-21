@@ -46,6 +46,6 @@ model Note {
    created_by       String
    created_at       DateTime  @default(now())
    note             String
-   clientID String @db.ObjectId
-   client Client @relation(fields: [clientID], references: [id])
+   leadId String @db.ObjectId
+   client Client @relation(fields: [leadId], references: [id])
 }

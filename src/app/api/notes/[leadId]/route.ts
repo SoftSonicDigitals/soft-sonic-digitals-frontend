@@ -19,7 +19,7 @@ export async function GET(
 
     const notes = await prismadb.note.findMany({
       where: {
-        clientID: leadId,
+        leadId,
       },
       orderBy: {
         created_at: "desc",
@@ -30,7 +30,7 @@ export async function GET(
 
     const totalNotes = await prismadb.note.count({
       where: {
-        clientID: leadId,
+        leadId,
       },
     });
 
@@ -68,7 +68,7 @@ export async function POST(
       data: {
         note,
         created_by: createdBy,
-        clientID: leadId,
+        leadId,
       },
     });
 

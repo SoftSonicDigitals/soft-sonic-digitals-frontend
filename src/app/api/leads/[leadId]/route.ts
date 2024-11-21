@@ -83,14 +83,12 @@ export async function DELETE(
   auth().protect();
   try {
     const { leadId } = params;
-    console.log("api", leadId);
 
     const notes = await prismadb.note.deleteMany({
       where: {
-        id: leadId,
+        leadId,
       },
     });
-    console.log(notes);
 
     const lead = await prismadb.client.delete({
       where: {
