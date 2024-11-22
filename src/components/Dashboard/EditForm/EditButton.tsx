@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiOutlinePencilAlt } from "react-icons/hi";
-import {EditFormModal} from "./";
+import { EditFormModal } from "./";
 
 type EditButtonProps = {
   displayForm: "profile" | "requirement";
