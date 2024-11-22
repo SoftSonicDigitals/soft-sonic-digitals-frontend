@@ -8,6 +8,7 @@ import EditTextAreaField from "./EditTextAreaField";
 import EditFormLayout from "./EditFormLayout";
 import ProfileFormFields from "./ProfileFormFields";
 import RequirementFormFields from "./RequirementFormFields";
+import DeleteLeadConfirmationModal from "./DeleteLeadConfirmationModal";
 
 export {
   FormButton,
@@ -20,4 +21,5 @@ export {
   EditFormLayout,
   ProfileFormFields,
   RequirementFormFields,
+  DeleteLeadConfirmationModal,
 };

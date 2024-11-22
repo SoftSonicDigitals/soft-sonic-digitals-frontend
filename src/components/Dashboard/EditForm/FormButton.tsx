@@ -11,9 +11,11 @@ type FormButtonsProps = {
   iconStyles?: string;
   isSubmitting?: boolean;
   isCancelBtn?: boolean;
+  ModalComponent?: React.ReactNode;
 };
 
 const FormButton = ({
+  ModalComponent,
   isCancelBtn,
   btnStyles,
   btnType = "button",
@@ -59,17 +61,20 @@ const FormButton = ({
   );
 
   return (
-    <button
-      type={btnType}
-      className={`${btnStyles} px-4 py-2  gap-2 transition duration-200 ${
-        isCancelBtn ? "hidden sm:block" : "flex-center"
-      }`}
-      onClick={() => clickHandler()}
-    >
-      {!isSubmitting && btnContent}
+    <>
+      <button
+        type={btnType}
+        className={`${btnStyles} px-4 py-2  gap-2 transition duration-200 ${
+          isCancelBtn ? "hidden sm:block" : "flex-center"
+        }`}
+        onClick={() => clickHandler()}
+      >
+        {!isSubmitting && btnContent}
 
-      {isSubmitting && loadingSpinner}
-    </button>
+        {isSubmitting && loadingSpinner}
+      </button>
+      {ModalComponent && ModalComponent}
+    </>
   );
 };
 

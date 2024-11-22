@@ -1,11 +1,7 @@
 "use client";
-import React, { Dispatch } from "react";
-import { FormButton } from "./";
+import React, { Dispatch, useState } from "react";
+import { DeleteLeadConfirmationModal, FormButton } from "./";
 import { GoTrash } from "react-icons/go";
-import axios from "axios";
-import { useParams, useRouter } from "next/navigation";
-import { useSWRConfig } from "swr";
-import toast from "react-hot-toast";
 
 const FormButtonsSection = ({
   setOpen,
@@ -16,60 +12,55 @@ const FormButtonsSection = ({
   isSubmitting: boolean;
   showDeleteButton: boolean;
 }) => {
-  const params = useParams();
-  const router = useRouter();
+  let [isDeleteConfirmationModalOpen, setIsDeletConfirmationModalOpen] =
+    useState(false);
 
-  const { mutate } = useSWRConfig();
-
-  const deleteLeadHandler = async () => {
-    try {
-      const result = await axios.delete(`/api/leads/${params.leadId}`);
-
-      if (result.status === 200) {
-        toast.success(`Lead Deleted Successfully`);
-        mutate(`/api/leads`);
-        setOpen(false);
-        router.push("/admin/leads");
-      }
-    } catch (error) {
-      toast.error("Lead couldn't be deleted. Try again");
-      console.error(error);
-    }
+  const deleteConfirmationHandler = () => {
+    setIsDeletConfirmationModalOpen(true);
   };
 
   return (
-    <div className="flex sm:justify-between mt-5 gap-3">
-      {showDeleteButton && (
-        <FormButton
-          btnText="Delete lead"
-          btnType="button"
-          btnStyles="bg-red-100 hover:bg-red-700 group "
-          btnTextStyles="text-red-300 group-hover:text-white"
-          iconStyles="text-red-300 group-hover:text-white"
-          Icon={GoTrash}
-          clickHandler={deleteLeadHandler}
-        />
-      )}
-      <div className="flex gap-3">
-        <FormButton
-          isCancelBtn={true}
-          btnText="Cancel"
-          btnType="button"
-          btnStyles="bg-white  group  border-[1px] hover:bg-gray-800 group"
-          btnTextStyles="text-gray-800 group-hover:text-white  "
-          iconStyles="text-red-300 group-hover:text-white"
-          clickHandler={() => setOpen(false)}
-        />
-        <FormButton
-          btnText="Save changes"
-          btnType="submit"
-          btnStyles="bg-gray-800  group  border-[1px] hover:bg-white group"
-          btnTextStyles="text-white group-hover:text-gray-800 "
-          iconStyles="text-red-300 group-hover:text-white"
-          isSubmitting={isSubmitting}
-        />
+    <>
+      <div className="flex sm:justify-between mt-5 gap-3">
+        {showDeleteButton && (
+          <FormButton
+            btnText="Delete lead"
+            btnType="button"
+            btnStyles="bg-red-100 hover:bg-red-700 group "
+            btnTextStyles="text-red-300 group-hover:text-white"
+            iconStyles="text-red-300 group-hover:text-white"
+            Icon={GoTrash}
+            clickHandler={deleteConfirmationHandler}
+            ModalComponent={
+              <DeleteLeadConfirmationModal
+                setEditModalOpen={setOpen}
+                openDeleteModal={isDeleteConfirmationModalOpen}
+                setOpenDeleteModal={setIsDeletConfirmationModalOpen}
+              />
+            }
+          />
+        )}
+        <div className="flex gap-3">
+          <FormButton
+            isCancelBtn={true}
+            btnText="Cancel"
+            btnType="button"
+            btnStyles="bg-white  group  border-[1px] hover:bg-gray-800 group"
+            btnTextStyles="text-gray-800 group-hover:text-white  "
+            iconStyles="text-red-300 group-hover:text-white"
+            clickHandler={() => setOpen(false)}
+          />
+          <FormButton
+            btnText="Save changes"
+            btnType="submit"
+            btnStyles="bg-gray-800  group  border-[1px] hover:bg-white group"
+            btnTextStyles="text-white group-hover:text-gray-800 "
+            iconStyles="text-red-300 group-hover:text-white"
+            isSubmitting={isSubmitting}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -53,29 +53,27 @@ const Profile = ({
   return (
     <section id="profile_details" className="mb-8">
       <div className="w-full border-x-[1px] border-t-[1px]  border-gray-200 py-8 px-4 md:p-8 ">
-        <div className="flex justify-between">
-          <div>
-            <div className="flex gap-8 px-4">
-              <div className="flex-center">
-                <div className="bg-gray-300 inline-block p-5 rounded-full">
-                  <FiUser className="h-10 w-10 text-gray-800" />
-                </div>
+        <div className="flex justify-between ">
+          <div className="flex flex-grow gap-4 sm:gap-8 px-4">
+            <div className="flex-center">
+              <div className="bg-gray-300 inline-block p-5 rounded-full">
+                <FiUser className="h-10 w-10 text-gray-800" />
               </div>
-              <div className="flex flex-col gap-2">
-                <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start capitalize ">
-                  {name}
-                </p>
-                <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 ">
-                  <IconData icon={ProfileInfoIcons.MAIL} data={email} />
-                  <div className="hidden lg:block bg-gray-700 min-w-1 min-h-1 rounded-full  self-center " />
-                  <IconData icon={ProfileInfoIcons.PHONE} data={mobile} />
-                </div>
-                <IconData
-                  icon={ProfileInfoIcons.ADDRESS}
-                  data={formattedAddress}
-                  styles="self-start"
-                />
+            </div>
+            <div className="flex flex-col gap-2">
+              <p className="text-3xl font-[700] tracking-wide text-gray-800 self-start capitalize ">
+                {name}
+              </p>
+              <div className="flex flex-col lg:flex-row gap-2 lg:gap-6 ">
+                <IconData icon={ProfileInfoIcons.MAIL} data={email} />
+                <div className="hidden lg:block bg-gray-700 min-w-1 min-h-1 rounded-full  self-center " />
+                <IconData icon={ProfileInfoIcons.PHONE} data={mobile} />
               </div>
+              <IconData
+                icon={ProfileInfoIcons.ADDRESS}
+                data={formattedAddress}
+                styles="self-start"
+              />
             </div>
           </div>
           <EditButton displayForm="profile" />
