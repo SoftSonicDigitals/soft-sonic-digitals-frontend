@@ -3,7 +3,7 @@ import React, { Dispatch } from "react";
 import { FormButton } from "./";
 import { GoTrash } from "react-icons/go";
 import axios from "axios";
-import { redirect, useParams, useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useSWRConfig } from "swr";
 import toast from "react-hot-toast";
 

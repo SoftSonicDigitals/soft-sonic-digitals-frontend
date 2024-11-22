@@ -1,16 +1,19 @@
 import EditButton from "./EditButton";
-import EditForm from "./EditForm";
+import EditProfileForm from "./EditProfileForm";
 import EditInputField from "./EditInputField";
 import EditFormModal from "./EditFormModal";
 import EditSelectField from "./EditSelectField";
 import FormButton from "./FormButton";
 import FormButtonsSection from "./FormButtonsSection";
+import EditTextAreaField from "./EditTextAreaField";
+
 export {
   FormButton,
   EditButton,
   EditFormModal,
-  EditForm,
+  EditProfileForm,
   EditInputField,
   EditSelectField,
   FormButtonsSection,
+  EditTextAreaField,
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { LeadDetails } from "@/constants/admin";
 import { PriorityInfoBox, InfoBox, DetailBullets, AssignLeadOwnerBox } from ".";
+import { EditButton } from "../EditForm";
 
 type RequirementsProps = {
   requirement: string;
@@ -23,15 +24,26 @@ const Requirements = ({
       </h1>
 
       <div className="border w-full p-6">
-        <DetailBullets
-          title={LeadDetails.PROJECT_REQUIREMENT}
-          value={requirement}
-        />
-        <DetailBullets title={LeadDetails.START_TIME} value={estimatedStart} />
-        <DetailBullets
-          title={LeadDetails.PROJECT_DETAILS}
-          value={projectDetails}
-        />
+        <div className="flex justify-between">
+          <div className="flex flex-col ">
+            <DetailBullets
+              title={LeadDetails.PROJECT_REQUIREMENT}
+              value={requirement}
+            />
+            <DetailBullets
+              title={LeadDetails.START_TIME}
+              value={estimatedStart}
+            />
+            <DetailBullets
+              title={LeadDetails.PROJECT_DETAILS}
+              value={projectDetails}
+            />
+          </div>
+
+          <div>
+            <EditButton displayForm="requirement" />
+          </div>
+        </div>
 
         <div className="grid  grid-cols-1  lg:grid-cols-3 items-center justify-center  border gap-[1px] bg-gray-200   ">
           <InfoBox title={"Reminder"} value="No reminder" />

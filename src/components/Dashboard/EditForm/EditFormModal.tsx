@@ -1,22 +1,20 @@
 "use client";
 
 import { Dispatch, useState } from "react";
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 
 import { FaUser } from "react-icons/fa";
-import { EditForm } from "./";
+import { EditProfileForm } from "./";
 import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
+import EditRequirementsForm from "./EditRequirementsForm";
 const EditFormModal = ({
   open,
   setOpen,
+  displayForm,
 }: {
   open: boolean;
   setOpen: Dispatch<React.SetStateAction<boolean>>;
+  displayForm: "profile" | "requirement";
 }) => {
   const {
     leadDetails: { name, email },
@@ -44,7 +42,11 @@ const EditFormModal = ({
                 <p className="text-2xl font-[700] ">{name}</p>
                 <p className="text-sm text-gray-700 font-[600]">{email}</p>
 
-                <EditForm setOpen={setOpen} />
+                {displayForm === "profile" ? (
+                  <EditProfileForm setOpen={setOpen} />
+                ) : (
+                  <EditRequirementsForm setOpen={setOpen} />
+                )}
               </div>
             </div>
           </DialogPanel>
