@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HiOutlinePencilAlt } from "react-icons/hi";
-import EditForm from "./EditFormModal";
+import {EditFormModal} from "./";
 
 type EditButtonProps = {
   displayForm: "profile" | "requirement";
@@ -16,7 +16,7 @@ const EditButton = ({ displayForm }: EditButtonProps) => {
         <HiOutlinePencilAlt className="text-3xl text-gray-600" />
       </div>
 
-      <EditForm
+      <EditFormModal
         open={openEditForm}
         setOpen={setOpenEditForm}
         displayForm={displayForm}

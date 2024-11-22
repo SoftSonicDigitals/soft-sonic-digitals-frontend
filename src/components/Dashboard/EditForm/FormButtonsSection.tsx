@@ -10,12 +10,15 @@ import toast from "react-hot-toast";
 const FormButtonsSection = ({
   setOpen,
   isSubmitting,
+  showDeleteButton,
 }: {
   setOpen: Dispatch<React.SetStateAction<boolean>>;
   isSubmitting: boolean;
+  showDeleteButton: boolean;
 }) => {
   const params = useParams();
   const router = useRouter();
+
   const { mutate } = useSWRConfig();
 
   const deleteLeadHandler = async () => {
@@ -36,15 +39,17 @@ const FormButtonsSection = ({
 
   return (
     <div className="flex justify-between mt-5">
-      <FormButton
-        btnText="Delete lead"
-        btnType="button"
-        btnStyles="bg-red-100 hover:bg-red-700 group "
-        btnTextStyles="text-red-300 group-hover:text-white"
-        iconStyles="text-red-300 group-hover:text-white"
-        Icon={GoTrash}
-        clickHandler={deleteLeadHandler}
-      />
+      {showDeleteButton && (
+        <FormButton
+          btnText="Delete lead"
+          btnType="button"
+          btnStyles="bg-red-100 hover:bg-red-700 group "
+          btnTextStyles="text-red-300 group-hover:text-white"
+          iconStyles="text-red-300 group-hover:text-white"
+          Icon={GoTrash}
+          clickHandler={deleteLeadHandler}
+        />
+      )}
       <div className="flex gap-3">
         <FormButton
           btnText="Cancel"

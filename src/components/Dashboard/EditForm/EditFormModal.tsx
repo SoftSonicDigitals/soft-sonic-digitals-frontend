@@ -1,12 +1,11 @@
 "use client";
 
-import { Dispatch, useState } from "react";
+import { Dispatch } from "react";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
-
 import { FaUser } from "react-icons/fa";
-import { EditProfileForm } from "./";
 import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
-import EditRequirementsForm from "./EditRequirementsForm";
+import { EditFormLayout } from "./";
+
 const EditFormModal = ({
   open,
   setOpen,
@@ -42,11 +41,7 @@ const EditFormModal = ({
                 <p className="text-2xl font-[700] ">{name}</p>
                 <p className="text-sm text-gray-700 font-[600]">{email}</p>
 
-                {displayForm === "profile" ? (
-                  <EditProfileForm setOpen={setOpen} />
-                ) : (
-                  <EditRequirementsForm setOpen={setOpen} />
-                )}
+                <EditFormLayout displayForm={displayForm} setOpen={setOpen} />
               </div>
             </div>
           </DialogPanel>
