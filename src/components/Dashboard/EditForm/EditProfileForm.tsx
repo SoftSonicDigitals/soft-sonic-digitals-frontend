@@ -1,6 +1,6 @@
 "use client";
 import React, { Dispatch } from "react";
-import { EditInputField, EditSelectField, FormButtonsSection } from "./";
+import { EditInputField, EditSelectField, FormButtonsSection } from ".";
 
 import { FieldId, FormFields } from "@/models/contact_page";
 import { FORM_FIELDS } from "@/constants/contact_page";
@@ -12,7 +12,7 @@ import axios from "axios";
 import { useParams } from "next/navigation";
 import { mutate } from "swr";
 
-const EditForm = ({
+const EditProfileForm = ({
   setOpen,
 }: {
   setOpen: Dispatch<React.SetStateAction<boolean>>;
@@ -21,7 +21,7 @@ const EditForm = ({
     register,
     handleSubmit,
 
-    formState: { errors, isSubmitting, isDirty },
+    formState: { errors, isSubmitting },
   } = useForm<FormFields>();
 
   const { leadDetails } = useLeadDetailsContext();
@@ -117,4 +117,4 @@ const EditForm = ({
   );
 };
 
-export default EditForm;
+export default EditProfileForm;
