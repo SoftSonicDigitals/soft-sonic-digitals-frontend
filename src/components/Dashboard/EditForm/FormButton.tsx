@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes } from "react";
+import React from "react";
 import { IconType } from "react-icons";
 
 type FormButtonsProps = {

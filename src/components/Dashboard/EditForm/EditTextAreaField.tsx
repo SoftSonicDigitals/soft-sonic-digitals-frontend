@@ -1,5 +1,5 @@
 import React from "react";
-import { InputField as EditInputFieldProps } from "@/models/contact_page";
+import { InputField as EditTextAreaFieldProps } from "@/models/contact_page";
 
 const EditTextAreaField = ({
   label,
@@ -11,7 +11,7 @@ const EditTextAreaField = ({
   customValidation,
   inputType,
   defaultValue,
-}: EditInputFieldProps) => {
+}: EditTextAreaFieldProps) => {
   return (
     <div className="flex flex-col sm:flex-row py-4 border-b-2 first:border-t-2 gap-1">
       <label className="text-sm font-[700] min-w-40 text-gray-700">

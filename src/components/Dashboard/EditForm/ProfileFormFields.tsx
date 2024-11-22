@@ -1,51 +1,22 @@
-"use client";
-import React, { Dispatch } from "react";
-import { EditInputField, EditSelectField, FormButtonsSection } from ".";
-
-import { FieldId, FormFields } from "@/models/contact_page";
+import React from "react";
 import { FORM_FIELDS } from "@/constants/contact_page";
-import { FORM_AUSTRALIAN_STATES } from "@/prototypes/contact_page";
-import { SubmitHandler, useForm } from "react-hook-form";
 import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
-import toast from "react-hot-toast";
-import axios from "axios";
-import { useParams } from "next/navigation";
-import { mutate } from "swr";
+import { FieldId, FormFields } from "@/models/contact_page";
+import EditSelectField from "./EditSelectField";
+import { FieldErrors, UseFormRegister } from "react-hook-form";
+import { FORM_AUSTRALIAN_STATES } from "@/prototypes/contact_page";
+import { EditInputField } from "./";
 
-const EditProfileForm = ({
-  setOpen,
+const ProfileFormFields = ({
+  errors,
+  register,
 }: {
-  setOpen: Dispatch<React.SetStateAction<boolean>>;
+  errors: FieldErrors<FormFields>;
+  register: UseFormRegister<FormFields>;
 }) => {
-  const {
-    register,
-    handleSubmit,
-
-    formState: { errors, isSubmitting },
-  } = useForm<FormFields>();
-
   const { leadDetails } = useLeadDetailsContext();
-  const params = useParams();
-
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
-    try {
-      const result = await axios.patch(`/api/leads/${params.leadId}`, {
-        ...data,
-      });
-
-      if (result.status === 200) {
-        toast.success(`Profile Updated`);
-        mutate(`/api/leads/${params.leadId}`);
-        setOpen(false);
-      }
-    } catch (error) {
-      toast.error("Submission Error!");
-      console.error(error);
-    }
-  };
-
   return (
-    <form className="mt-5" onSubmit={handleSubmit(onSubmit)}>
+    <>
       <EditInputField
         fieldId={FORM_FIELDS.name.id as FieldId}
         errors={errors}
@@ -111,10 +82,8 @@ const EditProfileForm = ({
         options={FORM_AUSTRALIAN_STATES}
         defaultValue={leadDetails.state}
       />
-
-      <FormButtonsSection setOpen={setOpen} isSubmitting={isSubmitting} />
-    </form>
+    </>
   );
 };
 
-export default EditProfileForm;
+export default ProfileFormFields;
