@@ -1,7 +1,7 @@
 "use server";
 import { ClientDetails } from "@/models/admin";
 import prismadb from "../lib/prismadb";
-import { StatusTags } from "@/constants/admin";
+import { PriorityTags, StatusTags } from "@/constants/admin";
 
 // add client
 export const addClient = async ({
@@ -37,7 +37,7 @@ export const addClient = async ({
         requirement,
         estimated_start_time,
         project_details,
-        priority: "",
+        priority: PriorityTags.LOW,
         status: StatusTags.NEW,
         lead_owner: "",
       },
