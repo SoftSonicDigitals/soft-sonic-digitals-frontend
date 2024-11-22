@@ -10,9 +10,11 @@ type FormButtonsProps = {
   clickHandler?: () => void;
   iconStyles?: string;
   isSubmitting?: boolean;
+  isCancelBtn?: boolean;
 };
 
 const FormButton = ({
+  isCancelBtn,
   btnStyles,
   btnType = "button",
   btnText,
@@ -22,6 +24,7 @@ const FormButton = ({
   isSubmitting,
   clickHandler = () => {},
 }: FormButtonsProps) => {
+  console.log();
   const loadingSpinner = (
     <div role="status">
       <svg
@@ -58,7 +61,9 @@ const FormButton = ({
   return (
     <button
       type={btnType}
-      className={`${btnStyles} px-4 py-2 flex-center gap-2 transition duration-200`}
+      className={`${btnStyles} px-4 py-2  gap-2 transition duration-200 ${
+        isCancelBtn ? "hidden sm:block" : "flex-center"
+      }`}
       onClick={() => clickHandler()}
     >
       {!isSubmitting && btnContent}

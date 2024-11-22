@@ -5,7 +5,7 @@ import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import { FaUser } from "react-icons/fa";
 import { useLeadDetailsContext } from "@/context/LeadDetailsContext";
 import { EditFormLayout } from "./";
-
+import { IoMdClose } from "react-icons/io";
 const EditFormModal = ({
   open,
   setOpen,
@@ -29,8 +29,13 @@ const EditFormModal = ({
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
-            className="relative transform overflow-hidden  bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+            className="relative  w-full transform overflow-hidden  bg-white text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
           >
+            <IoMdClose
+              className="text-3xl absolute top-4 right-4 z-40 text-gray-700 sm:hidden"
+              onClick={() => setOpen(false)}
+            />
+
             <div className=" h-16 bg-gray-200 m-[2px] mb-0  relative">
               <div className="inline-block rounded-full border-2  border-gray-500 p-3 bg-white absolute -bottom-1/3 left-6 shadow-md ">
                 <FaUser className="text-gray-500 text-3xl" />

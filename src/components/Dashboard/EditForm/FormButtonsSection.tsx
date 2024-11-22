@@ -38,7 +38,7 @@ const FormButtonsSection = ({
   };
 
   return (
-    <div className="flex justify-between mt-5">
+    <div className="flex sm:justify-between mt-5 gap-3">
       {showDeleteButton && (
         <FormButton
           btnText="Delete lead"
@@ -52,6 +52,7 @@ const FormButtonsSection = ({
       )}
       <div className="flex gap-3">
         <FormButton
+          isCancelBtn={true}
           btnText="Cancel"
           btnType="button"
           btnStyles="bg-white  group  border-[1px] hover:bg-gray-800 group"
