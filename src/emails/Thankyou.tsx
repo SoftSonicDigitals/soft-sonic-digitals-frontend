@@ -1,43 +1,28 @@
 import {
   Body,
-  Button,
   Container,
   Head,
   Html,
   Img,
-  Link,
   Preview,
   Section,
   Text,
 } from "@react-email/components";
 import * as React from "react";
 
-interface GithubAccessTokenEmailProps {
-  username?: string;
-}
-
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
-export const Welcome = () => (
+export const Thankyou = ({ name }: { name: string }) => (
   <Html>
     <Head />
-    <Preview>Thank you for reaching out soft sonic</Preview>
+    <Preview>Thank you for reaching out SoftSonic</Preview>
     <Body style={main}>
       <Container style={container}>
-        <Img
-          src={`${baseUrl}/static/github.png`}
-          width="32"
-          height="32"
-          alt="Github"
-        />
+        <Img src={`/Logo.svg`} width="32" height="32" alt="Magneto Logo" />
 
-        <Text style={title}>Thank you for reaching out soft sonic</Text>
+        <Text style={title}>Thank you for reaching out SoftSonic</Text>
 
         <Section style={section}>
           <Text style={text}>
-            Dear <strong>User</strong>,
+            Dear <strong className="capitalize">{name}</strong>,
           </Text>
           <Text style={text}>
             Thank you for contacting <strong>Softsonic Digitals</strong>. We
@@ -57,11 +42,7 @@ export const Welcome = () => (
   </Html>
 );
 
-// GithubAccessTokenEmail.PreviewProps = {
-//   username: "alanturing",
-// } as GithubAccessTokenEmailProps;
-
-export default Welcome;
+export default Thankyou;
 
 const main = {
   backgroundColor: "#ffffff",
@@ -97,5 +78,5 @@ const footer = {
   color: "#6a737d",
   fontSize: "12px",
   textAlign: "center" as const,
-  marginTop: "60px",
+  marginTop: "30px",
 };
