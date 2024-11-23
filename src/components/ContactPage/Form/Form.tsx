@@ -12,11 +12,12 @@ import {
   FORM_START,
 } from "@/prototypes/contact_page";
 import { FORM_FIELDS } from "@/constants/contact_page";
-import { addClient, getNextClientID } from "@/actions";
+import { getNextClientID } from "@/actions";
 import toast from "react-hot-toast";
 import { useSWRConfig } from "swr";
 
 import { InputField, SelectField, TextAreaField } from "../Form";
+import axios from "axios";
 
 const Form = () => {
   const {
@@ -31,17 +32,13 @@ const Form = () => {
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
       const clientId = await getNextClientID();
-      const result = await addClient({
-        ...data,
-        clientId,
-      });
-      if (result.status === "success") {
+      const response = await axios.post("/api/leads", { ...data, clientId });
+
+      if (response.status === 201) {
         toast.success("Form Successfully Submitted");
-        mutate("/api/clients");
+        await axios.post("/api/emails", { email: data.email, name: data.name });
+        mutate("/api/leads");
         reset();
-      }
-      if (result.status === "fail") {
-        throw new Error(result.message);
       }
     } catch (error) {
       toast.error("Submission Error!");
@@ -180,6 +177,7 @@ const Form = () => {
             className="mt-8 py-2.5"
             type="submit"
             disabled={isSubmitting}
+            isLoading={isSubmitting}
           />
         </form>
       </div>

@@ -1,9 +1,14 @@
-import { FilterCategoryTypes } from "@/constants/admin";
+import {
+  FilterCategoryTypes,
+  PriorityTags,
+  StatusTags,
+} from "@/constants/admin";
 import { CLIENT_TABLE_LIMIT as limit } from "@/constants/dashboard";
 import { auth } from "@clerk/nextjs/server";
 import { NextRequest, NextResponse } from "next/server";
 import prismadb from "@/lib/prismadb";
 import { Prisma } from "@prisma/client";
+import { ClientDetails } from "@/models/admin";
 
 // make the route dynamic
 export const revalidate = 0;
@@ -132,6 +137,68 @@ export async function GET(request: NextRequest) {
       {
         status: "error",
         message: "An error occurred while fetching clients.",
+        error: error.message,
+      },
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(request: NextRequest) {
+  auth().protect();
+
+  try {
+    const data: ClientDetails = await request.json();
+    const {
+      clientId,
+      name,
+      email,
+      mobile,
+      company,
+      address_line,
+      postcode,
+      state,
+      service,
+      budget,
+      requirement,
+      estimated_start_time,
+      project_details,
+    } = data;
+
+    const leadDetails = await prismadb.client.create({
+      data: {
+        client_id: clientId,
+        name,
+        email,
+        mobile,
+        company,
+        address_line,
+        postcode,
+        state,
+        service,
+        budget,
+        requirement,
+        estimated_start_time,
+        project_details,
+        priority: PriorityTags.LOW,
+        status: StatusTags.NEW,
+        lead_owner: "",
+      },
+    });
+
+    return NextResponse.json(
+      {
+        status: 201,
+        message: "Request successful",
+        data: { lead: leadDetails },
+      },
+      { status: 201 }
+    );
+  } catch (error: any) {
+    return NextResponse.json(
+      {
+        status: "error",
+        message: "An error occurred during submission.",
         error: error.message,
       },
       { status: 500 }

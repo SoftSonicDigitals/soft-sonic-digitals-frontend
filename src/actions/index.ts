@@ -42,6 +42,7 @@ export const addClient = async ({
         lead_owner: "",
       },
     });
+    await fetch("/api/emails", { method: "POST" });
 
     return {
       status: "success",
