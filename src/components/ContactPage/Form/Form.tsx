@@ -45,6 +45,7 @@ const Form = () => {
         console.log("here");
         toast.success("Form Successfully Submitted");
 
+        console.log(leadDetails);
         const emailresult = await axios.post("/api/emails", {
           users: users.data,
           leadDetails,
