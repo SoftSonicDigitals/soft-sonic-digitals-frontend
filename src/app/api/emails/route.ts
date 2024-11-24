@@ -15,7 +15,12 @@ export async function POST(request: NextRequest) {
 
     await resend.emails.send({
       from: "onboarding@resend.dev",
+      // testing
       to: "softsonicdigitals@gmail.com",
+
+      // production
+      // to:email,
+
       subject: "Thank you for reaching to Softsonic",
       react: Thankyou(leadDetails.name),
     });
