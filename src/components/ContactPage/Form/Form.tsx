@@ -30,15 +30,29 @@ const Form = () => {
   const { mutate } = useSWRConfig();
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
+    console.log(data);
     try {
-      const clientId = await getNextClientID();
-      const response = await axios.post("/api/leads", { ...data, clientId });
+      const users = await axios.get("/api/users");
 
-      if (response.status === 201) {
+      const clientId = await getNextClientID();
+
+      const leadDetails = { ...data, clientId };
+
+      const result = await axios.post("/api/leads", leadDetails);
+
+      console.log(result);
+      if (result.status === 201) {
+        console.log("here");
         toast.success("Form Successfully Submitted");
-        await axios.post("/api/emails", { email: data.email, name: data.name });
-        mutate("/api/leads");
+
+        const emailresult = await axios.post("/api/emails", {
+          users: users.data,
+          leadDetails,
+        });
+
+        console.log(emailresult);
         reset();
+        mutate("/api/leads");
       }
     } catch (error) {
       toast.error("Submission Error!");

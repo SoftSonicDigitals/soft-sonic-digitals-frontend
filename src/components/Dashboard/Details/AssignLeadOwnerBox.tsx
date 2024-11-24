@@ -8,12 +8,7 @@ import { FaUser } from "react-icons/fa";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import toast from "react-hot-toast";
-
-type UserDetails = {
-  firstName: string | null;
-  lastName: string | null;
-  email: string;
-};
+import { UserDetails } from "@/models/admin";
 
 const AssignLeadOwnerBox = ({ value }: { value: string }) => {
   const {

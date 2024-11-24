@@ -63,3 +63,9 @@ type StatusTagColor = TagColorBase & {
 type PriorityTagColor = TagColorBase & {
   tagName: ValueOf<typeof StatusTags>;
 };
+
+export type UserDetails = {
+  firstName: string | null;
+  lastName: string | null;
+  email: string;
+};

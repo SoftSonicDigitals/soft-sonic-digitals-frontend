@@ -10,7 +10,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const Thankyou = ({ name }: { name: string }) => (
+export const Thankyou = (name: string) => (
   <Html>
     <Head />
     <Preview>Thank you for reaching out SoftSonic</Preview>

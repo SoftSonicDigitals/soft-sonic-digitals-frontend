@@ -2,20 +2,34 @@ import { Resend } from "resend";
 import Thankyou from "@/emails/Thankyou";
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
+import { ClientDetails, UserDetails } from "@/models/admin";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
-  auth().protect();
   try {
-    const { name, email } = await request.json();
-    console.log(name, email);
+    const data: { leadDetails: ClientDetails; users: UserDetails[] } =
+      await request.json();
+
+    const { leadDetails, users } = data;
+
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: "softsonicdigitals@gmail.com",
       subject: "Thank you for reaching to Softsonic",
-      react: Thankyou({ name }),
+      react: Thankyou(leadDetails.name),
     });
+
+    // await resend.emails.send({
+    //   from: "onboarding@resend.dev",
+    // testing
+    // to: "softsonicdigitals@gmail.com",
+
+    // production
+    // to: users.map((user)=> user.email),
+    // subject: "Thank you for reaching to Softsonic",
+    // react: Thankyou({ name }),
+    // });
 
     return NextResponse.json(
       {
