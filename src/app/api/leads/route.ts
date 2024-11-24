@@ -145,8 +145,6 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  auth().protect();
-
   try {
     const data: ClientDetails = await request.json();
     const {
