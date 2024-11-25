@@ -10,46 +10,46 @@ import { PriorityTagsColorsType, StatusTagsColorsType } from "@/models/admin";
 export const PRIORITY_TAGS_COLORS: PriorityTagsColorsType = {
   high: {
     tagName: "high",
-    tagColor: "#f03e3e", // Light Red
-    tagTextColor: "#C62828", // More Saturated Red
+    tagColor: "#f03e3e",
+    tagTextColor: "#ffc9c9",
   },
   medium: {
     tagName: "medium",
-    tagColor: "#f59f00", // Light Purple
-    tagTextColor: "#6A1B9A", // More Saturated Purple
+    tagColor: "#f59f00",
+    tagTextColor: "#fff3bf",
   },
   low: {
     tagName: "low",
-    tagColor: "#66c255", // Light Orange
-    tagTextColor: "#F57C00", // More Saturated Orange
+    tagColor: "#37b24d",
+    tagTextColor: "#d3f9d8",
   },
 };
 
 export const STATUS_TAGS_COLORS: StatusTagsColorsType = {
   "in-progress": {
     tagName: StatusTags.IN_PROGRESS,
-    tagColor: "#80deea", // Light Cyan
-    tagTextColor: "#00acc1", // More Saturated Cyan
+    tagColor: "#099268", // Light Cyan
+    tagTextColor: "#c3fae8", // More Saturated Cyan
   },
   new: {
     tagName: StatusTags.NEW,
-    tagColor: "#e1bee7", // Light Pink
-    tagTextColor: "#ab47bc", // More Saturated Pink
+    tagColor: "#85888a", // Light Pink
+    tagTextColor: "#f2f3f5", // More Saturated Pink
   },
   open: {
     tagName: StatusTags.OPEN,
-    tagColor: "#c5e1a5", // Light Green
-    tagTextColor: "#7cb342", // More Saturated Green
+    tagColor: "#66a80f", // Light Green
+    tagTextColor: "#e9fac8", // More Saturated Green
   },
   reviewed: {
     tagName: StatusTags.REVIEWED,
-    tagColor: "#ffab91", // Light Coral
-    tagTextColor: "#ff5722", // More Saturated Coral
+    tagColor: "#e8590c", // Light Coral
+    tagTextColor: "#ffe8cc", // More Saturated Coral
   },
   closed: {
     tagName: StatusTags.CLOSED,
-    tagColor: "#ffecb3", // Light Yellow
-    tagTextColor: "#fbc02d", // More Saturated Yellow
+    tagColor: "#1971c2", // Light Yellow
+    tagTextColor: "#d0ebff", // More Saturated Yellow
   },
 };
 
