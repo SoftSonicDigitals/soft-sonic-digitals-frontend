@@ -41,7 +41,7 @@ const ClientTableRow = ({
 
   return (
     <tr
-      className="hover:bg-black-200 transition duration-300 hover:text-white border-b "
+      className="hover:bg-black-200 transition duration-300 hover:text-white border-b cursor-pointer "
       onClick={() => {
         router.push(`/admin/leads/${id}`);
       }}
